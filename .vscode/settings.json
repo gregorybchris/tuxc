@@ -1,0 +1,30 @@
+{
+  "[html]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[json]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[python]": { "editor.defaultFormatter": "charliermarsh.ruff" },
+  "[toml]": { "editor.defaultFormatter": "tamasfe.even-better-toml" },
+  "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "[typescriptreact]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll": "explicit"
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": true,
+  "editor.formatOnSave": true,
+  "editor.insertSpaces": true,
+  "editor.rulers": [120],
+  "mypy-type-checker.args": [
+    "--config-file=analysis/pyproject.toml",
+    "--enable-incomplete-feature=NewGenericSyntax"
+  ],
+  "prettier.printWidth": 120,
+  "python.analysis.extraPaths": ["python"],
+  "ruff.configuration": "analysis/pyproject.toml",
+  "ruff.nativeServer": true,
+  "python.testing.pytestArgs": ["analysis/tests"],
+  "python.testing.unittestEnabled": false,
+  "python.testing.pytestEnabled": true,
+  "cSpell.words": ["nvmrc", "snakecase", "camelcase"]
+}
