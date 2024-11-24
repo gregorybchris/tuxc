@@ -79,7 +79,7 @@ export default function CollectionPage() {
           {!loading && selectedRuns.length !== 0 && (
             <div className="flex flex-row flex-wrap justify-center gap-6 md:justify-start">
               {selectedRuns.map((run) => (
-                <RunView key={run.id} run={run} onReload={fetchRuns} />
+                <RunView key={run.id} run={run} />
               ))}
             </div>
           )}
