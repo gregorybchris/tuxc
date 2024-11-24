@@ -1,0 +1,64 @@
+name: Backend CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - analysis/**
+      - .github/workflows/backend-ci.yaml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - analysis/**
+      - .github/workflows/backend-ci.yaml
+
+jobs:
+  backend-ci:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install package
+        id: install
+        shell: bash
+        working-directory: analysis
+        run: |
+          pip install poetry
+
+          if [ -d /poetryenvs ]; then rm -rf ~/poetryenvs; fi
+          poetry config virtualenvs.path ~/poetryenvs
+          poetry install
+
+      - name: Run ruff
+        id: ruff
+        shell: bash
+        working-directory: analysis
+        run: |
+          poetry run ruff check .
+          poetry run ruff format . --check
+
+      - name: Run mypy
+        id: mypy
+        shell: bash
+        working-directory: analysis
+        run: |
+          poetry run mypy . --config pyproject.toml --enable-incomplete-feature=NewGenericSyntax
+        if: (success() || failure()) && steps.install.outcome == 'success'
+
+      - name: Run pytest
+        id: pytest
+        shell: bash
+        working-directory: analysis
+        run: |
+          poetry run pytest tests
+        if: (success() || failure()) && steps.install.outcome == 'success'
