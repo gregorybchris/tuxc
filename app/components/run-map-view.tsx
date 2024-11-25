@@ -13,18 +13,24 @@ interface RunMapViewProps {
 export function RunMapView({ run, runMap, className }: RunMapViewProps) {
   const mapRef = useRef<MapRef>(null);
 
+  const minLat = Math.min(...runMap.points.map((p) => p.latitude));
+  const maxLat = Math.max(...runMap.points.map((p) => p.latitude));
+  const minLng = Math.min(...runMap.points.map((p) => p.longitude));
+  const maxLng = Math.max(...runMap.points.map((p) => p.longitude));
+  const bounds = {
+    min: { latitude: minLat, longitude: minLng },
+    max: { latitude: maxLat, longitude: maxLng },
+  };
+
   useEffect(() => {
-    const minLat = Math.min(...runMap.points.map((p) => p.latitude));
-    const maxLat = Math.max(...runMap.points.map((p) => p.latitude));
-    const minLng = Math.min(...runMap.points.map((p) => p.longitude));
-    const maxLng = Math.max(...runMap.points.map((p) => p.longitude));
     mapRef.current?.fitBounds(
       [
-        [minLng, minLat],
-        [maxLng, maxLat],
+        [bounds.min.longitude, bounds.min.latitude],
+        [bounds.max.longitude, bounds.max.latitude],
       ],
       { padding: 40, duration: 1000 },
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [runMap]);
 
   const coordinates = runMap.points.map((point) => [
@@ -41,10 +47,15 @@ export function RunMapView({ run, runMap, className }: RunMapViewProps) {
     },
   };
 
+  const center = {
+    latitude: (minLat + maxLat) / 2,
+    longitude: (minLng + maxLng) / 2,
+  };
+
   const initialViewState = {
-    latitude: 42.40923,
-    longitude: -71.11457,
-    zoom: 13,
+    latitude: center.latitude,
+    longitude: center.longitude,
+    zoom: 11,
   };
 
   return (

@@ -35,7 +35,7 @@ export default function RunPage({ params }: { params: { id: number } }) {
 
   return (
     <div className="bg-background flex h-full w-full flex-row">
-      <div className="flex h-full w-full flex-col gap-5 py-10">
+      <div className="flex h-full w-full flex-col gap-5 py-5 md:py-10">
         {loading && (
           <div className="flex flex-col gap-3 px-2 md:px-2">
             <div className="flex flex-row gap-3">
@@ -55,7 +55,7 @@ export default function RunPage({ params }: { params: { id: number } }) {
                   href="/runs"
                   text="All Runs"
                   iconName="back"
-                  className="grow-0"
+                  className="px-2"
                 />
               </div>
               <RunDetails run={run} />
