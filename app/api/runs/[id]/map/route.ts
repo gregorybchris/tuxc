@@ -1,8 +1,8 @@
 import { RunMap } from "@/app/lib/models/runMap";
 import { ErrorResponse } from "@/app/lib/utilities/response-utils";
 import { NextResponse } from "next/server";
+import { MAPS } from "../../maps";
 import runs from "../../runs.json";
-import { MAP_09_REDLINE } from "./09-map";
 
 type GetRunMapParams = {
   params: { id: string };
@@ -19,12 +19,14 @@ export async function GET(
   const idNumber = parseInt(id, 10);
   const run = runs.find((run) => run.id === idNumber);
   if (!run) {
-    return NextResponse.json({ error: "Run not found" }, { status: 404 });
+    return NextResponse.json(
+      { error: "Run metadata not found" },
+      { status: 404 },
+    );
   }
-  // TODO: Pull run map from file
-
-  const runMap = {
-    points: MAP_09_REDLINE.points,
-  };
+  const runMap = MAPS.get(run.slug);
+  if (!runMap) {
+    return NextResponse.json({ error: "Run map not found" }, { status: 404 });
+  }
   return NextResponse.json({ runMap });
 }

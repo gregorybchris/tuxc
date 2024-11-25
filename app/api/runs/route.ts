@@ -1,5 +1,6 @@
 import { Run } from "@/app/lib/models/run";
 import { NextResponse } from "next/server";
+import { MAPS } from "./maps";
 import runs from "./runs.json";
 
 export type PostRunRequest = {
@@ -28,5 +29,12 @@ export type GetRunsResponse = {
 export async function GET(
   req: Request,
 ): Promise<NextResponse<GetRunsResponse>> {
-  return NextResponse.json({ runs });
+  const runsWithMaps: Run[] = [];
+  for (const run of runs) {
+    const runMap = MAPS.get(run.slug);
+    if (runMap) {
+      runsWithMaps.push(run);
+    }
+  }
+  return NextResponse.json({ runs: runsWithMaps });
 }

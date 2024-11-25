@@ -1,5 +1,6 @@
 # ruff: noqa: T201
 import logging
+import shutil
 from pathlib import Path
 
 import click
@@ -33,9 +34,13 @@ def convert_routes(debug: bool) -> None:
         logging.basicConfig(level=logging.INFO)
 
     gpx_dir = Path(__file__).parent.parent.parent / "gpx"
-    jpx_dir = Path(__file__).parent.parent.parent / "jpx"
+    jpx_dir = Path(__file__).parent.parent.parent / "app" / "api" / "runs" / "maps"
+    shutil.rmtree(jpx_dir, ignore_errors=True)
     jpx_dir.mkdir(exist_ok=True, parents=True)
     for gpx_filepath in gpx_dir.iterdir():
+        if gpx_filepath.suffix != ".gpx":
+            continue
+        logger.info("Converting %s", gpx_filepath)
         gpx = Gpx.parse(gpx_filepath)
         jpx = GpxCompressor.compress(gpx)
         jpx_filepath = jpx_dir / f"{gpx_filepath.stem}.json"

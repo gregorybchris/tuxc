@@ -28,12 +28,15 @@
   "python.testing.pytestEnabled": true,
   "cSpell.words": [
     "camelcase",
+    "cooldown",
+    "gantcher",
     "gpxpy",
+    "mapbox",
     "nvmrc",
+    "ossipee",
     "snakecase",
     "trkpt",
     "trkseg",
-    "tuxc",
-    "mapbox"
+    "tuxc"
   ]
 }
