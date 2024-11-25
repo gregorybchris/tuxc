@@ -2,13 +2,15 @@ import { useEffect, useRef } from "react";
 import Map, { Layer, MapRef, Source } from "react-map-gl";
 import { Run } from "../lib/models/run";
 import { RunMap } from "../lib/models/runMap";
+import { cn } from "../lib/utilities/style-utils";
 
 interface RunMapViewProps {
   run: Run;
   runMap: RunMap;
+  className?: string;
 }
 
-export function RunMapView({ run, runMap }: RunMapViewProps) {
+export function RunMapView({ run, runMap, className }: RunMapViewProps) {
   const mapRef = useRef<MapRef>(null);
 
   useEffect(() => {
@@ -23,7 +25,7 @@ export function RunMapView({ run, runMap }: RunMapViewProps) {
       ],
       { padding: 40, duration: 1000 },
     );
-  });
+  }, [runMap]);
 
   const coordinates = runMap.points.map((point) => [
     point.longitude,
@@ -46,7 +48,7 @@ export function RunMapView({ run, runMap }: RunMapViewProps) {
   };
 
   return (
-    <div className="flex flex-col items-center">
+    <div className={cn("flex flex-col items-center", className)}>
       <div className="h-[500px] w-full overflow-hidden md:w-[80%] md:rounded-xl">
         <Map
           ref={mapRef}

@@ -9,6 +9,7 @@ import { Run } from "@/app/lib/models/run";
 import { RunMap } from "@/app/lib/models/runMap";
 import { cn } from "@/app/lib/utilities/style-utils";
 import { formatDatetimeWithMonthAndYear } from "@/app/lib/utilities/time-utils";
+import { LinkButton } from "@/app/widgets/link-button";
 
 export default function RunPage({ params }: { params: { id: number } }) {
   const [loading, setLoading] = useState(true);
@@ -36,14 +37,29 @@ export default function RunPage({ params }: { params: { id: number } }) {
     <div className="bg-background flex h-full w-full flex-row">
       <div className="flex h-full w-full flex-col gap-5 py-10">
         {loading && (
-          <div className="px-2 md:px-2">
-            <LoadingBox className="h-48 w-64" />
+          <div className="flex flex-col gap-3 px-2 md:px-2">
+            <div className="flex flex-row gap-3">
+              <LoadingBox className="h-48 w-64" />
+              <LoadingBox className="h-48 w-64" />
+              <LoadingBox className="h-48 w-64" />
+            </div>
+            <LoadingBox className="h-[100px] w-full md:h-[300px] md:w-[500px]" />
           </div>
         )}
         {!loading && (!run || !runMap) && <div>Run not found</div>}
         {!loading && run && runMap && (
           <div className="flex w-full flex-col gap-7">
-            <RunDetails run={run} />
+            <div className="flex flex-col gap-4">
+              <div className="flex flex-row px-5 md:px-20">
+                <LinkButton
+                  href="/runs"
+                  text="All Runs"
+                  iconName="back"
+                  className="grow-0"
+                />
+              </div>
+              <RunDetails run={run} />
+            </div>
             <RunMapView run={run} runMap={runMap} />
           </div>
         )}
@@ -58,7 +74,7 @@ interface RunDetailsProps {
 
 function RunDetails({ run }: RunDetailsProps) {
   return (
-    <div className="flex flex-col gap-1 px-2 md:px-2">
+    <div className="flex flex-col gap-1 px-5 md:px-20">
       <RunDetail detail={run.name} className="text-lg font-bold" />
       <RunDetail name="Distance" detail={`${run.distance} mi`} />
       <RunDetail name="Region" detail={run.region} />

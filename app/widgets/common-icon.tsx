@@ -1,5 +1,6 @@
 "use client";
 import {
+  ArrowArcLeft,
   IconWeight,
   PersonSimpleRun,
   SneakerMove,
@@ -7,7 +8,7 @@ import {
 
 import { HouseLine, QuestionMark } from "@phosphor-icons/react";
 
-export type IconName = "home" | "runner" | "shoe";
+export type IconName = "home" | "runner" | "shoe" | "back";
 
 interface PageIconProps {
   name: IconName;
@@ -26,6 +27,9 @@ export function CommonIcon({ name, size, color, weight }: PageIconProps) {
     }
     case "shoe": {
       return <SneakerMove size={size} color={color} weight={weight} />;
+    }
+    case "back": {
+      return <ArrowArcLeft size={size} color={color} weight={weight} />;
     }
     default: {
       return <QuestionMark size={size} color={color} weight={weight} />;
