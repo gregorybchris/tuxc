@@ -26,5 +26,13 @@
   "python.testing.pytestArgs": ["analysis/tests"],
   "python.testing.unittestEnabled": false,
   "python.testing.pytestEnabled": true,
-  "cSpell.words": ["nvmrc", "snakecase", "camelcase"]
+  "cSpell.words": [
+    "camelcase",
+    "gpxpy",
+    "nvmrc",
+    "snakecase",
+    "trkpt",
+    "trkseg",
+    "tuxc"
+  ]
 }

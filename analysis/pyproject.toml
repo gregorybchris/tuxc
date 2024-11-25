@@ -45,7 +45,7 @@ line-length = 120
 src = ["tuxc"]
 
 [tool.ruff.lint]
-ignore = ["D100", "D104", "FIX002", "TD003"]
+ignore = ["D100", "D104", "FIX002", "TD002", "TD003"]
 select = [
     "A",
     "ARG",
