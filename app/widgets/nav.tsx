@@ -38,7 +38,7 @@ export function Nav({ children }: NavProps) {
 
   return (
     <div>
-      <div className="bg-tufts-blue flex flex-row items-center justify-between px-7 py-4">
+      <div className="flex flex-row items-center justify-between bg-tufts-blue px-7 py-4">
         <div className="cursor-pointer">
           {menuOpen && <X color="#FFF" size={32} onClick={close} />}
           {!menuOpen && <List size={32} color="#FFF" onClick={open} />}
@@ -58,7 +58,7 @@ export function Nav({ children }: NavProps) {
         >
           <NavLink page="home" href="/" onClick={close} />
           <NavLink page="rpp" href="/rpp" onClick={close} />
-          <NavLink page="runs" href="/rpp/runs" onClick={close} />
+          <NavLink page="runs" href="/runs" onClick={close} />
         </div>
 
         <div className={cn(menuOpen && "invisible opacity-0")}>{children}</div>
