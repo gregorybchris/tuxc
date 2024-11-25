@@ -41,7 +41,7 @@ interface LoadingRunViewProps {
 export function LoadingRunView({ duration, delay }: LoadingRunViewProps) {
   return (
     <div className="flex flex-col gap-1">
-      <LoadingBox className="h-36 w-48" duration={duration} delay={delay} />
+      <LoadingBox className="h-28 w-36" duration={duration} delay={delay} />
     </div>
   );
 }

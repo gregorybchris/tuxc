@@ -37,14 +37,14 @@ export async function GET(
   const runs = [
     {
       id: 1,
-      name: "My first run",
+      name: "Belmont",
       description: "",
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),
     },
     {
       id: 2,
-      name: "My second run",
+      name: "'09 Red Line",
       description: "",
       createdAt: new Date().toISOString(),
       updatedAt: new Date().toISOString(),

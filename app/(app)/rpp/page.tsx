@@ -4,7 +4,7 @@ export default function RppPage() {
   return (
     <div className="flex flex-row justify-center gap-10 px-5 py-20 md:px-32">
       <div className="flex flex-col items-center justify-center gap-10">
-        <span className="text-xl">Run Preservation Project</span>
+        <span className="text-xl">TUXC Run Preservation Project</span>
         <span>
           Welcome to the RPP! A collection of runs created in April 2020 by TW
           and added to every year since. Anyone can add a run as long as

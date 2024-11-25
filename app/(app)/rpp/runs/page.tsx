@@ -18,7 +18,7 @@ export default function CollectionPage() {
   const [loading, setLoading] = useState(true);
   const [searchText, setSearchText] = useState("");
   const [runs, setRuns] = useState<Run[]>([]);
-  const [sortValue, setSortValue] = useState<string>("recently added");
+  const [sortValue, setSortValue] = useState<string>("alphabetical");
   const client = useRef(new Client());
 
   useEffect(() => {
@@ -63,7 +63,7 @@ export default function CollectionPage() {
             <SortDropdown
               value={sortValue}
               setValue={setSortValue}
-              choices={["recently added", "recently updated", "alphabetical"]}
+              choices={["alphabetical", "recently added", "recently updated"]}
             />
           </div>
 
