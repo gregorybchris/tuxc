@@ -4,8 +4,10 @@ import {
   PostRunResponse,
 } from "@/app/api/runs/route";
 
+import { GetRunMapResponse } from "@/app/api/runs/[id]/map/route";
 import { GetRunResponse } from "@/app/api/runs/[id]/route";
 import { Run } from "../models/run";
+import { RunMap } from "../models/runMap";
 import { ClientBase } from "./client-base";
 
 export class Client extends ClientBase {
@@ -29,5 +31,10 @@ export class Client extends ClientBase {
   async getRun(id: number): Promise<Run> {
     const responseJson: GetRunResponse = await this.get(`/runs/${id}`);
     return responseJson.run;
+  }
+
+  async getRunMap(id: number): Promise<RunMap> {
+    const responseJson: GetRunMapResponse = await this.get(`/runs/${id}/map`);
+    return responseJson.runMap;
   }
 }

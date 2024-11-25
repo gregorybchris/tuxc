@@ -32,23 +32,22 @@ class GpxCompressor:
         lat_a, lon_a = point_a.latitude, point_a.longitude
         lat_b, lon_b = point_b.latitude, point_b.longitude
 
-        # TODO: use math.radians
-
-        r = 6371  # Radius of earth
-        p = math.pi / 180  # Degrees to radians
+        r = 6371  # Radius of earth (km)
         d = (
             2
             * r
             * math.asin(
                 math.sqrt(
                     0.5
-                    - math.cos((lat_b - lat_a) * p) / 2
-                    + math.cos(lat_a * p) * math.cos(lat_b * p) * (1 - math.cos((lon_b - lon_a) * p)) / 2
+                    - math.cos(math.radians(lat_b - lat_a)) / 2
+                    + math.cos(math.radians(lat_a))
+                    * math.cos(math.radians(lat_b))
+                    * (1 - math.cos(math.radians(lon_b - lon_a)))
+                    / 2
                 )
             )
         )
-        k = 0.62137119  # Kilometers to miles
-        return d * k
+        return d * 0.62137119  # Kilometers to miles
 
     @classmethod
     def path_dist(cls, points: list[Point]) -> float:
