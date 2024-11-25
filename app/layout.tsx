@@ -1,6 +1,6 @@
-import "./globals.css";
-
 import { ReactNode } from "react";
+import "./globals.css";
+import { Nav } from "./widgets/nav";
 
 const title = "tuxc";
 const description = "Athlete-run home of Tufts cross country.";
@@ -19,7 +19,11 @@ export const metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="font-manrope">{children}</body>
+      <body>
+        <div className="font-manrope">
+          <Nav>{children}</Nav>
+        </div>
+      </body>
     </html>
   );
 }

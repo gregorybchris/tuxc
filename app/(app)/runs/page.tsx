@@ -45,45 +45,43 @@ export default function CollectionPage() {
   }
 
   return (
-    <div className="h-full w-full">
-      <div className="h-full w-full px-5 py-10 md:px-20 md:py-20">
-        <div className="flex flex-col items-center gap-8 md:items-start">
-          <div className="flex flex-col flex-wrap items-center gap-3 md:flex-row">
-            <Textbox
-              value={searchText}
-              onChange={setSearchText}
-              id="search"
-              name="search"
-              placeholder="search"
-              required
-              icon="search"
-              className="w-[300px]"
-            />
+    <div className="h-full w-full px-5 py-10 md:px-20 md:py-20">
+      <div className="flex flex-col items-center gap-8 md:items-start">
+        <div className="flex flex-col flex-wrap items-center gap-3 md:flex-row">
+          <Textbox
+            value={searchText}
+            onChange={setSearchText}
+            id="search"
+            name="search"
+            placeholder="search"
+            required
+            icon="search"
+            className="w-[300px]"
+          />
 
-            <SortDropdown
-              value={sortValue}
-              setValue={setSortValue}
-              choices={["alphabetical", "recently added", "recently updated"]}
-            />
-          </div>
-
-          {loading && <LoadingRunViews numLoading={3} />}
-
-          {!loading && selectedRuns.length === 0 && (
-            <div className="text-darkest-white/50 pt-5 text-center text-sm">
-              {searchText.length === 0 && "no runs created yet"}
-              {searchText.length > 0 && "no runs matching search"}
-            </div>
-          )}
-
-          {!loading && selectedRuns.length !== 0 && (
-            <div className="flex flex-row flex-wrap justify-center gap-6 md:justify-start">
-              {selectedRuns.map((run) => (
-                <RunView key={run.id} run={run} />
-              ))}
-            </div>
-          )}
+          <SortDropdown
+            value={sortValue}
+            setValue={setSortValue}
+            choices={["alphabetical", "recently added", "recently updated"]}
+          />
         </div>
+
+        {loading && <LoadingRunViews numLoading={3} />}
+
+        {!loading && selectedRuns.length === 0 && (
+          <div className="text-darkest-white/50 pt-5 text-center text-sm">
+            {searchText.length === 0 && "no runs created yet"}
+            {searchText.length > 0 && "no runs matching search"}
+          </div>
+        )}
+
+        {!loading && selectedRuns.length !== 0 && (
+          <div className="flex flex-row flex-wrap justify-center gap-6 md:justify-start">
+            {selectedRuns.map((run) => (
+              <RunView key={run.id} run={run} />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
