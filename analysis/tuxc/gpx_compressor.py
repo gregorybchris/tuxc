@@ -74,6 +74,6 @@ class GpxCompressor:
         n_reduction = n_after / n_before
         dist_reduction = 1.0 - dist_after / dist_before
 
-        print(f"{name}")
-        print("  {:.0f}% fewer points ({:d} -> {:d})".format(n_reduction * 100, n_before, n_after))
-        print("  {:.3f}% shorter distance ({:.3f} -> {:.3f})".format(dist_reduction * 100, dist_before, dist_after))
+        print(f"{name}")  # noqa: T201
+        print("  {:.0f}% fewer points ({:d} -> {:d})".format(n_reduction * 100, n_before, n_after))  # noqa: T201
+        print("  {:.3f}% shorter distance ({:.3f} -> {:.3f})".format(dist_reduction * 100, dist_before, dist_after))  # noqa: T201
