@@ -2,6 +2,7 @@ import { RunMap } from "@/app/lib/models/runMap";
 import { ErrorResponse } from "@/app/lib/utilities/response-utils";
 import { NextResponse } from "next/server";
 import runs from "../../runs.json";
+import { MAP_09_REDLINE } from "./09-map";
 
 type GetRunMapParams = {
   params: { id: string };
@@ -21,14 +22,9 @@ export async function GET(
     return NextResponse.json({ error: "Run not found" }, { status: 404 });
   }
   // TODO: Pull run map from file
+
   const runMap = {
-    points: [
-      {
-        latitude: 40.7128,
-        longitude: -74.006,
-        elevation: 0,
-      },
-    ],
+    points: MAP_09_REDLINE.points,
   };
   return NextResponse.json({ runMap });
 }

@@ -7,6 +7,7 @@ import { RunMapView } from "@/app/components/run-map-view";
 import { Client } from "@/app/lib/clients/client";
 import { Run } from "@/app/lib/models/run";
 import { RunMap } from "@/app/lib/models/runMap";
+import { cn } from "@/app/lib/utilities/style-utils";
 import { formatDatetimeWithMonthAndYear } from "@/app/lib/utilities/time-utils";
 
 export default function RunPage({ params }: { params: { id: number } }) {
@@ -33,15 +34,15 @@ export default function RunPage({ params }: { params: { id: number } }) {
 
   return (
     <div className="bg-background flex h-full w-full flex-row">
-      <div className="flex h-full w-full flex-col items-center justify-center gap-5 py-10">
+      <div className="flex h-full w-full flex-col gap-5 py-10">
         {loading && (
-          <div className="text-darkest-white/50 flex flex-col gap-4 text-sm">
-            <LoadingBox className="h-48 w-56" />
+          <div className="px-2 md:px-2">
+            <LoadingBox className="h-48 w-64" />
           </div>
         )}
         {!loading && (!run || !runMap) && <div>Run not found</div>}
         {!loading && run && runMap && (
-          <div className="flex flex-col gap-7">
+          <div className="flex w-full flex-col gap-7">
             <RunDetails run={run} />
             <RunMapView run={run} runMap={runMap} />
           </div>
@@ -57,36 +58,33 @@ interface RunDetailsProps {
 
 function RunDetails({ run }: RunDetailsProps) {
   return (
-    <div className="flex flex-col gap-3">
-      <span className="w-full overflow-hidden truncate text-xl">
-        {run.name}
-      </span>
-
-      <span className="w-full overflow-hidden truncate text-sm">
-        Distance: {run.distance}
-      </span>
-
-      <span className="w-full overflow-hidden truncate text-sm">
-        Region: {run.region}
-      </span>
-
+    <div className="flex flex-col gap-1 px-2 md:px-2">
+      <RunDetail detail={run.name} className="text-lg font-bold" />
+      <RunDetail name="Distance" detail={`${run.distance} mi`} />
+      <RunDetail name="Region" detail={run.region} />
       {run.firstRunBy && (
-        <span className="w-full overflow-hidden truncate text-sm">
-          First run by: {run.firstRunBy}
-        </span>
+        <RunDetail name="First run by" detail={run.firstRunBy} />
       )}
+      {run.lore && <RunDetail name="Lore" detail={run.lore} />}
+      <RunDetail
+        name="Added"
+        detail={formatDatetimeWithMonthAndYear(new Date(run.createdAt))}
+      />
+    </div>
+  );
+}
 
-      {run.lore && (
-        <span className="w-full overflow-hidden truncate text-sm">
-          Lore: {run.lore}
-        </span>
-      )}
+interface RunDetailProps {
+  name?: string;
+  detail: string;
+  className?: string;
+}
 
-      <div className="flex flex-col gap-2 text-sm">
-        <div className="">
-          Added: {formatDatetimeWithMonthAndYear(new Date(run.createdAt))}
-        </div>
-      </div>
+function RunDetail({ name, detail, className }: RunDetailProps) {
+  return (
+    <div className={cn("w-full text-sm", className)}>
+      {name && <span className="font-bold">{name}: </span>}
+      <span className="">{detail}</span>
     </div>
   );
 }
