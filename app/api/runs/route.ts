@@ -15,14 +15,8 @@ export async function POST(
 ): Promise<NextResponse<PostRunResponse>> {
   const requestBody: PostRunRequest = await req.json();
 
-  // TODO: Accept more params to create run
-  const run = {
-    id: 1,
-    name: requestBody.name,
-    description: "",
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-  };
+  // TODO: Use request to create a new run
+  const run = runs[0];
 
   return NextResponse.json({ run });
 }
