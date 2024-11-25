@@ -1,5 +1,6 @@
 import { Run } from "@/app/lib/models/run";
 import { NextResponse } from "next/server";
+import runs from "./runs.json";
 
 export type PostRunRequest = {
   name: string;
@@ -33,23 +34,5 @@ export type GetRunsResponse = {
 export async function GET(
   req: Request,
 ): Promise<NextResponse<GetRunsResponse>> {
-  // TODO: Pull from JSON file
-  const runs = [
-    {
-      id: 1,
-      name: "Belmont",
-      description: "",
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    },
-    {
-      id: 2,
-      name: "'09 Red Line",
-      description: "",
-      createdAt: new Date().toISOString(),
-      updatedAt: new Date().toISOString(),
-    },
-  ];
-
   return NextResponse.json({ runs });
 }
