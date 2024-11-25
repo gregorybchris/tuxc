@@ -1,6 +1,8 @@
 import math
 from dataclasses import dataclass
 
+from rich import print
+
 from tuxc.gpx import Gpx, Point
 
 
@@ -16,10 +18,21 @@ class GpxCompressor:
         return points
 
     @classmethod
+    def to_mercator(cls, point: Point) -> tuple[float, float]:
+        r = 6378137  # Radius of earth
+        lat_rad = math.radians(point.latitude)
+        lon_rad = math.radians(point.longitude)
+        x = r * lon_rad
+        y = r * math.log(math.tan(math.pi / 4 + lat_rad / 2))
+        return x, y
+
+    @classmethod
     def dist(cls, point_a: Point, point_b: Point) -> float:
         """Haversine formula"""
         lat_a, lon_a = point_a.latitude, point_a.longitude
         lat_b, lon_b = point_b.latitude, point_b.longitude
+
+        # TODO: use math.radians
 
         r = 6371  # Radius of earth
         p = math.pi / 180  # Degrees to radians
@@ -74,6 +87,10 @@ class GpxCompressor:
         n_reduction = n_after / n_before
         dist_reduction = 1.0 - dist_after / dist_before
 
-        print(f"{name}")  # noqa: T201
-        print("  {:.0f}% fewer points ({:d} -> {:d})".format(n_reduction * 100, n_before, n_after))  # noqa: T201
-        print("  {:.3f}% shorter distance ({:.3f} -> {:.3f})".format(dist_reduction * 100, dist_before, dist_after))  # noqa: T201
+        print(f"\n[blue]{name}")
+        print("  {:.0f}% fewer points ({:d} -> {:d})".format(n_reduction * 100, n_before, n_after))
+        print("  {:.3f}% shorter distance ({:.3f} -> {:.3f})".format(dist_reduction * 100, dist_before, dist_after))
+
+        point = Point(latitude=40.7128, longitude=-74.0060, elevation=0.0)  # New York City
+        x, y = GpxCompressor.to_mercator(point)
+        print("Mercator x: {:.1f}, y: {:.1f}".format(x, y))
