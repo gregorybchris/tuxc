@@ -12,6 +12,7 @@ import {
   getRunsByCreated,
   getRunsByUpdated,
 } from "@/app/lib/utilities/sort-utils";
+import { LinkButton } from "@/app/widgets/link-button";
 import { Textbox } from "@/app/widgets/textbox";
 
 export default function CollectionPage() {
@@ -46,7 +47,11 @@ export default function CollectionPage() {
 
   return (
     <div className="h-full w-full px-5 py-10 md:px-20 md:py-20">
-      <div className="flex flex-col items-center gap-8 md:items-start">
+      <div className="flex w-full flex-col items-center gap-8 md:items-start">
+        <div className="flex w-full flex-col items-center text-xl">
+          <div>TUXC Run Preservation Project</div>
+        </div>
+        <LinkButton text="About the Project" href="/rpp" iconName="runner" />
         <div className="flex flex-col flex-wrap items-center gap-3 md:flex-row">
           <Textbox
             value={searchText}
@@ -56,7 +61,7 @@ export default function CollectionPage() {
             placeholder="search"
             required
             icon="search"
-            className="w-[300px]"
+            className="w-full md:w-[300px]"
           />
 
           <SortDropdown

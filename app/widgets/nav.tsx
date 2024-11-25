@@ -1,5 +1,5 @@
 "use client";
-import jumboIcon from "@/app/assets/images/athletics-graphic-blue.png";
+import jumboIcon from "@/app/assets/images/jumbo-head-simplified.png";
 import { cn } from "@/app/lib/utilities/style-utils";
 import { List, X } from "@phosphor-icons/react";
 import Image from "next/image";
@@ -39,12 +39,12 @@ export function Nav({ children }: NavProps) {
     <div>
       <div className="flex flex-row items-center justify-between bg-tufts-blue px-7 py-3">
         <Link href="/" onClick={close}>
-          <Image src={jumboIcon} width={50} height={50} alt="Jumbo" />
+          <Image src={jumboIcon} width={60} height={60} alt="Jumbo" />
         </Link>
 
         <div className="cursor-pointer">
-          {menuOpen && <X color="#FFF" size={40} onClick={close} />}
-          {!menuOpen && <List size={40} color="#FFF" onClick={open} />}
+          {menuOpen && <X color="#FFF" size={32} onClick={close} />}
+          {!menuOpen && <List size={32} color="#FFF" onClick={open} />}
         </div>
       </div>
 
