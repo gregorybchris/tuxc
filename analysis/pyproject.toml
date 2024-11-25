@@ -20,6 +20,7 @@ include = "tuxc"
 [tool.poetry.dependencies]
 click = "^8.1.7"
 python = ">=3.12"
+pydantic = "^2.10.1"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.13.0"
@@ -39,6 +40,7 @@ disallow_incomplete_defs = true
 disallow_untyped_calls = true
 disallow_untyped_defs = true
 ignore_missing_imports = true
+plugins = ["pydantic.mypy"]
 
 [tool.ruff]
 line-length = 120

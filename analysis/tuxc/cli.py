@@ -26,13 +26,29 @@ def get_route(route_id: str, debug: bool) -> None:
     logger.info("Fetching route information for route %s", route_id)
 
 
-@main.command(name="compress")
+@main.command(name="convert")
 @click.option("--debug", type=bool, default=False, is_flag=True)
-def compress_routes(debug: bool) -> None:
+def convert_routes(debug: bool) -> None:
+    if debug:
+        logging.basicConfig(level=logging.INFO)
+
+    gpx_dir = Path(__file__).parent.parent.parent / "gpx"
+    jpx_dir = Path(__file__).parent.parent.parent / "jpx"
+    jpx_dir.mkdir(exist_ok=True, parents=True)
+    for gpx_filepath in gpx_dir.iterdir():
+        gpx = Gpx.parse(gpx_filepath)
+        jpx = GpxCompressor.compress(gpx)
+        jpx_filepath = jpx_dir / f"{gpx_filepath.stem}.json"
+        jpx.to_file(jpx_filepath)
+
+
+@main.command(name="test")
+@click.option("--debug", type=bool, default=False, is_flag=True)
+def test_routes(debug: bool) -> None:
     if debug:
         logging.basicConfig(level=logging.INFO)
 
     gpx_dir = Path(__file__).parent.parent.parent / "gpx"
     for filepath in gpx_dir.iterdir():
         gpx = Gpx.parse(filepath)
-        GpxCompressor.compress(gpx, filepath.stem)
+        GpxCompressor.test(gpx, filepath.stem)

@@ -4,6 +4,8 @@ from dataclasses import dataclass
 from rich import print
 
 from tuxc.gpx import Gpx, Point
+from tuxc.jpx import Jpx
+from tuxc.jpx import Point as JpxPoint
 
 
 @dataclass
@@ -73,7 +75,18 @@ class GpxCompressor:
         return points
 
     @classmethod
-    def compress(cls, gpx: Gpx, name: str) -> None:
+    def compress(cls, gpx: Gpx) -> Jpx:
+        points_before = GpxCompressor.to_points(gpx)
+        points_after = GpxCompressor.simplify_route(points_before)
+
+        def gpx_point_to_jpx(point: Point) -> JpxPoint:
+            return JpxPoint(latitude=point.latitude, longitude=point.longitude, elevation=point.elevation)
+
+        jpx_points = [gpx_point_to_jpx(point) for point in points_after]
+        return Jpx(points=jpx_points)
+
+    @classmethod
+    def test(cls, gpx: Gpx, name: str) -> None:
         # TODO: Update this to return a new Gpx object with fewer points
         points_before = GpxCompressor.to_points(gpx)
         n_before = len(points_before)
