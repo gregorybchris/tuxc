@@ -19,7 +19,7 @@ export default function CollectionPage() {
   const [loading, setLoading] = useState(true);
   const [searchText, setSearchText] = useState("");
   const [runs, setRuns] = useState<Run[]>([]);
-  const [sortValue, setSortValue] = useState<string>("alphabetical");
+  const [sortValue, setSortValue] = useState<string>("Alphabetical");
   const client = useRef(new Client());
 
   useEffect(() => {
@@ -37,11 +37,11 @@ export default function CollectionPage() {
   }
 
   let selectedRuns = runs.filter((run) => runMatchesSearch(run, searchText));
-  if (sortValue === "alphabetical") {
+  if (sortValue === "Alphabetical") {
     selectedRuns.sort((a, b) => a.name.localeCompare(b.name));
-  } else if (sortValue === "recently added") {
+  } else if (sortValue === "Recently added") {
     selectedRuns = getRunsByCreated(selectedRuns);
-  } else if (sortValue === "recently updated") {
+  } else if (sortValue === "Recently updated") {
     selectedRuns = getRunsByUpdated(selectedRuns);
   }
 
@@ -58,7 +58,7 @@ export default function CollectionPage() {
             onChange={setSearchText}
             id="search"
             name="search"
-            placeholder="search"
+            placeholder="Search"
             required
             icon="search"
             className="w-full md:w-[300px]"
@@ -67,7 +67,7 @@ export default function CollectionPage() {
           <SortDropdown
             value={sortValue}
             setValue={setSortValue}
-            choices={["alphabetical", "recently added", "recently updated"]}
+            choices={["Alphabetical", "Recently added", "Recently updated"]}
           />
         </div>
 

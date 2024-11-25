@@ -33,7 +33,7 @@ export default function RunPage({ params }: { params: { id: number } }) {
             <LoadingBox className="h-48 w-56" />
           </div>
         )}
-        {!loading && !run && <div>run not found</div>}
+        {!loading && !run && <div>Run not found</div>}
         {!loading && run && (
           <div className="flex flex-col gap-3">
             <span className="w-full overflow-hidden truncate text-xl">
@@ -42,7 +42,7 @@ export default function RunPage({ params }: { params: { id: number } }) {
 
             <div className="flex flex-col gap-2 text-sm">
               <div className="">
-                added: {formatDatetimeWithMonthAndYear(new Date(run.createdAt))}
+                Added: {formatDatetimeWithMonthAndYear(new Date(run.createdAt))}
               </div>
             </div>
           </div>
