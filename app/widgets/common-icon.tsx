@@ -7,8 +7,10 @@ import {
 
 import { HouseLine, QuestionMark } from "@phosphor-icons/react";
 
+export type IconName = "home" | "runner" | "shoe";
+
 interface PageIconProps {
-  name: string;
+  name: IconName;
   size: number;
   color: string;
   weight: IconWeight;
@@ -19,10 +21,10 @@ export function CommonIcon({ name, size, color, weight }: PageIconProps) {
     case "home": {
       return <HouseLine size={size} color={color} weight={weight} />;
     }
-    case "rpp": {
+    case "runner": {
       return <PersonSimpleRun size={size} color={color} weight={weight} />;
     }
-    case "runs": {
+    case "shoe": {
       return <SneakerMove size={size} color={color} weight={weight} />;
     }
     default: {

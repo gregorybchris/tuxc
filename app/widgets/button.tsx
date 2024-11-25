@@ -1,13 +1,13 @@
 "use client";
 import { cn } from "../lib/utilities/style-utils";
-import { CommonIcon } from "./common-icon";
+import { CommonIcon, IconName } from "./common-icon";
 type ButtonTypes = "button" | "submit" | "reset";
 
 interface ButtonProps {
   text: string;
   type?: ButtonTypes;
   onClick?: () => void;
-  iconName?: string;
+  iconName?: IconName;
   className?: string;
 }
 

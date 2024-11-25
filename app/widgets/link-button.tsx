@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
 import { cn } from "../lib/utilities/style-utils";
-import { CommonIcon } from "./common-icon";
+import { CommonIcon, IconName } from "./common-icon";
 
 interface LinkButtonProps {
   text: string;
   href: string;
-  iconName?: string;
+  iconName?: IconName;
   className?: string;
 }
 

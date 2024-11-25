@@ -14,7 +14,7 @@ export default function RppPage() {
           every column if possible. All names must be initials when talking
           about lore etc. Go Jumbos Go RPP let&apos;s record some runs!
         </span>
-        <LinkButton text="Runs" href="/runs" iconName="runs" />
+        <LinkButton text="Runs" href="/runs" iconName="shoe" />
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ export default function SplashPage() {
         <LinkButton
           text="Run Preservation Project"
           href="/rpp"
-          iconName="rpp"
+          iconName="runner"
         />
       </div>
     </div>

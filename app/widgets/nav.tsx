@@ -1,12 +1,11 @@
 "use client";
-
-import jumboIcon from "@/app/assets/icons/jumbo.svg";
+import jumboIcon from "@/app/assets/images/athletics-graphic-blue.png";
 import { cn } from "@/app/lib/utilities/style-utils";
 import { List, X } from "@phosphor-icons/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { CommonIcon } from "./common-icon";
+import { CommonIcon, IconName } from "./common-icon";
 
 type NavProps = {
   children: React.ReactNode;
@@ -38,15 +37,15 @@ export function Nav({ children }: NavProps) {
 
   return (
     <div>
-      <div className="flex flex-row items-center justify-between bg-tufts-blue px-7 py-4">
-        <div className="cursor-pointer">
-          {menuOpen && <X color="#FFF" size={32} onClick={close} />}
-          {!menuOpen && <List size={32} color="#FFF" onClick={open} />}
-        </div>
-
+      <div className="flex flex-row items-center justify-between bg-tufts-blue px-7 py-3">
         <Link href="/" onClick={close}>
-          <Image src={jumboIcon} width={40} height={40} alt="Jumbo" />
+          <Image src={jumboIcon} width={50} height={50} alt="Jumbo" />
         </Link>
+
+        <div className="cursor-pointer">
+          {menuOpen && <X color="#FFF" size={40} onClick={close} />}
+          {!menuOpen && <List size={40} color="#FFF" onClick={open} />}
+        </div>
       </div>
 
       <div className="absolute w-full">
@@ -56,9 +55,8 @@ export function Nav({ children }: NavProps) {
             !menuOpen && "invisible opacity-0",
           )}
         >
-          <NavLink page="home" href="/" onClick={close} />
-          <NavLink page="rpp" href="/rpp" onClick={close} />
-          <NavLink page="runs" href="/runs" onClick={close} />
+          <NavLink text="Home" iconName="home" href="/" onClick={close} />
+          <NavLink text="Runs" iconName="shoe" href="/runs" onClick={close} />
         </div>
 
         <div className={cn(menuOpen && "invisible opacity-0")}>{children}</div>
@@ -68,13 +66,14 @@ export function Nav({ children }: NavProps) {
 }
 
 interface NavLinkProps {
-  page: string;
+  text: string;
+  iconName: IconName;
   href: string;
   disabled?: boolean;
   onClick: () => void;
 }
 
-function NavLink({ page, href, disabled, onClick }: NavLinkProps) {
+function NavLink({ text, iconName, href, disabled, onClick }: NavLinkProps) {
   const size = 24;
   const color = "#3172AE";
   const weight = "duotone";
@@ -90,14 +89,14 @@ function NavLink({ page, href, disabled, onClick }: NavLinkProps) {
       )}
       onClick={onClick}
     >
-      <CommonIcon name={page} size={size} color={color} weight={weight} />
+      <CommonIcon name={iconName} size={size} color={color} weight={weight} />
       <div
         className={cn(
           disabled && "text-black/20",
           !disabled && "text-black underline-offset-4 group-hover:underline",
         )}
       >
-        {page}
+        {text}
       </div>
     </Link>
   );
