@@ -71,7 +71,7 @@ export default function CollectionPage() {
           />
         </div>
 
-        {loading && <LoadingRunViews numLoading={3} />}
+        {loading && <LoadingRunViews numLoading={10} />}
 
         {!loading && selectedRuns.length === 0 && (
           <div className="text-darkest-white/50 pt-5 text-center text-sm">
