@@ -8,7 +8,6 @@ import { Client } from "@/app/lib/clients/client";
 import { Run } from "@/app/lib/models/run";
 import { RunMap } from "@/app/lib/models/runMap";
 import { cn } from "@/app/lib/utilities/style-utils";
-import { formatDatetimeWithMonthAndYear } from "@/app/lib/utilities/time-utils";
 import { CommonIcon, IconName } from "@/app/widgets/common-icon";
 import { LinkButton } from "@/app/widgets/link-button";
 
@@ -79,6 +78,8 @@ interface RunDetailsProps {
 }
 
 function RunDetails({ run }: RunDetailsProps) {
+  const firstRunYear = run.firstRunYear ? `${run.firstRunYear}` : "Unknown";
+
   return (
     <div className="flex flex-col gap-2">
       <div className="text-lg font-bold">{run.name}</div>
@@ -93,6 +94,11 @@ function RunDetails({ run }: RunDetailsProps) {
         {run.firstRunBy && (
           <RunDetail name="First run by" detail={run.firstRunBy.join(", ")} />
         )}
+        <RunDetail
+          name="First run year"
+          detail={firstRunYear}
+          iconName="calendar-plus"
+        />
         {run.description && (
           <RunDetail
             name="Description"
@@ -103,11 +109,6 @@ function RunDetails({ run }: RunDetailsProps) {
         {run.lore && (
           <RunDetail name="Lore" detail={run.lore} iconName="book" />
         )}
-        <RunDetail
-          name="Added"
-          detail={formatDatetimeWithMonthAndYear(new Date(run.createdAt))}
-          iconName="calendar-plus"
-        />
       </div>
     </div>
   );

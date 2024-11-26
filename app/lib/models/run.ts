@@ -7,7 +7,7 @@ export type Run = {
   description: string | null;
   lore: string | null;
   firstRunBy: string[] | null;
-  earliestRecordedYear: number | null;
+  firstRunYear: number | null;
   createdAt: string;
   updatedAt: string;
 };
