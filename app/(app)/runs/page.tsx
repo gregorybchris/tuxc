@@ -11,6 +11,7 @@ import { runMatchesSearch } from "@/app/lib/utilities/search-utils";
 import {
   getRunsByCreated,
   getRunsByDistance,
+  getRunsByName,
 } from "@/app/lib/utilities/sort-utils";
 import { LinkButton } from "@/app/widgets/link-button";
 import { Textbox } from "@/app/widgets/textbox";
@@ -38,7 +39,7 @@ export default function RunsPage() {
 
   let selectedRuns = runs.filter((run) => runMatchesSearch(run, searchText));
   if (sortValue === "Alphabetical") {
-    selectedRuns.sort((a, b) => a.name.localeCompare(b.name));
+    selectedRuns = getRunsByName(selectedRuns);
   } else if (sortValue === "Recently added") {
     selectedRuns = getRunsByCreated(selectedRuns);
   } else if (sortValue === "Distance") {
