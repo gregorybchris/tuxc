@@ -23,7 +23,7 @@ export function SortDropdown({ value, setValue, choices }: SortDropdownProps) {
       </Select.Trigger>
 
       <Select.Portal>
-        <Select.Content className="overflow-hidden rounded-md bg-white">
+        <Select.Content className="overflow-hidden rounded-md bg-black/5">
           <Select.ScrollUpButton className="flex h-6 cursor-default items-center justify-center bg-white text-black/20">
             <CaretUp size={16} />
           </Select.ScrollUpButton>
@@ -61,7 +61,7 @@ function SelectItem({
   return (
     <Select.Item
       className={cn(
-        "relative flex h-6 select-none items-center rounded pl-6 pr-9 font-manrope text-sm leading-none text-black/90 data-[disabled]:pointer-events-none data-[highlighted]:bg-black/30 data-[disabled]:text-stone-800 data-[highlighted]:text-white data-[highlighted]:outline-none",
+        "data-[highlighted]:bg-light-blue relative flex h-6 select-none items-center rounded pl-6 pr-9 font-manrope text-sm leading-none text-black/90 data-[disabled]:pointer-events-none data-[disabled]:text-stone-800 data-[highlighted]:text-white data-[highlighted]:outline-none",
         className,
       )}
       value={value}

@@ -47,30 +47,31 @@ export default function CollectionPage() {
 
   return (
     <div className="h-full w-full px-5 py-10 md:px-20 md:py-20">
-      <div className="flex w-full flex-col items-center gap-8 md:items-start">
+      <div className="flex w-full flex-col items-center gap-5 md:items-start">
         <div className="flex w-full flex-col items-center text-xl">
           <div>TUXC Run Preservation Project</div>
         </div>
-        <LinkButton text="About the Project" href="/rpp" iconName="runner" />
-        <div className="flex flex-col flex-wrap items-center gap-3 md:flex-row">
-          <Textbox
-            value={searchText}
-            onChange={setSearchText}
-            id="search"
-            name="search"
-            placeholder="Search"
-            required
-            icon="search"
-            className="w-full md:w-[300px]"
-          />
+        <div className="flex w-full flex-col items-center gap-2 px-10 md:items-start md:px-0">
+          <LinkButton text="About the Project" href="/rpp" iconName="runner" />
+          <div className="flex w-full flex-col items-center gap-3 md:flex-row">
+            <Textbox
+              value={searchText}
+              onChange={setSearchText}
+              id="search"
+              name="search"
+              placeholder="Search"
+              required
+              icon="search"
+              className="w-full md:w-[300px]"
+            />
 
-          <SortDropdown
-            value={sortValue}
-            setValue={setSortValue}
-            choices={["Alphabetical", "Recently added"]}
-          />
+            <SortDropdown
+              value={sortValue}
+              setValue={setSortValue}
+              choices={["Alphabetical", "Recently added"]}
+            />
+          </div>
         </div>
-
         {loading && <LoadingRunViews numLoading={10} />}
 
         {!loading && selectedRuns.length === 0 && (
