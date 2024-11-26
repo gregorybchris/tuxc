@@ -8,7 +8,7 @@ export default function SplashPage() {
           Tufts University Cross Country
         </div>
 
-        <span>
+        <span className="text-justify indent-4">
           tuxc.org is an athlete-run site for cross country at Tufts. Currently
           this site is just the home of the TUXC Run Preservation Project, an
           initiative to document and preserve the rich history of the
