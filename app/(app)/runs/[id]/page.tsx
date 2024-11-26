@@ -39,13 +39,12 @@ export default function RunPage({ params }: { params: { id: number } }) {
     <div className="bg-background flex h-full w-full flex-row">
       <div className="flex h-full w-full flex-col py-5 md:py-8">
         {loading && (
-          <div className="flex flex-col gap-3 px-2 md:px-2">
-            <div className="flex flex-row gap-3">
-              <LoadingBox className="h-48 w-64" />
-              <LoadingBox className="h-48 w-64" />
-              <LoadingBox className="h-48 w-64" />
+          <div className="flex w-full flex-col items-center">
+            <div className="flex w-full flex-col gap-3 px-2 md:w-[80%] md:px-2">
+              <LoadingBox className="h-12 w-full" />
+              <LoadingBox className="h-40 w-full" />
+              <LoadingBox className="h-[400px] w-full" />
             </div>
-            <LoadingBox className="h-[100px] w-full md:h-[300px] md:w-[500px]" />
           </div>
         )}
 

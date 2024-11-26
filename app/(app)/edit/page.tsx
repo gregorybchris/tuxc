@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { LoadingRunViews } from "@/app/components/loading-run-views";
+import { LoadingBox } from "@/app/components/loading-box";
 import { Client } from "@/app/lib/clients/client";
 import { Run } from "@/app/lib/models/run";
 import { Button } from "@/app/widgets/button";
@@ -40,7 +40,14 @@ export default function EditPage() {
         <div className="flex w-full flex-col items-center text-xl">
           <div className="text-xl font-bold text-black/60">Edit</div>
         </div>
-        {loading && <LoadingRunViews numLoading={10} />}
+        {loading && (
+          <div className="flex w-full flex-col items-center">
+            <div className="flex w-full flex-col gap-3 px-2 md:w-[400px] md:px-2">
+              <LoadingBox className="h-12 w-full" />
+              <LoadingBox className="h-40 w-full" />
+            </div>
+          </div>
+        )}
 
         {!loading && (
           <div className="flex w-full flex-col items-center gap-6">
