@@ -73,6 +73,10 @@ export default function RunPage({ params }: { params: { id: number } }) {
   );
 }
 
+interface RunDetailsProps {
+  run: Run;
+}
+
 function RunDetails({ run }: RunDetailsProps) {
   return (
     <div className="flex flex-col gap-1">
