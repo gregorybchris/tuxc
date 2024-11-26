@@ -26,7 +26,8 @@ export function generateThumbnail(runMap: RunMap, svg: SVGSVGElement): void {
   const maxY = Math.max(...vectors.map((v) => v.y));
   const width = maxX - minX;
   const height = maxY - minY;
-  const padding = 500;
+
+  const padding = width / 1.9;
 
   const viewBox = `${minX - padding} ${minY - padding} ${width + padding * 2} ${height + padding * 2}`;
 
@@ -35,7 +36,7 @@ export function generateThumbnail(runMap: RunMap, svg: SVGSVGElement): void {
   svg.setAttribute("height", `${height}`);
   svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
 
-  svg.style.width = "200px";
+  svg.style.width = "150px";
   svg.style.height = "100px";
   svg.style.backgroundColor = "#5E4B3C";
   svg.style.borderRadius = "5px";
@@ -45,9 +46,12 @@ export function generateThumbnail(runMap: RunMap, svg: SVGSVGElement): void {
     "d",
     vectors.map((v, i) => `${i === 0 ? "M" : "L"}${v.x},${v.y}`).join(" "),
   );
+
+  const strokeWidth = Math.min(height, width) / 12;
+
   path.style.fill = "none";
   path.style.stroke = "#4B87F7";
-  path.style.strokeWidth = "200";
+  path.style.strokeWidth = `${strokeWidth}px`;
   path.style.strokeLinejoin = "round";
   path.style.strokeLinecap = "round";
   svg.appendChild(path);

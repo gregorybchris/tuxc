@@ -7,7 +7,6 @@ import { RunMapView } from "@/app/components/run-map-view";
 import { Client } from "@/app/lib/clients/client";
 import { Run } from "@/app/lib/models/run";
 import { RunMap } from "@/app/lib/models/runMap";
-import { generateThumbnail } from "@/app/lib/thumbnail/thumbnail-generator";
 import { cn } from "@/app/lib/utilities/style-utils";
 import { CommonIcon, IconName } from "@/app/widgets/common-icon";
 import { InitialsBadge } from "@/app/widgets/initials";
@@ -17,7 +16,7 @@ export default function RunPage({ params }: { params: { id: number } }) {
   const [loading, setLoading] = useState(true);
   const [run, setRun] = useState<Run>();
   const [runMap, setRunMap] = useState<RunMap>();
-  const thumbnailRef = useRef<SVGSVGElement | null>(null);
+
   const client = useRef(new Client());
 
   useEffect(() => {
@@ -35,18 +34,6 @@ export default function RunPage({ params }: { params: { id: number } }) {
       });
     });
   }
-  useEffect(() => {
-    const svg = thumbnailRef.current;
-    if (!svg) return;
-
-    if (!runMap) return;
-
-    while (svg.firstChild) {
-      svg.removeChild(svg.firstChild);
-    }
-
-    generateThumbnail(runMap, svg);
-  }, [runMap]);
 
   return (
     <div className="bg-background flex h-full w-full flex-row">
@@ -74,8 +61,6 @@ export default function RunPage({ params }: { params: { id: number } }) {
 
                 <RunDetails run={run} />
               </div>
-
-              {/* <svg ref={thumbnailRef} /> */}
 
               <div className="flex flex-col items-center">
                 <div className="h-[500px] w-full">
