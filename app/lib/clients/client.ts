@@ -21,25 +21,25 @@ export class Client extends ClientBase {
       name: name,
     };
     const responseJson: PostRunResponse = await this.post("/runs", requestBody);
-    return responseJson.run;
+    return responseJson;
   }
 
   async getRuns(): Promise<Run[]> {
     const responseJson: GetRunsResponse = await this.get("/runs");
-    return responseJson.runs;
+    return responseJson;
   }
 
   async getRun(id: number): Promise<Run> {
     const responseJson: GetRunResponse = await this.get(`/runs/${id}`);
-    return responseJson.run;
+    return responseJson;
   }
 
   async getRunMaps(): Promise<RunMap[]> {
     const responseJson: GetRunMapsResponse = await this.get(`/runs/maps`);
-    return responseJson.runMaps;
+    return responseJson;
   }
   async getRunMap(id: number): Promise<RunMap> {
     const responseJson: GetRunMapResponse = await this.get(`/runs/${id}/map`);
-    return responseJson.runMap;
+    return responseJson;
   }
 }

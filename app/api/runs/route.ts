@@ -8,9 +8,7 @@ export type PostRunRequest = {
   name: string;
 };
 
-export type PostRunResponse = {
-  run: Run;
-};
+export type PostRunResponse = Run;
 
 export async function POST(
   req: Request,
@@ -19,9 +17,7 @@ export async function POST(
   return NextResponse.json({ error: "Not supported" }, { status: 500 });
 }
 
-export type GetRunsResponse = {
-  runs: Run[];
-};
+export type GetRunsResponse = Run[];
 
 export async function GET(
   req: Request,
@@ -33,5 +29,5 @@ export async function GET(
       runsWithMaps.push(run);
     }
   }
-  return NextResponse.json({ runs: runsWithMaps });
+  return NextResponse.json(runsWithMaps);
 }

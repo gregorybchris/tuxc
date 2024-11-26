@@ -3,9 +3,7 @@ import { NextResponse } from "next/server";
 import { MAPS } from "../maps";
 import runs from "../runs.json";
 
-export type GetRunMapsResponse = {
-  runMaps: RunMap[];
-};
+export type GetRunMapsResponse = RunMap[];
 
 export async function GET(
   req: Request,
@@ -17,5 +15,5 @@ export async function GET(
       runMapsWithRuns.push(runMap);
     }
   }
-  return NextResponse.json({ runMaps: runMapsWithRuns });
+  return NextResponse.json(runMapsWithRuns);
 }

@@ -8,9 +8,7 @@ type GetRunMapParams = {
   params: { id: string };
 };
 
-export type GetRunMapResponse = {
-  runMap: RunMap;
-};
+export type GetRunMapResponse = RunMap;
 
 export async function GET(
   req: Request,
@@ -31,5 +29,5 @@ export async function GET(
       { status: 404 },
     );
   }
-  return NextResponse.json({ runMap });
+  return NextResponse.json(runMap);
 }

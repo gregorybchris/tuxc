@@ -7,9 +7,7 @@ type GetRunParams = {
   params: { id: string };
 };
 
-export type GetRunResponse = {
-  run: Run;
-};
+export type GetRunResponse = Run;
 
 export async function GET(
   req: Request,
@@ -20,5 +18,5 @@ export async function GET(
   if (!run) {
     return NextResponse.json({ error: "Run not found" }, { status: 404 });
   }
-  return NextResponse.json({ run });
+  return NextResponse.json(run);
 }
