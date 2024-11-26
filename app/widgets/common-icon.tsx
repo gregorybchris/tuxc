@@ -7,6 +7,7 @@ import {
   IconWeight,
   PersonSimpleRun,
   SneakerMove,
+  TextAa,
 } from "@phosphor-icons/react";
 
 import { HouseLine, QuestionMark } from "@phosphor-icons/react";
@@ -20,7 +21,8 @@ export type IconName =
   | "ruler"
   | "globe"
   | "book"
-  | "calendar-plus";
+  | "calendar-plus"
+  | "letters";
 
 interface CommonIconProps {
   name: IconName;
@@ -62,6 +64,9 @@ export function CommonIcon({
     }
     case "calendar-plus": {
       return <CalendarPlus {...props} />;
+    }
+    case "letters": {
+      return <TextAa {...props} />;
     }
     default: {
       return <QuestionMark {...props} />;

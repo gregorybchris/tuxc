@@ -4,9 +4,10 @@ export type Run = {
   slug: string;
   region: string;
   distance: number;
-  lore: string;
-  firstRunBy: string | null;
-  firstRunAround: string | null;
+  description: string | null;
+  lore: string | null;
+  firstRunBy: string[] | null;
+  earliestRecordedYear: number | null;
   createdAt: string;
   updatedAt: string;
 };

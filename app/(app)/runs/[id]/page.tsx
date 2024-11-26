@@ -91,7 +91,14 @@ function RunDetails({ run }: RunDetailsProps) {
         />
         <RunDetail name="Region" detail={run.region} iconName="globe" />
         {run.firstRunBy && (
-          <RunDetail name="First run by" detail={run.firstRunBy} />
+          <RunDetail name="First run by" detail={run.firstRunBy.join(", ")} />
+        )}
+        {run.description && (
+          <RunDetail
+            name="Description"
+            detail={run.description}
+            iconName="letters"
+          />
         )}
         {run.lore && (
           <RunDetail name="Lore" detail={run.lore} iconName="book" />
