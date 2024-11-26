@@ -169,21 +169,23 @@ function RunDetail({ name, detail, iconName, className }: RunDetailProps) {
         className,
       )}
     >
-      {iconName && (
-        <CommonIcon
-          name={iconName}
-          className="h-4 w-4 shrink-0"
-          size={16}
-          color="#3172AE"
-          weight="duotone"
-        />
-      )}
-      {name && (
-        <div className="flex flex-row gap-2">
-          <span className="font-bold text-black/60">{name}</span>
-          <span className="text-black/20">•</span>
-        </div>
-      )}
+      <div className="flex flex-row items-center gap-2">
+        {iconName && (
+          <CommonIcon
+            name={iconName}
+            className="h-4 w-4 shrink-0"
+            size={16}
+            color="#3172AE"
+            weight="duotone"
+          />
+        )}
+        {name && (
+          <div className="flex flex-row gap-2">
+            <span className="font-bold text-black/60">{name}</span>
+            <span className="text-black/20">•</span>
+          </div>
+        )}
+      </div>
       <span>{detail}</span>
     </div>
   );
