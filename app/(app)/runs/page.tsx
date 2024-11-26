@@ -2,9 +2,9 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import { Dropdown } from "@/app/components/dropdown";
 import { LoadingRunViews } from "@/app/components/loading-run-views";
 import { RunView } from "@/app/components/run-view";
-import { SortDropdown } from "@/app/components/sort-dropdown";
 import { Client } from "@/app/lib/clients/client";
 import { Run } from "@/app/lib/models/run";
 import { runMatchesSearch } from "@/app/lib/utilities/search-utils";
@@ -69,7 +69,7 @@ export default function RunsPage() {
               className="w-full md:w-[300px]"
             />
 
-            <SortDropdown
+            <Dropdown
               value={sortValue}
               setValue={setSortValue}
               choices={["Alphabetical", "Distance", "Recently added"]}

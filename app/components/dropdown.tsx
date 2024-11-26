@@ -5,13 +5,13 @@ import { ReactNode } from "react";
 
 import { cn } from "../lib/utilities/style-utils";
 
-interface SortDropdownProps {
+interface DropdownProps {
   value: string;
   setValue: (value: string) => void;
   choices: string[];
 }
 
-export function SortDropdown({ value, setValue, choices }: SortDropdownProps) {
+export function Dropdown({ value, setValue, choices }: DropdownProps) {
   return (
     <Select.Root value={value} onValueChange={setValue}>
       <Select.Trigger className="text-near-white data-[placeholder]:text-near-white inline-flex h-9 items-center justify-center gap-2 rounded px-4 text-sm leading-none outline-none transition-all focus:shadow-black">
