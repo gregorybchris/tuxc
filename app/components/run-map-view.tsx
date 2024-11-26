@@ -1,16 +1,14 @@
 import { useEffect, useRef } from "react";
 import Map, { Layer, MapRef, Source } from "react-map-gl";
-import { Run } from "../lib/models/run";
 import { RunMap } from "../lib/models/runMap";
 import { cn } from "../lib/utilities/style-utils";
 
 interface RunMapViewProps {
-  run: Run;
   runMap: RunMap;
   className?: string;
 }
 
-export function RunMapView({ run, runMap, className }: RunMapViewProps) {
+export function RunMapView({ runMap, className }: RunMapViewProps) {
   const mapRef = useRef<MapRef>(null);
 
   const minLat = Math.min(...runMap.points.map((p) => p.latitude));

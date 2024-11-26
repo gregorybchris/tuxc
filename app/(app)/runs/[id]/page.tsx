@@ -9,6 +9,7 @@ import { Run } from "@/app/lib/models/run";
 import { RunMap } from "@/app/lib/models/runMap";
 import { cn } from "@/app/lib/utilities/style-utils";
 import { formatDatetimeWithMonthAndYear } from "@/app/lib/utilities/time-utils";
+import { CommonIcon, IconName } from "@/app/widgets/common-icon";
 import { LinkButton } from "@/app/widgets/link-button";
 
 export default function RunPage({ params }: { params: { id: number } }) {
@@ -62,7 +63,7 @@ export default function RunPage({ params }: { params: { id: number } }) {
 
               <div className="flex flex-col items-center">
                 <div className="h-[500px] w-full">
-                  <RunMapView run={run} runMap={runMap} />
+                  <RunMapView runMap={runMap} />
                 </div>
               </div>
             </div>
@@ -79,18 +80,28 @@ interface RunDetailsProps {
 
 function RunDetails({ run }: RunDetailsProps) {
   return (
-    <div className="flex flex-col gap-1">
-      <RunDetail detail={run.name} className="text-lg font-bold" />
-      <RunDetail name="Distance" detail={`${run.distance} mi`} />
-      <RunDetail name="Region" detail={run.region} />
-      {run.firstRunBy && (
-        <RunDetail name="First run by" detail={run.firstRunBy} />
-      )}
-      {run.lore && <RunDetail name="Lore" detail={run.lore} />}
-      <RunDetail
-        name="Added"
-        detail={formatDatetimeWithMonthAndYear(new Date(run.createdAt))}
-      />
+    <div className="flex flex-col gap-2">
+      <div className="text-lg font-bold">{run.name}</div>
+
+      <div className="flex flex-col gap-1">
+        <RunDetail
+          name="Distance"
+          detail={`${run.distance} mi`}
+          iconName="ruler"
+        />
+        <RunDetail name="Region" detail={run.region} iconName="globe" />
+        {run.firstRunBy && (
+          <RunDetail name="First run by" detail={run.firstRunBy} />
+        )}
+        {run.lore && (
+          <RunDetail name="Lore" detail={run.lore} iconName="book" />
+        )}
+        <RunDetail
+          name="Added"
+          detail={formatDatetimeWithMonthAndYear(new Date(run.createdAt))}
+          iconName="calendar-plus"
+        />
+      </div>
     </div>
   );
 }
@@ -98,14 +109,34 @@ function RunDetails({ run }: RunDetailsProps) {
 interface RunDetailProps {
   name?: string;
   detail: string;
+  iconName?: IconName;
   className?: string;
 }
 
-function RunDetail({ name, detail, className }: RunDetailProps) {
+function RunDetail({ name, detail, iconName, className }: RunDetailProps) {
   return (
-    <div className={cn("w-full text-sm", className)}>
-      {name && <span className="font-bold">{name}: </span>}
-      <span className="">{detail}</span>
+    <div
+      className={cn(
+        "flex w-full flex-row items-center gap-2 text-sm",
+        className,
+      )}
+    >
+      {iconName && (
+        <CommonIcon
+          name={iconName}
+          className="h-4 w-4"
+          size={16}
+          color="#3172AE"
+          weight="duotone"
+        />
+      )}
+      {name && (
+        <div className="flex flex-row gap-2">
+          <span className="font-bold text-black/60">{name}</span>
+          <span className="text-black/20">•</span>
+        </div>
+      )}
+      <span>{detail}</span>
     </div>
   );
 }

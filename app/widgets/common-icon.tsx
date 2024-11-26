@@ -1,38 +1,70 @@
 "use client";
 import {
   ArrowArcLeft,
+  BookOpenText,
+  CalendarPlus,
+  GlobeHemisphereWest,
   IconWeight,
   PersonSimpleRun,
   SneakerMove,
 } from "@phosphor-icons/react";
 
 import { HouseLine, QuestionMark } from "@phosphor-icons/react";
+import { Ruler } from "@phosphor-icons/react/dist/ssr";
 
-export type IconName = "home" | "runner" | "shoe" | "back";
+export type IconName =
+  | "home"
+  | "runner"
+  | "shoe"
+  | "back"
+  | "ruler"
+  | "globe"
+  | "book"
+  | "calendar-plus";
 
-interface PageIconProps {
+interface CommonIconProps {
   name: IconName;
   size: number;
   color: string;
   weight: IconWeight;
+  className?: string;
 }
 
-export function CommonIcon({ name, size, color, weight }: PageIconProps) {
+export function CommonIcon({
+  name,
+  size,
+  color,
+  weight,
+  className,
+}: CommonIconProps) {
+  const props = { size, color, weight, className };
   switch (name) {
     case "home": {
-      return <HouseLine size={size} color={color} weight={weight} />;
+      return <HouseLine {...props} />;
     }
     case "runner": {
-      return <PersonSimpleRun size={size} color={color} weight={weight} />;
+      return <PersonSimpleRun {...props} />;
     }
     case "shoe": {
-      return <SneakerMove size={size} color={color} weight={weight} />;
+      return <SneakerMove {...props} />;
     }
     case "back": {
-      return <ArrowArcLeft size={size} color={color} weight={weight} />;
+      return <ArrowArcLeft {...props} />;
+    }
+    case "ruler": {
+      return <Ruler {...props} />;
+    }
+    case "globe": {
+      return <GlobeHemisphereWest {...props} />;
+    }
+    case "book": {
+      return <BookOpenText {...props} />;
+    }
+    case "calendar-plus": {
+      return <CalendarPlus {...props} />;
     }
     default: {
-      return <QuestionMark size={size} color={color} weight={weight} />;
+      return <QuestionMark {...props} />;
     }
   }
 }
