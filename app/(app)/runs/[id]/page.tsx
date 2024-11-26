@@ -82,12 +82,12 @@ function RunDetails({ run }: RunDetailsProps) {
   const firstRunYear = run.firstRunYear ? `${run.firstRunYear}` : "Unknown";
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-4">
       <a href={run.mapLink} target="_blank">
         <div className="text-lg font-bold">{run.name}</div>
       </a>
 
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col gap-2">
         <RunDetail
           name="Distance"
           detail={
@@ -104,14 +104,15 @@ function RunDetails({ run }: RunDetailsProps) {
         {run.firstRunBy && (
           <RunDetail
             name="First run by"
-            detail={
-              <div className="flex flex-row gap-1">
-                {run.firstRunBy.map((initials) => (
-                  <InitialsBadge initials={initials} />
-                ))}
-              </div>
-            }
+            detail={<InitialsList initialsList={run.firstRunBy} />}
             iconName="medal"
+          />
+        )}
+        {run.contributors && (
+          <RunDetail
+            name="Contributors"
+            detail={<InitialsList initialsList={run.contributors} />}
+            iconName="user-plus"
           />
         )}
         {run.description && (
@@ -119,6 +120,7 @@ function RunDetails({ run }: RunDetailsProps) {
             name="Description"
             detail={run.description}
             iconName="letters"
+            className="items-start"
           />
         )}
         {run.lore && (
@@ -130,6 +132,20 @@ function RunDetails({ run }: RunDetailsProps) {
           />
         )}
       </div>
+    </div>
+  );
+}
+
+interface InitialsListProps {
+  initialsList: string[];
+}
+
+function InitialsList({ initialsList }: InitialsListProps) {
+  return (
+    <div className="flex flex-row gap-1">
+      {initialsList.map((initials) => (
+        <InitialsBadge initials={initials} />
+      ))}
     </div>
   );
 }
