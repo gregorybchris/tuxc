@@ -4,6 +4,7 @@ export type Run = {
   slug: string;
   area: string;
   distance: number;
+  includesTrail: boolean;
   description: string | null;
   lore: string | null;
   editors: string[] | null;
