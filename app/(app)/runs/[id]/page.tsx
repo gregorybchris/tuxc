@@ -148,7 +148,7 @@ function InitialsList({ initialsList }: InitialsListProps) {
   return (
     <div className="flex flex-row gap-1">
       {initialsList.map((initials) => (
-        <InitialsBadge initials={initials} />
+        <InitialsBadge initials={initials} key={initials} />
       ))}
     </div>
   );
