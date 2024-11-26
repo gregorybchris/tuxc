@@ -23,7 +23,7 @@ export function SortDropdown({ value, setValue, choices }: SortDropdownProps) {
       </Select.Trigger>
 
       <Select.Portal>
-        <Select.Content className="overflow-hidden rounded-md bg-black/5">
+        <Select.Content className="overflow-hidden rounded-md bg-neutral-100">
           <Select.ScrollUpButton className="flex h-6 cursor-default items-center justify-center bg-white text-black/20">
             <CaretUp size={16} />
           </Select.ScrollUpButton>

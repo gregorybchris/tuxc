@@ -10,7 +10,7 @@ import { Run } from "@/app/lib/models/run";
 import { runMatchesSearch } from "@/app/lib/utilities/search-utils";
 import {
   getRunsByCreated,
-  getRunsByUpdated,
+  getRunsByDistance,
 } from "@/app/lib/utilities/sort-utils";
 import { LinkButton } from "@/app/widgets/link-button";
 import { Textbox } from "@/app/widgets/textbox";
@@ -41,8 +41,8 @@ export default function RunsPage() {
     selectedRuns.sort((a, b) => a.name.localeCompare(b.name));
   } else if (sortValue === "Recently added") {
     selectedRuns = getRunsByCreated(selectedRuns);
-  } else if (sortValue === "Recently updated") {
-    selectedRuns = getRunsByUpdated(selectedRuns);
+  } else if (sortValue === "Distance") {
+    selectedRuns = getRunsByDistance(selectedRuns);
   }
 
   return (
@@ -71,7 +71,7 @@ export default function RunsPage() {
             <SortDropdown
               value={sortValue}
               setValue={setSortValue}
-              choices={["Alphabetical", "Recently added"]}
+              choices={["Alphabetical", "Distance", "Recently added"]}
             />
           </div>
         </div>

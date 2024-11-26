@@ -7,3 +7,7 @@ export function getRunsByCreated(runs: Run[]): Run[] {
 export function getRunsByUpdated(runs: Run[]): Run[] {
   return [...runs].sort((a, b) => (b.updatedAt < a.updatedAt ? -1 : 1));
 }
+
+export function getRunsByDistance(runs: Run[]): Run[] {
+  return [...runs].sort((a, b) => (a.distance < b.distance ? -1 : 1));
+}
