@@ -2,13 +2,15 @@ import { LinkButton } from "./widgets/link-button";
 
 export default function SplashPage() {
   return (
-    <div className="h-full w-full px-5 py-20 md:px-20 md:py-28">
+    <div className="h-full w-full px-5 py-10 md:px-20 md:py-16">
       <div className="flex flex-col items-center justify-center gap-6">
         <span className="text-xl">Tufts University Cross Country</span>
 
         <span>
-          tuxc.org is the athlete-run home for cross country at Tufts. The site
-          is not affiliated with the university.
+          tuxc.org is an athlete-run site for cross country at Tufts. Currently
+          this site is just the home of the TUXC Run Preservation Project, an
+          initiative to document and preserve the history of running routes on
+          the team over the years. Click the link below to explore the archive.
         </span>
 
         <LinkButton
