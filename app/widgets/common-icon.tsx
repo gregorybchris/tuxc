@@ -5,6 +5,7 @@ import {
   CalendarPlus,
   GlobeHemisphereWest,
   IconWeight,
+  Medal,
   PersonSimpleRun,
   SneakerMove,
   TextAa,
@@ -22,7 +23,8 @@ export type IconName =
   | "globe"
   | "book"
   | "calendar-plus"
-  | "letters";
+  | "letters"
+  | "medal";
 
 interface CommonIconProps {
   name: IconName;
@@ -67,6 +69,9 @@ export function CommonIcon({
     }
     case "letters": {
       return <TextAa {...props} />;
+    }
+    case "medal": {
+      return <Medal {...props} />;
     }
     default: {
       return <QuestionMark {...props} />;

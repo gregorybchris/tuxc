@@ -92,7 +92,11 @@ function RunDetails({ run }: RunDetailsProps) {
         />
         <RunDetail name="Region" detail={run.region} iconName="globe" />
         {run.firstRunBy && (
-          <RunDetail name="First run by" detail={run.firstRunBy.join(", ")} />
+          <RunDetail
+            name="First run by"
+            detail={run.firstRunBy.join(", ")}
+            iconName="medal"
+          />
         )}
         <RunDetail
           name="First run year"
