@@ -52,7 +52,8 @@ export default function RunsPage() {
           <div>TUXC Run Preservation Project</div>
         </div>
         <div className="flex w-full flex-col items-center gap-2 px-10 md:items-start md:px-0">
-          <LinkButton text="About the Project" href="/rpp" iconName="info" />
+          <LinkButton text="About the project" href="/rpp" iconName="info" />
+          <LinkButton text="Make an edit" href="/edit" iconName="pencil" />
           <div className="flex w-full flex-col items-center gap-3 md:flex-row">
             <Textbox
               value={searchText}

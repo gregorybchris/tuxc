@@ -108,10 +108,10 @@ function RunDetails({ run }: RunDetailsProps) {
             iconName="medal"
           />
         )}
-        {run.contributors && (
+        {run.editors && (
           <RunDetail
-            name="Contributors"
-            detail={<InitialsList initialsList={run.contributors} />}
+            name="Editors"
+            detail={<InitialsList initialsList={run.editors} />}
             iconName="user-plus"
           />
         )}

@@ -7,6 +7,7 @@ import {
   IconWeight,
   Info,
   Medal,
+  Pencil,
   PersonSimpleRun,
   SneakerMove,
   TextAa,
@@ -28,7 +29,8 @@ export type IconName =
   | "letters"
   | "medal"
   | "info"
-  | "user-plus";
+  | "user-plus"
+  | "pencil";
 
 interface CommonIconProps {
   name: IconName;
@@ -82,6 +84,9 @@ export function CommonIcon({
     }
     case "user-plus": {
       return <UserPlus {...props} />;
+    }
+    case "pencil": {
+      return <Pencil {...props} />;
     }
     default: {
       return <QuestionMark {...props} />;
