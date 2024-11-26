@@ -15,7 +15,7 @@ import {
 import { LinkButton } from "@/app/widgets/link-button";
 import { Textbox } from "@/app/widgets/textbox";
 
-export default function CollectionPage() {
+export default function RunsPage() {
   const [loading, setLoading] = useState(true);
   const [searchText, setSearchText] = useState("");
   const [runs, setRuns] = useState<Run[]>([]);
