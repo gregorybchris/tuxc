@@ -56,7 +56,7 @@ export default function RunsPage() {
         </div>
         <div className="flex w-full flex-col items-center gap-2 px-10 md:items-start md:px-0">
           <LinkButton text="About the project" href="/rpp" iconName="info" />
-          <LinkButton text="Make an edit" href="/edit" iconName="pencil" />
+          {/* <LinkButton text="Make an edit" href="/edit" iconName="pencil" /> */}
           <div className="flex w-full flex-col items-center gap-3 md:flex-row">
             <Textbox
               value={searchText}

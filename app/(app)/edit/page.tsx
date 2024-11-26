@@ -2,19 +2,15 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import { EditForm } from "@/app/components/edit-form";
 import { LoadingBox } from "@/app/components/loading-box";
 import { Client } from "@/app/lib/clients/client";
 import { Run } from "@/app/lib/models/run";
-import { Button } from "@/app/widgets/button";
-import { Textbox } from "@/app/widgets/textbox";
 
 export default function EditPage() {
   const [loading, setLoading] = useState(true);
   const [runs, setRuns] = useState<Run[]>([]);
   const client = useRef(new Client());
-  const [descriptionText, setDescriptionText] = useState("");
-  const [loreText, setLoreText] = useState("");
-  const [somethingElseText, setSomethingElseText] = useState("");
 
   useEffect(() => {
     fetchRuns();
@@ -30,15 +26,11 @@ export default function EditPage() {
     });
   }
 
-  function onSubmit() {
-    // Do something with the text values
-  }
-
   return (
     <div className="h-full w-full px-5 py-10 md:px-20 md:py-20">
       <div className="flex w-full flex-col items-center gap-5 md:items-start">
         <div className="flex w-full flex-col items-center text-xl">
-          <div className="text-xl font-bold text-black/60">Edit</div>
+          <div className="text-xl font-bold text-black/60">Submit a Run</div>
         </div>
         {loading && (
           <div className="flex w-full flex-col items-center">
@@ -51,28 +43,35 @@ export default function EditPage() {
 
         {!loading && (
           <div className="flex w-full flex-col items-center gap-6">
-            <div>To edit a run, fill out some or all of the fields below.</div>
-            <div className="flex w-full flex-col gap-3 md:w-[400px]">
-              <Textbox
-                value={descriptionText}
-                onChange={setDescriptionText}
-                placeholder="Description"
-              />
-              <Textbox
-                value={loreText}
-                onChange={setLoreText}
-                placeholder="Lore"
-              />
-              <Textbox
-                value={somethingElseText}
-                onChange={setSomethingElseText}
-                placeholder="Something else?"
-              />
-              <Button onClick={onSubmit} text="Submit" />
+            <div className="w-full md:w-[500px]">
+              <div className="text-justify indent-4">
+                When you submit a run, site maintainers will review your request
+                and update the run archive. If you would like expedite future
+                edits you can send an email to{" "}
+                <EmailLink email="tuxc.org@gmail.com" /> with your GitHub
+                account name to become a site maintainer.
+              </div>
             </div>
+
+            <EditForm />
           </div>
         )}
       </div>
     </div>
+  );
+}
+
+interface EmailLinkProps {
+  email: string;
+}
+
+function EmailLink({ email }: EmailLinkProps) {
+  return (
+    <a
+      href={`mailto:${email}`}
+      className="text-tufts-blue transition-all hover:text-tufts-brown"
+    >
+      {email}
+    </a>
   );
 }
