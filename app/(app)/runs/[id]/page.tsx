@@ -83,9 +83,12 @@ function RunDetails({ run }: RunDetailsProps) {
 
   return (
     <div className="flex flex-col gap-4">
-      <a href={run.mapLink} target="_blank">
-        <div className="text-lg font-bold">{run.name}</div>
-      </a>
+      <div className="flex w-full flex-row items-center justify-between gap-3">
+        <a href={run.mapLink} target="_blank">
+          <div className="text-lg font-bold">{run.name}</div>
+        </a>
+        <LinkButton text="Edit" href="/edit" iconName="pencil" />
+      </div>
 
       <div className="flex flex-col gap-2">
         <RunDetail
