@@ -76,7 +76,7 @@ export default function RunsPage() {
             />
           </div>
         </div>
-        {loading && <LoadingRunViews numLoading={10} />}
+        {loading && <LoadingRunViews numLoading={12} />}
 
         {!loading && selectedRuns.length === 0 && (
           <div className="text-darkest-white/50 pt-5 text-center text-sm">
