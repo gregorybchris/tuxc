@@ -90,20 +90,12 @@ function RunDetails({ run }: RunDetailsProps) {
       <div className="flex flex-col gap-1">
         <RunDetail
           name="Distance"
-          detail={`${run.distance} mi`}
+          detail={
+            <span className="rounded-md bg-tufts-brown/80 px-2 py-0.5 text-white">{`${run.distance} mi`}</span>
+          }
           iconName="ruler"
         />
         <RunDetail name="Area" detail={run.area} iconName="globe" />
-        {run.description && (
-          <RunDetail
-            name="Description"
-            detail={run.description}
-            iconName="letters"
-          />
-        )}
-        {run.lore && (
-          <RunDetail name="Lore" detail={run.lore} iconName="book" />
-        )}
         <RunDetail
           name="First run year"
           detail={firstRunYear}
@@ -120,6 +112,21 @@ function RunDetails({ run }: RunDetailsProps) {
               </div>
             }
             iconName="medal"
+          />
+        )}
+        {run.description && (
+          <RunDetail
+            name="Description"
+            detail={run.description}
+            iconName="letters"
+          />
+        )}
+        {run.lore && (
+          <RunDetail
+            name="Lore"
+            detail={run.lore}
+            iconName="book"
+            className="items-start"
           />
         )}
       </div>
@@ -145,7 +152,7 @@ function RunDetail({ name, detail, iconName, className }: RunDetailProps) {
       {iconName && (
         <CommonIcon
           name={iconName}
-          className="h-4 w-4"
+          className="h-4 w-4 shrink-0"
           size={16}
           color="#3172AE"
           weight="duotone"
