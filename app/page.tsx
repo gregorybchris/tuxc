@@ -4,7 +4,9 @@ export default function SplashPage() {
   return (
     <div className="h-full w-full px-5 py-10 md:px-20 md:py-16">
       <div className="flex flex-col items-center justify-center gap-6">
-        <span className="text-xl">Tufts University Cross Country</span>
+        <div className="text-xl font-bold text-black/60">
+          Tufts University Cross Country
+        </div>
 
         <span>
           tuxc.org is an athlete-run site for cross country at Tufts. Currently

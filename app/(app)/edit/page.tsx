@@ -38,7 +38,7 @@ export default function EditPage() {
     <div className="h-full w-full px-5 py-10 md:px-20 md:py-20">
       <div className="flex w-full flex-col items-center gap-5 md:items-start">
         <div className="flex w-full flex-col items-center text-xl">
-          <div>Edit</div>
+          <div className="text-xl font-bold text-black/60">Edit</div>
         </div>
         {loading && <LoadingRunViews numLoading={10} />}
 

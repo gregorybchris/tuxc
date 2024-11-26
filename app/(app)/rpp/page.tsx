@@ -4,7 +4,7 @@ export default function RppPage() {
   return (
     <div className="flex flex-row justify-center gap-10 px-5 py-20 md:px-32">
       <div className="flex flex-col items-center justify-center gap-10">
-        <span className="text-xl">About the Project</span>
+        <div className="text-xl font-bold text-black/60">About the Project</div>
         <span>
           Welcome to the Run Preservation Project! This initiative was started
           in 2020 by TW with the goal of ensuring the history of our team&apos;s

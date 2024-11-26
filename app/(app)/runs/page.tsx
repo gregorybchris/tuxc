@@ -48,8 +48,10 @@ export default function RunsPage() {
   return (
     <div className="h-full w-full px-5 py-10 md:px-20 md:py-20">
       <div className="flex w-full flex-col items-center gap-5 md:items-start">
-        <div className="flex w-full flex-col items-center text-xl">
-          <div>TUXC Run Preservation Project</div>
+        <div className="flex w-full flex-col items-center">
+          <div className="text-xl font-bold text-black/60">
+            TUXC Run Preservation Project
+          </div>
         </div>
         <div className="flex w-full flex-col items-center gap-2 px-10 md:items-start md:px-0">
           <LinkButton text="About the project" href="/rpp" iconName="info" />
