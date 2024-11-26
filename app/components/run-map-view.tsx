@@ -53,7 +53,7 @@ export function RunMapView({ runMap, className }: RunMapViewProps) {
   const initialViewState = {
     latitude: center.latitude,
     longitude: center.longitude,
-    zoom: 11,
+    zoom: 12,
   };
 
   return (
