@@ -10,42 +10,72 @@
     "editors": ["CG"],
     "firstRunBy": ["VB", "AA", "MB"],
     "firstRunYear": 2015,
-    "createdAt": "2024-11-25T01:00:00.000Z",
+    "createdAt": "2018-06-01T01:00:00.000Z",
     "updatedAt": "2024-11-25T01:00:00.000Z",
     "mapLink": "https://us.mapometer.com/running/route_4287239.html"
   },
   {
     "id": 2,
-    "name": "Woodbine Wiggle",
-    "slug": "woodbine-wiggle",
-    "area": "Medford",
-    "distance": 0.49,
-    "description": "Simplest add-on in the books",
+    "name": "Battle Road",
+    "slug": "battle-road",
+    "area": "Concord",
+    "distance": 5,
+    "description": "Tempo: Patriotic",
     "lore": null,
-    "editors": null,
+    "editors": ["CG"],
     "firstRunBy": null,
     "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
+    "createdAt": "2018-06-01T01:00:00.000Z",
     "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2023+On+The+Go+Map,+OpenStreetMap+Contributors&d=791&f=66c3ffaeb1&n=1&dm=1&context=share&r2=_XxY8jnXoDW1U44EI82Y1U49KKSSm2i2OIu3W1u2EQ21J4d22D6Bg1f3r1d1z4Z319Ve1z2z2Pi1j1q2DO9GHW17GX1X11G33VT"
+    "mapLink": "https://us.mapometer.com/running/route_5228863.html"
   },
   {
     "id": 3,
-    "name": "Chris' Dad's House",
-    "slug": "chris-dads-house",
-    "area": "Medford",
-    "distance": 1,
-    "description": "23B Hancock Ave Extension. Knock on the door, he'll let you pet Tucker -CJT",
-    "lore": null,
-    "editors": ["CJT"],
-    "firstRunBy": ["CJT", "MH"],
-    "firstRunYear": 2021,
-    "createdAt": "2024-11-25T01:00:00.000Z",
+    "name": "HB",
+    "slug": "hb",
+    "area": "Medford / Somerville",
+    "distance": 5.3,
+    "description": null,
+    "lore": "Supposedly in reference to MB.",
+    "editors": ["CG"],
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
     "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/6212243383"
+    "mapLink": "https://us.mapometer.com/running/route_4530495.html"
   },
   {
     "id": 4,
+    "name": "Main Street",
+    "slug": "main-street",
+    "area": "Medford / Somerville",
+    "distance": 2.4,
+    "description": "Short and sweet",
+    "lore": null,
+    "editors": ["CG"],
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://us.mapometer.com/running/route_4287237.html"
+  },
+  {
+    "id": 5,
+    "name": "Full Glam",
+    "slug": "full-glam",
+    "area": "Medford / Somerville",
+    "distance": 3.4,
+    "description": "Full on Glamourville",
+    "lore": null,
+    "editors": ["CG"],
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://us.mapometer.com/running/route_4373700.html"
+  },
+  {
+    "id": 6,
     "name": "George Street",
     "slug": "george-street",
     "area": "Campus",
@@ -55,27 +85,12 @@
     "editors": null,
     "firstRunBy": null,
     "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
+    "createdAt": "2018-06-01T01:00:00.000Z",
     "updatedAt": "2024-11-25T01:00:00.000Z",
     "mapLink": "https://bit.ly/2X5FFP7"
   },
   {
-    "id": 5,
-    "name": "Extendedly Shorter Glam",
-    "slug": "extendedly-shorter-glam",
-    "area": "Glamourville",
-    "distance": 2,
-    "description": "Extendedly short Glam but without the full hill. Perfectly two miles.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2020+On+The+Go+Map,+OpenStreetMap+Contributors&d=3233&f=66c02dcbc4&n=1&dm=1&context=share&r2=kWxY8jpXoDCCg2c23c2Fc85u2Hm7D_8r3s1z2i1~3s1p3i1p3k1z1QX1ETAl3q1j3k1n1Mb2a1PCx1STGx1Ql1MJAJ8B6X1KX1Gb1G~2i1d3m1h3m1b3m1Dv1p1z5z1p7d1z49b117DTJTq1n42523Ej1In1ATATY1f3W2l1YAn7o7r5s6z4e1T_1j1y1j1QHW1NOHC92087m4f3w2Z2i1X1KDMHC6O6A0OQAA4422KMGEACA866i1e1Y3W322e2Y2MKg1e1"
-  },
-  {
-    "id": 6,
+    "id": 7,
     "name": "Med Square",
     "slug": "med-square",
     "area": "Medford",
@@ -85,12 +100,12 @@
     "editors": null,
     "firstRunBy": null,
     "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
+    "createdAt": "2018-06-01T01:00:00.000Z",
     "updatedAt": "2024-11-25T01:00:00.000Z",
     "mapLink": "https://www.strava.com/activities/3131971050"
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "Extendedly Short Glam",
     "slug": "extendedly-short-glam",
     "area": "Medford / Somerville",
@@ -100,12 +115,27 @@
     "editors": null,
     "firstRunBy": null,
     "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
+    "createdAt": "2018-06-01T01:00:00.000Z",
     "updatedAt": "2024-11-25T01:00:00.000Z",
     "mapLink": "https://bit.ly/34fJ3s3"
   },
   {
-    "id": 8,
+    "id": 9,
+    "name": "Harvard",
+    "slug": "harvard",
+    "area": "Cambridge",
+    "distance": 5.5,
+    "description": "Flat run. Edge of Harvard Campus. Roads",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2wZLJOn"
+  },
+  {
+    "id": 10,
     "name": "Short Glam",
     "slug": "short-glam",
     "area": "Medford / Somerville",
@@ -115,12 +145,597 @@
     "editors": null,
     "firstRunBy": null,
     "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
+    "createdAt": "2018-06-01T01:00:00.000Z",
     "updatedAt": "2024-11-25T01:00:00.000Z",
     "mapLink": "https://www.strava.com/activities/1383867490"
   },
   {
-    "id": 9,
+    "id": 11,
+    "name": "Woodbine Wiggle",
+    "slug": "woodbine-wiggle",
+    "area": "Medford",
+    "distance": 0.49,
+    "description": "Simplest add-on in the books",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2023+On+The+Go+Map,+OpenStreetMap+Contributors&d=791&f=66c3ffaeb1&n=1&dm=1&context=share&r2=_XxY8jnXoDW1U44EI82Y1U49KKSSm2i2OIu3W1u2EQ21J4d22D6Bg1f3r1d1z4Z319Ve1z2z2Pi1j1q2DO9GHW17GX1X11G33VT"
+  },
+  {
+    "id": 12,
+    "name": "Chris' Dad's House",
+    "slug": "chris-dads-house",
+    "area": "Medford",
+    "distance": 1,
+    "description": "23B Hancock Ave Extension. Knock on the door, he'll let you pet Tucker -CJT",
+    "lore": null,
+    "editors": ["CJT"],
+    "firstRunBy": ["CJT", "MH"],
+    "firstRunYear": 2021,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/6212243383"
+  },
+  {
+    "id": 13,
+    "name": "Extendedly Shorter Glam",
+    "slug": "extendedly-shorter-glam",
+    "area": "Glamourville",
+    "distance": 2,
+    "description": "Extendedly short Glam but without the full hill. Perfectly two miles.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2020+On+The+Go+Map,+OpenStreetMap+Contributors&d=3233&f=66c02dcbc4&n=1&dm=1&context=share&r2=kWxY8jpXoDCCg2c23c2Fc85u2Hm7D_8r3s1z2i1~3s1p3i1p3k1z1QX1ETAl3q1j3k1n1Mb2a1PCx1STGx1Ql1MJAJ8B6X1KX1Gb1G~2i1d3m1h3m1b3m1Dv1p1z5z1p7d1z49b117DTJTq1n42523Ej1In1ATATY1f3W2l1YAn7o7r5s6z4e1T_1j1y1j1QHW1NOHC92087m4f3w2Z2i1X1KDMHC6O6A0OQAA4422KMGEACA866i1e1Y3W322e2Y2MKg1e1"
+  },
+  {
+    "id": 14,
+    "name": "C-Loop",
+    "slug": "c-loop",
+    "area": "Campus",
+    "distance": 3.1,
+    "description": "Flat 3 mile road loop around campus area.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2R9M0VM"
+  },
+  {
+    "id": 15,
+    "name": "Porter",
+    "slug": "porter",
+    "area": "Cambridge",
+    "distance": 3.5,
+    "description": "Short and flat.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/3bSrxNm"
+  },
+  {
+    "id": 16,
+    "name": "No Fells",
+    "slug": "no-fells",
+    "area": "Medford",
+    "distance": 3.5,
+    "description": "When you're bored of every other shakeout option.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/2779277238"
+  },
+  {
+    "id": 17,
+    "name": "OG No Fells",
+    "slug": "og-no-fells",
+    "area": "Medford",
+    "distance": 3,
+    "description": "Better than Fells and back.",
+    "lore": "Likely not run since spring 2016 at the latest.",
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2022+On+The+Go+Map,+OpenStreetMap+Contributors&d=4895&f=3446c719ae&n=1&dm=1&context=share&r2=q~wY8dqXoD66g3c3Y1Y1OMKKSSm2i2OIu3W1o3GC2G3g5b1g5d1Y17O1M8a1Kq1c1W1MId1Sd2c3_1_2u1o1W1w1a1k2m1k1U4Ru3q1S0I7K52266E8462_1C63CSGm1Qo1S646Pm2Mg1Aq3W1W4W1a3Sa2Kc2QY3k1a2OW2Ee6IW22g4C04030V4Z41z20p52z4W2lA2h1Dn3Pp5Pp5Rd509p4a1r5c1v9w1D0F77H7D3072537B1BX52L0X42d32F0X61T0x123010206a63W53W27i204Da29e1b1m5f9f6d2n1Z1_2JFh6y3j2l1RFj3d2n3~15I1122r1_3Jq1r1W47311x5v353z6ITTf3b3BB"
+  },
+  {
+    "id": 18,
+    "name": "Viking Tower",
+    "slug": "viking-tower",
+    "area": "West Medford",
+    "distance": 3.7,
+    "description": "aka Chode Tower.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1841588129"
+  },
+  {
+    "id": 19,
+    "name": "Yerxa",
+    "slug": "yerxa",
+    "area": "Somerville / Bike Path / Cambridge",
+    "distance": 4.5,
+    "description": null,
+    "lore": "The really absurd/bootleg thing about the OG Yerxa route was that it involved taking a left from the underpass onto the train tracks and running into the porter square T station... (Pretty dangerous and I do not condone!) Idk for sure though, I could be wrong.",
+    "editors": null,
+    "firstRunBy": ["CC", "MB"],
+    "firstRunYear": 2024,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=332851"
+  },
+  {
+    "id": 20,
+    "name": "Lakes",
+    "slug": "lakes",
+    "area": "Campus / Long Lakes",
+    "distance": 4.7,
+    "description": "A better 4 miler than Glam.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2022+On+The+Go+Map,+OpenStreetMap+Contributors&d=7520&f=0aa31af147&n=1&dm=1&context=share&r2=aXxY8doXoDn1j1r1r177b7x6DDVT57DB9D5JJ1J751X1Pn2x1~1Z1B5b13P4L41HX3CB49030177BJb236917BV4L48V0JP~24N537U5Hx1j31D2BUr28L53RJl3l239a1d325BFm1b2Y2v3g1t2i2f56DDB4923w4zBU~1E8678Fe2h3Y1~1q4xBi3Z98H6BABKJQDw1Fg10g1Ce3Ua12Y13i2NW6z1C3E1o29m28O0E2a12a27I1Q3W4l1I341K3q20K4I22L0RE0a18E1GB65CD8N4n13n21Z22x12~16d2G28v1Mn44~13p3JZ72n3E~2Qt3Y1v2EEIf1O7CBi1h3o1j2QTa1Vs2p2g4f3g5X3i1j1_2f4u1t1y1j1e1FQ5g24o18C22y22CB0x12t3c1n2w2~1Y3b3a3v3w1l4o3n1g2h3i4l2s4RW47e2Fs5AW7Y1m70QBw3D_1Pk4Gg1MMGGS0m3Je2IW1IOKIQKu2Ee1Co114X1q1r3o59C33449GAEBIt4e758JU7AJW1h2m3x1w2DM58~2m4r2e4v2Y4t2e4l4w67Ed3_47C5An3q5d2u3X2c3t3s4v1W2Z4c4p2i2~3Y3r2W2b1E44KMAA66a1a1CC58c7y688s1s1g1c1"
+  },
+  {
+    "id": 21,
+    "name": "No Res",
+    "slug": "no-res",
+    "area": "Fells",
+    "distance": 4.8,
+    "description": "Shortest Res run (but you won't see any reservoirs",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2022+On+The+Go+Map,+OpenStreetMap+Contributors&d=7747&f=0aa31af147&n=1&dm=1&context=share&r2=aXxY8doXoDw1u144EI82Y1U49KKSSm2i2OIu3W1o3GC2G3g5b1g5d1Y17O1M8a1Kq2y1Ba1CZ1k1l3c3_1_2u1o1W1w1a1y3k24Ru3q1S0I7K52266E8462_1C63CSGm1Qu1W16Pm2Mg1Aq3W1W4W16Pi5i1c2Ss3q1m1Gq1Cw18W12o38e6Ek16OCg4AW30Q1c1Hq2Hm37s26i28k4Gi4Go4Cm32O84BUMu1MI0MHLIH0w1IG4q14K3SBe1X1i3h2k17_16S2Q7E9g1~14D4z16T5X18b1GX1ELKf18P4LGX2APANSX1w1p1k2x1IHW1~1Uh1k1h1QX1CPUVc1~2Gx2F~10v1296RQVOf1Ub2Br159DLBX1BNNBVPZ2AX11T6l1Dr13l11T9h1H9KAJd1Bl18z11DJLr2Lf1d1Pn1Nv1X1X1RVBf10j4Mn27l11b2Cx1Mz1Kf30Z1m1b1Ub1Mh2a1BEF0r1Fh2FH62718Pa1Ha1z2q3h1Ol3Sr2GZ4c1d4W119Pd5p4a1r5c1v9w1D0F7FV3072537B1BX52L0X42d32F0X61T0x1230h13VHW1Ii146a63W53W27i2De29e1X1y43KnBx7Z1_297f8q2PFf4t2n3~15I3344r1_3Jq1953Cf1g3t5p3B453h4Cj5h2"
+  },
+  {
+    "id": 22,
+    "name": "Short Res",
+    "slug": "short-res",
+    "area": "Fells",
+    "distance": 5.5,
+    "description": "Short scenic loop in the fells.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/2803975269"
+  },
+  {
+    "id": 23,
+    "name": "CHiPs",
+    "slug": "chips",
+    "area": "Mystic",
+    "distance": 5,
+    "description": null,
+    "lore": "The legend of CHiPs continues to grow, ask Skye. Don't you dare do this on a nice day",
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/2838640423"
+  },
+  {
+    "id": 24,
+    "name": "Cemetery",
+    "slug": "cemetery",
+    "area": "West Medford",
+    "distance": 5,
+    "description": "A road run through the cemetery by Medford High.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3063001392"
+  },
+  {
+    "id": 25,
+    "name": "'09 Red-Line",
+    "slug": "09-red-line",
+    "area": "Cambridge",
+    "distance": 5.8,
+    "description": "This run describes itself. Frankly it doesn't but if anyone knows the origin story let us know.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3039956797"
+  },
+  {
+    "id": 26,
+    "name": "Castle Black",
+    "slug": "castle-black",
+    "area": "Cambridge",
+    "distance": 5.8,
+    "description": "GOAT night time run that somehow wasn't on here.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/s/i924ov9n"
+  },
+  {
+    "id": 27,
+    "name": "X-Cemetery",
+    "slug": "extended-cemetery",
+    "area": "West Medford",
+    "distance": 6.2,
+    "description": "Cemetery but longer. Winchester vibes.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3168186578"
+  },
+  {
+    "id": 28,
+    "name": "X-Harvard",
+    "slug": "extended-harvard",
+    "area": "Cambridge",
+    "distance": 6.5,
+    "description": "Harvard run with an extra mile out to the river.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/3bK51G4"
+  },
+  {
+    "id": 29,
+    "name": "Malden",
+    "slug": "malden",
+    "area": "Malden",
+    "distance": 6.5,
+    "description": "Towards 1500 then back through the park.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3008766064"
+  },
+  {
+    "id": 30,
+    "name": "Spy Pond",
+    "slug": "spy-pond",
+    "area": "Arlington",
+    "distance": 6.8,
+    "description": "Run around Spy Pond and back on the bike path",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1476219455"
+  },
+  {
+    "id": 31,
+    "name": "One Bridge",
+    "slug": "one-bridge",
+    "area": "Charles",
+    "distance": 7.4,
+    "description": "Shortest Charles run, flat, through Harvard",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2R627Ub"
+  },
+  {
+    "id": 32,
+    "name": "Fresh Pond",
+    "slug": "fresh-pond",
+    "area": "Cambridge",
+    "distance": 7.5,
+    "description": "Flat lollipop course around Fresh Pond, bike path",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1409416884"
+  },
+  {
+    "id": 33,
+    "name": "Mid Res",
+    "slug": "mid-res",
+    "area": "Fells",
+    "distance": 7.57,
+    "description": "Anywhere from 6.5 to 8. Trail-Run, Popular, moderately hilly.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1904594544"
+  },
+  {
+    "id": 34,
+    "name": "Two Bridges",
+    "slug": "two-bridges",
+    "area": "Charles",
+    "distance": 7.8,
+    "description": "Tracy Basset sightings: 2",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2UXPYSG"
+  },
+  {
+    "id": 35,
+    "name": "Swimming Hole",
+    "slug": "swimming-hole",
+    "area": "Fells",
+    "distance": 8,
+    "description": "To the rock at Spot Pond and back on Short Res",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2UWOY12"
+  },
+  {
+    "id": 36,
+    "name": "Mid-D Madness",
+    "slug": "mid-d-madness",
+    "area": "Somerville / Inner Belt",
+    "distance": 8,
+    "description": "whatup lechmere",
+    "lore": "A bills, brink, and jman creation",
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=3409576"
+  },
+  {
+    "id": 37,
+    "name": "Long Res",
+    "slug": "long-res",
+    "area": "Fells",
+    "distance": 8.5,
+    "description": "Impossible run to remember. Long, hilly run in the Fells.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1945972023"
+  },
+  {
+    "id": 38,
+    "name": "Belmont",
+    "slug": "belmont",
+    "area": "Belmont",
+    "distance": 9.2,
+    "description": "Flat run, roads, through Belmont, long straightway",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1811930667"
+  },
+  {
+    "id": 39,
+    "name": "S*** Biased",
+    "slug": "s-biased",
+    "area": "West Med / Lakes",
+    "distance": 9.35,
+    "description": "Previously lost loop, but it's back. Working on the new name because the old one is outdated",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2023+On+The+Go+Map,+OpenStreetMap+Contributors&d=15043&f=2e1433c0ab&n=1&dm=1&context=share&r2=_YxY8tnXoDm1k1QOa1a1_2w2GCGAO6e5e1C187C0G22Gg5b1g5d1Y17O1M8a1Kg2q1A8k1l3c3_1_2u1o1W1w1a1o3e2A64Ry1f9c1l5Ad1Ed28h24~12F2l45Z640y11U0Y62G0K0q21Y41M0k41K02H67E7G4C5q1h1q2d3s1z1g5d643QRc3Z4m2X3OTY3z3w2v3MTi1~1s4l6a1n1i1x1g3z4CJe2~3k2j4k5h9o1r2w1X2g2h2_1t1m1Z1w4p2w2x1Y1NOBq3r1e2Ta3Vq2LE3W8Z2q1Bk5f1g7n1q8X2O5k1Hq1Z1o1r1a2j2g8l7o3z2M4c1584C1_1Kw1i2Y1a1Ua1m1a1a1Ai16O0i32q16u1As3Sw6s1i16y11I0y39y27m10e30C0C1o25W17e1Fk1Z1Y2b2a2n2UZ1Y1h1t2X4EJCTAr16HAf16HEl1If1CR23Gf1g1z3LDRPb1f1FPBJRv1j1~3Fl1Bl19r2072j2E~40p13VBj1z1~4d1~2p1X4Fb1Nx1t1Z4Th2b1x2d1n2d2~4Nr1Z1v2b3r7j2x5j4pAPd2n1m112z1c1x6k2Z4m1B4Z3Sj1330l2F7w11W2q1y4M_1w1i5g1k3o1a2e1e1q2a1k28UAQEW1QW1a1KW1Y1Y2g3u6Ea1Kc2Kq2q1q56SCG7En1u2f1q2Ty1Z3W6h2q4BKf3TL9n1Hp2Z1p1d1PPNTl1l237DDLFR9X15Z2Dr1Pz1l1b1j1~1h2~1d2x2x2X3r2j1VVJD7j1Np1Ft1Bp4Dt1Db2X1~3t2d1Df13j1Ab1Ih2q1X1Cl16r1Bl2Jl2Df21x28Z3Qb7s2l2Oj26f3BL2EX1b25L6NAx2u1z1Ud2OJ2L7h17P7h1Z1f19l13Z10t2Kj1Or1e1BAl2u2j1Y2Ns1j1i2t1a1j1Ah26r2c1z4W46CZ4a2f2Kz16Z10b27p3TF35CB44o16c1c1i76W1i1c86e1e1m72A4SAw1B4TGx4e8f1c29Kx1i37E7Ah5i9v2w4n1e2v1u28Eb3w4Vo1HUt2g412789G5CD9BKt4c758JU7AJW1h2m3x1w2DM58~2m4r2e4v2Y4t2e4l4w67Ed3_47C5AZ1w1j2w3d2u358x1_2t3s4v1W2Z4c48Eb2Y2n3s2l3u268KB8C488E8G8M2Ki1i1W1Qw2s2s1q1w1u1y2u2"
+  },
+  {
+    "id": 40,
+    "name": "Firehouse",
+    "slug": "firehouse",
+    "area": "Fells",
+    "distance": 9.5,
+    "description": "Around the furthest res in the fells and back.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/2015857183"
+  },
+  {
+    "id": 41,
+    "name": "1500 Meter Pond Short",
+    "slug": "1500-meter-pond-short",
+    "area": "Fells",
+    "distance": 10,
+    "description": "Out through fells, back on roads, swimming spot",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=333243"
+  },
+  {
+    "id": 42,
+    "name": "BU Bridge / Fake 10",
+    "slug": "bu-bridge-fake-10",
+    "area": "Charles",
+    "distance": 10.3,
+    "description": "Even 10 miler along the charles. (BU Bridge)",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2wRr7Ih"
+  },
+  {
+    "id": 43,
+    "name": "1500 Meter Pond",
+    "slug": "1500-meter-pond",
+    "area": "Fells",
+    "distance": 11,
+    "description": "Repeats and a great long run.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/2711463342"
+  },
+  {
+    "id": 44,
+    "name": "Around-the-Fells",
+    "slug": "around-the-fells",
+    "area": "Fells",
+    "distance": 11.5,
+    "description": "Highland street up around and back woodland.",
+    "lore": "Likely not run since spring 2016 at the latest.",
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2024+On+The+Go+Map,+OpenStreetMap+Contributors&d=17906&f=25942b87af&n=1&dm=1&context=share&r2=qYxY8XoXoDw1u1QOa1a1_2w2GCGAO6e5e1C187C0G2A2WCx2G2e1Ms2_14065c1b34B844Bc2f54Da1z2Mz1Il18d10p16j1Gp1Gd1Qn2a1v2s1p4W3W2a3y1i1440y11U0Y62G0K0q21Y41M0k41K02H67E7G4C5q1h1q2d3s1z1g2r2W3n3UVc3Z4m2X3OTY3z3w2v3MTi1~1s4l6a1n1i1x1g3z4CJe2~3k2j4e5X969o1r2w1X2STk1j1_1t1m1Z1w4p2w2x1Y1NOBq3r1e2Ta3Vq2LE3W8Z2q1Bk5f1g7n1q8X2O5k1H4W1CSKCs4g1y3Y1e18s3W1w3c1e3m1_1a1i2g1g3y1W2a1e1Kw1Oe14c13i1Da2Jy19E0_16q1Es5W2s5_1UCs2W1m4s1e3Y1y2GG2e4Am3Aq26e18O6k4g2u2i1u2e1o2Sq1Kq2Uc2Sy1Um3g2k7a5y3q2e2q1q1Y1o2u1s4e3KEW5m3o1Y1W2i1a5k3c5o3u4g3u5y3o2y1QG_1c1QCW16Y25e20Y18w1Kc3Y1c2Sm1GQ2Y2i2i2g2OQa2a2y1a2Qi1QY2w2o8OW4Sq1q1Y2k3Y4m4q4W1i1ESGe1Su3Mu34y18_2Cs54_2Aa4Ek74Y12a20k1Fy3Bc3083y1h27b3Pt1Jj1FX3h1j1DX11Z14P8n1Mz4o2n7_3x2w1h1e1X1g1Z1q1JY1X3c6h2W5Nq1Pq1Ls1Dc1J_2Je4Bc2Lk3b1m5Z1e5Bs1Fg1TW2d1o2Dc15U3w11Y57k2HY3X1u4X2i7Lu1r1a2JM97JId1Kb2EL2N4J4B0d13n1Ff2f13Cz1Pt17R1X14PAj1Ux1W2b2_2t1i1PQFMLc1Lw1Pw2RY2f1w1h1i1TGR6Z11d3f1v1Dj11n2CX13H751PJHJVh1h2p3b1l1LJl1RR7R1r4Gf26~27n4Vj3HZ19PD~5r4b1f1d1r1Jb1Lp1Nl2Ht1X1d2l1Z2h1h1n1Z1d2f1Z5v2h2Lb23h14b18p4s1j4c1n2KX3Kr1GH6p4k1Z20F1RDTRBHRZ1p1Z3b3d6b1X2NTVRRHPBz3X1r1HVFr1d1VVZ1h1Pj1Nj1Nv1Lt1z1v4f1v2t1X3JRr1x1l1j1l2f2Nn1JF5b1N670t6s1t1Qb2g1j1Oh1Cv12P3p7l2TJHHLTFX1z1n4Tr1FJRNp1RX15J0X3KV5F9PV9HLNNFP7N1J4n1J11LTB9L9f20X13b1BX5r2t1RX4Z2t3z1Z3p1x2n1Z1FX2Vd4h2p4j2D7z2l1VFf5t2l2h1t5z2~2p1b3r1t1TNLHBDP57PNZ2j1v1Z133RFZ1Dl1Bf15R0l52H2~17P1H2h10N1R1t15v3DD0J1~21x3Ex1C1Hv1tE1DB1n3Ht3T4HFBz2v2Z1Z1PNr1p1"
+  },
+  {
+    "id": 45,
+    "name": "Hoover Sucks",
+    "slug": "hoover-sucks",
+    "area": "Cambridge / Charles",
+    "distance": 12,
+    "description": "Shorter if you don't add along the Charles",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/3bSVInB"
+  },
+  {
+    "id": 46,
+    "name": "Belmont Hill",
+    "slug": "belmont-hill",
+    "area": "Belmont",
+    "distance": 12.3,
+    "description": "Extended Belmont, by the school, hilly add-on",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2xODapE"
+  },
+  {
+    "id": 47,
+    "name": "Tour De Malden",
+    "slug": "tour-de-malden",
+    "area": "Medford / Revere / Malden",
+    "distance": 13,
+    "description": "Even better than going to the beach",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/9822916762"
+  },
+  {
+    "id": 48,
+    "name": "Longfellow",
+    "slug": "longfellow",
+    "area": "Charles",
+    "distance": 14,
+    "description": "A long Charles run.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2X9stZh"
+  },
+  {
+    "id": 49,
+    "name": "Enforcer",
+    "slug": "enforcer",
+    "area": "Mystic",
+    "distance": 6.1,
+    "description": null,
+    "lore": "I think CR invented this run?",
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2018-06-01T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/34d8Fpp"
+  },
+  {
+    "id": 50,
     "name": "Powder-Teele",
     "slug": "powder-teele",
     "area": "Medford / Somerville",
@@ -135,7 +750,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2024+On+The+Go+Map,+OpenStreetMap+Contributors&d=4067&f=27d12753f9&n=1&dm=1&context=share&r2=qYxY8~nXoDn2l27Ev1r155f4X4x2t258DDVT57DB9Dn15B2BDF95BZ1RPHTLD7NFB5V7F2D275L49478B2D071bGi2v1At3KB6RO151B152F0791JF01NPN550959F159Z11Z10H3j25~58f3Cd2e1b549UZ4Er1MX36JGz1Gt1e1z4e1t3APUh2APa2z4Y2t48HE6o1l3G3k5q364C6s2y1A6A8e1Qm1W12A76Z5yC3I78315C3C46087E5416X2s4r3s65A5AZ3q37A583CAEr1k29IZ1m2X1u2h1q5X1o2Ni134LW11GHW17S086MACA81C081G262C26SNC5u3Ju3HeEZ282E0C187A3M386E1G1W18C6OGE8UMQI20Y1S6CGACEC1o16AEEC68W1UEE67y2u2g4Y466w1s18Ds1q1SQ"
   },
   {
-    "id": 10,
+    "id": 51,
     "name": "North Street",
     "slug": "north-street",
     "area": "Campus",
@@ -150,7 +765,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2024+On+The+Go+Map,+OpenStreetMap+Contributors&d=4514&f=07ac981210&n=1&dm=1&context=share&r2=mYxY8lnXoDr2n2v1r155f4X4x2t2BBZ1Z15599DT72L0H5FBRJl2v1z1Z1D5b13l181HX3CB49030l4M7072fCw1r2EL095375F0B2D8Di1~1OX1CPSd2En1MZ321Gr1Qd2m1x2k1f29FGNm3d4i1b2q2f5e2X5AL8Lq5nD6DALAJW2p2W1~1c2n5g2d6q3f9E4G1e2m1864BC8m3g264_2_1m1W1QEe2m1W3w1e3Y2o2s1KEc3a2o3k2A8k1SSK84C8Y3Y2q2o1i2u17A14d2m3787A18b2g3787Cj2s3585A18X4Y6p3o55A3Af3a55C56z1a37E58n1q27EBCj6o7NOX2y1f2a2HEl6y4AIAG4A789G66a1a1CC58c7y688s1s1w2s2"
   },
   {
-    "id": 11,
+    "id": 52,
     "name": "Do it Live",
     "slug": "do-it-live",
     "area": "South Medford",
@@ -165,67 +780,7 @@
     "mapLink": "https://bit.ly/2XbjqXZ"
   },
   {
-    "id": 12,
-    "name": "OG No Fells",
-    "slug": "og-no-fells",
-    "area": "Medford",
-    "distance": 3,
-    "description": "Better than Fells and back.",
-    "lore": "Likely not run since spring 2016 at the latest.",
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2022+On+The+Go+Map,+OpenStreetMap+Contributors&d=4895&f=3446c719ae&n=1&dm=1&context=share&r2=q~wY8dqXoD66g3c3Y1Y1OMKKSSm2i2OIu3W1o3GC2G3g5b1g5d1Y17O1M8a1Kq1c1W1MId1Sd2c3_1_2u1o1W1w1a1k2m1k1U4Ru3q1S0I7K52266E8462_1C63CSGm1Qo1S646Pm2Mg1Aq3W1W4W1a3Sa2Kc2QY3k1a2OW2Ee6IW22g4C04030V4Z41z20p52z4W2lA2h1Dn3Pp5Pp5Rd509p4a1r5c1v9w1D0F77H7D3072537B1BX52L0X42d32F0X61T0x123010206a63W53W27i204Da29e1b1m5f9f6d2n1Z1_2JFh6y3j2l1RFj3d2n3~15I1122r1_3Jq1r1W47311x5v353z6ITTf3b3BB"
-  },
-  {
-    "id": 13,
-    "name": "C-Loop",
-    "slug": "c-loop",
-    "area": "Campus",
-    "distance": 3.1,
-    "description": "Flat 3 mile road loop around campus area.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://bit.ly/2R9M0VM"
-  },
-  {
-    "id": 14,
-    "name": "Porter",
-    "slug": "porter",
-    "area": "Cambridge",
-    "distance": 3.5,
-    "description": "Short and flat.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://bit.ly/3bSrxNm"
-  },
-  {
-    "id": 15,
-    "name": "No Fells",
-    "slug": "no-fells",
-    "area": "Medford",
-    "distance": 3.5,
-    "description": "When you're bored of every other shakeout option.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/2779277238"
-  },
-  {
-    "id": 16,
+    "id": 53,
     "name": "Glamourville",
     "slug": "glamourville",
     "area": "Medford / Somerville",
@@ -240,7 +795,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2022+On+The+Go+Map,+OpenStreetMap+Contributors&d=5621&f=2b2db516b2&n=1&dm=1&context=share&r2=yWxY8joXoDY2_1441s1d1kIBi81I32n3q1x2i1r3m1B6d3e1B4p3k1z2e1VAl3q1B6X3e1b1GB694x1W1d2Y1D654NCx1Ql1MJAJ8l1MB6x1S~1W1LA74D6v2g1h3m1b3m174n2a1v2i1F8d2Y1v2e1r2c1f1GB4VAh1W1~1o1d2u1BA5733l1X1b2l1l2r1n5x3Z1P73p4b3j1Vh1TFBJBZ1NNF0CCOj1m30642GDe1X3a1X3CX1Ul3c2f8c2b9Gx18p1Mb22B4BIZ24d1_2zBEz1a3~C4D4FW2b8Qb3294JY1l4Mp2C263e1X54B4B0119a1t48b2If2Cv127757351628486IA_1Y1w1W1AAA4i2i184868D6BA8u1Y1g2e36C4Ey1o46A6CW2i44A6Ei2u36A88Qa1w3e5E3E0E0G2G2MF6C466662C68SEEC2k5Py9l18180m4L40A0C3Y3B2I0CM386E1G1W18C6OGE8UMQIe1UMKC8w1AAEEC68W1UEEc7y688s1s1g1e1"
   },
   {
-    "id": 17,
+    "id": 54,
     "name": "West Med",
     "slug": "west-med",
     "area": "West Medford",
@@ -255,7 +810,7 @@
     "mapLink": "https://www.strava.com/activities/3047987782"
   },
   {
-    "id": 18,
+    "id": 55,
     "name": "X-C-Loop",
     "slug": "x-c-loop",
     "area": "Campus",
@@ -270,7 +825,7 @@
     "mapLink": "https://bit.ly/2wUafk9"
   },
   {
-    "id": 19,
+    "id": 56,
     "name": "Taylor's Stupid Run",
     "slug": "taylors-stupid-run",
     "area": "Mystic / Long Lakes",
@@ -285,22 +840,7 @@
     "mapLink": "https://www.strava.com/activities/3023092803"
   },
   {
-    "id": 20,
-    "name": "Viking Tower",
-    "slug": "viking-tower",
-    "area": "West Medford",
-    "distance": 3.7,
-    "description": "aka Chode Tower.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/1841588129"
-  },
-  {
-    "id": 21,
+    "id": 57,
     "name": "fRiES",
     "slug": "fries",
     "area": "Medford",
@@ -315,7 +855,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2022+On+The+Go+Map,+OpenStreetMap+Contributors&d=6143&f=c1fc77477e&n=1&dm=1&context=share&r2=s~wY8xpXoD45g3c3Y1Y1OMKKSSm2i2OIu3W10CA1i3Qu1qE4KA1y1By3DW32Y12w3Eu16S2O2i10G0S2y100Us60e2Ag2MG8w1a1KCc1QQM46248I2IRk3z1e6z1_57Od1k35IX1w2b1g3Fe17MJy1Rg2l1y3v2a6d3Y6r2m4x5cCt1y3R_1j1c3384799H3x1h15D5X15JBBTFLR8T1FJp17d16t10l23DBLDBB1d1Kf10p2Nz14R0T0j19z15j16Z1AX2Y1p1W1781AB6l1ELCPSNs1r1a1h1i1b1q1BMJi1j1a4Py1Pu1X1c3BK3254P8v1DR1HAl2Y3HW19Y10ECa32U64E~22H2b11f1Hn75p23b3399L75D3o1d129SX4s2p8Ep1Ap1Af30R5v13v13X1Fx2d1l5p2vBj3ZFZ2j5j2b6v1l4X1t2n1z3n1z3RZ2Pb2r1d4DT3241KDg7l5w3x2u7z5q4j3G7CJK8C2806KAEEC68W1UEEc7y688g1e1"
   },
   {
-    "id": 22,
+    "id": 58,
     "name": "Ghetto Run ('09 Redline Sucks)",
     "slug": "ghetto-run",
     "area": "Campus / Arlington",
@@ -330,7 +870,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2022+On+The+Go+Map,+OpenStreetMap+Contributors&d=7002&f=0aa31af147&n=1&dm=1&context=share&r2=aXxY8doXoDn1j1r1r177b7x6DDVT57DB9D5JJ1J751X1Pn2x1~1Z1B5b13P4L41HX3CB49030l4M70720R4Je1v24NX1n3v1f317372Le1f3h4Z339a1d325BFm1b2Y2v3g1t2i2f56DDB4923w4zBU~14933B7b3Z21J73t3l27575l4~29BMp1BD9Bt3p4l1v1x9bCz4f6Z1j1p1Z2j1z1BD9EADQf1Qj1Ul16BQv1W2p4u1Z48D8JGV6DKf1ENCNCL23Qn1GX16Z1GRq1z1MR4389W2f2QVk2x2OTs1~1g1p1QVa2r2Y1h1s1b2e1l1o1z1i1v121e1n1_1l2y3c5a5e6s4Y6w4Y6o2e3Z1i2u3y3y1W2m2o2SSW2y1u3u1s3q1W4w1g2Y1UEm1IW4c1W2KM67s10A4CE6U7SJSRK2GCC45q23_10i10Y20EKa2e1_2EQQY1e7w6q1c26QAC8B7C9E9GBIt4e758JU7AJW1h2m3x1w2DM58~2m4r2e4v2Y4t2e4l4w67Ed3_47C5An3q5d2u3X2c3t3s4v1W2Z4c48El2g2v6e51ICGQSu1w1g2y1u3o37G3Cs1s1a1Y1"
   },
   {
-    "id": 23,
+    "id": 59,
     "name": "Near Tower",
     "slug": "near-tower",
     "area": "Fells",
@@ -345,7 +885,7 @@
     "mapLink": "https://www.strava.com/activities/1871630034"
   },
   {
-    "id": 24,
+    "id": 60,
     "name": "South of the Border",
     "slug": "south-of-the-border",
     "area": "Fells",
@@ -360,22 +900,7 @@
     "mapLink": "https://www.strava.com/activities/3120558067"
   },
   {
-    "id": 25,
-    "name": "Yerxa",
-    "slug": "yerxa",
-    "area": "Somerville / Bike Path / Cambridge",
-    "distance": 4.5,
-    "description": null,
-    "lore": "The really absurd/bootleg thing about the OG Yerxa route was that it involved taking a left from the underpass onto the train tracks and running into the porter square T station... (Pretty dangerous and I do not condone!) Idk for sure though, I could be wrong.",
-    "editors": null,
-    "firstRunBy": ["CC", "MB"],
-    "firstRunYear": 2024,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.gmap-pedometer.com/?r=332851"
-  },
-  {
-    "id": 26,
+    "id": 61,
     "name": "West Lakes",
     "slug": "west-lakes",
     "area": "West Medford / Long Lakes",
@@ -390,37 +915,7 @@
     "mapLink": "https://www.strava.com/activities/1992596579"
   },
   {
-    "id": 27,
-    "name": "Lakes",
-    "slug": "lakes",
-    "area": "Campus / Long Lakes",
-    "distance": 4.7,
-    "description": "A better 4 miler than Glam.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2022+On+The+Go+Map,+OpenStreetMap+Contributors&d=7520&f=0aa31af147&n=1&dm=1&context=share&r2=aXxY8doXoDn1j1r1r177b7x6DDVT57DB9D5JJ1J751X1Pn2x1~1Z1B5b13P4L41HX3CB49030177BJb236917BV4L48V0JP~24N537U5Hx1j31D2BUr28L53RJl3l239a1d325BFm1b2Y2v3g1t2i2f56DDB4923w4zBU~1E8678Fe2h3Y1~1q4xBi3Z98H6BABKJQDw1Fg10g1Ce3Ua12Y13i2NW6z1C3E1o29m28O0E2a12a27I1Q3W4l1I341K3q20K4I22L0RE0a18E1GB65CD8N4n13n21Z22x12~16d2G28v1Mn44~13p3JZ72n3E~2Qt3Y1v2EEIf1O7CBi1h3o1j2QTa1Vs2p2g4f3g5X3i1j1_2f4u1t1y1j1e1FQ5g24o18C22y22CB0x12t3c1n2w2~1Y3b3a3v3w1l4o3n1g2h3i4l2s4RW47e2Fs5AW7Y1m70QBw3D_1Pk4Gg1MMGGS0m3Je2IW1IOKIQKu2Ee1Co114X1q1r3o59C33449GAEBIt4e758JU7AJW1h2m3x1w2DM58~2m4r2e4v2Y4t2e4l4w67Ed3_47C5An3q5d2u3X2c3t3s4v1W2Z4c4p2i2~3Y3r2W2b1E44KMAA66a1a1CC58c7y688s1s1g1c1"
-  },
-  {
-    "id": 28,
-    "name": "No Res",
-    "slug": "no-res",
-    "area": "Fells",
-    "distance": 4.8,
-    "description": "Shortest Res run (but you won't see any reservoirs",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2022+On+The+Go+Map,+OpenStreetMap+Contributors&d=7747&f=0aa31af147&n=1&dm=1&context=share&r2=aXxY8doXoDw1u144EI82Y1U49KKSSm2i2OIu3W1o3GC2G3g5b1g5d1Y17O1M8a1Kq2y1Ba1CZ1k1l3c3_1_2u1o1W1w1a1y3k24Ru3q1S0I7K52266E8462_1C63CSGm1Qu1W16Pm2Mg1Aq3W1W4W16Pi5i1c2Ss3q1m1Gq1Cw18W12o38e6Ek16OCg4AW30Q1c1Hq2Hm37s26i28k4Gi4Go4Cm32O84BUMu1MI0MHLIH0w1IG4q14K3SBe1X1i3h2k17_16S2Q7E9g1~14D4z16T5X18b1GX1ELKf18P4LGX2APANSX1w1p1k2x1IHW1~1Uh1k1h1QX1CPUVc1~2Gx2F~10v1296RQVOf1Ub2Br159DLBX1BNNBVPZ2AX11T6l1Dr13l11T9h1H9KAJd1Bl18z11DJLr2Lf1d1Pn1Nv1X1X1RVBf10j4Mn27l11b2Cx1Mz1Kf30Z1m1b1Ub1Mh2a1BEF0r1Fh2FH62718Pa1Ha1z2q3h1Ol3Sr2GZ4c1d4W119Pd5p4a1r5c1v9w1D0F7FV3072537B1BX52L0X42d32F0X61T0x1230h13VHW1Ii146a63W53W27i2De29e1X1y43KnBx7Z1_297f8q2PFf4t2n3~15I3344r1_3Jq1953Cf1g3t5p3B453h4Cj5h2"
-  },
-  {
-    "id": 29,
+    "id": 62,
     "name": "Alewife Greenway",
     "slug": "alewife-greenway",
     "area": "Bike Path / Mystic",
@@ -435,37 +930,7 @@
     "mapLink": "https://www.strava.com/activities/1387193145"
   },
   {
-    "id": 30,
-    "name": "CHiPs",
-    "slug": "chips",
-    "area": "Mystic",
-    "distance": 5,
-    "description": null,
-    "lore": "The legend of CHiPs continues to grow, ask Skye. Don't you dare do this on a nice day",
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/2838640423"
-  },
-  {
-    "id": 31,
-    "name": "Cemetery",
-    "slug": "cemetery",
-    "area": "West Medford",
-    "distance": 5,
-    "description": "A road run through the cemetery by Medford High.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/3063001392"
-  },
-  {
-    "id": 32,
+    "id": 63,
     "name": "Marvel's D",
     "slug": "marvels-d",
     "area": "Bike Path / North Cambridge",
@@ -480,7 +945,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2023+On+The+Go+Map,+OpenStreetMap+Contributors&d=8478&f=1a2c478036&n=1&dm=1&context=share&r2=mYxY8jnXoDr2p2v1r155f4X4x2t2BBZ1Z15599DT72L0J7D9PHn2x1~1Z1B5b13l181HX3CB49030l4M70720R4Je1v24NX1n3j1n2BN5F2Le1f3Gb1316X1Eb11R4JFh21TGNGBKr1JHp1r1g1t2i2f56DDBF9l1X1l1Vd3b2h3b25C73t2x11831B597134973Dv1L5~11d2l431DPD89J7Hp5h67973z1f2FH5775X2b27B77X2d23599r4h55379d1h1f1l1159BBH7D719B7L5V92723BZ10h2214907F~3490B0X340Dh54x4235F016512GD10C9D0H37X1At3Qb4U~2O9272p2K922D2JCd20950Cj2Kj3Qz42Dj140Dn12n12P0D230n38701CR2501BV27050D2j121P07091h23Z15X15JRf1Hn18JIFY1TOd1EDs3r3Y1RY3h1ONKX1Ed18h11d13X19VJn1FHRNNB53x1FB59B798DCT31El1Aj1An16X1A6226FUKe1Ik1CM087MJKf16FANIb1Gd1Ib1If1UZ2Gb1TJVHD9Y1X1I7SHW1AW2Ks3c1o4k1o2KMC0160G0C04563s3022i41s25i13Lk2BO1I0Y31Y1j1W4Ba144A4W69I6CE4AIW36u36I88E8q2C816020MAGS8UAo34K6UCq25s38_41e1Le41c1By35W39y52Q4U2M3E3e26Ie1i18A64s4i5AA46Y2e2888CY2c2866888c2q2848Aq5i68IAKE7EQ42e2m4W22M6Ew1843A24A8C64227u2y1846Bi3c2e3c2W3Y2GA2516EC5Eh2g5f1u2q1s1KIJs1FCFO2UGi23K2SDc15Y142Fc1d1g31M6GCMk1q2Y1o33Od1w23K0S8180m4L40A0C3Y3B2Im17c14C6W2a1o2y1QIEAK8M081EUAA66a1a1CCy2u2g4Y466w1s1_2y2"
   },
   {
-    "id": 33,
+    "id": 64,
     "name": "Townie Porn",
     "slug": "townie-porn",
     "area": "The towniest parts of Medford",
@@ -495,7 +960,7 @@
     "mapLink": "https://bit.ly/2UZ4Gc0"
   },
   {
-    "id": 34,
+    "id": 65,
     "name": "Brooks Estate",
     "slug": "brooks-estate",
     "area": "West Medford",
@@ -510,37 +975,7 @@
     "mapLink": "https://www.strava.com/activities/3134751911"
   },
   {
-    "id": 35,
-    "name": "Harvard",
-    "slug": "harvard",
-    "area": "Cambridge",
-    "distance": 5.5,
-    "description": "Flat run. Edge of Harvard Campus. Roads",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://bit.ly/2wZLJOn"
-  },
-  {
-    "id": 36,
-    "name": "Short Res",
-    "slug": "short-res",
-    "area": "Fells",
-    "distance": 5.5,
-    "description": "Short scenic loop in the fells.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/2803975269"
-  },
-  {
-    "id": 37,
+    "id": 66,
     "name": "Mom's Run",
     "slug": "moms-run",
     "area": "Somerville",
@@ -555,7 +990,7 @@
     "mapLink": "https://bit.ly/39Kgpk6"
   },
   {
-    "id": 38,
+    "id": 67,
     "name": "Railroad Underpass",
     "slug": "railroad-underpass",
     "area": "Bike Path / Cambridge",
@@ -570,7 +1005,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2022+On+The+Go+Map,+OpenStreetMap+Contributors&d=9232&f=69cc1bb04d&n=1&dm=1&context=share&r2=y_wY8hqXoDVV77b7x6DDVT57DB9Dv19B7LJd1TPHTLD7NFB5V7F2D275L40BV4j2Cd5QX8e1f4Gp2GV5NDDJD7B0D2JK9BDH71N7JBx2Z4FLTj1f1v1f1Z2BB1Bb1j2Pz13B7D78b2X57D7Hv1j2x1d17573h2h19399v1Vz1X1H975254DOG4HW1z37H5FA94H8T4Z1Sd4Ir22B4DCn16h3I~94RIr1AR4r1Ar44d27t13f11j14D8D8F5H4d24D1L3T1PGx8EX5Md42d17z46r3DX37Z19n37TFRL9105072v17P3D7775H5t3H~239BDH5~5A9333ARm1d42X10X32HCNMj2r14h26h4211r305436B0F05002LBn2Jn4j1r5v1V9p3b1b1Ht1X1p1f1H197HH75t5X5d1RPBP7Z11B5N2RCVO5658RW1Z1u1BKPc1Tk1Le1Z1m21416Dg1H238Lq1Lq1383C97CT2V1HBJCK2I1W1BU5GBSx1c4Z1o2BO18Z3a7R_15C3CBMCLA8886Bc5a48A6CIc1SW3Y1m30C2KFm1Ps25C3CH_1f1_3Hs1Lm19Mf1k238887G7Cg1k1ISq1q44C4EY2o52626M_14A4Ey2w7m1a4f1Og1NA5A7a6h363C7c5~2A5C5a1t3m2OUAs1GM61CJs4HY35s11s11s2V0W100644s5w44444w2g2e1KA484k2e1SE0W1GDGFA9k5z56587UZ1AE686AAEa5y8486Aq5u98A85c2W48Gq1KKEKCOGi1Qu2q18486k2k1A6q1Y1q1Y2KW1IY1_1u48E4CQ_1c1k22CCCg1a2g1w1Uk1GMy2a4KCO882OUKJE1C0E8EKOEW16q2Fg4FY8d1e5Pk2BW13m17c14C6W2a1o2y1Y1Q62K8K2OQAA66a1a1CCc7w666a1Y1"
   },
   {
-    "id": 39,
+    "id": 68,
     "name": "FUMRD",
     "slug": "fumrd",
     "area": "Long Lakes / West Medford",
@@ -585,37 +1020,7 @@
     "mapLink": "https://www.strava.com/activities/3096320232"
   },
   {
-    "id": 40,
-    "name": "'09 Red-Line",
-    "slug": "09-red-line",
-    "area": "Cambridge",
-    "distance": 5.8,
-    "description": "This run describes itself. Frankly it doesn't but if anyone knows the origin story let us know.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/3039956797"
-  },
-  {
-    "id": 41,
-    "name": "Castle Black",
-    "slug": "castle-black",
-    "area": "Cambridge",
-    "distance": 5.8,
-    "description": "GOAT night time run that somehow wasn't on here.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://onthegomap.com/s/i924ov9n"
-  },
-  {
-    "id": 42,
+    "id": 69,
     "name": "Saudi Prince",
     "slug": "saudi-prince",
     "area": "Bike Path",
@@ -630,7 +1035,7 @@
     "mapLink": "https://bit.ly/2JEECO7"
   },
   {
-    "id": 43,
+    "id": 70,
     "name": "Ass Canyon",
     "slug": "ass-canyon",
     "area": "Cambridge",
@@ -645,7 +1050,7 @@
     "mapLink": "https://www.strava.com/activities/5453199400"
   },
   {
-    "id": 44,
+    "id": 71,
     "name": "X-CHiPs",
     "slug": "extended-chips",
     "area": "Mystic",
@@ -660,7 +1065,7 @@
     "mapLink": "https://bit.ly/2UGkqBN"
   },
   {
-    "id": 45,
+    "id": 72,
     "name": "Rectangle",
     "slug": "rectangle",
     "area": "Medford / Winter Hill",
@@ -675,67 +1080,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2023+On+The+Go+Map,+OpenStreetMap+Contributors&d=9881&f=dfd7a5f996&n=1&dm=1&context=share&r2=yYxY8ZnXoD88Y1Y1OMKKSSm2i2OIu3W10CA1i3Qu1qE4KA1y1By3DW32Y12g14m2Au16S2O2i10G0S2y100Us60e2Ag2MG8w1a1KCc1QQMAI6S7UJm2z1e6z1_57ONa2Fg15IX1w2Z1i3Dc19OJw1Tg2l1y3v2a6d3Y6r2m4x5cCt1y3R_1j1c3BOFa1l1i3BQRW2r1y3FW1b1q2p1s37Kl2k5h1s4Lo35e12g30A0I2c30a12o10u22W22m30w31g2Bg2Fe2Rc2DQRs1BM7G385Cl1W3Vm2PY2Ne2Bm19k15Uf1i6B_1Rg4d1g6d1g693j4p1z1Jt2X1n4p1f2R~1N93X13l2RX1FFB7MB5l1HJ55A589BHBVFD7F3v3f17893F51Db5t1N45B39CJAH4R4Lv3h1X1H~1Nl1DF1p1H~Bh4L7Z1FJHFR727232J1x1L03051703l19V7j2Pr2NX5x1L9RLPVt2V7173z2RHD943A5656DKD1b15b31J0N0EF59BHFAX25Z2Db2Rz1f1z1p1Z8f839FFDF0J1111GTKd1EVQv1e1f2Y1b2IZ16BSt18Z1k1n2ELe1r143KRGJY1l1W2X38DUr1Mf14349Kb18D8Nq1b3CRUv1ADABALIZ1e1j221AJa1h2c1X2CJa2X4Kb1i1v2Kn1CVQv16VY1h2Kb18HMp1W1l2w1Z48Ji1b3Qd26JW1b3CX1Gp1AV258J8P4D25Sp28RGn1AZ1Kz1MZ26b1276HCd1496Ha1t3CB6DGr1e2z6S~26HAX14DQd2It1UX3GH47290Ni1Z4Ej1c1h3c1h36FW1X327496LY1Z36Du1j5Qd2Qj2m1p4Kp16X14Z1034h1C98TAB478989432HOX145MJELU5O3Y5JY8d1e5PC1Y29W13m17c14C6W2a1o2y186ICEAK8M081EUAA66a1a1CCy2u2g4Y466w1s1_2w2"
   },
   {
-    "id": 46,
-    "name": "Enforcer",
-    "slug": "enforcer",
-    "area": "Mystic",
-    "distance": 6.1,
-    "description": null,
-    "lore": "I think CR invented this run?",
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://bit.ly/34d8Fpp"
-  },
-  {
-    "id": 47,
-    "name": "X-Cemetery",
-    "slug": "extended-cemetery",
-    "area": "West Medford",
-    "distance": 6.2,
-    "description": "Cemetery but longer. Winchester vibes.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/3168186578"
-  },
-  {
-    "id": 48,
-    "name": "X-Harvard",
-    "slug": "extended-harvard",
-    "area": "Cambridge",
-    "distance": 6.5,
-    "description": "Harvard run with an extra mile out to the river.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://bit.ly/3bK51G4"
-  },
-  {
-    "id": 49,
-    "name": "Malden",
-    "slug": "malden",
-    "area": "Malden",
-    "distance": 6.5,
-    "description": "Towards 1500 then back through the park.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/3008766064"
-  },
-  {
-    "id": 50,
+    "id": 73,
     "name": "Trunks",
     "slug": "trunks",
     "area": "Mystic / Cambridge",
@@ -750,7 +1095,7 @@
     "mapLink": "https://www.strava.com/activities/6053450540"
   },
   {
-    "id": 51,
+    "id": 74,
     "name": "6 Mile Bike Path",
     "slug": "6-mile-bike-path",
     "area": "Bike Path / Arlington",
@@ -765,7 +1110,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2022+On+The+Go+Map,+OpenStreetMap+Contributors&d=10621&f=90948633b6&n=1&dm=1&context=share&r2=mXxY8xnXoDz1v1r1r177b7x6DDVT57DB9Dv19B7LJd1TPHTLD7NFB5V7F2D275L40B1HX3CB49030l4M70720R4Je1v24NX1n3b1b2JZ15F2Le1f3h4Z339c1j3BF67g1z1Y2v3g1t2i2f5F7D9t2z19573r2x19555v2x19773t2x118H977HLv2X2b2f431DP52DFB6DDBABBvCjE578D6D99r4h55379d1h15H4d24D1L3T1PGx8EX5Md42d17z46r3DX37Z19n37TFRL9105072n2B10D7775H5t3H~239BDH5~5A9333w1Z52X10X32HCNMj20p22Fe1FCFG9a17IF6F81A3v1n81X15D0D1FY1Bk2Jq1NW1Dw2f1CFk3p1s2f1W1TEJEJk1PUFI1E4IEY1QM0e2Z1G987IRIDg7b4yDv6A363y1Vw2j1y6d3k6v2y1Hk7r1o2Pi1JA5W2Rs3h2_1n1u1r1i3x3CDa2j2q2j2i1Ts3b2c3X1q6z1C3K3JP85OX1W1c1Vb1NY176KQ6Ac1c1Ra2T_19E3AEKEIu1m2_2Y4q1g2EQKg1Ge1m1W3Ig1048IBCBECDCBAKAOq1q2KSc1m1c1g1y1W2g1e1k2m2w2k286e3q2w2e2A822EAs2g2GGQc1Ec18e12S3a1927C3A0G4A68E60c1H110x19f23P6d1Gx1k1t1u1z2g4h1k1f5Y3f4g3r2q2Z1W1PUn1k2h1i3BCN8Hg1DDX1w2Pu3DW31o3Ka74q33W2Lo47w1F11S2RG2C45q23g30Y20EKa2e1_2EQQY1e7w6q1c26Q9CNROS9GAEBIt4e758JU7AJW1h2m3x1w2DM58~2m4r2e4v2Y4t2e4l4w67Ed3_47C5An3q5d2u3X2c3t3s4v1W2Z4c4p2i2~3Y3r2W2b1E6Kf17g18AEEC68W1UEE67c7w666w1s1k1k1"
   },
   {
-    "id": 52,
+    "id": 75,
     "name": "Fellsway",
     "slug": "fellsway",
     "area": "Mystic / Fells",
@@ -780,22 +1125,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2022+On+The+Go+Map,+OpenStreetMap+Contributors&d=10805&f=9f63fedd30&n=1&dm=1&context=share&r2=WWxY8fpXoDDBr1r177b7x6DDVT57DB9Dv19B7LJd1TPHTLD7NFB5V7F2D275L40BV4j2Cd5QX8e1f4Gp2GX1UPUBC7281CY1EW1MUg3e5AE48EQs1y28Gu1c38E6EEUs1e4Qc2Sa2o1_3o1_3Y1u2w1m4k2c6a2k5k3aFq2wBe1m5Gy2h1c1i1b1CB8U6O6g16i35i27c1MNDq1z2gA9o1AA8A0GDq25E9U9m14w2Ec78c2Gw12Y2Bc1k1k1EGAAIKq5_4y6c6SMa1I82g3Kw2E82Y14Q6u18m18W2C2g30A0I2c30a12o10u22W22m30w31g2Bg2Fe2QQ4C0S2w41s31_30QB2C10Pi49g24A0c28_3Oo1Ok4m1G6k2Mg18s12c3Lg1HQFa2l1C9e3p2k2x1a2f1SHs1PI7QBg2Lu19s25w12G2w8K8f52Jq8Qq2AE8ODO5EZ18n12l1Es1Ie10201Hd1Dr16p14DKb2Kr1k1x2a1x1MZ1HTIVMX2IX2G~2Cj3At5Ap4Md4Kt2w1p6IZ3Gz3An4Gf8Cx3Ed3Kn3a1h5Ez4Ar22V051l1Ed5a1hAX1Fr2j1Z3p1x2n1h1Ji1Kc1l5EX26l16~50d90V4Z41z20d40h12z4W2lA2h1Dn3Pp5z1GV2~1x2Z1f31h35X1r5c1v9w1D0DT1L073CB83072537B1BX52L0X42d32F0X61T0x12306a63W53W27i2De29e1X1w43MnBx7Z1_255l1Vz6o3PFf4t2n3~13E14r1_3Jq1r1W47375r5r333Z7Ix3h3"
   },
   {
-    "id": 53,
-    "name": "Spy Pond",
-    "slug": "spy-pond",
-    "area": "Arlington",
-    "distance": 6.8,
-    "description": "Run around Spy Pond and back on the bike path",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/1476219455"
-  },
-  {
-    "id": 54,
+    "id": 76,
     "name": "Arlington to Alewife",
     "slug": "arlington-to-alewife",
     "area": "Long Lakes / Arlington",
@@ -810,7 +1140,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2022+On+The+Go+Map,+OpenStreetMap+Contributors&d=12187&f=90948633b6&n=1&dm=1&context=share&r2=mXxY8xnXoDz1v1r1r177b7x6DDVT57DB9Dv19B7LJd1TPHTLD7NFB5V7F2D275L40BV4j2Cd5QX8e1f4Gp2GV5NDDJD7B0D2JKNT71N7JBx2Z4FLTj1f1v1f1Z2BB1Bb1j2Pz13B7Dz1t4HX1JVp1X2p1X195j2j17573t2p1h1PNFJB73B9Mj1s1x1GD5FA94H8T4Z1Sd4Ir22B4DCn16h3I~94RIr1AR4r1Ar44d27t13f11j14D8D8F5H4d24D1L3T1PGx8EX5Md42d17z46r3DX37Z19n37TFRL9105072n2B10D7775H5t3H~239BDH5~5A9333w1Z52X10X32HCNMj20p22Fe1FCFG9a17IF6F81A3v1n81X15D0D1FY1Bk2Jq1NW1Dw2f1CFk3p1s2f1W1TEJEJk1PUFI1E4IEY1QM0e2Z1G987IRIDg7b4yDv6A363y1Vw2j1y6d3k6v2y1Hk7r1o2Pi1JA5W2Rs3h2_1n1u1r1i3x3CDa2j2q2j2i1Ts3b2c3X1q6z1C3K36Ac1c1IE49S~1c1~2CM02636Hw3e6i1i2a1q1GMGIUCk1Es1Mi12I1S5k1NA7a3X2KBGBg1Vg1VY2p1c1TO8IMY1Oa2Se14Y29c11c16Y1CY1MSQc1i1Y1s1c1u2Kk26o27k29g1Hu1Te2Na2Ta4Ji2Li27W22u16s1M_2W1Y44u13Y19Y1Fg1DMTe1d1a1PERA10X12T3T3L4767451620c1H1z19f23P6d1Gx1k1t1u1z2g4h1k1f5Y3f4g3r2q2Z1W1PUn1k2h1i3BCN8Hg1DDX1w2Pu3DW31o3Ka74q33W2Lo47w1F15e21W21y12a24o21U1K7OHKFCD2Z17D00S1MH1J3p20J432H4~3m1P4H2Z28Z11D1N0l27n2AD2B4~5_1h2OX14Z11d3Tf1BL0J0v1GPEJK9C5C7Ih3a9p4yBX1W2d2i37G58t5WE5G5Eh2g5f1u2X2w3l1c2b3w3l1k2l1w2Pe2Fs1Nc3Do1Re2BQNY1h1W2BS8S8866C2gFf28180m4L40A0C3Y3B2Im17c14C6W2a1o2y1Y1Q62K8K2OQAAADCGQSu1w1g2y1u3o3w1u1c2a2"
   },
   {
-    "id": 55,
+    "id": 77,
     "name": "Squares",
     "slug": "squares",
     "area": "Somerville",
@@ -825,7 +1155,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2023+On+The+Go+Map,+OpenStreetMap+Contributors&d=11494&f=dfd7a5f996&n=1&dm=1&context=share&r2=yXxY8XoXoDX2~1v1r155f4X4x2t258DDVT57DB9Dv19B7h2w1l2y1FCX4W3LINIx1i1v1i1z1k1h7k5HEBAt1e1nFsBVM98FE5Gb1i3b1i3Dk1h1a4FE3A3ABITY37316Vk33E5C18b4WD163C1AZ1m338185KDg17M18025G5EFK3O~1o1B8x1m1DCd4g3FCt2a298v2e2n3u2h5e4h4i3DCPOz2_29776~2c3BA78b2g29858b2c256BA58l2o27A76j4q49A56349AZ1c1f7k7j3o3j1k1l1k1~2c3Z1a1X1W1BEb3b2D9B7Z3Z2Z3b2f3d2h2p1z1j1p1b197n1b1JDf3j275FBr1f138l1f1Z3a279RGD8POl1g1L851H7R2n3a1P8B43Jp4m151X1B55Vx13B57z1t37435x1~3Bd1053D9n1NZ4Hl21BF197h7~29375r4~127X17z2P296j107Eh2714B4L172N20IZ4Cx2296p12BG285k2l2u6n7W4d4k2t2597JEd38L81A5s6X7ABB~1E5w1Ni2Ta1HKRm1x1GHQTe1h168y2s3ABAG68CBm1z1Y1f1i1r1q6X8C845KNo4n5W2l2m1v1c1SC1a1UQMMG8440QI20C823QOAJW1Z2o1z2w1j3Oh1e1f2CCGRg2b4c3r5i1j2Mf1KZ1W1t1GRCLW1x1c2z3g1f2q1z2q1f2854F8N070NM5G341614343A1G06563C741o1l1456585k2n2216545W2l26189u3k5AB686AW3i4g3t2u3h38743_1h1A583q3Z283C588QFo3X2W1LC7i3f2u1Z1i2f1e1NA5a1EG6Mj1MX1a1TC9w3X363w1j1w1l1a2v1e3l2OJy1n1m2~1IDW2p1ULa3l287IB83G7O9SBc2VY4r1_2h141G5QBa1V58p1q33A7GZ2W5X2u49Qd1c3b1q3f1Y5Fu1F_15KLY3Ds1Ta43A3GZ1s4Be29c30y16e46k20I2a13O2C086K8Q6i16OCO868AA0A3A967OP43W1T80U5O3Y5JY8d1e5PC1Y29W13m17c14C6W2a1o2y1QIEAK8M081EUAA66a1a1CCy2u2g4Y466w1s18DY2_1"
   },
   {
-    "id": 56,
+    "id": 78,
     "name": "Short SB",
     "slug": "short-sb",
     "area": "West Medford / Long Lakes",
@@ -840,7 +1170,7 @@
     "mapLink": "https://bit.ly/2UFCuMe"
   },
   {
-    "id": 57,
+    "id": 79,
     "name": "Brattle Street",
     "slug": "brattle-street",
     "area": "Cambridge",
@@ -855,22 +1185,7 @@
     "mapLink": "https://onthegomap.com/?m=s&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2020+On+The+Go+Map,+OpenStreetMap+Contributors&d=11846&f=4462f34775&n=1&dm=1&context=share&r2=c~wY8ZpXoDh7l8NL55979BFDJL113399NP90N5B5Z1RX1N31f1V97X1HJ9B511Z11f18L2z2Ed5QR4b7a1f4Gp2G52R7LD7B57D7D0307432FGNTL593JBBHTh1n1b2h1X211f1v1n1l2h1v2Td239X2z4HX1JVp1X2n1VB7j2j17573t2p1h1PJD3131H9LDf1JC7B8F8d1Mh2g1t1a1BAf3c298NGn3a2B896DAJE74f3_1Z1MFCFE76v2o298FGX2_1l1k13456BJNh1LVFHf1v1897Ax2e3FIn2y239Pj1l2n47F6758BAZ1W1b1QLAB6F6TAD4L8T87292523P72p1EX1AX1AV6V4f10T1v13h13N3j27p15Z11J1h13j15V3d3Bd25J3~17X7Pr27N1n2791j25l29t291Ot3Dv5Jh13D0f13b12921PCTPBz5553RB31v1b1TNJJ49DDn1x1PVFHHLl1~1n1z10321OP69c1j1i1X2Kh1Ut2ATg1p3Eh1Ev16R01MX3Kd2Gj2298T8R27Cl1Iv1Ox1i1n2c1X2Sl1i1f225O~1O~22JAv10Fp1X6DX2192b5055d2Dl37X2Jf4Bf2X1l63JVZ6Bn2Bf2VZ5Vb5Dd21B9l1PX43NCDw1j1Y2X1o1Z1GFQX1Ob1Kf18H6NIX36PATIj1Qf1m1r1s1l1c1Pc1N20q1NK7E5q2HO4U0I3W4Hg12Y1EMA42e1Uk1m144o1u1u3u3e1c1UQEFI58DG86A3I2Is1m1c5c3m3y1a1CQAUAw2Su18c35i2X1MZ14T8RCLGKELCAAA8ESd1CJa1t121W1d1W1N63A3I7G18022e2EQCQIA842i5s4CC86IIA8I2q1g1u1Y1a2Us2QW1As5w1o2Qo4g1K880G040301G5E5s1N_85g23SC0M0Y10W1CW10838CI2K2w13K5I7GBUNa1j16AE1G0q57EA8KGo28c46IGEK4a28C0G282648C8G2A6KAo38a18m16o15s36m32k11e1Le49m31W1Ji91C4E6Q5o33Sk1u122s4c5KKi2u2QSs1y1y2g3_2g3w2Y3EEC5C58KEQ42u1m3EQw2Y2EI6666ALC8a3a2i3c2e3c2e3e264GCX1k2l1g3Nq17G5C387E8D47Mc1W1UAA4ISIUK5Gx1i418Fk1Lw15C7Q7MTs21C2Ey1k36I8IKo20G3GFY13Co296C2I5Gy1M2IA0q2DM1g17a1222C6KAY1IA8g1W142Y1Oa1SC6O6A0OQAA4422KMGEACA866i1e1Y3W322e2Y2MKy1w1"
   },
   {
-    "id": 58,
-    "name": "One Bridge",
-    "slug": "one-bridge",
-    "area": "Charles",
-    "distance": 7.4,
-    "description": "Shortest Charles run, flat, through Harvard",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://bit.ly/2R627Ub"
-  },
-  {
-    "id": 59,
+    "id": 80,
     "name": "K Harvard",
     "slug": "k-harvard",
     "area": "Cambridge",
@@ -885,22 +1200,7 @@
     "mapLink": "https://onthegomap.com/s/ol849sis"
   },
   {
-    "id": 60,
-    "name": "Fresh Pond",
-    "slug": "fresh-pond",
-    "area": "Cambridge",
-    "distance": 7.5,
-    "description": "Flat lollipop course around Fresh Pond, bike path",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/1409416884"
-  },
-  {
-    "id": 61,
+    "id": 81,
     "name": "Boat House",
     "slug": "boat-house",
     "area": "Mystic / Malden",
@@ -915,7 +1215,7 @@
     "mapLink": "https://bit.ly/2JBA1MJ"
   },
   {
-    "id": 62,
+    "id": 82,
     "name": "South Border Road",
     "slug": "south-border-road",
     "area": "Winchester / West Medford",
@@ -930,22 +1230,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2022+On+The+Go+Map,+OpenStreetMap+Contributors&d=12018&f=f363e6403d&n=1&dm=1&context=share&r2=sWxY8zpXoDo4i4a1a1_2w2GCGAO6e5e1C187C0G22Gg5b1g5d1Y17O1M8a1Kq2y1k1l3c3_1_2u1o1W1w1a1y3k24Ru3q1S0I7K52266E8462_1C63CSGm1Qu1W16Pm2Mg1Aq3W1W4W1a3Sa2Kc2QY3k1a2OW2Ee6IW22g4Ck15O7g4AW30Q1g16o2Fk39_28Y28k4Gg4Gq4Cu10g10SCCR4Bu1t3g2h4Ox1Gf1c1v4I~1Kv1Kd1SZ1e1d1e3b2W1Vm1j2Y1n1W1RUJy3v1k2n1W2z1w1Z2s3d5y3~4o1Z2c1l1q1n2W1f2KX2IX3Kn2Mt1Qh1e1t1_1b2a1Ra1FY15Q5g2FQBOFQNSZ1_1Z3i1r1c1d1c1Ve1N_1RW19u17w10m16s1Aq28a13o1Jk1Pa6l3m4x1e2Py3h1m2Ju27Y46w17W19c1Jk1Ve1Z1W2X2m1h1W1Ha1Bm27_29W2Ji1TKLOTSv1U~2IX28v1256b3f1f2X2j2Z1l1Tn1Lb2Df23j2Ep3Y1b62f11j1n17L_1Mz1t3Jd2Dv1NX2X1b40B0d30l10x28~3Af22h15v6r1r3Rt19p15Z41h15Z19l1Z1Z1X1TZ1t1j2n1n1151333B3923616f1KLK~8w7p2k2Z2k2n1s1h1Ur1OZ2Gd7u1f7o1j5g1p1C~7a2D4p2MZ3W1d2Ud3o1d2g1t2w1v4q25B6Cl1a1z1u1z2a3b1g1n1s2j5i9j2k4d2W4BKf3_4h1y1Z1o1r4m6h1W2LUv2w3X3_3NUl2Y3b3a4TW1f5e6r1_1p2e3p1i1B6F3D8581IV0X42L0X42d32F0X61T0x1210106a61g21s23W27i2De29e1b1m5b2j1h9j62516Z1_2p2v1z7W3b3X2n3~15Ir1_3Jq1953Cf1g3t5p3B453f7HX3v2"
   },
   {
-    "id": 63,
-    "name": "Mid Res",
-    "slug": "mid-res",
-    "area": "Fells",
-    "distance": 7.57,
-    "description": "Anywhere from 6.5 to 8. Trail-Run, Popular, moderately hilly.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/1904594544"
-  },
-  {
-    "id": 64,
+    "id": 83,
     "name": "BroadWash",
     "slug": "broadwash",
     "area": "Somerville / Cambridge",
@@ -960,7 +1245,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2023+On+The+Go+Map,+OpenStreetMap+Contributors&d=12310&f=a06e8ec39a&n=1&dm=1&context=share&r2=mZxY8vlXoDDH33h3b3r1r177b7x6DDVT57DB9Dv19B7h2w1B9v2a2Z3c2ROBA0F9FbFe2F8l2w1B837B8r8g6NIPe2Vc3Ne25EX1a35M3A18VY35Gb1i3b1i3Dk1h1a40O1A38FITY3Fm116Pg23E9Y15IRW3d2_6Fs15EBCZ1u35I3ABe15I185c1La2J_19a1Fo17SRq2163E7Q7K169W1Fq1BY1Vc35KPe2h1c37Kv1a4Vm2Lq17IJc1X1i2FMRy1FSNk1f1q2x1q3Li15CFSl2y4b2c47I9Gf1o2DS7IHY1Lk19APq1l2m4z1s2FOb1q1Vi1Vi1n1e27EPo1Lg19If2w49MLm1FY1Nu1FW1Hc19ONu1f1W3Lq1BO7K7Ib1u2No15G7Gh2a5RW2j1k33C5A18BU5GHk15I5G363C3C3At1q53ETg3Ns2Ps25I9e1Fy1Dq1Fu1h1u4B53G3C0403v4l3r2z1Z1PBBDBf3l2X2l1TJn9~6LH0A09Fn2Nh43VHt31L1JDj39l2X1z65RJn25HFz17RFz13HZ1~3Pd2Fd15h1Hx19NVn2BP7JZ1~2DF7H3DN~1Fl1E7Lh2Bl207071b16l3292B6h22b12b1470B0D8r24h14n11J2RCr24n1230F0F6N77338F9209N91V5d29D3v11f13h15h11F7l19n23j19r21j10T0J2V6d1Ab24z14h15j27z1Dr2Dd2Fx1Ll27V5NN~23LLt2HX2Fb213Dz1Td41B5L5TDX2Jn2Lx23FB~13Lb1j5Bt13Lh1l61B3DZ1b53HTh4E7DX20319h1h63F5P9p19t1Dv1X1X50B43c2P1Dm3f1e2Pg6h2C3i6MA0G2c28c3AA0A2e14y2AC2C0g5KI2G0k2AE0y2EA0C0i31M0I0g45E1E0m37e1140A6EMEFE9a2L60Y1C24CC69EPW1t1GRCLEEOj1456Bu1Z3AH8Bu2b5i1t1606720o1W346i1q2_2q5244AMJ874321s1t1QRCBw1x1_1X265i2t2892112CGa9i6A886_1e1a2k1W3a2CAC8w2Y2i1Uk1UUK42314FCb2g1p4Ah1Qb3E92086KE88SMq1c1861020c1z201A6c3a28665i1Uy1i1q1Y1e3g284A8e6k464E941C8G6A5UMSES4S0W1521IBKZ14N2d2431J8S4U608061CC24458B8HA967OP4E4506SNC5u3JmD~1m4L82E0C187A3M386E1G1W18C6OGE8UMQIe1UMKC8w1AAEEC68W1UEEc7y688s1s1i3c344EI1A"
   },
   {
-    "id": 65,
+    "id": 84,
     "name": "West Cambridge",
     "slug": "west-cambridge",
     "area": "West Cambridge",
@@ -975,22 +1260,7 @@
     "mapLink": "https://bit.ly/2RaWLaf"
   },
   {
-    "id": 66,
-    "name": "Two Bridges",
-    "slug": "two-bridges",
-    "area": "Charles",
-    "distance": 7.8,
-    "description": "Tracy Basset sightings: 2",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://bit.ly/2UXPYSG"
-  },
-  {
-    "id": 67,
+    "id": 85,
     "name": "Fells n' Chips",
     "slug": "fells-n-chips",
     "area": "Mystic / Malden",
@@ -1005,7 +1275,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=48491"
   },
   {
-    "id": 68,
+    "id": 86,
     "name": "DEA Pond",
     "slug": "dea-pond",
     "area": "Bike Path / Arlington / Long Lakes",
@@ -1020,22 +1290,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=2323007"
   },
   {
-    "id": 69,
-    "name": "Swimming Hole",
-    "slug": "swimming-hole",
-    "area": "Fells",
-    "distance": 8,
-    "description": "To the rock at Spot Pond and back on Short Res",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://bit.ly/2UWOY12"
-  },
-  {
-    "id": 70,
+    "id": 87,
     "name": "Femmed",
     "slug": "femmed",
     "area": "Fells / West Medford",
@@ -1050,22 +1305,7 @@
     "mapLink": "https://www.strava.com/activities/5003375440"
   },
   {
-    "id": 71,
-    "name": "Mid-D Madness",
-    "slug": "mid-d-madness",
-    "area": "Somerville / Inner Belt",
-    "distance": 8,
-    "description": "whatup lechmere",
-    "lore": "A bills, brink, and jman creation",
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.gmap-pedometer.com/?r=3409576"
-  },
-  {
-    "id": 72,
+    "id": 88,
     "name": "Goldman Sachs",
     "slug": "goldman-sachs",
     "area": "Arlington",
@@ -1080,7 +1320,7 @@
     "mapLink": "https://onthegomap.com/s/jke5m91d"
   },
   {
-    "id": 73,
+    "id": 89,
     "name": "Tour de Cambrville (BRICKS)",
     "slug": "tour-de-cambrville-bricks",
     "area": "Cambridge / Somerville",
@@ -1095,7 +1335,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2024+On+The+Go+Map,+OpenStreetMap+Contributors&d=14046&f=5959dc739a&n=1&dm=1&context=share&r2=oYxY8XoXoDl2j27Ev1r155f4X4x2t2BBZ1Z15599DT72L0H5FBRJl2v1z1Z1D5b13l18V4X2AB2d2A~2G0L1L4JKb1Kj14F0FJn27H5Hx1j31D2BUr28L8P6B33316X1Eb11R4JFf20T6JOHGd14DJHp1r1g1t2g2b5F77507354Bz2X2d3b2h3b2VL~1j15E021831B597134973Dv1L5~11d2l431DPF839153D173011n5f67755l2x25775X2d2219755X2h27775r4h55379d1h15H4d24D1L3T1PEl72h1Cx32b1Md42d17z46f20h1Bp25T3J9n37TFRL9105072p2BD7775H5t3H~239BDH5~5A9333Z1k1ROZ1KJ6b14d11H17B74V0VB90j102R2B0991714b12B0BKZ72R2F6~17HLBn2Jn4j1r5v1V9p3b1b1Ht1X1p1f1H197HH7513r5z4d1RPBf19V5N2R8VM569ENW1Nc1BIBKPc19B9979l1k274Nc174b2Ul14p10t15l4l15M5KJ9Z1639B5B735j3b2RHp1X1F29BBB01Z2r1h2X27797n2h2b3l351579Bn1r1JFd1F93z4K7202J3P324H1d3Kx1Qt1a1n2W2l1q1Ri1FY1Fu17g33E5A91Fg1Lk1HS5KBC9A12NSN6l2e1d1S58BG047426Ue58Y1g1y6e1c62A6W14S28Ik3IY44UEy1Y1s6Ew3Co24OIW53W42q14Y1CQc1s42I6Q082G065_11INW3Js1p1w2Z3o5DUTe29Y1Lm25c1f1k5Z1y4Fi15C189QBg1l1m4He1n1q2l1w124HM04W3s3OSk2W338EE5CCCA838Iq18MKg1IUEi1202G2A4E2806442224882268l1W3NY2Fy19e43I5W1Tu4MA2A4EUm460C64IMa3Ec26152Cu102Ao16S6O6UY1Y5Ec2EW2286Y1Oi34IW1_46M4MGi2C_1Ew14OCu1c1k54MCW2Qi3Ko2EY24K2A4A2C2CUe4E_124Gc2IY2Mu24MOW36Q8UMm2Gy1Ee2Es28_16k20k11y1Fc25e11Y10G0W10c1Aw26k14W16s16m12I4e18w24u18E8g23UW1A0A3A4444A85Ok1k1_2Y3W5e55A8AAC8Bg1u14A0C02M02a16C88EI01028Cm1f2C8a3g2A6Ef1A4_2m1s6m4EAG481c1Tq5r587CD_1~1m2n2W2x1c1b1k2p2MLk2n2m2l2a1b1W1VQPi1f189A9A9W4Z4MNW3Z3CBm2n2QPq1n1CBAFc3d3_2z2QNEBi4h3i5d4E9a3j2w2d2ADu2z1GBe4f3EBy1l1C7W2n1OJKDG88D83K7C4M9s2h1w2d1e2X1G7y2f1m2b183c3l1i3l1w2f1E583M9W2VUBg1Lm1LK7K9E5Y3j1QBs2d1c2Z1Y1DE5Y3f1E5G7W3h1a1Do2X181C5e3d1C3e3d1C5s3l1y2h14JE5E3i2b1u1ZQ192B0F6h1Z1Z1"
   },
   {
-    "id": 74,
+    "id": 90,
     "name": "Bunker Hill",
     "slug": "bunker-hill",
     "area": "Charlestown",
@@ -1110,7 +1350,7 @@
     "mapLink": "https://bit.ly/3aJTNBA"
   },
   {
-    "id": 75,
+    "id": 91,
     "name": "Femetery",
     "slug": "femetery",
     "area": "Fells / West Medford",
@@ -1125,22 +1365,7 @@
     "mapLink": "https://www.strava.com/activities/3056561803"
   },
   {
-    "id": 76,
-    "name": "Long Res",
-    "slug": "long-res",
-    "area": "Fells",
-    "distance": 8.5,
-    "description": "Impossible run to remember. Long, hilly run in the Fells.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/1945972023"
-  },
-  {
-    "id": 77,
+    "id": 92,
     "name": "Sandy Beach",
     "slug": "sandy-beach",
     "area": "Long Lakes / Fells",
@@ -1155,7 +1380,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=1130771"
   },
   {
-    "id": 78,
+    "id": 93,
     "name": "OGSB",
     "slug": "ogsb",
     "area": "Winchester",
@@ -1170,7 +1395,7 @@
     "mapLink": "https://www.strava.com/activities/3034782205"
   },
   {
-    "id": 79,
+    "id": 94,
     "name": "Marathon Monday",
     "slug": "marathon-monday",
     "area": "Cambridge / Newton",
@@ -1185,7 +1410,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=327289"
   },
   {
-    "id": 80,
+    "id": 95,
     "name": "New Bunker Hill",
     "slug": "new-bunker-hill",
     "area": "Charlestown",
@@ -1200,7 +1425,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2024+On+The+Go+Map,+OpenStreetMap+Contributors&d=14221&f=3902f3fa60&n=1&dm=1&context=share&r2=sYxY8znXoDp2n27Ev1r155f4X4x2t2BBZ1Z15599DT72L0H5FBRJl2v1z1Z1D5b13l18V4X2AB2d5QX8e1X5KN4T670VU34NQ589A7G7E3613BB5270322e11g1H190DGLCT4T0P3PBRLj13755Gd5t3VLFB95b3d2p1X1NHZ1Ph1T5675b3Z295b1W3B9l1X1RL77JD75FAPc39i1Dq1RW3Bc23G3ENw3f2a9FW2x2_B1Y17Y1De13C1CLc2n2aBLu2Ty3Te3~1a7f1w29EHMj1c2x3_4Va1TI5A9S7Cj1w1JC5AZ3W85C3Av1e4~1e43C1CVo2Z2o4Z3g6r1y336951C1A16f3c7Tw1Dg1b1W3Z1w15O24l1o16A6A02b2e4LY1h1s1023A7C04p2o3n2_2d3a3h7y6XDYCt3y3p1q1t2w2r4_4RGB8r4o4~AiAp9Y9l2q2FMFW1~3g6BW1Ha27GJY17Kf1w41Ov1m6Z1k3De188EA7IECCM4Y1h1gC3i11ILy57c15IBUBSz2k69M3E86He1BIFe134688842BW1Fk1i2y102AIW2q1m2Y2Y3e2i1o1Y1s1Mq1Y1c38ICE0I0E084E0426Qw1484C3CMi2Qo2s3_A8GUc122KGEGGE7Ca2k2_2a33A1Ad1i3Nc23A38Vy2043C048Ef1u38642A8GA867MLY20A2684o1SIA5E7M3Cw1Uk1Ok1d420E1E0s1So4k249Il105Kt16F4D4BEh1In14929OZ26H494Bm1h409090BCLOj1AJ474749a1b22569i2n44749g2r4w3n76F4743256Bg1t24549s1d3Ol1m1Z3454Bu3j7076B4965m1~2Ib1Ux1Sv1On16J6FAN6F43IX1038B47W1p165ABMD0Z225HJD32D097f20DW1REJ6r16N8P67Of1Y1h11R87AFAB4789Uh1w1Z347498FC9a1n1CLw1b40D4B49274H2545KZ22927a1z36H2D4B4Fg1j410292720En1Gn1Ot22B2B2023Mp22327IZ24B29Gv1AZ125494D02s1~4A049M06B296D6HEj16FAN6B6Hm1h3y1X4m1f38DAF_1Z48Hw1X4W1~1Mn1AAAJIVEJ230J1111GTy1X4e1f2Y1b2IZ16BSt18Z1k1n2ELe1r143KRGJY1l1W2X38DUr1Mf14349Kb1ABEJY2~3Uv1GRCLIZ1e1h2CNg2j444696By1r3696By1p349u2~1C7A7g3n2Y2X28787e3p365A9k1p1g2r267ABm4n5u3t58D698Do1n2g1r1658Bc1r1658Bw3z4m1z18BAB23g2X3896743EJSb1IN8967q1d2w1f2w1v1IFe1NE0E38349w2f1833FQBs2d1c2Z1Y1DE5Y3f1E5G7W3h1a1Do2X181C5e3d1C3e3d1C5s3l1y2h14JE5E3i2b1C3Ch8e1dI6r12FUS8Fx1v1"
   },
   {
-    "id": 81,
+    "id": 96,
     "name": "Menotomy",
     "slug": "menotomy",
     "area": "Arlington",
@@ -1215,7 +1440,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=324994"
   },
   {
-    "id": 82,
+    "id": 97,
     "name": "Bike Lakes",
     "slug": "bike-lakes",
     "area": "Bike Path / Arlington / Long Lakes",
@@ -1230,7 +1455,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=2012354"
   },
   {
-    "id": 83,
+    "id": 98,
     "name": "Donut Run Deluxe",
     "slug": "donut-run-deluxe",
     "area": "Campus / Arlington",
@@ -1245,7 +1470,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=2392571"
   },
   {
-    "id": 84,
+    "id": 99,
     "name": "2 Central",
     "slug": "2-central",
     "area": "Charles / Cambridge",
@@ -1258,231 +1483,6 @@
     "createdAt": "2024-11-25T01:00:00.000Z",
     "updatedAt": "2024-11-25T01:00:00.000Z",
     "mapLink": "https://www.gmap-pedometer.com/?r=527870"
-  },
-  {
-    "id": 85,
-    "name": "Long Lakes",
-    "slug": "long-lakes",
-    "area": "Long Lakes",
-    "distance": 9,
-    "description": "Tempo Loop!!!",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://bit.ly/2x2BAAx"
-  },
-  {
-    "id": 86,
-    "name": "Belmont",
-    "slug": "belmont",
-    "area": "Belmont",
-    "distance": 9.2,
-    "description": "Flat run, roads, through Belmont, long straightway",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/1811930667"
-  },
-  {
-    "id": 87,
-    "name": "Encore",
-    "slug": "encore",
-    "area": "Mystic",
-    "distance": 9.2,
-    "description": null,
-    "lore": "First run spring 2020 by TW + 20 pals",
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://onthegomap.com/?m=s&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2020+On+The+Go+Map,+OpenStreetMap+Contributors&d=14827&f=4462f34775&n=1&dm=1&context=share&r2=i_wY8jrXoD44g2e2g2c21I1q1Fc8NeAD_832n3q1z2i1~3s110n3i1p3k1~2e1TAl3q1F6G5k3aFq2wBe1m5Gy24Y18a22m103040S0C9_29q1Dq1Vc3r1k5Fe2Da2FCX1S80EAAM4A2Y22a12Y14o1Io70O0u1Dy21M60C65SVc37M8LW1b36RB5509W19c1Pa2p4_A7K32B8r2SVIFG3IHy1Bu17_19o41O7C58p1W2BAF8b1AH07310D5J9B7H1D0B5JRj1v2Rh1N9J2H8109C7G9m13W2R_19e1140W16U28AKEUACCOIUCOISAECQ6K066q13s13Q5GHa21O4I6ACGU0Y2PS0C484SES2Q3_1Vy29E7A2A6EA22EC6E46063w30C9M7E12989690r33PE9O1K0g23o19e1BM9E14HCNCt16t15b19RCZ1a1387EBM1464GQ8O2AY1Iq3g162181E3SBGBO02017395JA35n3d1913272NO9C9858X1U56Pg15E7MBW20K1c10W22K4q12OAk1061I5O3I3APa23A38d2W3l1e2Z1i1FKd1_1Vy152t54Z22HA7I1M2o11G8060k10k9C4040i1482C2w1GG8020664a1W1Y2u1UQY1SY1Sa1m1GQIW1c1u1Y1q1W1e1Y1e1CA6265676DY1Z28DOn16t1296183a1DI8q1W1E8UO8AACEMAO263U022M5s1Be2FW21m15OHu2Ne3Ds1f1q5BW19E9a19k1Bc1FOHGJGF2H4~13N1RDNHLP2D9j1Hh1Fd2BZ1HRj1h1j2d1B573D7H9FLDT7T7F4Z18l11X25N9LNb1NL10r1Rb10Z14R8V4T8R6CK8Ij1n15ADFJDLFf1Bz4Gt14F2f16JEJKLg19O9Gx1e3DCl1m1760SQa1c1Y1Kc14K7I7Eb2S~14F3RBh2f2T6RHh3l4L9d2X230~2u4143M8MY2e2MQCo1g1e1o1i1i3Y31Ij1u2z1s3Ei116Pw1q1q1g1i188A8e1Y1He17E705828He1L2F2xAh94738v5p4r6X5LFR9lAf6t4v2j2f1D5Z2FT3b6Vh2D70n2Hh19h17t19N9LBDFFLH3716I50605H397f20D0D63GT6F0V5P394A87636527AP41Ib1CFKLQR4905C5A38BA987694922A2a3f5KVGV8Ho1j36HEp18TGp129Uj3Ab14Fo1j5Gt1Ep1Gx1Ad1W1d3Or2G~1Ir1w1n54BAVe1n36D6JETe1r2Qz1s2t5KCc2r4Y2n4W1~1Ml1ALGZ1Op1u1t3On1s2h5i1r2W1v1ELGLa1l1Sb1EH_1p2W1p169Ol1W1x16B45Sp1i2t4Kd1IX1LDo2x4a1b2g1n2g1l2W2t3s1j347i1x2w1h3GX1Y2t4e1z2Gd18Jc2f58LW1b3a1p3AV8N01Y1Z3Sr26Li1d4DAE9i1DI5O9s2b1w2b101e2X1G7w2h1w2d1c3l1i3l1e3l1W3h1c1FY1FY1JC5K7K9m1Ly1PUFy1RQBc2Z1c1FC5k3j1m3p1U9W3d1q3j1q3h1W4r1_2h1s3r1Ez8OdAGb84b2f2b2f2d2B9"
-  },
-  {
-    "id": 88,
-    "name": "S*** Biased",
-    "slug": "s-biased",
-    "area": "West Med / Lakes",
-    "distance": 9.35,
-    "description": "Previously lost loop, but it's back. Working on the new name because the old one is outdated",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2023+On+The+Go+Map,+OpenStreetMap+Contributors&d=15043&f=2e1433c0ab&n=1&dm=1&context=share&r2=_YxY8tnXoDm1k1QOa1a1_2w2GCGAO6e5e1C187C0G22Gg5b1g5d1Y17O1M8a1Kg2q1A8k1l3c3_1_2u1o1W1w1a1o3e2A64Ry1f9c1l5Ad1Ed28h24~12F2l45Z640y11U0Y62G0K0q21Y41M0k41K02H67E7G4C5q1h1q2d3s1z1g5d643QRc3Z4m2X3OTY3z3w2v3MTi1~1s4l6a1n1i1x1g3z4CJe2~3k2j4k5h9o1r2w1X2g2h2_1t1m1Z1w4p2w2x1Y1NOBq3r1e2Ta3Vq2LE3W8Z2q1Bk5f1g7n1q8X2O5k1Hq1Z1o1r1a2j2g8l7o3z2M4c1584C1_1Kw1i2Y1a1Ua1m1a1a1Ai16O0i32q16u1As3Sw6s1i16y11I0y39y27m10e30C0C1o25W17e1Fk1Z1Y2b2a2n2UZ1Y1h1t2X4EJCTAr16HAf16HEl1If1CR23Gf1g1z3LDRPb1f1FPBJRv1j1~3Fl1Bl19r2072j2E~40p13VBj1z1~4d1~2p1X4Fb1Nx1t1Z4Th2b1x2d1n2d2~4Nr1Z1v2b3r7j2x5j4pAPd2n1m112z1c1x6k2Z4m1B4Z3Sj1330l2F7w11W2q1y4M_1w1i5g1k3o1a2e1e1q2a1k28UAQEW1QW1a1KW1Y1Y2g3u6Ea1Kc2Kq2q1q56SCG7En1u2f1q2Ty1Z3W6h2q4BKf3TL9n1Hp2Z1p1d1PPNTl1l237DDLFR9X15Z2Dr1Pz1l1b1j1~1h2~1d2x2x2X3r2j1VVJD7j1Np1Ft1Bp4Dt1Db2X1~3t2d1Df13j1Ab1Ih2q1X1Cl16r1Bl2Jl2Df21x28Z3Qb7s2l2Oj26f3BL2EX1b25L6NAx2u1z1Ud2OJ2L7h17P7h1Z1f19l13Z10t2Kj1Or1e1BAl2u2j1Y2Ns1j1i2t1a1j1Ah26r2c1z4W46CZ4a2f2Kz16Z10b27p3TF35CB44o16c1c1i76W1i1c86e1e1m72A4SAw1B4TGx4e8f1c29Kx1i37E7Ah5i9v2w4n1e2v1u28Eb3w4Vo1HUt2g412789G5CD9BKt4c758JU7AJW1h2m3x1w2DM58~2m4r2e4v2Y4t2e4l4w67Ed3_47C5AZ1w1j2w3d2u358x1_2t3s4v1W2Z4c48Eb2Y2n3s2l3u268KB8C488E8G8M2Ki1i1W1Qw2s2s1q1w1u1y2u2"
-  },
-  {
-    "id": 89,
-    "name": "Long Res to Winchester Hospital",
-    "slug": "long-res-to-winchester-hospital",
-    "area": "Fells / Winchester",
-    "distance": 9.4,
-    "description": "Rory showed me this a while ago",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://bit.ly/2V5TWIY"
-  },
-  {
-    "id": 90,
-    "name": "Double Mid-Res",
-    "slug": "double-mid-res",
-    "area": "Fells",
-    "distance": 9.5,
-    "description": "Almost twice as good as mid-res",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.gmap-pedometer.com/?r=1868779"
-  },
-  {
-    "id": 91,
-    "name": "Firehouse",
-    "slug": "firehouse",
-    "area": "Fells",
-    "distance": 9.5,
-    "description": "Around the furthest res in the fells and back.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/2015857183"
-  },
-  {
-    "id": 92,
-    "name": "Winchester Hospital",
-    "slug": "winchester-hospital",
-    "area": "Winchester",
-    "distance": 9.5,
-    "description": "Basically a two mile extension off of South Border",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.gmap-pedometer.com/?r=324899#"
-  },
-  {
-    "id": 93,
-    "name": "Charles Nine-Miler",
-    "slug": "charles-nine-miler",
-    "area": "Charles",
-    "distance": 10,
-    "description": "Basically the Real Deal minus Comm Ave",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "http://www.gmap-pedometer.com/?r=2345636"
-  },
-  {
-    "id": 94,
-    "name": "1500 Meter Pond Short",
-    "slug": "1500-meter-pond-short",
-    "area": "Fells",
-    "distance": 10,
-    "description": "Out through fells, back on roads, swimming spot",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.gmap-pedometer.com/?r=333243"
-  },
-  {
-    "id": 95,
-    "name": "Far Tower",
-    "slug": "far-tower",
-    "area": "Fells",
-    "distance": 10,
-    "description": "Tower at the far end of the Fells. Scary. Bear Hill XC repeats.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/1940449819"
-  },
-  {
-    "id": 96,
-    "name": "Far Tower to Firehouse",
-    "slug": "far-tower-to-firehouse",
-    "area": "Fells",
-    "distance": 10,
-    "description": "GOAT run.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/2786241834"
-  },
-  {
-    "id": 97,
-    "name": "Pisgah",
-    "slug": "pisgah",
-    "area": "Arlington",
-    "distance": 10.3,
-    "description": "Includes Pisgah and Turkey Hill, so be ready for elevation. Pronunciation: (piss-guy)",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": ["MB", "JF"],
-    "firstRunYear": 2023,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2023+On+The+Go+Map,+OpenStreetMap+Contributors&d=16567&f=c79f7ca390&n=1&dm=1&context=share&r2=cZxY8dmXoD332Ff3b3v1r155f4X46Dl1d1t1v1PRBF2Hw6d5m2f27Da4b4w1~1u3r4y1z267e2t3o3p5698Be3z48Dm4v6u2d4w2X4s2d4W3l467ELy1v2i2l3KV89KT67u4d7CHAFADk3f5Qd1Qb1w2d4w1t2o1d2w2v4q5r9k2j4g1b2c4Z7m1x26D67ALi6XAW2Z3q4l6q1x2W1F8FUz1q1d2_1~1_1v1w1z1Ir18j2KTi1v2Sj1a1p1STs1j1a2d1Q9u1Bm11a14e1Ee3k1q2Gk15o1DW5r2s1FEX1W1j3W1t4Oz11P2h109Db49p2D~21B7l339l1D3BTv2A9e2n4i1v22J1Pn1d5r1f6s6x3g1Li1Fu9d3w3b1g4l1g2Rk1Do1BK2k1AQGU5SD2d60~18t48l1Eb1ITMNMDk2Je3Lo1HY2PY8p3s2f1k3x1m1Vo2b2g1d1q1d1A7c8b5h1~21z14LCLY3z3Y1r1MLE5Y2h1a2~1I0i1RQZ189i2t22p1CNi1l1I9W11s1Q8C0I2E5SHo10AAQ7W2T0X1992J2JX17LNX13Fh2u2X1k1h1SH0Z2W2X2i1D62PCl1c1X4It223Kf42X18l22x25h5Bn3Ht3j1n5Fj1v1p4l4Z9HPX2b3v1x1h1d1b1P~1PT1b16n2W2X1QZ2Y1d3W1D4l2Mb2QX3q1l3y1T4H5LDZ1j1BF9Ff5p7TZ1r1f2j1l1x2m3d1u1Z2k2~1o2RW1DAF8f2I~1IT0F5j1h17N5D83GF8L295N11B9P5B4989A5K0QHs1PAJJJ7j19R2L8z1u1Z1m13Q06B8u2g7j1IVEr3m1z2c1j4s1J8LAj4u1L8JAx2e1z3o1d4q1d2EX32~67N0H0p13h25n3Nh1CLE9GHRt1_2Ha138Tc2Hq1b1m49y17k1Jw5Dw3Bo2Fq2Tu39g1HW2Vw2p4wBn8aL5Er1i4h2W6f2q5r1Y3Vs1r1_1l3i3HGZ1W190FBRZ17G9U5I540154Vk2~2s69BDOh2c38g1VY3N_1Hg1Vk2Ra2Da1Hi1f1c316DW1j1m3x1k4x1q4x1m4p1a4t2q6Ls1BSVk2n1q3Z1i2b2o4Ps1d1o214Lm1FW1Pq1~1e4Ru15Gt1q3Z1g2Z1i2Z1g238n1g3l2c57Ej1c3t1y37KLs17ICA7I7GY2a2W1c1q2Y4i2y4Ii10Q7O9IFId1AR64Kp1KDAJOICq2w13C3E22p8mNn1k46684223C1ASIr4qCNu1865Is2w15E5IFg17KX1_2f1o3A85G5G_1i17OA6Di10EKk18k1Rk266Jy1Bg3C26i2Mm1e1i1a3c2i1UKEKAW160M4MAEEC68W1UEEc7y688s1s1i3c3441U"
-  },
-  {
-    "id": 98,
-    "name": "BU Bridge / Fake 10",
-    "slug": "bu-bridge-fake-10",
-    "area": "Charles",
-    "distance": 10.3,
-    "description": "Even 10 miler along the charles. (BU Bridge)",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://bit.ly/2wRr7Ih"
-  },
-  {
-    "id": 99,
-    "name": "BBB",
-    "slug": "bbb",
-    "area": "Malden Center / Encore",
-    "distance": 10.4,
-    "description": "The only run to Malden Center. Solid Encore / Enforcer / Broadway options for the finish.",
-    "lore": "Bernie’s Boda Borg",
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/5193156609"
   },
   {
     "id": 100,
@@ -1501,6 +1501,156 @@
   },
   {
     "id": 101,
+    "name": "Long Lakes",
+    "slug": "long-lakes",
+    "area": "Long Lakes",
+    "distance": 9,
+    "description": "Tempo Loop!!!",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2024-11-25T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2x2BAAx"
+  },
+  {
+    "id": 102,
+    "name": "Encore",
+    "slug": "encore",
+    "area": "Mystic",
+    "distance": 9.2,
+    "description": null,
+    "lore": "First run spring 2020 by TW + 20 pals",
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2024-11-25T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=s&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2020+On+The+Go+Map,+OpenStreetMap+Contributors&d=14827&f=4462f34775&n=1&dm=1&context=share&r2=i_wY8jrXoD44g2e2g2c21I1q1Fc8NeAD_832n3q1z2i1~3s110n3i1p3k1~2e1TAl3q1F6G5k3aFq2wBe1m5Gy24Y18a22m103040S0C9_29q1Dq1Vc3r1k5Fe2Da2FCX1S80EAAM4A2Y22a12Y14o1Io70O0u1Dy21M60C65SVc37M8LW1b36RB5509W19c1Pa2p4_A7K32B8r2SVIFG3IHy1Bu17_19o41O7C58p1W2BAF8b1AH07310D5J9B7H1D0B5JRj1v2Rh1N9J2H8109C7G9m13W2R_19e1140W16U28AKEUACCOIUCOISAECQ6K066q13s13Q5GHa21O4I6ACGU0Y2PS0C484SES2Q3_1Vy29E7A2A6EA22EC6E46063w30C9M7E12989690r33PE9O1K0g23o19e1BM9E14HCNCt16t15b19RCZ1a1387EBM1464GQ8O2AY1Iq3g162181E3SBGBO02017395JA35n3d1913272NO9C9858X1U56Pg15E7MBW20K1c10W22K4q12OAk1061I5O3I3APa23A38d2W3l1e2Z1i1FKd1_1Vy152t54Z22HA7I1M2o11G8060k10k9C4040i1482C2w1GG8020664a1W1Y2u1UQY1SY1Sa1m1GQIW1c1u1Y1q1W1e1Y1e1CA6265676DY1Z28DOn16t1296183a1DI8q1W1E8UO8AACEMAO263U022M5s1Be2FW21m15OHu2Ne3Ds1f1q5BW19E9a19k1Bc1FOHGJGF2H4~13N1RDNHLP2D9j1Hh1Fd2BZ1HRj1h1j2d1B573D7H9FLDT7T7F4Z18l11X25N9LNb1NL10r1Rb10Z14R8V4T8R6CK8Ij1n15ADFJDLFf1Bz4Gt14F2f16JEJKLg19O9Gx1e3DCl1m1760SQa1c1Y1Kc14K7I7Eb2S~14F3RBh2f2T6RHh3l4L9d2X230~2u4143M8MY2e2MQCo1g1e1o1i1i3Y31Ij1u2z1s3Ei116Pw1q1q1g1i188A8e1Y1He17E705828He1L2F2xAh94738v5p4r6X5LFR9lAf6t4v2j2f1D5Z2FT3b6Vh2D70n2Hh19h17t19N9LBDFFLH3716I50605H397f20D0D63GT6F0V5P394A87636527AP41Ib1CFKLQR4905C5A38BA987694922A2a3f5KVGV8Ho1j36HEp18TGp129Uj3Ab14Fo1j5Gt1Ep1Gx1Ad1W1d3Or2G~1Ir1w1n54BAVe1n36D6JETe1r2Qz1s2t5KCc2r4Y2n4W1~1Ml1ALGZ1Op1u1t3On1s2h5i1r2W1v1ELGLa1l1Sb1EH_1p2W1p169Ol1W1x16B45Sp1i2t4Kd1IX1LDo2x4a1b2g1n2g1l2W2t3s1j347i1x2w1h3GX1Y2t4e1z2Gd18Jc2f58LW1b3a1p3AV8N01Y1Z3Sr26Li1d4DAE9i1DI5O9s2b1w2b101e2X1G7w2h1w2d1c3l1i3l1e3l1W3h1c1FY1FY1JC5K7K9m1Ly1PUFy1RQBc2Z1c1FC5k3j1m3p1U9W3d1q3j1q3h1W4r1_2h1s3r1Ez8OdAGb84b2f2b2f2d2B9"
+  },
+  {
+    "id": 103,
+    "name": "Long Res to Winchester Hospital",
+    "slug": "long-res-to-winchester-hospital",
+    "area": "Fells / Winchester",
+    "distance": 9.4,
+    "description": "Rory showed me this a while ago",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2024-11-25T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2V5TWIY"
+  },
+  {
+    "id": 104,
+    "name": "Double Mid-Res",
+    "slug": "double-mid-res",
+    "area": "Fells",
+    "distance": 9.5,
+    "description": "Almost twice as good as mid-res",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2024-11-25T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=1868779"
+  },
+  {
+    "id": 105,
+    "name": "Winchester Hospital",
+    "slug": "winchester-hospital",
+    "area": "Winchester",
+    "distance": 9.5,
+    "description": "Basically a two mile extension off of South Border",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2024-11-25T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=324899#"
+  },
+  {
+    "id": 106,
+    "name": "Charles Nine-Miler",
+    "slug": "charles-nine-miler",
+    "area": "Charles",
+    "distance": 10,
+    "description": "Basically the Real Deal minus Comm Ave",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2024-11-25T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "http://www.gmap-pedometer.com/?r=2345636"
+  },
+  {
+    "id": 107,
+    "name": "Far Tower",
+    "slug": "far-tower",
+    "area": "Fells",
+    "distance": 10,
+    "description": "Tower at the far end of the Fells. Scary. Bear Hill XC repeats.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2024-11-25T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1940449819"
+  },
+  {
+    "id": 108,
+    "name": "Far Tower to Firehouse",
+    "slug": "far-tower-to-firehouse",
+    "area": "Fells",
+    "distance": 10,
+    "description": "GOAT run.",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2024-11-25T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/2786241834"
+  },
+  {
+    "id": 109,
+    "name": "Pisgah",
+    "slug": "pisgah",
+    "area": "Arlington",
+    "distance": 10.3,
+    "description": "Includes Pisgah and Turkey Hill, so be ready for elevation. Pronunciation: (piss-guy)",
+    "lore": null,
+    "editors": null,
+    "firstRunBy": ["MB", "JF"],
+    "firstRunYear": 2023,
+    "createdAt": "2024-11-25T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2023+On+The+Go+Map,+OpenStreetMap+Contributors&d=16567&f=c79f7ca390&n=1&dm=1&context=share&r2=cZxY8dmXoD332Ff3b3v1r155f4X46Dl1d1t1v1PRBF2Hw6d5m2f27Da4b4w1~1u3r4y1z267e2t3o3p5698Be3z48Dm4v6u2d4w2X4s2d4W3l467ELy1v2i2l3KV89KT67u4d7CHAFADk3f5Qd1Qb1w2d4w1t2o1d2w2v4q5r9k2j4g1b2c4Z7m1x26D67ALi6XAW2Z3q4l6q1x2W1F8FUz1q1d2_1~1_1v1w1z1Ir18j2KTi1v2Sj1a1p1STs1j1a2d1Q9u1Bm11a14e1Ee3k1q2Gk15o1DW5r2s1FEX1W1j3W1t4Oz11P2h109Db49p2D~21B7l339l1D3BTv2A9e2n4i1v22J1Pn1d5r1f6s6x3g1Li1Fu9d3w3b1g4l1g2Rk1Do1BK2k1AQGU5SD2d60~18t48l1Eb1ITMNMDk2Je3Lo1HY2PY8p3s2f1k3x1m1Vo2b2g1d1q1d1A7c8b5h1~21z14LCLY3z3Y1r1MLE5Y2h1a2~1I0i1RQZ189i2t22p1CNi1l1I9W11s1Q8C0I2E5SHo10AAQ7W2T0X1992J2JX17LNX13Fh2u2X1k1h1SH0Z2W2X2i1D62PCl1c1X4It223Kf42X18l22x25h5Bn3Ht3j1n5Fj1v1p4l4Z9HPX2b3v1x1h1d1b1P~1PT1b16n2W2X1QZ2Y1d3W1D4l2Mb2QX3q1l3y1T4H5LDZ1j1BF9Ff5p7TZ1r1f2j1l1x2m3d1u1Z2k2~1o2RW1DAF8f2I~1IT0F5j1h17N5D83GF8L295N11B9P5B4989A5K0QHs1PAJJJ7j19R2L8z1u1Z1m13Q06B8u2g7j1IVEr3m1z2c1j4s1J8LAj4u1L8JAx2e1z3o1d4q1d2EX32~67N0H0p13h25n3Nh1CLE9GHRt1_2Ha138Tc2Hq1b1m49y17k1Jw5Dw3Bo2Fq2Tu39g1HW2Vw2p4wBn8aL5Er1i4h2W6f2q5r1Y3Vs1r1_1l3i3HGZ1W190FBRZ17G9U5I540154Vk2~2s69BDOh2c38g1VY3N_1Hg1Vk2Ra2Da1Hi1f1c316DW1j1m3x1k4x1q4x1m4p1a4t2q6Ls1BSVk2n1q3Z1i2b2o4Ps1d1o214Lm1FW1Pq1~1e4Ru15Gt1q3Z1g2Z1i2Z1g238n1g3l2c57Ej1c3t1y37KLs17ICA7I7GY2a2W1c1q2Y4i2y4Ii10Q7O9IFId1AR64Kp1KDAJOICq2w13C3E22p8mNn1k46684223C1ASIr4qCNu1865Is2w15E5IFg17KX1_2f1o3A85G5G_1i17OA6Di10EKk18k1Rk266Jy1Bg3C26i2Mm1e1i1a3c2i1UKEKAW160M4MAEEC68W1UEEc7y688s1s1i3c3441U"
+  },
+  {
+    "id": 110,
+    "name": "BBB",
+    "slug": "bbb",
+    "area": "Malden Center / Encore",
+    "distance": 10.4,
+    "description": "The only run to Malden Center. Solid Encore / Enforcer / Broadway options for the finish.",
+    "lore": "Bernie’s Boda Borg",
+    "editors": null,
+    "firstRunBy": null,
+    "firstRunYear": null,
+    "createdAt": "2024-11-25T01:00:00.000Z",
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/5193156609"
+  },
+  {
+    "id": 111,
     "name": "96 Straight Street",
     "slug": "96-straight-street",
     "area": "Arlington",
@@ -1515,7 +1665,7 @@
     "mapLink": "https://bit.ly/2V0EeyJ"
   },
   {
-    "id": 102,
+    "id": 112,
     "name": "Long Res to Long Lakes",
     "slug": "long-res-to-long-lakes",
     "area": "Fells / Long Lakes",
@@ -1530,7 +1680,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=3934594"
   },
   {
-    "id": 103,
+    "id": 113,
     "name": "GC",
     "slug": "gc",
     "area": "Long Lakes / Arlington",
@@ -1545,7 +1695,7 @@
     "mapLink": "https://onthegomap.com/?m=s&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2020+On+The+Go+Map,+OpenStreetMap+Contributors&d=16889&f=d33dcb121a&n=1&dm=1&context=share&r2=kXxY8loXoDJHf2d2LJd2X211X3~2h1d155979BFDJL113399BDBBO5G9q2z1o2z1g2x1_2t2k1d1o1r1e3~3e2v2EJq1n2c2r3e2n3o1j2c2h3g1z1Sh1k2r389c1x1u2d4w2X4s2d4W3l467ELy1v2i2l3KV89EL67s2~3e2l3CHAFADCHQb1e2n3Qd1Qb1g2l3GNX1h1l2j3x3f5z2~335Tf17Dd1z1DZ1Ff2035j24x36p1Cp2Sl3Sp2Mr1Ih1e1p2i2Z4u1t2y1l2MNUd1i3l320k3~2q1Z1Y1Na1L_2h1k2Lm171L0F3p21x2I20b141834341323474320c12G0Y12a10CI00F1Z22N4BA7E0Q6U2Y2Hy1f1OVg1j2Ch14j13j1x1d81p16X24Hs1h6Gb2_1Z5Cn12B29Aj33v11B61E182020A8IMCa27E220c2b4g1l2y3~76B47C8a1Ma1MG6m1Ia18U6C0k10W39W11o17e2Ds3l121o1N61c2Z1Y1D63A3UBM9g2Z1i1JUFC5e2h1m1PW2b1W6h3eIZ6c1Ba2Pk1DS7M1K0e1862C6EAIGOM8A8A0j20d62~10L6n32F8l1EZ101ITMNMDk2Je3Lo1HY2PY8p3i2b1A3UHW2X1E7o1Vc2x1C9g1d1g1X1A5A7G9y6f421OFb1l25F1V0T4LCLc1p1w1f2a1r1ABC92Pm1j523W1Z56X24X18l22x20t15p39Z31DHt3j1n5Hj13B4CBE~2u2HQBGf1u2b1w1j1e1l2a1JAVIX18V2X17VFh1j1JT3Bv1b411h1b3f3x8Nr2135PBp37z2l2M74z1MX1GF8l1SZ2c1h1MT44w1Ka7Iq66y23SNu1n1y238j1s2Z1m27UHm1r2w9Rs29e17Q3GDW1Vw1f1s1X1m1Ng1DQj2e5f1i2j2y3f5i7l1m2~2g6Ts1Vm138Pe1K4J3r1k2Rw1N_1Bq15m12o1Ci3LSVe1B7Z1Pb3r1b2Jz1Bn1550v11D1b2Ev1Az1C~1CZ2Gn1CZ1Il1OTKDAp1Sh1GX28r5Jl1H~1b1X1Lh2h1~1Z1J710At1Af14D290R075577D7523090N8H6Z18n16x12Z12n45l17p17r13j31b12N0h15d3DB3505131F5F7x1P515Et1i4Vu2Jm1Lu1z1q4Ry1b1c2A29IZ1y1Ta1l1s1~1y1VW1JId1UGSY2i3DOSm18E8E6G4O081I3W15w15Q3O3ONk43c108E1D21E2Q6i16QAUEW14A8MKi1GQGSKUKSIOc1k1KKy1W2g1e1o1q1SSSQUQ42SO86e3q2w2e2A822EAu1i1UUSW1EM8ICg14k13a15032347I2K2622CC600c1H1H0h19f23P6d1Gx1k1TUPQz2g4h1k1f5Y3f4g3r1s1VUZ1W1PUn1k2h1i37SBc17KEC9Q9C9K9O1C7g1V_59q34q3a1u64k23UDu1FSFE52L1161I5a33e22Y20EKa2s1u3QY1s2o2o4e4q1c22A4GAC22119E9GBId2m3r2W458DM7AJW1h2m3x1w2DM58~2m4r2e4v2Y4t2e4j1c2j2s3Ri1f1_1b2i3n1k2d2o3b2s3p1o2DKd2w2d3W4n1s1j1e1z2u2f2y1n2_1p2_1FAN6OQAA4422KMGEACA866i1e1Y3W322e2Y2MKg2e2OO"
   },
   {
-    "id": 104,
+    "id": 114,
     "name": "Rubi Factory",
     "slug": "rubi-factory",
     "area": "Somerville / Inner Belt",
@@ -1560,7 +1710,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2024+On+The+Go+Map,+OpenStreetMap+Contributors&d=17449&f=2a0eeb5aa7&n=1&dm=1&context=share&r2=mYxY8boXoDj2f27Ev1r155f4X4x2t2~1~1DT72L0H5FBRJl2v1z1Z1D5b13l18V4X2AB2fDY2X5KN4T6d1091JF01NPN5h10516U061E38b1r1~2X4f2Z357r1p27DBR15n1h39L333B5Fb2Z57D7HJVLPVTb1P5075Vg2557MX3w75C84r1c4Lu1l1u3b1W39Mz1y45I53t1e43C33FOf2n1X2h177B7z3r2Tc2DU3C5Ch1e35C3Ad1W33A665E5C735Cv1e47G3C~3e95E3ANm1j2q57Gr2w5Z6qD3A5Eb1s2b4e9p1i45C3Er1Y57Kj1i45Eo4c384A6k2s18688a3a2g1UCAa3h6q1~2k1z1k2h3j2i3j1_1p1W3Z3i6MEo2w11E1A4804CCE1y6_4285IJIj2k2z2a33633585A20f2g29858h2i2BA58JKx1_17A76j4q4TUZ1c1x6W7DEZ3e39A24l1o1TUDQDEl2o2z1W2BE78p5s5b1U72F37Cb1s1TU37h2u1r2y1109676p1c1X6c49876t1c1d2Sl2KZ18d2I924I2C4A6IKk1GW16KW3y94EHCKm28S9856b1_1j1g2Rk1Ni15M9i13o1HqCZ1730b1C2s5l262i16Y50U92D02Ib121EX12l12T2f1490B2b16h38545C2w10A904w30O4k3ZBKaBJ3b43v3A0091v16B63i37c15C1A0g13U1m11Y112Dc111HE0A15~51h1m251f10h4c1B40a18IpC4n1Ah16LOh1Sj1q2d47N09Fz1Z1n4Nn15H7F7N5FFd1BDv1X15351N30PBd21705j2I74j8W2Z2IJ4H4Z1A9C9692D2h1A905230n2Kf9Y42B74092774Ab32L6z107v3N072B03Ef32BCb16p12BAB4J2D5FABAROt1A3Kh10B69o1d3Cp125716D3D9171b1Bb2BB2X1I96L0B3f2H0DX2Fl2Rd1J2H298t1C~22LD52N4PGz32B2FKv40B4HGd44VOn54Z18t1Eb32PAl2272D09Ih4290L2F8b1B76R4j125052B29074NEh36RUl7Uf74Rw1hE4NO~58PGz34r1C~28N4d16d1Ql60VGr38Z10H2PCr2Aj26L2NGx42P23Cz3It58~1114LN77F9L5254VE74N0N9l1DF3T9X19P7H5d1DP7Z2Ll1D31Un3P74LUj34D69GPIDUHS5a3K44k1A05u2Kw1Go1EUMIQGW16c13c182I8C45S626T014HAd4Gx1OX2m1~257GL8BA1GBg2Ta3T0681K1k26e4GY5IY1440E2A2A0k4GC0A2W38q1624E2A281k24a2A04K0o3Aa3E20A2E0M2W14_166082s16A0A280o2824A280g24K4g5I82A0A2k33W198381A1i19c1BE3i1DK5A2238183M5A141406187A1G065IB41o1l1456585k2n28745W3y4GOi2r2KN686AY3k4i1d1q5z4CB_1h1A583q3Z2A3A588QFo3X2W1LC78Ey2z1_3r2G3M5QAEFIA24A666A0K464C6EAKAg1Ow1W1AAA4W1Ii1SGC60c1QW1UMQKW18I8Ec2a56G4C44AM2001o1i324C4GQg2q3W1g1Y2w2GMUe1IM6EMO4AKQ6OCOGGA0A3A967OP43W1T80U5O3Y5JI1m7b1e5PC1Y29W13m17c14E6_1a1m2w1SKGCI6M081EUW2W2y2u2g4Y466w1s18De2a2"
   },
   {
-    "id": 105,
+    "id": 115,
     "name": "Menotomy to Belmont",
     "slug": "menotomy-to-belmont",
     "area": "Arlington / Belmont",
@@ -1575,7 +1725,7 @@
     "mapLink": "https://bit.ly/3dXW7GX"
   },
   {
-    "id": 106,
+    "id": 116,
     "name": "No Hill",
     "slug": "no-hill",
     "area": "Long Lakes / Arlington",
@@ -1590,7 +1740,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2020+On+The+Go+Map,+OpenStreetMap+Contributors&d=17337&f=1a4c0bed53&n=1&dm=1&context=share&r2=iWxY8lpXoDx1v1LJd2X211X3~2h1d155979BFDJL113399FF79O5G9q2z1o2z1g2x1_2t2SNIFo1r1e3~3e2v2EJq1n2c2r3e2n3o1j2c2h3g1z1Sh1k2r3k1b2u2d4KTc2Z3s2d4W3l467ELy1v2i2l3KV89EL67s2~3e2l3CHAF2010ADCHQb1e2n3Qd1IPf1d4b1f3h5d1l305j3c1l7f1j80XAOx8o1t3y5n7c4l3e4Z3s2v1Y2t3k3b3o4Dy1Z1040CI00F1Z22N1O2a20GH00B1Z10X11F0b1418343G3E0M482Y14O3g1FC7E9EDQPGPCLOx16V0t15b1Rj3FZ29p13r10T8v105Mh2o1l6In1o1z34J6J4L4J4v13b21B3FFz1Nx1DRFRHPX1b1HJVPVFZ17b11t2Cd13j1Ht1X1FLN7A9E985A967CFa1z1KVGPMTi1d1g2l1ODQDSFC3C1A121Y10q16u18k18a1Ai1Qe1W1i1a122g3u2e3m2C8a1Ma1MG6m1IY2EC0k10W39W11m1521e2Ds3l121o1N61c2Z1Y1DG7UBM9g2Z1i1JUF458Hc1n1m3z3w1d2y2Z4Sj1CFKNMRBh31n16l1Cp1Oz1GZ1CLs1j2Qd147W1l1Ur1W3f6m1l2g5h7k2x3g1h2k2d5c1Z2Y1l1EHSZ1W1v1EV4F8PAd1Sr2s2v9Qj2a1l2W1x1EP47o1x2Ot14R5x2b1tD3v1B351JBVb159LT10FPv3l5Th1TZ1FJb1r1j1l1r1l1z2X2RFh2Tl6Rb1BVHTNRDB5f1FL3J292h1CVKd1Y1f3s2b1Y1j2q1X1Gt2Ml4e1D2J2D79F9DHIHGHELEj1Md1AF4J8J89696BFBDp2~2h1p1z2n3LPHD73501122601O5k1Ru47Qb1s3DW1h1Y3t4_6j4g6x2c4Rc1Z2Y3r2y3f1a2HW1DUDSb1c3Py2La39i25k1Bw35_1Jk4Tg4FY29g1HW2Vy2f5cDTe2z6kH5Et1i4Vu2Jm1Lu112x1o4Ry1b1c2BMVm1f1k1X4y3HGD0j13FT5G79577O9O9OTe2Jo19OHD97RT526159J4B4X3U52h3UZ2MX1CJAj4w2f1a1h2k2X1g1BEh1s1j1o1HKPSx2i2r3i2Z1IRA96B6VEn2Qj7s1x1Ih5g2X1GD6j6Y3v2k1X2a1bE_6f7c4HEHS78z2o1B1N8p28f2W17496NAr2g1j3q1BG34HOHEH6F072f1K76VUNGL872H2f1531110I6E2Y1u1k82494725GHGZ189654BGL8H81G04Bq27g2587G1I0e10w11Y19Ol1i46A0201E1a67A8428KGo28c46IEC22K4a28C0G282648C246C8UAo38a18m16o15s36m32k11e1Bi29y19m31W1Lu951624E6Q5o33S97A8k1u122a2g2o2y2KKi2u2m2u2y2g3_2g3w2Y36688C5C54C48EQ42c2g4w2Y2EICC8H23C8a3a2i3c2e3c2c3c286GCX1k2l1g3Nq17G5C387E8D47Mc1W1UAA4ICAG8UK7Iv1g418Fk1Lw15C7Q7MTs21C2E48u1c36I8IKo20G3GJk1o29ILKa2EEA82I_2DM1g17a1222C6KAW1I20A8g1W142Y1Oa1SC6O6A0OQAA4422KMGEACA866i1e1Y3W322e2Y2MKm1m1"
   },
   {
-    "id": 107,
+    "id": 117,
     "name": "President's Run",
     "slug": "presidents-run",
     "area": "Somerville / Cambridge",
@@ -1605,22 +1755,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2023+On+The+Go+Map,+OpenStreetMap+Contributors&d=17565&f=2c888f9ba1&n=1&dm=1&context=share&r2=eWxY8ppXoDy2u2Y1Y1OMm1m1m2i2OIu3W1o3G044Gu1qE6050r4i19272z4o172B0z2a1760Gj2g1J6F6r3s1x2i1r3m1B6d3e1B4p3k1z2e1VAl3q1B6Z3g1Z1EB694x1W1d2Y1D654NCx1Ql1MJAJ8l1Mf1MTC5Fl1MX1GB47452j2a196x1b7723Dt1r63H1Bz5u2v1z67452929538FITW302D773d3t1b1PD9EAACY4i2Z1y35C18b4WD5I1AZ1m338185KDg17MGC5c1f1Y49a1Fo17STw23E7Q7K16Pq2BY1Vc35KPe2h1c37Kv1a475B7t3j2~5z3d4~2B91221CAe4W3W6_3u3k2KE4536Vm2Lq17IJc1X1i25W1Pw1BW1Jo1h1w2t2e5BKb1Y2Z1i29K12d1k2Ha19M9C9ETw1BSp1c37O7EJc13A34BKd1i27E~1Y3X1m102MSg3s4c3g4CKW3W48A46s2q3W4m5443387a3Z48935t3z43513h3i4580201r2p33579~2~3BJb3f4f3r4LT34BGJS34d1s1DMj1o2DQT_15Az1y3f2u4No15GHc1Fa19KLo1VW2v1Y45G12EAk3o3SUy1y12413x1x1RTj3n3D91122z1a4FW1l1g3x1Y4l1i3DS9O5G1EBW15I5E1A5Cz1W65KRm3Dm104y52M3K9IFCHBIHGJAL4x510304TKPs25I53t4h2113CVe30403c2Y1z1TNo2185162m4g262511A20f1k43G3C6453v4l3v3t2BBDBf3l2X2l1TJn9~6LH086U6k12AIu3Ga32G2U8k2024W12Y14Y112D2~2KW3JG3033TI3073N3p15x11VDl30319Hn39r11D3J9b2191DLv3171FNv40B19Dj3a58Z577b217H0X1z65RJn25H9b15N7RFz13HZ1~3Pd2Fd1Rr17Bd2h1FL9J3P1d10N2h12n27HRj2Fl1E7Lh2Bl207e12s2E3y12MAE9D1L4x1r2Dd11F20t16p3G22B6h24h2470PCX44n11J2RCr24n1230V6NBB8F92091B0d1729JBz3Bv317073HDb45p19b30j1D3D0L2d15j11B652PAD3D9596AEAE4Q961C5k12e16M14X12T49C2Ab24z14h15j23Z13PDr2Dd2Fx1Ll2b1t43LLt2HX2Fb213Dz1Td41B5L5TDX2j1z5Fr2n1b7F30Dh1h63F0BZ1d53DX1p41D3FJj3h1X65775b19t4X12B50602B6BCBIKEA2HE3C7GP4JA2Al16BUFA3Jb31D13q8b3g6h2C3i6MA0G2i5IA0A2e14y2AC2C0y5MG0k2AE0y2EA02JMlF4v12p10PE0M2W14_166082s16A0A280o2824A280g24K4g5I82A0A2k33e1D81A1i19c1BC8C3Y19G02826202423CIEI242614e1g28E2A4Ce4Y82167CB85s1t167GFCACBw1x1_1X265i2t28A4689a9i6IE_1e1a2k1W3a2CAC8w2Y2i1Uk1UQI424FCb2g1p4Ah1Qb3G986KE6820w4XC84m1USI4984r1c486Ly1j1q386_2_18665i1Uy1i1q1Y1e3g284A8k6o4E9030441C8G6A5UMSES4S0W15KD8BCN4N2d2431J8S4UE061CC24CH8HA967OPa1X180U5O3Y5JsDZ2Y29W13m17c14C6W2a1W2m1ICe1SK8M081EUW2W2y2u2g4Y466w1s1CC"
   },
   {
-    "id": 108,
-    "name": "1500 Meter Pond",
-    "slug": "1500-meter-pond",
-    "area": "Fells",
-    "distance": 11,
-    "description": "Repeats and a great long run.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/2711463342"
-  },
-  {
-    "id": 109,
+    "id": 118,
     "name": "Sy Snootles",
     "slug": "sy-snootles",
     "area": "Arlington",
@@ -1635,7 +1770,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2024+On+The+Go+Map,+OpenStreetMap+Contributors&d=17772&f=6d8edb9721&n=1&dm=1&context=share&r2=oYxY8ZoXoDl2h2v1t1r1p1v2r2VPh1h11J7L7F7D377BJC57m3t2o3r2c2X27Da4b4w1~1u3r4y1z267e2t3o3p5698Be3z48D_2l4o1f2u2d4w2X4s2d4W3l467698By1v2i2l3KV89KT67u4b7CJAFADk3f5Qd1Qb1w2d49BNVPZ1r1f2x3f5x2~3Z1l1X1p1DNDZ1Ff25n20h1AZ4Cp2Sl3Sp2Mr1Ih1e1p2g1d2Y1x1u1t2o2d3Ud1e1h1a2Z2g2X2w2X2c2j1_2h1c1Bu2H610FAD1z20Z11X11F0b18385M3U4U4a11S9QDY1T65Ud1ELGf1AX14X13t1VX4Lz25r11t18~1Mh2o1l6OZ2Ud2It1Af18j25n2Jj2b1t2X1r1b1h1RPX1LX1Bb15b12X2Ad13Z2RX1NHL43IBDHGHCFEPMZ1a1v1MTSPo3h2s1TO5a1Ng1FG5W1Hk2t2c1f1e1h1o1j2Mt1If2Qx36TE1AB291Bg2Ti19e18g2US8U0S7SFUNQVi2z2m1h1q2h2AFGh1o1x7Cd1CZ1GTy1p2ILk1Z1UJW1FC3f1t4x1b6l2l3FX1p1j2Dn1DVl1z1FB77HBR0JEL6TAj28l1Eh2i1X2Qf1Cd18j49H0Z2OB2F0NJ9POp3El66l14l1Mr2Y1h2g3d6IZ1If1EX1Mv1e1b3a1j2GX1W1t1c1v1s5r7MVUb1EJm2d3g2z243GDSPA5o1L0DC3Q3c1Dc1NSLa1X1W2r2GX16B8HQx18T2B3B494DE9Sb34F8NOl28P15698R6Ba1v36J6Hs1x36Hd5v6Vj1VZ1PD2FIZ14NK4Fj1Vp1Bh1BV9L9DF7GPPRRn1FN112P2H8X1W1b1DTRz2Z1f3v4_2RMZ1c19IJa1b2m4x2W64I260E0I9AKi26SSw3Cm20M3ON_1X1u2L_17a19GRe196Ai3Ac46m12W30i21e13g1Dc3LW3v1i5j1a3r4_6Z3k4z9eEt1_2Ha138Tc2Hq1b1m4Hg37c2Bq3Dw3Bo2Fq2Tu39g1HW2Vw2p4wBn8aL5Er1i4h2W6f2q5r1Y3Vs1r1_1X4y3TQ5690FBRZ111L19O7Ob1W3Vg2HDBBPP599292B4p6_1b3Y1p1UX2e1h1Up2k2Z2k2BEX2k2f1k1t1s1z1o1r3i2~1S9674Z1Gn2Qj7s1x1Ij6w2x6e3d1Kb1ORIZ1KD674d1GrCa6f7c4HEHS56HCd2a1L0FCr26h2W1f1Kr2g1j3q1BGv2g1VEp1Oj2KX1C2G0E6E2Y1w1o89432FOB8Z18FABGd1G1G0q2Lk2BO1I0Y31Y1l1g49Q448U2e30c80E2C2q54E0E180g5620C0E122q50E0A4y30y10E2A4i70EW438GA023i21a104C81A16W18MAC828ECIAC26g1m1e1i18A64s4i5AA46Y2e2888CY2c28668k2y2848Aq5i68IAKE7EQ42e2m4W22M6Ew1843A24A8C64227u2y1846Bi3c2e3c2GCm2s1GAEC5Eh2g5f1u2X2w3l1c220AGb1k34Ai4a3d1g31M6Go1w28GY1o33Od1w23K0S8180m4L40A0C3Y3B2Im17c14C6W2a1o2y1QIEAK8M081EUAA66a1a1CCy2s202g4Y466w1s1e2c2"
   },
   {
-    "id": 110,
+    "id": 119,
     "name": "No Whip",
     "slug": "no-whip",
     "area": "Fells",
@@ -1650,23 +1785,8 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=484449"
   },
   {
-    "id": 111,
-    "name": "Around-the-Fells",
-    "slug": "around-the-fells",
-    "area": "Fells",
-    "distance": 11.5,
-    "description": "Highland street up around and back woodland.",
-    "lore": "Likely not run since spring 2016 at the latest.",
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2024+On+The+Go+Map,+OpenStreetMap+Contributors&d=17906&f=25942b87af&n=1&dm=1&context=share&r2=qYxY8XoXoDw1u1QOa1a1_2w2GCGAO6e5e1C187C0G2A2WCx2G2e1Ms2_14065c1b34B844Bc2f54Da1z2Mz1Il18d10p16j1Gp1Gd1Qn2a1v2s1p4W3W2a3y1i1440y11U0Y62G0K0q21Y41M0k41K02H67E7G4C5q1h1q2d3s1z1g2r2W3n3UVc3Z4m2X3OTY3z3w2v3MTi1~1s4l6a1n1i1x1g3z4CJe2~3k2j4e5X969o1r2w1X2STk1j1_1t1m1Z1w4p2w2x1Y1NOBq3r1e2Ta3Vq2LE3W8Z2q1Bk5f1g7n1q8X2O5k1H4W1CSKCs4g1y3Y1e18s3W1w3c1e3m1_1a1i2g1g3y1W2a1e1Kw1Oe14c13i1Da2Jy19E0_16q1Es5W2s5_1UCs2W1m4s1e3Y1y2GG2e4Am3Aq26e18O6k4g2u2i1u2e1o2Sq1Kq2Uc2Sy1Um3g2k7a5y3q2e2q1q1Y1o2u1s4e3KEW5m3o1Y1W2i1a5k3c5o3u4g3u5y3o2y1QG_1c1QCW16Y25e20Y18w1Kc3Y1c2Sm1GQ2Y2i2i2g2OQa2a2y1a2Qi1QY2w2o8OW4Sq1q1Y2k3Y4m4q4W1i1ESGe1Su3Mu34y18_2Cs54_2Aa4Ek74Y12a20k1Fy3Bc3083y1h27b3Pt1Jj1FX3h1j1DX11Z14P8n1Mz4o2n7_3x2w1h1e1X1g1Z1q1JY1X3c6h2W5Nq1Pq1Ls1Dc1J_2Je4Bc2Lk3b1m5Z1e5Bs1Fg1TW2d1o2Dc15U3w11Y57k2HY3X1u4X2i7Lu1r1a2JM97JId1Kb2EL2N4J4B0d13n1Ff2f13Cz1Pt17R1X14PAj1Ux1W2b2_2t1i1PQFMLc1Lw1Pw2RY2f1w1h1i1TGR6Z11d3f1v1Dj11n2CX13H751PJHJVh1h2p3b1l1LJl1RR7R1r4Gf26~27n4Vj3HZ19PD~5r4b1f1d1r1Jb1Lp1Nl2Ht1X1d2l1Z2h1h1n1Z1d2f1Z5v2h2Lb23h14b18p4s1j4c1n2KX3Kr1GH6p4k1Z20F1RDTRBHRZ1p1Z3b3d6b1X2NTVRRHPBz3X1r1HVFr1d1VVZ1h1Pj1Nj1Nv1Lt1z1v4f1v2t1X3JRr1x1l1j1l2f2Nn1JF5b1N670t6s1t1Qb2g1j1Oh1Cv12P3p7l2TJHHLTFX1z1n4Tr1FJRNp1RX15J0X3KV5F9PV9HLNNFP7N1J4n1J11LTB9L9f20X13b1BX5r2t1RX4Z2t3z1Z3p1x2n1Z1FX2Vd4h2p4j2D7z2l1VFf5t2l2h1t5z2~2p1b3r1t1TNLHBDP57PNZ2j1v1Z133RFZ1Dl1Bf15R0l52H2~17P1H2h10N1R1t15v3DD0J1~21x3Ex1C1Hv1tE1DB1n3Ht3T4HFBz2v2Z1Z1PNr1p1"
-  },
-  {
-    "id": 112,
-    "name": "Smoot's",
+    "id": 120,
+    "name": "Smot's",
     "slug": "smoots",
     "area": "Charles",
     "distance": 11.9,
@@ -1680,7 +1800,7 @@
     "mapLink": "https://bit.ly/3495jUn"
   },
   {
-    "id": 113,
+    "id": 121,
     "name": "Bernie's Great Meadow",
     "slug": "bernies-great-meadow",
     "area": "Bike Path / Arlington / Lexington",
@@ -1695,22 +1815,7 @@
     "mapLink": "https://strava.app.link/xrS3DRFYSjb"
   },
   {
-    "id": 114,
-    "name": "Hoover Sucks",
-    "slug": "hoover-sucks",
-    "area": "Cambridge / Charles",
-    "distance": 12,
-    "description": "Shorter if you don't add along the Charles",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://bit.ly/3bSVInB"
-  },
-  {
-    "id": 115,
+    "id": 122,
     "name": "Extra Short Freedom Trail",
     "slug": "extra-short-freedom-trail",
     "area": "Charlestown / Boston",
@@ -1725,7 +1830,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=3934604"
   },
   {
-    "id": 116,
+    "id": 123,
     "name": "Goldilocks",
     "slug": "goldilocks",
     "area": "Somerville / Charles",
@@ -1740,7 +1845,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2024+On+The+Go+Map,+OpenStreetMap+Contributors&d=19336&f=d352f4923d&n=1&dm=1&context=share&r2=mYxY8ZoXoDj2h27Ev1r155f4X4x2t2~1~1DT72L0H5FBRJl2v1z1Z1D5b13l18V4X2AB2fDY2X5KN4T670VU34NQ589A7G7E3613BB5270322e11g1H190DGHA32T4T0P3PBRLj137573X6b43CFB95b3d2p1X1x1h1h1T5675b3Z295b1W3B9l1X1RL77JD75FA3CLw29i1f1q4Bc23G3ENw3z1u7Bi1FW2x2_B1Y17Y1De13C1CLc2n2aBLu2Ty3Te3~1a7f1w29EHMj1c2x3_4Va1TI5A9S7Cj1w1JC5AZ3W85C3Av1e4~1e43C1CVo2Z2o4Z3g6r1y336951C1A16f3c7Tw1Dg1b1W3Z1w15O24l1o1CK02b2e4LY1h1s1023A7C04p2o3n2_2d3a3h7y6XDYCl2o2d1g1p1q1t2w2r4_4RGB8r4o4~AiAp9Y9l2q2FMFW1~3g6BW1Ha2Ro17Kf1w41Ov1m6Z1k39S3C757E3C53b2z1PPJHb1Z1551074333CFW1Rq2BKr1W4BU93533373B75131HU7E5C02f1c25210585A7C7E1I313051717a1Fa1Z1Y2HW114X1u1Li19M5Ad2q4DMF64C28047A5A9MBM6ALo138DQ7IDSBQx1y39Ir2e5h3q67E9KFY1Z1e2f1k2BO7651BBj1t1Vd1l2x2HFx1R~3z1935351~1Vd2X1F7VLJLh5d8RVl1f1X1RFDh1Vr1LD7p2Bh10RELE~1e1j1DV791R371NBl1HN7n1JZ1DB3h5Z2L9B3VF4D1FBj1BDNFZ1DHBZ3Z2TPj1f1HRh1d2Jd1d1Z4X2h7v2tABh1Bb1Jh23D19Dd1Vz1X1h27FPZ17Fr4hH9h10Z21x10H1d15t1133JJf27P5N5L5H0T3DZ3rBBf29r29j1Bb13b1Df2Vj8Jh3~1r67FRb1DZ11n1Td29l14R0T7x32x67h2Cr54r1Ch5MfA2d1Ij8Ej6g1zI6v2Eb3Oj30v11p28v1Gt1Ab18x27b22l18f163M86069An3157957B~13b16f5Az1Gf2Ip1AVO~1g1p2q4h8o1n2m2r4o1Z2a1f1_1p1Y2f1_1Ny2Nw21W28_3Sg3c1y7e3e1A_18u10Y6R618622G0C189wAt1A1g5Fg10M448C0M2A5M0y92o2DY29k1Lc1Pq2h2k1b2o1s1g4o4GI88k1q1GCKE028Ca1Oc2e1MC648444u3c2y1c1C46542A8641884QGA4G6Qg1KKA2w2L86AE4644KNC3254DGHIT6R1DC4Mj2SEMt2c1CE4a2MQ8e1EI6Q8Y1AUAG4m1EOAO083_1IO8g1660c2q380A6K7_7z2g6h2C3i6MA0G2i5IA0A2e14y2AC2C0C2m5KG0k2AE0y2EM0i31e10g45E1E0m37i11A68CGBK3u1H20E1Y1CEEY2r3ENMf1AHm1p2MBAH268Bm2t4q1b260q1_24628e1i285_2q56589CB85m1n16567GFCACBw3z345i2r2A9248Aa9i6A886_1e1a2k1W3a2CAC8w2Y2i1Uk1UUK2925Cb2g1p48d123Qb3G986KE88SMm1Y1CA8LUf2A6c3a28665i1Uy1i1q1Y1c3e2A6GC4BY6c48486k14SMQCQ4U0U3MBA945A0I22f11d1418061CC24458D8FA967OP43W1T80U5O3Y5Jm4Lo3He5PC1Y29W13m17c14E6_1a1m2w1SKGCI6M081EUW2W2y2u2g4Y466w1s18Di2e2"
   },
   {
-    "id": 117,
+    "id": 124,
     "name": "Purple People Eater",
     "slug": "purple-people-eater",
     "area": "Fells",
@@ -1755,7 +1860,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=365186"
   },
   {
-    "id": 118,
+    "id": 125,
     "name": "Short Fenway",
     "slug": "short-fenway",
     "area": "Charles / Boston",
@@ -1770,22 +1875,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=410758."
   },
   {
-    "id": 119,
-    "name": "Belmont Hill",
-    "slug": "belmont-hill",
-    "area": "Belmont",
-    "distance": 12.3,
-    "description": "Extended Belmont, by the school, hilly add-on",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://bit.ly/2xODapE"
-  },
-  {
-    "id": 120,
+    "id": 126,
     "name": "Habitat",
     "slug": "habitat",
     "area": "Belmont",
@@ -1800,7 +1890,7 @@
     "mapLink": "https://bit.ly/2ULwyBm"
   },
   {
-    "id": 121,
+    "id": 127,
     "name": "Logan Ferry",
     "slug": "logan-ferry",
     "area": "Mystic / Malden / Chelsea / East Boston / Boston / Charlestown",
@@ -1815,7 +1905,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2020+On+The+Go+Map,+OpenStreetMap+Contributors&d=20013&f=00d8a69c0d&n=1&dm=1&context=share&r2=iinY8vmmnD44o1Mk1Kk1G_4i2q2e1q1Qy1KA4a5Es46k15UBq1d1c1l1Qn1Ml1w1b4316D69A803Mh1Ub2c1p2s3j8SX2AJs3n8GX1g1~2Y2r4m1n3Y2p4a2z4m1l38HCNk3x7EZ1Id1W2h40F2D490145678563W41e21e23_11u11g10Y11O0g41g43U1Y21w1080s47k11k31a21q23W31q11u31e10k43_6361y21g65q73y20_10W50W41_42k32QCi6e34BEl1Il1e1f31122o6g4OO8A6220G16143k1n1e2f2a2d2ED_2b3ONa4h4W9l9a3d3w1z1s1r1STc1d1W4b4a2b2MNMJW1X1y3X4KJW2X2k1h1GHs2t2i3n3W3~243k2p2e2h2IJGHy2~2SV23a2x2e1p1a2v2k3n4_2z3m2j3Ub1Ud1Y2v2INGLMTADm2d3g2X3i2d3W2r2y1h231LJz1r133d1b1FHX1V31BBDDf1d175Z3x2PN99TP3333B955JNNh1Bv10X16z1Cf169GR5Z1117RVFPX1Dh13R4n41x11P1Z11L5v21n1Dj71Z26z3Aj38p182A26HIl3071F4T211X1DZ21f14FCFi1Z11737Ef1472141238N4909292J2b1Ap1c1x4Ad1CX2W1v4Cx1Gb2Qp38RGb2Sp3Ed12H2p1292Z16d61x11h11t52Z40B2p24H6F2N6H651BIt4Sf4Ex1Cl1Ch1CJ397BCT8HMz3G5E55T3N79676953551B5f41Z1Dt35TPp33HBd1d1h3Nb2Dj15Lf1p61b11n31f24RAZ4Kv2Al1Cz1On2e1l3s1x3u1r3q1X3g4z6BBCF8BDFd1X26H070h11D9R7j15r1Db73r14r16TAT6D4H8j12Z17999Kt2u2l9Ad1LO8b14X12Z23~11F1F3R5N7TSPg1b1KFm1n1a2X2c2X2g1LUR65Y2~1e3Z3k3b3m1h1ML63b1p77l1Dr29b2Fr3d1z710X1CEz8e1jI4b211d2Z2BBCCe2c2203c2Fc8NeAD_832n3q1z2i1~3s1p3i1p3k1~2e1TAl3q1~4a2b2a1PCx1STGx1Ql1MJAJ8B6X1KNA96b1y1p1a212r1e2z1q2FM34r2s3~1m2x3g5r1a2f1_1Pa1b1w1z1c3j1e2z2u3p2i3~1e212BGHMLQHKDGh1m1x1W2d2g2~1s1r1c1t2e1L714t3g7f1m2f1o2Z1c2X4w7Pm1HW1Nm1VW2t1i3La1Na1r1g2f1s1Re1NY1h1y1BIDMNk1Vy1d2y49MLm1FY1d1u2Hc1FY1Hk1Hg1Hg15CLq1BODY1d1y2p3w7P_1d1s2DU5K5Ed1o39W1z1_5Hs1FW2t1_5Pa3Dq1Fu1n1k53G9c1Tk31ANo2Dq15In1k37IFW1JW1b2w3Tm1FW1l1u1DIJQDI345EHW1107Q5O5IDu15K3E041K4e1EY191717170J6H8~1c1d1MfDW8l2k1~1c1v3e2f3Y2t3Y2h2a1z4_2RGd2q1l4y2b6s3~1e1D8RGh1QLE9OPy1l2s5z2k6~2m6p1GF8r1Q1221l1_2Jc1Pa2Ls1FHt1i49O9M7KHa1LY1p1y1t1m1b4y2pDo976FCJCZ1KR4d3Ap5G90X10X34H8H6D494B656~1Y2JGPONMd1k1NSDI9G9GFO38t1_214f1g2BM7G14f2e4BOBKNk13A5At1m3V_1X1W27I58X1w19GDG5ALQBE9AHIX1S54VOj1OD6PAJ84QCo24K"
   },
   {
-    "id": 122,
+    "id": 128,
     "name": "Freedom Trail - Short",
     "slug": "freedom-trail-short",
     "area": "Charlestown / Boston",
@@ -1830,7 +1920,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=1374622"
   },
   {
-    "id": 123,
+    "id": 129,
     "name": "X-No Hill",
     "slug": "x-no-hill",
     "area": "Long Lakes / Arlington",
@@ -1845,7 +1935,7 @@
     "mapLink": "https://www.strava.com/activities/3063318357"
   },
   {
-    "id": 124,
+    "id": 130,
     "name": "Freedom Trail",
     "slug": "freedom-trail",
     "area": "Charlestown / Boston / Charles",
@@ -1860,22 +1950,7 @@
     "mapLink": "https://www.strava.com/activities/1447918982"
   },
   {
-    "id": 125,
-    "name": "Tour De Malden",
-    "slug": "tour-de-malden",
-    "area": "Medford / Revere / Malden",
-    "distance": 13,
-    "description": "Even better than going to the beach",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://www.strava.com/activities/9822916762"
-  },
-  {
-    "id": 126,
+    "id": 131,
     "name": "Met State",
     "slug": "met-state",
     "area": "Belmont",
@@ -1890,7 +1965,7 @@
     "mapLink": "https://www.strava.com/activities/3066000898"
   },
   {
-    "id": 127,
+    "id": 132,
     "name": "Wilson Farm",
     "slug": "wilson-farm",
     "area": "Belmont / Arlington / Lexington",
@@ -1905,7 +1980,7 @@
     "mapLink": "https://onthegomap.com/s/u4g551oi"
   },
   {
-    "id": 128,
+    "id": 133,
     "name": "Charles St",
     "slug": "charles-st",
     "area": "Charles / Boston",
@@ -1920,7 +1995,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=327200"
   },
   {
-    "id": 129,
+    "id": 134,
     "name": "Shaker",
     "slug": "shaker",
     "area": "Long Lakes / Winchester",
@@ -1935,7 +2010,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2023+On+The+Go+Map,+OpenStreetMap+Contributors&d=21232&f=7beae87097&n=1&dm=1&context=share&r2=iWxY8zoXoDPNr1r177b7x667BBZ1Z155AD4Jm3t2o3r2c2X27Da4b4w1~1u3r4y1z267e2t3o3p56973848Be3z48Dm4v6u2d4w2X4s2d4W3l467ELy1v2i2l3KV89KT67u4b7CJAFADk3f5Qd1Qb1i2n3EL9BNVl2j3x3f5x2~3Z1l1X1p1DNDZ1Ff25n20h1AZ42HAX2Sl3Sp2Mr1Ih1e1p2i2Z4u1t2o2d3Ud1e1h1a2Z2g2X2w2X2c2j1_2h1c1By1Bw1b22j21t12N4BA7E0q1840W15Y1Ba1LOJOVg1j2Ch14j13j1x1d81p16X2w1z6Gb2_1Z5Aj16VAd35b27j1Dl1d1l2t1l2x1l1JBn1Fd15R3b2AX2Fj1RFH1FDHGH6767EPMZ1a1v1MTSPo3h2s1TO5U3a26c3Ga1As1W1g2_1i3w2e3m2q2q1W2Ok2Ek5Bw3Lu3n1u1Pc2Z1Y1DG7q1Lg2Z1i1JUFa4h2s6x3g1Li1Fu9d3w3b1g4l1i1FUBk1Do1BK2k1AQGa1W1MQIUOw1Qa2k1m3Uk1e1i1q3i3c1Sg1Ec8i1g3Io2GY7k1w16i34q3Mm2Go14a3RC3a4l1a6b2O7W2d1o1l1q1X2q1v1g2f2c2X2Y2x1ULs2r1i3v1i2f1o6p3W3b2u3z2m3r2c2p1k3r2QJs3v2g3h2E7c3r1c2Li2Fw17W3PG5OFm1b1y4h5g2n2EPg2d3w1z2o2v4i2f4g1p2y1d3w1p2m2p3e1f2c1d3Kr2Ah30J3b23b49p74n3In3Ub3Mr1k1z2Y1X2g1~1g1r1i1Z1o1Ve2Z1OBb1p3p2f6Pn2Bv1Hv5Lv5Bx28b1X5j3HSPKH6x2Dl2Eb12x1Bt1H93v1BX1Ab3a2j2w156h2g2l2i2Va1d2u3Z1m1d1i1f2m2z1s1v2g1p1O74h2W1R0V3f1Hv4Z3f5j4X2p1PDR0V6d1IZ1MZ1OZ3k2VMJC~1UN8d1C~1EZ21h28j2STIj1Qh4q1x5a2j2Md1Ah8Gd1Ez1i1r1i1JEREd26l15d29v3Lb27V0J4F4RId1Un2W2X1QZ2Y1r3a1l2Mb2QX3q1d1Md2c1T4m1kI1SPu1r1a3j1s2X1m2Rk2X1w3p1W6Rs29e17QHq1Vs1f1s1X1m1b1a2j2e5Vu1r1_2Vo1l3s4x1s2l1m2~2g6Ts1Z1u1Pe1r1k2Rw1Ly1Ds15m12o14a18e2r1a2Rk1x2a4v1e2l3_3b1o1BOTGF6REf2a1p1MF8X1Eb2a1t1Qt3o1v3Mj5Cj2D~1Np2p1d3l2h3v2f2z1r1VZ19b3FZ25T4N6r1Un3i2RQLUZ1w1La1DQBG589AEI2GGIk1SY2Gc29S4e16o1GKCy1m1u1m25Cc1u2Kk26o27k29g1Hu1Te2Na2n1m6Li27W22u16s1M_2W1Y44u13Y19Y1Fg1DMTe1d1a1PERAZ12T3T3L476740c12G2Y10a12_29E0G52t2Ib1Cz2i1b2k1v2Y2f2Y2Z2a2d1i1Te1n2e3t1u2h2a4d1q2Hi1Ls1Rq2Rm39W21K9a40i16o2Gg2Ea1EOY1q1a1m1y2W4y3g5m2k3OW1ACv2e4Pc1Pe1j3g59E9GBKt4c758JU7AJW1h2m3x1w2DM58~2m4r2e4v2Y4t2e4l4w67Ed3_47C5An3q5d2u358x1_2t3s4v1W2Z4c48Eb2Y2n3s2l3u23K9E66a1a1CC58c7y688s1s1OM"
   },
   {
-    "id": 130,
+    "id": 135,
     "name": "Horn Pond",
     "slug": "horn-pond",
     "area": "Winchester / Woburn / Long Lakes",
@@ -1950,7 +2025,7 @@
     "mapLink": "https://www.strava.com/activities/3105682655"
   },
   {
-    "id": 131,
+    "id": 136,
     "name": "Fenway",
     "slug": "fenway",
     "area": "Charles",
@@ -1965,22 +2040,7 @@
     "mapLink": "https://bit.ly/39EfYI4"
   },
   {
-    "id": 132,
-    "name": "Longfellow",
-    "slug": "longfellow",
-    "area": "Charles",
-    "distance": 14,
-    "description": "A long Charles run.",
-    "lore": null,
-    "editors": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://bit.ly/2X9stZh"
-  },
-  {
-    "id": 133,
+    "id": 137,
     "name": "Skeleton Overlook",
     "slug": "skeleton-overlook",
     "area": "Fells / Melrose",
@@ -1995,7 +2055,7 @@
     "mapLink": "https://www.strava.com/activities/4242656466"
   },
   {
-    "id": 134,
+    "id": 138,
     "name": "OG No Hill",
     "slug": "og-no-hill",
     "area": "Long Lakes / Arlington / Lexington",
@@ -2010,7 +2070,7 @@
     "mapLink": "https://bit.ly/3aJTNBA"
   },
   {
-    "id": 135,
+    "id": 139,
     "name": "Zero Fells",
     "slug": "zero-fells",
     "area": "Winchester / Stoneham / Melrose",
@@ -2025,7 +2085,7 @@
     "mapLink": "https://onthegomap.com/s/ids2m13b"
   },
   {
-    "id": 136,
+    "id": 140,
     "name": "Greenway",
     "slug": "greenway",
     "area": "Winchester / Stoneham / Melrose",
@@ -2040,7 +2100,7 @@
     "mapLink": "https://onthegomap.com/?m=s&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2020+On+The+Go+Map,+OpenStreetMap+Contributors&d=22264&f=4462f34775&n=1&dm=1&context=share&r2=YYxY8xnXoDY1W146USi1g1SS64g2e2OIY2Is1E_3IC1k5d1i6l1O142I6a1Kk2u164k1l38N31427Oc3_1_2u1o1W1u1Y1_3m24R29U~4S~3c1l5Ad1Ed28h2054v12f22r21j11p1DX3E0_11U0o62e31Y41M0Y31u10078N4123K3IE48s1z1k1t1c1j1q1x1a5~589UVc3Z4m2X3OT45i1t1o1~1Sd1_1n2MTi1~1q2p3Y2x2Uh165c1p147i3z4CJe2~3CJY2v3s2t4q2l443k1l245c1f1KNg2h2_1t1k1Z1q2h1e2d1c2j1IBc1L41UHQDs4X2a3Vq2LE3_3X1Y4X1q1Bc2Hy6l181i3Ni4X1m2HE3a2Fc1FW1FSLSRMPEHW1b1MLGHw7z6u2d2IFMJUHC125218540Ml1KHA3W1Ts1t1q1Z2u1t2_1X3695BAJENEJOj1On1o1p3KGG8G3OX1c1FK6g7o2m8k3mHW7s2s16q18MC8G6a2q18C_1o2UY2i1e2Y15QDY19U6As140G3W4A_2MY1i1a1W3Ke1UHu1X1UPo1p1m1z1GLIP8D6BQOGCC7E1i2U_3k142Py15c1Li3UEu5w2k4c2a3_1y2u1Hu1o1Uk3c284u1Y1a2k1_2o1g3u12901Gv125A6k1OW1Ie1KA6I86AS7Q3MMW1Y1k2Y1W1W1Ge1Gi1y2i1_2l1g1t1QFW1GI0i1Dk1PMDy2n1U5i16I44D49E5k1Y1A2A3SFA2C8s3q2k3W2Sc1Kc1Ai1Ai43U18NY23k1k1oF4U280442CCk10k10E2S4c1AQAE6e1Ke5k2q2SI6u5q1e3tFy1GY1Es1MA4q1Ki1G4J3KG8y2a1_1Oy2a1u1Oo3i1a1Ek4q1w2Y1A4c3e1SAGq26k21_17w1v4yTBk25i32k38k3Sq6Cq36k54sBKy5i1o5k2w5q3y5iEyJw5W7W6w5QOa6k5g2W3Si18K6Gs1q4CQOk34W1040G0OBs3F_2HW2X1u29GB20S9Mt1u2BEn1q1n3c3b3c3RMRMVI9610n2c1RAn2Gj30h2DV9N9d2f197t1Z1p1d102012F0F2n2Aj80Hj118h3c1f28L476H49HD010111014D476Jd1T00x2~1~1j1D9VNVN55Pr1L1J1~2BR3f3DX13V3L1J1n1770p2Br3BD1n13b3Bp3Bh1500l3Bj13p15d3BD0R3j44r28j28L2h14d28T4~3KZ6e1b2CP6N470N1f17T7R5f5h1Z17d19b1Br2Z1j2R~BX3p21L0~7g1~2Cx14X22J7HBHDf7h6t2r1N9b13Z8610f27h2Db2Lx2h1X7X495b1Jt1Lz1Hl1FZ5j1F331l1Df1DN5h2NnAz2p14h1Ej1O96v4k4d1Y176x1a1r1Kp1Cn7Iv12B2d2270b37j9p1r15r14x18n4o1nAa4hAw332X9c252B2P652b18n5i1t1Qb2g1j1Oh1CH0d12Z2Ff6Z2X1LFFPd19N7Hp1~37HJX1Z1Z1r1VX1BF1J4~2GL07111B333DJBPFL5T3J25B19B577ANCX2293755CDF7DB931H7N1V2H0F1f17h2b1Z3r1t1Rb2Z1x1Vt3z1Z3p1x2n1b3l1d4f2p4l2j3v1TDx2j1j2d1n2f1X3n1p2j1~2n1b3x1p1Vj1T3B9D79FD77927677THj2l1F7F5z2Nv11v50500TZ10N0h11h10p13v1790f3B30X11b11v10~16x18x1C1Hx1bFV3z2Dr1DX2HNHf2d253"
   },
   {
-    "id": 137,
+    "id": 141,
     "name": "Aquarium",
     "slug": "aquarium",
     "area": "Charles",
@@ -2055,7 +2115,7 @@
     "mapLink": "https://bit.ly/2xPMrh3"
   },
   {
-    "id": 138,
+    "id": 142,
     "name": "Twin Peaks",
     "slug": "twin-peaks",
     "area": "Belmont / Arlington",
@@ -2070,7 +2130,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=325170#"
   },
   {
-    "id": 139,
+    "id": 143,
     "name": "Boston Massacre",
     "slug": "boston-massacre",
     "area": "Charlestown / Boston / Charles",
@@ -2085,7 +2145,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=386636#"
   },
   {
-    "id": 140,
+    "id": 144,
     "name": "Museum of Science",
     "slug": "museum-of-science",
     "area": "Charles",
@@ -2100,7 +2160,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=746719"
   },
   {
-    "id": 141,
+    "id": 145,
     "name": "Son of a Beach",
     "slug": "son-of-a-beach",
     "area": "Revere / Medford / Everett",
@@ -2115,7 +2175,7 @@
     "mapLink": "https://www.strava.com/activities/8703688853"
   },
   {
-    "id": 142,
+    "id": 146,
     "name": "BC Res",
     "slug": "bc-res",
     "area": "Allston / Boston",
@@ -2130,7 +2190,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=328859"
   },
   {
-    "id": 143,
+    "id": 147,
     "name": "JP",
     "slug": "jp",
     "area": "Boston",
@@ -2145,7 +2205,7 @@
     "mapLink": "https://www.strava.com/activities/2691247836"
   },
   {
-    "id": 144,
+    "id": 148,
     "name": "Boston Tour",
     "slug": "boston-tour",
     "area": "Charles / Boston / Charlestown",
@@ -2160,7 +2220,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=1209214"
   },
   {
-    "id": 145,
+    "id": 149,
     "name": "Triple Peaks",
     "slug": "triple-peaks",
     "area": "Belmont / Arlington",
@@ -2175,7 +2235,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=1203206"
   },
   {
-    "id": 146,
+    "id": 150,
     "name": "Femepond Charles (BFL)",
     "slug": "femepond-charles-bfl",
     "area": "Everywhere",
@@ -2190,7 +2250,7 @@
     "mapLink": "http://www.gmap-pedometer.com/?r=888874"
   },
   {
-    "id": 147,
+    "id": 151,
     "name": "Short Res to BU Bridge",
     "slug": "short-res-to-bu-bridge",
     "area": "Fells / Charles",
@@ -2205,7 +2265,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=1160938"
   },
   {
-    "id": 148,
+    "id": 152,
     "name": "The Highlands",
     "slug": "the-highlands",
     "area": "Stoneham / Melrose",
@@ -2220,7 +2280,7 @@
     "mapLink": "https://onthegomap.com/?m=r&u=mi&w[]=Routes+may+not+be+suitable+for+public+use.&c[]=Route+data+©2023+On+The+Go+Map,+OpenStreetMap+Contributors&d=28040&f=c79f7ca390&n=1&dm=1&context=share&r2=sYxY8dnXoDECY1Y1e2c2m2i2OIu3W1_3Iw5f1i6l1O1M8a1Kq2y1k1l3a6s3e7o44Ru3q1S0I7K588E8462_1C63Ca4g26Pm2Mg1Aq3W1W4W1e5m1c2QY3k1a2OW2Ee6IW22i4Ci15O7g4AW30Q1g16o2Fk39_28wAe1q4CY30SCCR4Bu1t3g2h4Ox1Gf1c1v4I~1Kv1Kd1SZ1e1d1e3b2W1Vm1j2c1p1SPUJy3v1k2n1W2z1w1Z2s3d5y3~4o1Z2c1l1q1n2W1f2KX2IX3Kn2Mt1Qh1e1t1_1b2a1Ra1FY15a3LQBOFQNSZ1_1Z3i1r1c1d1c1Ve1N_1RW19u17w10m16s1Aq28a13o1Jc7Z4C5m4x1a6b2m2Ju27Y46w17W19c1Jk1Ve1Z1W2X2m1h1W1Ha1Bk5HW2Ji1TKLOTSv1U~2IX28v18h3O6w2k1q1Su2i1u2e1o2Sq1Kq2Uc2Sy1Um3g2k7a5y3q2e2q1q1Y1o2u1gAc7o3k2a5k3sFuAo2y1u2s1QCW16Y25e20Y18W5s1c2Sm1GQ2Y2i2i2g2y2_2y1a2Qi1QY2AY1m2m7OW4Sq1q1Y2k3Y4m4q4W1i1Ki1Gm1MW3Mu3Cw4Cs54_2Aa4Ek74Y12a20k1RY73a22u38q8AY56u1Y1i6Ck1W3a7Qk1i16q3Cc3C4f1O22846W141Ss3Cq2C80o18g14oAg1c23k40k34A2a20E2_50A1k60s34m30o42e34S0E2i24q34S06y22q24KY1k7Ia42QEk38i1k7cNe3w9a2u6Y1e3Us2S_1a4q6u1q2MUw2a3k6w6CEk3s3i4Y5i4c5o2_3OUg1k1k2m2y5i6y1u1e4e3a2e2W9_9c6u6KOII8Ai2o2OSu1_1OW1IMo2k3z1u1b6g5b6q5t1W2n1s2p3y8b2k5z1g4f15j17v11B0X38Z5W1r5w1t1Ap12r43f4Dj10d28z3W1l5a3n2g1j1Qv2e1~2Sr16x20l16X18f1Il1Up1k1x2g3NOd8k6f7m5r2_1b8w2l7q2zEY5H09Br1t3n2i1t5k2F6h1KZ8m3n4y1p1Et16X22n7Ct7Ab10jBGp23dDp1v4Jt2Dx4Jr6Tz3Dh3Ft6Rn15f119BT3Z3ND4x3p1PBh1HF7f3z1t6~375j4p2j1Pf3~1p3Z2p1VLBt2p1~2v1F7r2p1f4l2n1Vb1Lj3Z2X4j2e1~3SZ3g1j429_1l6e2j7o2t8s4jFY1p36Nq1f5_1v6Sx2I~1o2j8s2j9_2z929w1r6m2Z7c1j2m1h2e1t1Y2f2a1t1Sf2IZ24P0d1Ff1JN1H6LZ16F031J3f3h1f17h11n2Ab13L7JDZ1d1FPFL~1Z3b1l1j1Z1j1HX13r4Gf26X23l5Z1b3DV7d1Lz5p4d1d1Pb1Nd1TZ2Nj2Jv1Vb2d1v1p1t1LHz1Z1f6n3z1Hp27h14d1An4s1X4a1~5e1r1Gb5q1Z20F1RDTRd1r1v4h9b1X2NTVRRHPBz3X1r1HVFr1d1VVZ1h1Pj1Nj1h3h8f1v2t1X3JRr1x1~3t3Nn1JF5b1N670t6s1t1Qb2g1j1Oh1Cv12P3p7l2TJHHLTFX1z1n4Tr1FJRNp1RX15J0X3KV5F9PV9HLNNFP7N1J4p1LLTB9L9f20X13b1BX5r2t1RzAr5x2n1b3l1d4h2X5r2~2n1TDx7~3p8n4d3x1p1Vj1TDPVV~3r2D7h2Tb2Bv80R1x10p13n5JX11~21x3Eb2E3Jt1pEh3P9293r1Dj139571Z2b2HB9D75h1h1X1T71HL3i154r1B"
   },
   {
-    "id": 149,
+    "id": 153,
     "name": "Freedom Trail - Extended",
     "slug": "freedom-trail-extended",
     "area": "Charlestown / Boston / Charles",
@@ -2235,7 +2295,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=1615443"
   },
   {
-    "id": 150,
+    "id": 154,
     "name": "Arboretum (X-JP)",
     "slug": "arboretum-x-jp",
     "area": "Boston",
@@ -2250,7 +2310,7 @@
     "mapLink": "https://www.strava.com/activities/5649663405"
   },
   {
-    "id": 151,
+    "id": 155,
     "name": "BFL",
     "slug": "bfl",
     "area": "Everywhere",
@@ -2265,7 +2325,7 @@
     "mapLink": "https://www.gmap-pedometer.com/?r=914920"
   },
   {
-    "id": 152,
+    "id": 156,
     "name": "Ex-BFL",
     "slug": "ex-bfl",
     "area": "Everywhere",
@@ -2278,65 +2338,5 @@
     "createdAt": "2024-11-25T01:00:00.000Z",
     "updatedAt": "2024-11-25T01:00:00.000Z",
     "mapLink": "https://www.gmap-pedometer.com/?r=1757107"
-  },
-  {
-    "id": 153,
-    "name": "Battle Road",
-    "slug": "battle-road",
-    "area": "Concord",
-    "distance": 5,
-    "description": "Tempo: Patriotic",
-    "lore": null,
-    "editors": ["CG"],
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://us.mapometer.com/running/route_5228863.html"
-  },
-  {
-    "id": 154,
-    "name": "HB",
-    "slug": "hb",
-    "area": "Medford / Somerville",
-    "distance": 5.3,
-    "description": null,
-    "lore": "Supposedly in reference to MB.",
-    "editors": ["CG"],
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://us.mapometer.com/running/route_4530495.html"
-  },
-  {
-    "id": 155,
-    "name": "Main Street",
-    "slug": "main-street",
-    "area": "Medford / Somerville",
-    "distance": 2.4,
-    "description": "Short and sweet",
-    "lore": null,
-    "editors": ["CG"],
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://us.mapometer.com/running/route_4287237.html"
-  },
-  {
-    "id": 156,
-    "name": "Full Glam",
-    "slug": "full-glam",
-    "area": "Medford / Somerville",
-    "distance": 3.4,
-    "description": "Full on Glamourville",
-    "lore": null,
-    "editors": ["CG"],
-    "firstRunBy": null,
-    "firstRunYear": null,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z",
-    "mapLink": "https://us.mapometer.com/running/route_4373700.html"
   }
 ]
