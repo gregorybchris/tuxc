@@ -128,6 +128,7 @@ function RunDetails({ run }: RunDetailsProps) {
             name="Description"
             detail={run.description}
             iconName="letters"
+            blockDetail={true}
             className="items-start"
           />
         )}
@@ -136,6 +137,7 @@ function RunDetails({ run }: RunDetailsProps) {
             name="Lore"
             detail={run.lore}
             iconName="book"
+            blockDetail={true}
             className="items-start"
           />
         )}
@@ -162,14 +164,22 @@ interface RunDetailProps {
   name?: string;
   detail?: string | React.ReactNode;
   iconName?: IconName;
+  blockDetail?: boolean;
   className?: string;
 }
 
-function RunDetail({ name, detail, iconName, className }: RunDetailProps) {
+function RunDetail({
+  name,
+  detail,
+  iconName,
+  blockDetail,
+  className,
+}: RunDetailProps) {
   return (
     <div
       className={cn(
         "flex w-full flex-row items-center gap-2 text-sm",
+        blockDetail && "flex-col",
         className,
       )}
     >
@@ -187,8 +197,8 @@ function RunDetail({ name, detail, iconName, className }: RunDetailProps) {
       </div>
       {detail && (
         <div className="flex flex-row gap-2">
-          <span className="text-black/20">•</span>
-          <span>{detail}</span>
+          {!blockDetail && <span className="text-black/20">•</span>}
+          <span className={cn(blockDetail && "pl-[24px]")}>{detail}</span>
         </div>
       )}
     </div>
