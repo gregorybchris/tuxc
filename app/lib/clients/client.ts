@@ -6,6 +6,7 @@ import {
 
 import { GetRunMapResponse } from "@/app/api/runs/[id]/map/route";
 import { GetRunResponse } from "@/app/api/runs/[id]/route";
+import { GetRunMapsResponse } from "@/app/api/runs/maps/route";
 import { Run } from "../models/run";
 import { RunMap } from "../models/runMap";
 import { ClientBase } from "./client-base";
@@ -33,6 +34,10 @@ export class Client extends ClientBase {
     return responseJson.run;
   }
 
+  async getRunMaps(): Promise<RunMap[]> {
+    const responseJson: GetRunMapsResponse = await this.get(`/runs/maps`);
+    return responseJson.runMaps;
+  }
   async getRunMap(id: number): Promise<RunMap> {
     const responseJson: GetRunMapResponse = await this.get(`/runs/${id}/map`);
     return responseJson.runMap;

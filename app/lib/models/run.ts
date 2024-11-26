@@ -6,7 +6,7 @@ export type Run = {
   distance: number;
   description: string | null;
   lore: string | null;
-  editors: string[];
+  editors: string[] | null;
   firstRunBy: string[] | null;
   firstRunYear: number | null;
   createdAt: string;
