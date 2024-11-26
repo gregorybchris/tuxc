@@ -66,7 +66,6 @@ import MAP_FULL_GLAM from "./maps/full-glam.json";
 import MAP_FUMRD from "./maps/fumrd.json";
 import MAP_GC from "./maps/gc.json";
 import MAP_GEORGE_STREET from "./maps/george-street.json";
-import MAP_GHETTO_RUN_0_9_REDLINE_SUCKS from "./maps/ghetto-run-0-9-redline-sucks.json";
 import MAP_GLAMOURVILLE from "./maps/glamourville.json";
 import MAP_GOLDILOCKS from "./maps/goldilocks.json";
 import MAP_GOLDMAN_SACHS from "./maps/goldman-sachs.json";
@@ -224,7 +223,6 @@ export const MAPS = new Map<string, RunMap>([
   ["fumrd", MAP_FUMRD],
   ["gc", MAP_GC],
   ["george-street", MAP_GEORGE_STREET],
-  ["ghetto-run-0-9-redline-sucks", MAP_GHETTO_RUN_0_9_REDLINE_SUCKS],
   ["glamourville", MAP_GLAMOURVILLE],
   ["goldilocks", MAP_GOLDILOCKS],
   ["goldman-sachs", MAP_GOLDMAN_SACHS],
