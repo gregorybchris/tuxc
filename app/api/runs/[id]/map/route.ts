@@ -20,13 +20,16 @@ export async function GET(
   const run = runs.find((run) => run.id === idNumber);
   if (!run) {
     return NextResponse.json(
-      { error: "Run metadata not found" },
+      { error: `Run metadata not found: ${id}` },
       { status: 404 },
     );
   }
   const runMap = MAPS.get(run.slug);
   if (!runMap) {
-    return NextResponse.json({ error: "Run map not found" }, { status: 404 });
+    return NextResponse.json(
+      { error: `Run map not found: ${run.slug}` },
+      { status: 404 },
+    );
   }
   return NextResponse.json({ runMap });
 }

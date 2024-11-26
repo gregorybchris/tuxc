@@ -9,8 +9,10 @@ import {
   Medal,
   Pencil,
   PersonSimpleRun,
+  RoadHorizon,
   SneakerMove,
   TextAa,
+  Tree,
   UserPlus,
 } from "@phosphor-icons/react";
 
@@ -30,7 +32,9 @@ export type IconName =
   | "medal"
   | "info"
   | "user-plus"
-  | "pencil";
+  | "pencil"
+  | "tree"
+  | "road";
 
 interface CommonIconProps {
   name: IconName;
@@ -87,6 +91,12 @@ export function CommonIcon({
     }
     case "pencil": {
       return <Pencil {...props} />;
+    }
+    case "tree": {
+      return <Tree {...props} />;
+    }
+    case "road": {
+      return <RoadHorizon {...props} />;
     }
     default: {
       return <QuestionMark {...props} />;

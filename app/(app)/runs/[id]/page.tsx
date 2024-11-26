@@ -101,6 +101,11 @@ function RunDetails({ run }: RunDetailsProps) {
         />
         <RunDetail name="Area" detail={run.area} iconName="globe" />
         <RunDetail
+          name={run.includesTrail ? "Includes trail" : "No trail"}
+          iconName={run.includesTrail ? "tree" : "road"}
+          className="items-center"
+        />
+        <RunDetail
           name="First run year"
           detail={firstRunYear}
           iconName="calendar-plus"
@@ -156,7 +161,7 @@ function InitialsList({ initialsList }: InitialsListProps) {
 
 interface RunDetailProps {
   name?: string;
-  detail: string | React.ReactNode;
+  detail?: string | React.ReactNode;
   iconName?: IconName;
   className?: string;
 }
@@ -179,14 +184,14 @@ function RunDetail({ name, detail, iconName, className }: RunDetailProps) {
             weight="duotone"
           />
         )}
-        {name && (
-          <div className="flex flex-row gap-2">
-            <span className="font-bold text-black/60">{name}</span>
-            <span className="text-black/20">•</span>
-          </div>
-        )}
+        {name && <span className="font-bold text-black/60">{name}</span>}
       </div>
-      <span>{detail}</span>
+      {detail && (
+        <div className="flex flex-row gap-2">
+          <span className="text-black/20">•</span>
+          <span>{detail}</span>
+        </div>
+      )}
     </div>
   );
 }
