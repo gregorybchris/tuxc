@@ -1,16 +1,17 @@
 [
   {
     "id": 1,
-    "name": "FNAF",
-    "slug": "fnaf",
-    "area": "Barnum Basement, 9:00pm",
-    "distance": 151.37,
-    "description": "Watch out for computer virus",
+    "name": "Mystic Stoplight Cooldown",
+    "slug": "mystic-stoplight-cooldown",
+    "area": "Medford/Somerville",
+    "distance": 2,
+    "description": "Short and sweet",
     "lore": null,
-    "firstRunBy": null,
-    "firstRunYear": null,
+    "firstRunBy": ["VB", "AA", "MB"],
+    "firstRunYear": 2015,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://us.mapometer.com/running/route_4287239.html"
   },
   {
     "id": 2,
@@ -23,7 +24,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92023+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=791&f=66c3ffaeb1&n=1&dm=1&c"
   },
   {
     "id": 3,
@@ -36,7 +38,8 @@
     "firstRunBy": ["CJT", "MH"],
     "firstRunYear": 2021,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/6212243383"
   },
   {
     "id": 4,
@@ -49,7 +52,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2X5FFP7"
   },
   {
     "id": 5,
@@ -62,7 +66,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92020+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=3233&f=66c02dcbc4&n=1&dm=1&c"
   },
   {
     "id": 6,
@@ -75,7 +80,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3131971050"
   },
   {
     "id": 7,
@@ -88,7 +94,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/34fJ3s3"
   },
   {
     "id": 8,
@@ -101,7 +108,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1383867490"
   },
   {
     "id": 9,
@@ -114,7 +122,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92024+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=4067&f=27d12753f9&n=1&dm=1&c"
   },
   {
     "id": 10,
@@ -127,7 +136,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92024+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=4514&f=07ac981210&n=1&dm=1&c"
   },
   {
     "id": 11,
@@ -140,7 +150,8 @@
     "firstRunBy": ["TS"],
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2XbjqXZ"
   },
   {
     "id": 12,
@@ -153,7 +164,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92022+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=4895&f=3446c719ae&n=1&dm=1&c"
   },
   {
     "id": 13,
@@ -166,7 +178,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2R9M0VM"
   },
   {
     "id": 14,
@@ -179,7 +192,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/3bSrxNm"
   },
   {
     "id": 15,
@@ -192,7 +206,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/2779277238"
   },
   {
     "id": 16,
@@ -205,7 +220,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92022+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=5621&f=2b2db516b2&n=1&dm=1&c"
   },
   {
     "id": 17,
@@ -218,7 +234,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3047987782"
   },
   {
     "id": 18,
@@ -231,7 +248,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2wUafk9"
   },
   {
     "id": 19,
@@ -244,7 +262,8 @@
     "firstRunBy": ["TW"],
     "firstRunYear": 2017,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3023092803"
   },
   {
     "id": 20,
@@ -257,7 +276,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1841588129"
   },
   {
     "id": 21,
@@ -270,7 +290,8 @@
     "firstRunBy": ["AB"],
     "firstRunYear": 2021,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92022+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=6143&f=c1fc77477e&n=1&dm=1&c"
   },
   {
     "id": 22,
@@ -283,7 +304,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92022+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=7002&f=0aa31af147&n=1&dm=1&c"
   },
   {
     "id": 23,
@@ -296,7 +318,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1871630034"
   },
   {
     "id": 24,
@@ -309,7 +332,8 @@
     "firstRunBy": ["TW", "SG", "NG"],
     "firstRunYear": 2020,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3120558067"
   },
   {
     "id": 25,
@@ -322,7 +346,8 @@
     "firstRunBy": ["CC", "MB"],
     "firstRunYear": 2024,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=332851"
   },
   {
     "id": 26,
@@ -335,7 +360,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1992596579"
   },
   {
     "id": 27,
@@ -348,7 +374,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92022+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=7520&f=0aa31af147&n=1&dm=1&c"
   },
   {
     "id": 28,
@@ -361,7 +388,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92022+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=7747&f=0aa31af147&n=1&dm=1&c"
   },
   {
     "id": 29,
@@ -374,7 +402,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1387193145"
   },
   {
     "id": 30,
@@ -387,7 +416,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/2838640423"
   },
   {
     "id": 31,
@@ -400,7 +430,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3063001392"
   },
   {
     "id": 32,
@@ -413,7 +444,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92023+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=8478&f=1a2c478036&n=1&dm=1&c"
   },
   {
     "id": 33,
@@ -426,7 +458,8 @@
     "firstRunBy": ["MD", "MM", "KA"],
     "firstRunYear": 2016,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2UZ4Gc0"
   },
   {
     "id": 34,
@@ -439,7 +472,8 @@
     "firstRunBy": ["TW", "OP", "DK"],
     "firstRunYear": 2020,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3134751911"
   },
   {
     "id": 35,
@@ -452,7 +486,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2wZLJOn"
   },
   {
     "id": 36,
@@ -465,7 +500,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/2803975269"
   },
   {
     "id": 37,
@@ -478,7 +514,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/39Kgpk6"
   },
   {
     "id": 38,
@@ -491,7 +528,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92022+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=9232&f=69cc1bb04d&n=1&dm=1&c"
   },
   {
     "id": 39,
@@ -504,7 +542,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3096320232"
   },
   {
     "id": 40,
@@ -517,7 +556,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3039956797"
   },
   {
     "id": 41,
@@ -530,7 +570,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/s/i924ov9n"
   },
   {
     "id": 42,
@@ -543,7 +584,8 @@
     "firstRunBy": ["RB", "MM"],
     "firstRunYear": 2017,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2JEECO7"
   },
   {
     "id": 43,
@@ -556,7 +598,8 @@
     "firstRunBy": ["SG"],
     "firstRunYear": 2021,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/5453199400"
   },
   {
     "id": 44,
@@ -569,7 +612,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2UGkqBN"
   },
   {
     "id": 45,
@@ -582,7 +626,8 @@
     "firstRunBy": ["MB"],
     "firstRunYear": 2023,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92023+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=9881&f=dfd7a5f996&n=1&dm=1&c"
   },
   {
     "id": 46,
@@ -595,7 +640,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/34d8Fpp"
   },
   {
     "id": 47,
@@ -608,7 +654,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3168186578"
   },
   {
     "id": 48,
@@ -621,7 +668,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/3bK51G4"
   },
   {
     "id": 49,
@@ -634,7 +682,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3008766064"
   },
   {
     "id": 50,
@@ -647,7 +696,8 @@
     "firstRunBy": ["CJT", "JOT"],
     "firstRunYear": 2021,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/6053450540"
   },
   {
     "id": 51,
@@ -660,7 +710,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92022+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=10621&f=90948633b6&n=1&dm=1&c"
   },
   {
     "id": 52,
@@ -673,7 +724,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92022+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=10805&f=9f63fedd30&n=1&dm=1&c"
   },
   {
     "id": 53,
@@ -686,7 +738,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1476219455"
   },
   {
     "id": 54,
@@ -699,7 +752,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92022+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=12187&f=90948633b6&n=1&dm=1&c"
   },
   {
     "id": 55,
@@ -712,7 +766,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92023+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=11494&f=dfd7a5f996&n=1&dm=1&c"
   },
   {
     "id": 56,
@@ -725,7 +780,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2UFCuMe"
   },
   {
     "id": 57,
@@ -738,7 +794,8 @@
     "firstRunBy": ["TW", "CG", "ND", "SG"],
     "firstRunYear": 2020,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=s&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92020+On+The+Go+Map,+OpenStreetMap+Contributors&d=11846&f=4462f34775&n=1&dm=1&c"
   },
   {
     "id": 58,
@@ -751,7 +808,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2R627Ub"
   },
   {
     "id": 59,
@@ -764,7 +822,8 @@
     "firstRunBy": ["K"],
     "firstRunYear": 2022,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/s/ol849sis"
   },
   {
     "id": 60,
@@ -777,7 +836,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1409416884"
   },
   {
     "id": 61,
@@ -790,7 +850,8 @@
     "firstRunBy": ["TW"],
     "firstRunYear": 2020,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2JBA1MJ"
   },
   {
     "id": 62,
@@ -803,7 +864,8 @@
     "firstRunBy": null,
     "firstRunYear": 2016,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92022+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=12018&f=f363e6403d&n=1&dm=1&c"
   },
   {
     "id": 63,
@@ -816,7 +878,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1904594544"
   },
   {
     "id": 64,
@@ -829,7 +892,8 @@
     "firstRunBy": ["MB"],
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92023+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=12310&f=a06e8ec39a&n=1&dm=1&c"
   },
   {
     "id": 65,
@@ -842,7 +906,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2RaWLaf"
   },
   {
     "id": 66,
@@ -855,7 +920,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2UXPYSG"
   },
   {
     "id": 67,
@@ -868,7 +934,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=48491"
   },
   {
     "id": 68,
@@ -881,7 +948,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=2323007"
   },
   {
     "id": 69,
@@ -894,7 +962,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2UWOY12"
   },
   {
     "id": 70,
@@ -907,7 +976,8 @@
     "firstRunBy": ["SG"],
     "firstRunYear": 2021,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/5003375440"
   },
   {
     "id": 71,
@@ -920,7 +990,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=3409576"
   },
   {
     "id": 72,
@@ -933,7 +1004,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/s/jke5m91d"
   },
   {
     "id": 73,
@@ -946,7 +1018,8 @@
     "firstRunBy": ["CJT"],
     "firstRunYear": 2020,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92024+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=14046&f=5959dc739a&n=1&dm=1&c"
   },
   {
     "id": 74,
@@ -959,7 +1032,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/3aJTNBA"
   },
   {
     "id": 75,
@@ -972,7 +1046,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3056561803"
   },
   {
     "id": 76,
@@ -985,7 +1060,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1945972023"
   },
   {
     "id": 77,
@@ -998,7 +1074,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=1130771"
   },
   {
     "id": 78,
@@ -1011,7 +1088,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3034782205"
   },
   {
     "id": 79,
@@ -1024,7 +1102,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=327289"
   },
   {
     "id": 80,
@@ -1037,7 +1116,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92024+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=14221&f=3902f3fa60&n=1&dm=1&c"
   },
   {
     "id": 81,
@@ -1050,7 +1130,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=324994"
   },
   {
     "id": 82,
@@ -1063,7 +1144,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=2012354"
   },
   {
     "id": 83,
@@ -1076,7 +1158,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=2392571"
   },
   {
     "id": 84,
@@ -1089,7 +1172,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=527870"
   },
   {
     "id": 85,
@@ -1102,7 +1186,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2x2BAAx"
   },
   {
     "id": 86,
@@ -1115,7 +1200,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1811930667"
   },
   {
     "id": 87,
@@ -1128,7 +1214,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=s&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92020+On+The+Go+Map,+OpenStreetMap+Contributors&d=14827&f=4462f34775&n=1&dm=1&c"
   },
   {
     "id": 88,
@@ -1141,7 +1228,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92023+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=15043&f=2e1433c0ab&n=1&dm=1&c"
   },
   {
     "id": 89,
@@ -1154,7 +1242,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2V5TWIY"
   },
   {
     "id": 90,
@@ -1167,7 +1256,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=1868779"
   },
   {
     "id": 91,
@@ -1180,7 +1270,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/2015857183"
   },
   {
     "id": 92,
@@ -1193,7 +1284,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=324899#"
   },
   {
     "id": 93,
@@ -1206,7 +1298,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "http://www.gmap-pedometer.com/?r=2345636"
   },
   {
     "id": 94,
@@ -1219,7 +1312,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=333243"
   },
   {
     "id": 95,
@@ -1232,7 +1326,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1940449819"
   },
   {
     "id": 96,
@@ -1245,7 +1340,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/2786241834"
   },
   {
     "id": 97,
@@ -1258,7 +1354,8 @@
     "firstRunBy": ["MB", "JF"],
     "firstRunYear": 2023,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92023+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=16567&f=c79f7ca390&n=1&dm=1&c"
   },
   {
     "id": 98,
@@ -1271,7 +1368,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2wRr7Ih"
   },
   {
     "id": 99,
@@ -1284,7 +1382,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/5193156609"
   },
   {
     "id": 100,
@@ -1297,7 +1396,8 @@
     "firstRunBy": ["MD"],
     "firstRunYear": 2018,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2Rdl5bI"
   },
   {
     "id": 101,
@@ -1310,7 +1410,8 @@
     "firstRunBy": ["TW", "MD"],
     "firstRunYear": 2018,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2V0EeyJ"
   },
   {
     "id": 102,
@@ -1323,7 +1424,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=3934594"
   },
   {
     "id": 103,
@@ -1336,7 +1438,8 @@
     "firstRunBy": ["TW"],
     "firstRunYear": 2020,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=s&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92020+On+The+Go+Map,+OpenStreetMap+Contributors&d=16889&f=d33dcb121a&n=1&dm=1&c"
   },
   {
     "id": 104,
@@ -1349,7 +1452,8 @@
     "firstRunBy": ["MD"],
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92024+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=17449&f=2a0eeb5aa7&n=1&dm=1&c"
   },
   {
     "id": 105,
@@ -1362,7 +1466,8 @@
     "firstRunBy": ["TW", "HS", "DJ", "SG"],
     "firstRunYear": 2020,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/3dXW7GX"
   },
   {
     "id": 106,
@@ -1375,7 +1480,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92020+On+The+Go+Map,+OpenStreetMap+Contributors&d=17337&f=1a4c0bed53&n=1&dm=1&c"
   },
   {
     "id": 107,
@@ -1388,7 +1494,8 @@
     "firstRunBy": ["The Dragon"],
     "firstRunYear": 2023,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92023+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=17565&f=2c888f9ba1&n=1&dm=1&c"
   },
   {
     "id": 108,
@@ -1401,7 +1508,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/3aHomHY"
   },
   {
     "id": 109,
@@ -1414,7 +1522,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/2711463342"
   },
   {
     "id": 110,
@@ -1427,7 +1536,8 @@
     "firstRunBy": ["MB"],
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92024+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=17772&f=6d8edb9721&n=1&dm=1&c"
   },
   {
     "id": 111,
@@ -1440,7 +1550,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=484449"
   },
   {
     "id": 112,
@@ -1453,7 +1564,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92024+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=17906&f=25942b87af&n=1&dm=1&c"
   },
   {
     "id": 113,
@@ -1466,7 +1578,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/3495jUn"
   },
   {
     "id": 114,
@@ -1479,7 +1592,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://strava.app.link/xrS3DRFYSjb"
   },
   {
     "id": 115,
@@ -1492,7 +1606,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/3bSVInB"
   },
   {
     "id": 116,
@@ -1505,7 +1620,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=3934604"
   },
   {
     "id": 117,
@@ -1518,7 +1634,8 @@
     "firstRunBy": ["AS"],
     "firstRunYear": 2023,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92024+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=19336&f=d352f4923d&n=1&dm=1&c"
   },
   {
     "id": 118,
@@ -1531,7 +1648,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=365186"
   },
   {
     "id": 119,
@@ -1544,7 +1662,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=410758."
   },
   {
     "id": 120,
@@ -1557,7 +1676,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2xODapE"
   },
   {
     "id": 121,
@@ -1570,7 +1690,8 @@
     "firstRunBy": ["MD"],
     "firstRunYear": 2018,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2ULwyBm"
   },
   {
     "id": 122,
@@ -1583,7 +1704,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92020+On+The+Go+Map,+OpenStreetMap+Contributors&d=20013&f=00d8a69c0d&n=1&dm=1&c"
   },
   {
     "id": 123,
@@ -1596,7 +1718,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=1374622"
   },
   {
     "id": 124,
@@ -1609,7 +1732,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3063318357"
   },
   {
     "id": 125,
@@ -1622,7 +1746,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/1447918982"
   },
   {
     "id": 126,
@@ -1635,7 +1760,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/9822916762"
   },
   {
     "id": 127,
@@ -1648,7 +1774,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3066000898"
   },
   {
     "id": 128,
@@ -1661,7 +1788,8 @@
     "firstRunBy": ["TW"],
     "firstRunYear": 2020,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/s/u4g551oi"
   },
   {
     "id": 129,
@@ -1674,7 +1802,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=327200"
   },
   {
     "id": 130,
@@ -1687,7 +1816,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92023+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=21232&f=7beae87097&n=1&dm=1&c"
   },
   {
     "id": 131,
@@ -1700,7 +1830,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/3105682655"
   },
   {
     "id": 132,
@@ -1713,7 +1844,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/39EfYI4"
   },
   {
     "id": 133,
@@ -1726,7 +1858,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2X9stZh"
   },
   {
     "id": 134,
@@ -1739,7 +1872,8 @@
     "firstRunBy": ["SG", "HS"],
     "firstRunYear": 2020,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/4242656466"
   },
   {
     "id": 135,
@@ -1752,7 +1886,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/3aJTNBA"
   },
   {
     "id": 136,
@@ -1765,7 +1900,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/s/ids2m13b"
   },
   {
     "id": 137,
@@ -1778,7 +1914,8 @@
     "firstRunBy": ["TW"],
     "firstRunYear": 2020,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=s&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92020+On+The+Go+Map,+OpenStreetMap+Contributors&d=22264&f=4462f34775&n=1&dm=1&c"
   },
   {
     "id": 138,
@@ -1791,7 +1928,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://bit.ly/2xPMrh3"
   },
   {
     "id": 139,
@@ -1804,7 +1942,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=325170#"
   },
   {
     "id": 140,
@@ -1817,7 +1956,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=386636#"
   },
   {
     "id": 141,
@@ -1830,7 +1970,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=746719"
   },
   {
     "id": 142,
@@ -1843,7 +1984,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/8703688853"
   },
   {
     "id": 143,
@@ -1856,7 +1998,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=328859"
   },
   {
     "id": 144,
@@ -1869,7 +2012,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/2691247836"
   },
   {
     "id": 145,
@@ -1882,7 +2026,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=1209214"
   },
   {
     "id": 146,
@@ -1895,7 +2040,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=1203206"
   },
   {
     "id": 147,
@@ -1908,11 +2054,12 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "http://www.gmap-pedometer.com/?r=888874"
   },
   {
     "id": 148,
-    "name": "Short Res -> BU Bridge",
+    "name": "Short Res to BU Bridge",
     "slug": "short-res-to-bu-bridge",
     "area": "Fells / Charles",
     "distance": 17,
@@ -1921,7 +2068,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=1160938"
   },
   {
     "id": 149,
@@ -1934,7 +2082,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://onthegomap.com/?m=r&u=mi&w%5B%5D=Routes+may+not+be+suitable+for+public+use.&c%5B%5D=Route+data+%C2%A92023+On+The+Go+Map%2C+OpenStreetMap+Contributors&d=28040&f=c79f7ca390&n=1&dm=1&c"
   },
   {
     "id": 150,
@@ -1947,7 +2096,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=1615443"
   },
   {
     "id": 151,
@@ -1960,7 +2110,8 @@
     "firstRunBy": ["SG"],
     "firstRunYear": 2021,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.strava.com/activities/5649663405"
   },
   {
     "id": 152,
@@ -1973,7 +2124,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=914920"
   },
   {
     "id": 153,
@@ -1986,7 +2138,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://www.gmap-pedometer.com/?r=1757107"
   },
   {
     "id": 154,
@@ -1999,7 +2152,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://us.mapometer.com/running/route_5228863.html"
   },
   {
     "id": 155,
@@ -2012,7 +2166,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://us.mapometer.com/running/route_4530495.html"
   },
   {
     "id": 156,
@@ -2025,7 +2180,8 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://us.mapometer.com/running/route_4287237.html"
   },
   {
     "id": 157,
@@ -2038,19 +2194,7 @@
     "firstRunBy": null,
     "firstRunYear": null,
     "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
-  },
-  {
-    "id": 158,
-    "name": "Mystic Stoplight Cooldown",
-    "slug": "mystic-stoplight-cooldown",
-    "area": "Medford/Somerville",
-    "distance": 2,
-    "description": "Short and sweet",
-    "lore": null,
-    "firstRunBy": ["VB", "AA", "MB"],
-    "firstRunYear": 2015,
-    "createdAt": "2024-11-25T01:00:00.000Z",
-    "updatedAt": "2024-11-25T01:00:00.000Z"
+    "updatedAt": "2024-11-25T01:00:00.000Z",
+    "mapLink": "https://us.mapometer.com/running/route_4373700.html"
   }
 ]

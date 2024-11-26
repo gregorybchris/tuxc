@@ -10,4 +10,5 @@ export type Run = {
   firstRunYear: number | null;
   createdAt: string;
   updatedAt: string;
+  mapLink: string | null;
 };
