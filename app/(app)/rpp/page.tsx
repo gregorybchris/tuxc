@@ -15,7 +15,7 @@ export default function RppPage() {
           the answer is yes, run it up. All names must be initials when talking
           about lore etc. Go Jumbos Go RPP let&apos;s record some runs!
         </span>
-        <LinkButton text="Runs" href="/runs" iconName="shoe" />
+        <LinkButton text="View all runs" href="/runs" iconName="shoe" />
       </div>
     </div>
   );
