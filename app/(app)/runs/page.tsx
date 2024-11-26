@@ -67,7 +67,7 @@ export default function CollectionPage() {
           <SortDropdown
             value={sortValue}
             setValue={setSortValue}
-            choices={["Alphabetical", "Recently added", "Recently updated"]}
+            choices={["Alphabetical", "Recently added"]}
           />
         </div>
 

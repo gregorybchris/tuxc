@@ -35,7 +35,7 @@ export default function RunPage({ params }: { params: { id: number } }) {
 
   return (
     <div className="bg-background flex h-full w-full flex-row">
-      <div className="flex h-full w-full flex-col gap-5 py-5 md:py-10">
+      <div className="flex h-full w-full flex-col py-5 md:py-8">
         {loading && (
           <div className="flex flex-col gap-3 px-2 md:px-2">
             <div className="flex flex-row gap-3">
@@ -46,21 +46,26 @@ export default function RunPage({ params }: { params: { id: number } }) {
             <LoadingBox className="h-[100px] w-full md:h-[300px] md:w-[500px]" />
           </div>
         )}
+
         {!loading && (!run || !runMap) && <div>Run not found</div>}
+
         {!loading && run && runMap && (
-          <div className="flex w-full flex-col gap-7">
-            <div className="flex flex-col gap-4">
-              <div className="flex flex-row px-5 md:px-20">
-                <LinkButton
-                  href="/runs"
-                  text="All Runs"
-                  iconName="back"
-                  className="px-2"
-                />
+          <div className="flex w-full flex-col items-center">
+            <div className="flex w-full flex-col gap-4 md:w-[80%]">
+              <div className="flex flex-col gap-3 px-5 md:px-0">
+                <div className="flex flex-row">
+                  <LinkButton href="/runs" text="All Runs" iconName="back" />
+                </div>
+
+                <RunDetails run={run} />
               </div>
-              <RunDetails run={run} />
+
+              <div className="flex flex-col items-center">
+                <div className="h-[500px] w-full">
+                  <RunMapView run={run} runMap={runMap} />
+                </div>
+              </div>
             </div>
-            <RunMapView run={run} runMap={runMap} />
           </div>
         )}
       </div>
@@ -68,13 +73,9 @@ export default function RunPage({ params }: { params: { id: number } }) {
   );
 }
 
-interface RunDetailsProps {
-  run: Run;
-}
-
 function RunDetails({ run }: RunDetailsProps) {
   return (
-    <div className="flex flex-col gap-1 px-5 md:px-20">
+    <div className="flex flex-col gap-1">
       <RunDetail detail={run.name} className="text-lg font-bold" />
       <RunDetail name="Distance" detail={`${run.distance} mi`} />
       <RunDetail name="Region" detail={run.region} />

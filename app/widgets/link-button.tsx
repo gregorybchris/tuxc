@@ -20,7 +20,7 @@ export function LinkButton({
     <Link
       href={href}
       className={cn(
-        "rounded px-6 py-1.5 text-sm transition-all hover:bg-black/5",
+        "rounded px-2 py-1.5 text-sm transition-all hover:bg-black/5",
         className,
       )}
     >

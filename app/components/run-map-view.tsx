@@ -59,28 +59,28 @@ export function RunMapView({ run, runMap, className }: RunMapViewProps) {
   };
 
   return (
-    <div className={cn("flex flex-col items-center", className)}>
-      <div className="h-[500px] w-full overflow-hidden md:w-[80%] md:rounded-xl">
-        <Map
-          ref={mapRef}
-          initialViewState={initialViewState}
-          mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
-          style={{ width: "100%", height: "100%" }}
-          mapStyle="mapbox://styles/mapbox/streets-v11"
-          attributionControl={false}
-        >
-          <Source type="geojson" data={routeGeoJSON}>
-            <Layer
-              type="line"
-              paint={{
-                "line-color": "#4B87F7",
-                "line-width": 4,
-                "line-opacity": 1,
-              }}
-            />
-          </Source>
-        </Map>
-      </div>
+    <div
+      className={cn("h-full w-full overflow-hidden md:rounded-xl", className)}
+    >
+      <Map
+        ref={mapRef}
+        initialViewState={initialViewState}
+        mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
+        style={{ width: "100%", height: "100%" }}
+        mapStyle="mapbox://styles/mapbox/streets-v11"
+        attributionControl={false}
+      >
+        <Source type="geojson" data={routeGeoJSON}>
+          <Layer
+            type="line"
+            paint={{
+              "line-color": "#4B87F7",
+              "line-width": 4,
+              "line-opacity": 1,
+            }}
+          />
+        </Source>
+      </Map>
     </div>
   );
 }

@@ -15,6 +15,7 @@ export default function SplashPage() {
           text="Run Preservation Project"
           href="/runs"
           iconName="shoe"
+          className="px-6"
         />
       </div>
     </div>
