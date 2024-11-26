@@ -52,7 +52,7 @@ export default function CollectionPage() {
           <div>TUXC Run Preservation Project</div>
         </div>
         <div className="flex w-full flex-col items-center gap-2 px-10 md:items-start md:px-0">
-          <LinkButton text="About the Project" href="/rpp" iconName="runner" />
+          <LinkButton text="About the Project" href="/rpp" iconName="info" />
           <div className="flex w-full flex-col items-center gap-3 md:flex-row">
             <Textbox
               value={searchText}
