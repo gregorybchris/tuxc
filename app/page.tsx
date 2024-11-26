@@ -11,8 +11,9 @@ export default function SplashPage() {
         <span>
           tuxc.org is an athlete-run site for cross country at Tufts. Currently
           this site is just the home of the TUXC Run Preservation Project, an
-          initiative to document and preserve the history of running routes on
-          the team over the years. Click the link below to explore the archive.
+          initiative to document and preserve the rich history of the team's
+          running routes over the years. Click the link below to explore the
+          archive.
         </span>
 
         <LinkButton
