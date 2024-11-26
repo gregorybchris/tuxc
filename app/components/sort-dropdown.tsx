@@ -61,7 +61,7 @@ function SelectItem({
   return (
     <Select.Item
       className={cn(
-        "data-[highlighted]:bg-light-blue relative flex h-6 select-none items-center rounded pl-6 pr-9 font-manrope text-sm leading-none text-black/90 data-[disabled]:pointer-events-none data-[disabled]:text-stone-800 data-[highlighted]:text-white data-[highlighted]:outline-none",
+        "relative flex h-6 select-none items-center rounded pl-6 pr-9 font-manrope text-sm leading-none text-black/90 data-[disabled]:pointer-events-none data-[highlighted]:bg-tufts-blue data-[disabled]:text-stone-800 data-[highlighted]:text-white data-[highlighted]:outline-none",
         className,
       )}
       value={value}

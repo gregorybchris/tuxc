@@ -2,7 +2,7 @@ export type Run = {
   id: number;
   name: string;
   slug: string;
-  region: string;
+  area: string;
   distance: number;
   description: string | null;
   lore: string | null;

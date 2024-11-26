@@ -9,6 +9,7 @@ import { Run } from "@/app/lib/models/run";
 import { RunMap } from "@/app/lib/models/runMap";
 import { cn } from "@/app/lib/utilities/style-utils";
 import { CommonIcon, IconName } from "@/app/widgets/common-icon";
+import { InitialsBadge } from "@/app/widgets/initials";
 import { LinkButton } from "@/app/widgets/link-button";
 
 export default function RunPage({ params }: { params: { id: number } }) {
@@ -90,19 +91,7 @@ function RunDetails({ run }: RunDetailsProps) {
           detail={`${run.distance} mi`}
           iconName="ruler"
         />
-        <RunDetail name="Region" detail={run.region} iconName="globe" />
-        {run.firstRunBy && (
-          <RunDetail
-            name="First run by"
-            detail={run.firstRunBy.join(", ")}
-            iconName="medal"
-          />
-        )}
-        <RunDetail
-          name="First run year"
-          detail={firstRunYear}
-          iconName="calendar-plus"
-        />
+        <RunDetail name="Area" detail={run.area} iconName="globe" />
         {run.description && (
           <RunDetail
             name="Description"
@@ -113,6 +102,24 @@ function RunDetails({ run }: RunDetailsProps) {
         {run.lore && (
           <RunDetail name="Lore" detail={run.lore} iconName="book" />
         )}
+        <RunDetail
+          name="First run year"
+          detail={firstRunYear}
+          iconName="calendar-plus"
+        />
+        {run.firstRunBy && (
+          <RunDetail
+            name="First run by"
+            detail={
+              <div className="flex flex-row gap-1">
+                {run.firstRunBy.map((initials) => (
+                  <InitialsBadge initials={initials} />
+                ))}
+              </div>
+            }
+            iconName="medal"
+          />
+        )}
       </div>
     </div>
   );
@@ -120,7 +127,7 @@ function RunDetails({ run }: RunDetailsProps) {
 
 interface RunDetailProps {
   name?: string;
-  detail: string;
+  detail: string | React.ReactNode;
   iconName?: IconName;
   className?: string;
 }
