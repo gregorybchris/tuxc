@@ -1,4 +1,5 @@
 import { Run } from "@/app/lib/models/run";
+import { ErrorResponse } from "@/app/lib/utilities/response-utils";
 import { NextResponse } from "next/server";
 import { MAPS } from "./maps";
 import runs from "./runs.json";
@@ -13,13 +14,9 @@ export type PostRunResponse = {
 
 export async function POST(
   req: Request,
-): Promise<NextResponse<PostRunResponse>> {
+): Promise<NextResponse<PostRunResponse> | NextResponse<ErrorResponse>> {
   const requestBody: PostRunRequest = await req.json();
-
-  // TODO: Use request to create a new run
-  const run = runs[0];
-
-  return NextResponse.json({ run });
+  return NextResponse.json({ error: "Not supported" }, { status: 500 });
 }
 
 export type GetRunsResponse = {
