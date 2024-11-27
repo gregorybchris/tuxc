@@ -7,8 +7,8 @@ export default function RppPage() {
         <div className="text-xl font-bold text-black/60">About the Project</div>
         <span className="text-justify indent-4">
           Welcome to the Run Preservation Project! This initiative was started
-          in 2020 by TW with the goal of ensuring the history of our team&apos;s
-          running routes is preserved. New runs have been added to the RPP
+          in 2020 by TW with the goal of ensuring the preservation of our
+          team&apos;s running routes. New runs have been added to the RPP
           archive each year since. Anyone can add a run as long as it&apos;s
           repeatable, well mapped, and there is some sort of reason to do it.
           Before adding a run, think &quot;Would I do this run again?&quot; if
