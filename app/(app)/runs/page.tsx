@@ -94,7 +94,7 @@ export default function RunsPage() {
                     className="relative flex h-5 w-[200px] touch-none select-none items-center"
                     min={minDistance}
                     max={maxDistance}
-                    step={1}
+                    step={0.1}
                     minStepsBetweenThumbs={1}
                     value={distanceRange}
                     onValueChange={setDistanceRange}
@@ -102,10 +102,10 @@ export default function RunsPage() {
                     <Slider.Track className="relative h-[3px] grow rounded-full bg-black/20">
                       <Slider.Range className="absolute h-full rounded-full bg-black/30" />
                     </Slider.Track>
-                    <Slider.Thumb className="bg-light-blue flex size-5 cursor-pointer flex-col items-center justify-center rounded-[10px] text-[10px] text-white hover:bg-tufts-blue focus:outline-none">
+                    <Slider.Thumb className="bg-light-blue flex size-5 cursor-pointer flex-col items-center justify-center rounded-[10px] text-[10px] text-white transition-all hover:bg-tufts-blue focus:outline-none">
                       {distanceRange[0].toFixed(0)}
                     </Slider.Thumb>
-                    <Slider.Thumb className="bg-light-blue flex size-5 cursor-pointer flex-col items-center justify-center rounded-[10px] text-[10px] text-white hover:bg-tufts-blue focus:outline-none">
+                    <Slider.Thumb className="bg-light-blue flex size-5 cursor-pointer flex-col items-center justify-center rounded-[10px] text-[10px] text-white transition-all hover:bg-tufts-blue focus:outline-none">
                       {distanceRange[1].toFixed(0)}
                     </Slider.Thumb>
                   </Slider.Root>
