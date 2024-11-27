@@ -85,47 +85,51 @@ export default function RunsPage() {
             <LinkButton text="About the project" href="/rpp" iconName="info" />
             <LinkButton text="Submit a run" href="/edit" iconName="pin-plus" />
           </div>
-          <div className="flex w-full flex-col items-center gap-5 md:flex-row">
-            <div className="flex flex-row gap-3">
-              <div className="text-sm">Distance</div>
-              <Slider.Root
-                className="relative flex h-5 w-[200px] touch-none select-none items-center"
-                min={minDistance}
-                max={maxDistance}
-                step={1}
-                minStepsBetweenThumbs={1}
-                value={distanceRange}
-                onValueChange={setDistanceRange}
-              >
-                <Slider.Track className="relative h-[3px] grow rounded-full bg-black/20">
-                  <Slider.Range className="absolute h-full rounded-full bg-black/30" />
-                </Slider.Track>
-                <Slider.Thumb className="bg-light-blue flex size-5 cursor-pointer flex-col items-center justify-center rounded-[10px] text-[10px] text-white hover:bg-tufts-blue focus:outline-none">
-                  {distanceRange[0].toFixed(0)}
-                </Slider.Thumb>
-                <Slider.Thumb className="bg-light-blue flex size-5 cursor-pointer flex-col items-center justify-center rounded-[10px] text-[10px] text-white hover:bg-tufts-blue focus:outline-none">
-                  {distanceRange[1].toFixed(0)}
-                </Slider.Thumb>
-              </Slider.Root>
-            </div>
+          {!loading && (
+            <>
+              <div className="flex w-full flex-col items-center gap-5 md:flex-row">
+                <div className="flex flex-row gap-3">
+                  <div className="text-sm">Distance</div>
+                  <Slider.Root
+                    className="relative flex h-5 w-[200px] touch-none select-none items-center"
+                    min={minDistance}
+                    max={maxDistance}
+                    step={1}
+                    minStepsBetweenThumbs={1}
+                    value={distanceRange}
+                    onValueChange={setDistanceRange}
+                  >
+                    <Slider.Track className="relative h-[3px] grow rounded-full bg-black/20">
+                      <Slider.Range className="absolute h-full rounded-full bg-black/30" />
+                    </Slider.Track>
+                    <Slider.Thumb className="bg-light-blue flex size-5 cursor-pointer flex-col items-center justify-center rounded-[10px] text-[10px] text-white hover:bg-tufts-blue focus:outline-none">
+                      {distanceRange[0].toFixed(0)}
+                    </Slider.Thumb>
+                    <Slider.Thumb className="bg-light-blue flex size-5 cursor-pointer flex-col items-center justify-center rounded-[10px] text-[10px] text-white hover:bg-tufts-blue focus:outline-none">
+                      {distanceRange[1].toFixed(0)}
+                    </Slider.Thumb>
+                  </Slider.Root>
+                </div>
 
-            <Dropdown
-              value={sortValue}
-              setValue={setSortValue}
-              choices={["Alphabetical", "Distance", "Recently added"]}
-            />
+                <Dropdown
+                  value={sortValue}
+                  setValue={setSortValue}
+                  choices={["Alphabetical", "Distance", "Recently added"]}
+                />
 
-            <Textbox
-              value={searchText}
-              onChange={setSearchText}
-              id="search"
-              name="search"
-              placeholder="Search"
-              required
-              icon="search"
-              className="w-full md:w-[300px]"
-            />
-          </div>
+                <Textbox
+                  value={searchText}
+                  onChange={setSearchText}
+                  id="search"
+                  name="search"
+                  placeholder="Search"
+                  required
+                  icon="search"
+                  className="w-full md:w-[300px]"
+                />
+              </div>
+            </>
+          )}
         </div>
         {loading && <LoadingRunViews numLoading={12} />}
 
