@@ -27,86 +27,84 @@ export function RunForm({ editMode, className }: RunFormProps) {
     <form
       action="https://formspree.io/f/mldepjqk"
       method="POST"
-      className="w-full"
+      className={cn("flex w-full flex-col gap-3 md:w-[400px]", className)}
     >
-      <div className={cn("flex w-full flex-col gap-3 md:w-[400px]", className)}>
-        <Textbox
-          name="editorName"
-          value={editorNameText}
-          onChange={setEditorNameText}
-          placeholder="Your full name"
-          autoFocus
-          required={required}
-        />
-        <Textbox
-          name="runName"
-          value={runNameText}
-          onChange={setRunNameText}
-          placeholder="Run name"
-          autoComplete="false"
-          required={required}
-        />
-        <Textbox
-          name="distance"
-          value={distanceText}
-          onChange={setDistanceText}
-          placeholder="Distance (in miles)"
-          autoComplete="false"
-          required={required}
-        />
-        <Textbox
-          name="mapLink"
-          value={mapLinkText}
-          onChange={setMapLinkText}
-          placeholder="Map link (e.g. Strava or onthegomap.com)"
-          autoComplete="false"
-          required={required}
-        />
-        <Textbox
-          name="description"
-          value={descriptionText}
-          onChange={setDescriptionText}
-          placeholder="Description (what is the run like)"
-          autoComplete="false"
-          required={required}
-        />
-        <Textbox
-          name="lore"
-          value={loreText}
-          onChange={setLoreText}
-          placeholder="Lore"
-          autoComplete="false"
-          required={required}
-        />
-        <Textbox
-          name="area"
-          value={areaText}
-          onChange={setAreaText}
-          placeholder="Area (e.g. Medford, Cambridge, Fells)"
-          required={required}
-        />
-        <Textbox
-          name="firstRunBy"
-          value={firstRunByText}
-          onChange={setFirstRunByText}
-          placeholder="Who ran it first? (initials or name) (optional)"
-        />
-        <Textbox
-          name="firstRunYear"
-          value={firstRunYearText}
-          onChange={setFirstRunYearText}
-          placeholder="When was the run created? (year or date) (optional)"
-        />
-        <Textbox
-          name="other"
-          value={somethingElseText}
-          onChange={setSomethingElseText}
-          placeholder="Anything else? (optional)"
-          autoComplete="false"
-        />
-        <div className="flex flex-col items-center">
-          <SubmitButton>Submit</SubmitButton>
-        </div>
+      <Textbox
+        name="editorName"
+        value={editorNameText}
+        onChange={setEditorNameText}
+        placeholder="Your full name"
+        autoFocus
+        required={required}
+      />
+      <Textbox
+        name="runName"
+        value={runNameText}
+        onChange={setRunNameText}
+        placeholder="Run name"
+        autoComplete="false"
+        required={required}
+      />
+      <Textbox
+        name="distance"
+        value={distanceText}
+        onChange={setDistanceText}
+        placeholder="Distance (in miles)"
+        autoComplete="false"
+        required={required}
+      />
+      <Textbox
+        name="mapLink"
+        value={mapLinkText}
+        onChange={setMapLinkText}
+        placeholder="Map link (e.g. Strava or onthegomap.com)"
+        autoComplete="false"
+        required={required}
+      />
+      <Textbox
+        name="description"
+        value={descriptionText}
+        onChange={setDescriptionText}
+        placeholder="Description (what is the run like)"
+        autoComplete="false"
+        required={required}
+      />
+      <Textbox
+        name="lore"
+        value={loreText}
+        onChange={setLoreText}
+        placeholder="Lore"
+        autoComplete="false"
+        required={required}
+      />
+      <Textbox
+        name="area"
+        value={areaText}
+        onChange={setAreaText}
+        placeholder="Area (e.g. Medford, Cambridge, Fells)"
+        required={required}
+      />
+      <Textbox
+        name="firstRunBy"
+        value={firstRunByText}
+        onChange={setFirstRunByText}
+        placeholder="Who ran it first? (initials or name) (optional)"
+      />
+      <Textbox
+        name="firstRunYear"
+        value={firstRunYearText}
+        onChange={setFirstRunYearText}
+        placeholder="When was the run created? (year or date) (optional)"
+      />
+      <Textbox
+        name="other"
+        value={somethingElseText}
+        onChange={setSomethingElseText}
+        placeholder="Anything else? (optional)"
+        autoComplete="false"
+      />
+      <div className="flex flex-col items-center">
+        <SubmitButton>Submit</SubmitButton>
       </div>
     </form>
   );
