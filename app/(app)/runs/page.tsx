@@ -3,6 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 
 import { RunView } from "@/app/components/run-view";
+import {
+  TrailsToggle,
+  TrailsToggleGroup,
+} from "@/app/components/trail-toggle-group";
 import { Client } from "@/app/lib/clients/client";
 import { Run } from "@/app/lib/models/run";
 import { runMatchesSearch } from "@/app/lib/utilities/search-utils";
@@ -25,6 +29,7 @@ export default function RunsPage() {
   const [searchText, setSearchText] = useState("");
   const [runs, setRuns] = useState<Run[]>([]);
   const [sortValue, setSortValue] = useState<string>("Alphabetical");
+  const [trailsToggle, setTrailsToggle] = useState<TrailsToggle>(undefined);
   const client = useRef(new Client());
   const [distanceRange, setDistanceRange] = useState([
     MIN_DISTANCE,
@@ -59,6 +64,12 @@ export default function RunsPage() {
     (run) =>
       run.distance >= distanceRange[0] && run.distance <= distanceRange[1],
   );
+
+  selectedRuns = selectedRuns.filter((run) => {
+    if (trailsToggle === "trails") return run.includesTrail;
+    if (trailsToggle === "no trails") return !run.includesTrail;
+    return true;
+  });
 
   function getDistanceRange(runs: Run[]): [number, number] {
     const minDistance =
@@ -111,11 +122,18 @@ export default function RunsPage() {
                   </Slider.Root>
                 </div>
 
-                <Dropdown
-                  value={sortValue}
-                  setValue={setSortValue}
-                  choices={["Alphabetical", "Distance", "Recently added"]}
-                />
+                <div className="flex flex-row gap-3">
+                  <Dropdown
+                    value={sortValue}
+                    setValue={setSortValue}
+                    choices={["Alphabetical", "Distance", "Recently added"]}
+                  />
+
+                  <TrailsToggleGroup
+                    value={trailsToggle}
+                    onChange={setTrailsToggle}
+                  />
+                </div>
 
                 <Textbox
                   value={searchText}

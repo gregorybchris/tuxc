@@ -52,7 +52,7 @@ export function Textbox({
         name={name}
         type={fieldType}
         className={cn(
-          "w-full rounded bg-black/5 px-3 py-2 text-sm text-black/70 outline-none placeholder:text-black/30",
+          "w-full rounded border border-black/10 px-3 py-2 text-sm text-black/70 outline-none placeholder:text-black/30",
           xVisible && "pr-9",
           icon && "pl-8",
         )}
