@@ -18,6 +18,7 @@ export function RunForm({ editMode, className }: RunFormProps) {
   const [descriptionText, setDescriptionText] = useState("");
   const [loreText, setLoreText] = useState("");
   const [areaText, setAreaText] = useState("");
+  const [trailText, setTrailText] = useState("");
   const [firstRunByText, setFirstRunByText] = useState("");
   const [firstRunYearText, setFirstRunYearText] = useState("");
   const [somethingElseText, setSomethingElseText] = useState("");
@@ -89,6 +90,13 @@ export function RunForm({ editMode, className }: RunFormProps) {
         value={areaText}
         onChange={setAreaText}
         placeholder="Area (e.g. Medford, Cambridge, Fells)"
+        required={required}
+      />
+      <Textbox
+        name="trail"
+        value={trailText}
+        onChange={setTrailText}
+        placeholder="Does part of this run happen on a trail? (yes or no)"
         required={required}
       />
       <Textbox
