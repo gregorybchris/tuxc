@@ -1,8 +1,9 @@
+import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useRef } from "react";
-import Map, { Layer, MapRef, Source } from "react-map-gl";
+import Map, { Layer, MapRef, Marker, Source } from "react-map-gl";
 import { RunMap } from "../lib/models/runMap";
 import { cn } from "../lib/utilities/style-utils";
-
+import { Pin } from "./run-map-pin";
 interface RunMapViewProps {
   runMap: RunMap;
   className?: string;
@@ -49,6 +50,10 @@ export function RunMapView({ runMap, className }: RunMapViewProps) {
     latitude: (minLat + maxLat) / 2,
     longitude: (minLng + maxLng) / 2,
   };
+  const start = {
+    latitude: runMap.points[0].latitude,
+    longitude: runMap.points[0].longitude,
+  };
 
   const initialViewState = {
     latitude: center.latitude,
@@ -68,6 +73,13 @@ export function RunMapView({ runMap, className }: RunMapViewProps) {
         mapStyle="mapbox://styles/mapbox/streets-v11"
         attributionControl={false}
       >
+        <Marker
+          latitude={start.latitude}
+          longitude={start.longitude}
+          anchor="bottom"
+        >
+          <Pin />
+        </Marker>
         <Source type="geojson" data={routeGeoJSON}>
           <Layer
             type="line"
