@@ -80,7 +80,7 @@ export default function RunsPage() {
             TUXC Run Preservation Project
           </div>
         </div>
-        <div className="flex w-full flex-col items-center gap-6 px-10 md:items-start md:px-0">
+        <div className="flex w-full flex-col items-center gap-6 md:items-start">
           <div className="flex flex-row items-center gap-5">
             <LinkButton text="About the project" href="/rpp" iconName="info" />
             <LinkButton text="Submit a run" href="/edit" iconName="pin-plus" />
