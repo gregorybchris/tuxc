@@ -1,4 +1,5 @@
 import { LinkButton } from "@/app/widgets/link-button";
+import { LinkText } from "@/app/widgets/link-text";
 
 export default function RppPage() {
   return (
@@ -12,8 +13,9 @@ export default function RppPage() {
           archive each year since. Anyone can add a run as long as it&apos;s
           repeatable, well mapped, and there is some sort of reason to do it.
           Before adding a run, think &quot;Would I do this run again?&quot; if
-          the answer is yes, run it up. All names must be initials when talking
-          about lore etc. Go Jumbos Go RPP let&apos;s record some runs!
+          the answer is yes, <LinkText href="/edit" text="run it up" />. All
+          names must be initials when talking about lore etc. Go Jumbos Go RPP
+          let&apos;s record some runs!
         </span>
         <LinkButton text="View all runs" href="/runs" iconName="shoe" />
       </div>
