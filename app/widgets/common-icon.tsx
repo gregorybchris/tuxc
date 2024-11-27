@@ -6,6 +6,7 @@ import {
   GlobeHemisphereWest,
   IconWeight,
   Info,
+  MapPinPlus,
   Medal,
   Pencil,
   PersonSimpleRun,
@@ -34,7 +35,8 @@ export type IconName =
   | "user-plus"
   | "pencil"
   | "tree"
-  | "road";
+  | "road"
+  | "pin-plus";
 
 interface CommonIconProps {
   name: IconName;
@@ -97,6 +99,9 @@ export function CommonIcon({
     }
     case "road": {
       return <RoadHorizon {...props} />;
+    }
+    case "pin-plus": {
+      return <MapPinPlus {...props} />;
     }
     default: {
       return <QuestionMark {...props} />;

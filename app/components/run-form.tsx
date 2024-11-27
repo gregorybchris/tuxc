@@ -4,11 +4,12 @@ import { Textbox } from "@/app/widgets/textbox";
 import { cn } from "../lib/utilities/style-utils";
 import { SubmitButton } from "../widgets/submit-button";
 
-interface EditFormProps {
+interface RunFormProps {
+  editMode: boolean;
   className?: string;
 }
 
-export function EditForm({ className }: EditFormProps) {
+export function RunForm({ editMode, className }: RunFormProps) {
   const [editorNameText, setEditorNameText] = useState("");
   const [runNameText, setRunNameText] = useState("");
   const [distanceText, setDistanceText] = useState("");
@@ -20,6 +21,8 @@ export function EditForm({ className }: EditFormProps) {
   const [firstRunYearText, setFirstRunYearText] = useState("");
   const [somethingElseText, setSomethingElseText] = useState("");
 
+  const required = !editMode;
+
   return (
     <form action="https://formspree.io/f/mldepjqk" method="POST">
       <div className={cn("flex w-full flex-col gap-3 md:w-[400px]", className)}>
@@ -29,7 +32,7 @@ export function EditForm({ className }: EditFormProps) {
           onChange={setEditorNameText}
           placeholder="Your full name"
           autoFocus
-          // required
+          required={required}
         />
         <Textbox
           name="runName"
@@ -37,7 +40,7 @@ export function EditForm({ className }: EditFormProps) {
           onChange={setRunNameText}
           placeholder="Run name"
           autoComplete="false"
-          // required
+          required={required}
         />
         <Textbox
           name="distance"
@@ -45,7 +48,7 @@ export function EditForm({ className }: EditFormProps) {
           onChange={setDistanceText}
           placeholder="Distance (in miles)"
           autoComplete="false"
-          // required
+          required={required}
         />
         <Textbox
           name="mapLink"
@@ -53,7 +56,7 @@ export function EditForm({ className }: EditFormProps) {
           onChange={setMapLinkText}
           placeholder="Map link (e.g. Strava or onthegomap.com)"
           autoComplete="false"
-          // required
+          required={required}
         />
         <Textbox
           name="description"
@@ -61,7 +64,7 @@ export function EditForm({ className }: EditFormProps) {
           onChange={setDescriptionText}
           placeholder="Description (what is the run like)"
           autoComplete="false"
-          // required
+          required={required}
         />
         <Textbox
           name="lore"
@@ -69,32 +72,32 @@ export function EditForm({ className }: EditFormProps) {
           onChange={setLoreText}
           placeholder="Lore"
           autoComplete="false"
-          // required
+          required={required}
         />
         <Textbox
           name="area"
           value={areaText}
           onChange={setAreaText}
           placeholder="Area (e.g. Medford, Cambridge, Fells)"
-          // required
+          required={required}
         />
         <Textbox
           name="firstRunBy"
           value={firstRunByText}
           onChange={setFirstRunByText}
-          placeholder="Who ran it first? (initials or name)"
+          placeholder="Who ran it first? (initials or name) (optional)"
         />
         <Textbox
           name="firstRunYear"
           value={firstRunYearText}
           onChange={setFirstRunYearText}
-          placeholder="When was the run created? (year or date)"
+          placeholder="When was the run created? (year or date) (optional)"
         />
         <Textbox
           name="other"
           value={somethingElseText}
           onChange={setSomethingElseText}
-          placeholder="Anything else?"
+          placeholder="Anything else? (optional)"
           autoComplete="false"
         />
         <div className="flex flex-col items-center">

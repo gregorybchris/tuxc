@@ -12,7 +12,7 @@ import { CommonIcon, IconName } from "@/app/widgets/common-icon";
 import { InitialsBadge } from "@/app/widgets/initials";
 import { LinkButton } from "@/app/widgets/link-button";
 
-export default function RunPage({ params }: { params: { id: number } }) {
+export default function RunPage({ params }: { params: { id: string } }) {
   const [loading, setLoading] = useState(true);
   const [run, setRun] = useState<Run>();
   const [runMap, setRunMap] = useState<RunMap>();
@@ -25,10 +25,11 @@ export default function RunPage({ params }: { params: { id: number } }) {
   }, []);
 
   function fetchRun() {
+    const idNumber = parseInt(params.id, 10);
     setLoading(true);
-    client.current.getRun(params.id).then((run) => {
+    client.current.getRun(idNumber).then((run) => {
       setRun(run);
-      client.current.getRunMap(params.id).then((runMap) => {
+      client.current.getRunMap(idNumber).then((runMap) => {
         setRunMap(runMap);
         setLoading(false);
       });
@@ -87,7 +88,7 @@ function RunDetails({ run }: RunDetailsProps) {
         <a href={run.mapLink} target="_blank">
           <div className="text-lg font-bold">{run.name}</div>
         </a>
-        <LinkButton text="Edit" href="/edit" iconName="pencil" />
+        <LinkButton text="Edit" href={`/edit/${run.id}`} iconName="pencil" />
       </div>
 
       <div className="flex flex-col gap-2">
