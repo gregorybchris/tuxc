@@ -55,8 +55,14 @@ This command will put your converted map file in the [app/api/runs/jpx](app/api/
 
 ### 4. Update runs.json
 
-Add your run details in [runs.json](app/api/runs/runs.json). Try to include as much information as possible and make sure your entry conforms to the schema at [run.ts](app/lib/models/run.ts).
+Add your run details in [runs.json](app/api/runs/runs.json). Try to include as much information as possible and make sure your entry conforms to the schema at [run.ts](app/lib/models/run.ts). Remember to avoid including easily personally identifiable information and prefer initials over real names.
 
 ### 5. Update maps.ts
 
 [maps.ts](app/api/runs/maps.ts) contains a list of all runs in the archive. Add your run there and it will get picked up by all API calls from the app frontend to the Next.js API. Try to keep the same structure as existing routes.
+
+## Editing a run
+
+### 1. Update runs.json
+
+Edit run details in [runs.json](app/api/runs/runs.json). Try to include as much information as possible and make sure your entry conforms to the schema at [run.ts](app/lib/models/run.ts). Remember to avoid including easily personally identifiable information and prefer initials over real names.
