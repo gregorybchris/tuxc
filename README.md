@@ -9,6 +9,26 @@
 
 tuxc.org is an athlete run site and is not officially affiliated with the university. This site is created and maintained by the athletes of TUXC.
 
+This is not intended as a replacement for [gojumbos.com](https://www.gojumbos.com), although there is a [good archive of runs](https://www.gojumbos.com/maps.php) there as well. Over time it seems less and less likely an enterprising PHP dev will come along and take up the cause, so for now we have TypeScript.
+
+## Goals
+
+### Maintainability
+
+This project is comprised of a small backend, no external storage, and a relatively simple frontend. Project maintainers should think carefully before adding larger features or tools that might be difficult for future maintainers to learn and develop on.
+
+### Map ownership
+
+Previous route archives have relied on 3rd party mapping providers, which has obvious downsides. This project makes the decision to own the storage and presentation of maps.
+
+### Privacy
+
+This project aims to be respectful of privacy by refraining from publishing lore that could be harmful or hurtful to those involved. Some lore is not even worth posting publicly, but if it is, initials should be used.
+
+### Aesthetics
+
+This site is not going for a bootleg 90's internet look (as cool as that would have been). Updates should strive to be aesthetic and intuitive. Responsiveness and mobile-first design is desired.
+
 ## Tech stack
 
 This is a [Next.js](https://nextjs.org) app using [Tailwind CSS](https://tailwindcss.com) for styles and deployed on a free tier of [Vercel](https://vercel.com). A free tier of [Formspree](https://formspree.io) is used for collecting edits and new run submissions. The email <tuxc.org@gmail.com> is used to collect submissions. The same email was used to create the Formspree account. The Vercel account is owned by Chris Gregory (<christopher.b.gregory@gmail.com>).
