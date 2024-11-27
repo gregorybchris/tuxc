@@ -73,6 +73,8 @@ poetry run tuxc convert
 
 This command will put your converted map file in the [app/api/runs/jpx](app/api/runs/jpx) folder.
 
+> Note: This command also attempts to "simplify" the route by removing collinear points. The route length is reduced by less than 0.01% and the number of points is reduced by 20-40%. This makes the payloads over web requests smaller and decreases load time. You can run the `tuxc test` command to check what the reduction factors are.
+
 ### 4. Update runs.json
 
 Add your run details in [runs.json](app/api/runs/runs.json). Try to include as much information as possible and make sure your entry conforms to the schema at [run.ts](app/lib/models/run.ts). Remember to avoid including easily personally identifiable information and prefer initials over real names.
