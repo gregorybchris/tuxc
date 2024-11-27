@@ -2,11 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { LoadingBox } from "@/app/components/loading-box";
 import { RunForm } from "@/app/components/run-form";
 import { Client } from "@/app/lib/clients/client";
 import { Run } from "@/app/lib/models/run";
 import { LinkText } from "@/app/widgets/link-text";
+import { LoadingBox } from "@/app/widgets/loading-box";
 
 export default function EditRunPage({ params }: { params: { id: string } }) {
   const [loading, setLoading] = useState(true);

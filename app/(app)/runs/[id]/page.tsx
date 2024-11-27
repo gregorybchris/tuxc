@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { LoadingBox } from "@/app/components/loading-box";
 import { RunMapView } from "@/app/components/run-map-view";
 import { Client } from "@/app/lib/clients/client";
 import { Run } from "@/app/lib/models/run";
@@ -11,6 +10,7 @@ import { cn } from "@/app/lib/utilities/style-utils";
 import { CommonIcon, IconName } from "@/app/widgets/common-icon";
 import { InitialsBadge } from "@/app/widgets/initials";
 import { LinkButton } from "@/app/widgets/link-button";
+import { LoadingBox } from "@/app/widgets/loading-box";
 
 export default function RunPage({ params }: { params: { id: string } }) {
   const [loading, setLoading] = useState(true);

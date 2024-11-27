@@ -2,8 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { Dropdown } from "@/app/components/dropdown";
-import { LoadingRunViews } from "@/app/components/loading-run-views";
 import { RunView } from "@/app/components/run-view";
 import { Client } from "@/app/lib/clients/client";
 import { Run } from "@/app/lib/models/run";
@@ -13,7 +11,9 @@ import {
   getRunsByDistance,
   getRunsByName,
 } from "@/app/lib/utilities/sort-utils";
+import { Dropdown } from "@/app/widgets/dropdown";
 import { LinkButton } from "@/app/widgets/link-button";
+import { LoadingRunViews } from "@/app/widgets/loading-run-views";
 import { Textbox } from "@/app/widgets/textbox";
 import * as Slider from "@radix-ui/react-slider";
 
