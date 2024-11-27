@@ -24,7 +24,11 @@ export function RunForm({ editMode, className }: RunFormProps) {
   const required = !editMode;
 
   return (
-    <form action="https://formspree.io/f/mldepjqk" method="POST">
+    <form
+      action="https://formspree.io/f/mldepjqk"
+      method="POST"
+      className="w-full"
+    >
       <div className={cn("flex w-full flex-col gap-3 md:w-[400px]", className)}>
         <Textbox
           name="editorName"
