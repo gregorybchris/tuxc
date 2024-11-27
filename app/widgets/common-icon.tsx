@@ -3,6 +3,8 @@ import {
   ArrowArcLeft,
   BookOpenText,
   CalendarPlus,
+  Envelope,
+  GithubLogo,
   GlobeHemisphereWest,
   IconWeight,
   Info,
@@ -36,7 +38,9 @@ export type IconName =
   | "pencil"
   | "tree"
   | "road"
-  | "pin-plus";
+  | "pin-plus"
+  | "github"
+  | "mail";
 
 interface CommonIconProps {
   name: IconName;
@@ -102,6 +106,12 @@ export function CommonIcon({
     }
     case "pin-plus": {
       return <MapPinPlus {...props} />;
+    }
+    case "github": {
+      return <GithubLogo {...props} />;
+    }
+    case "mail": {
+      return <Envelope {...props} />;
     }
     default: {
       return <QuestionMark {...props} />;

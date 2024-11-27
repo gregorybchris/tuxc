@@ -11,6 +11,7 @@ interface RunFormProps {
 
 export function RunForm({ editMode, className }: RunFormProps) {
   const [editorNameText, setEditorNameText] = useState("");
+  const [editorEmailText, setEditorEmailText] = useState("");
   const [runNameText, setRunNameText] = useState("");
   const [distanceText, setDistanceText] = useState("");
   const [mapLinkText, setMapLinkText] = useState("");
@@ -36,6 +37,12 @@ export function RunForm({ editMode, className }: RunFormProps) {
         placeholder="Your full name"
         autoFocus
         required={required}
+      />
+      <Textbox
+        name="editorEmail"
+        value={editorEmailText}
+        onChange={setEditorEmailText}
+        placeholder="Your email"
       />
       <Textbox
         name="runName"

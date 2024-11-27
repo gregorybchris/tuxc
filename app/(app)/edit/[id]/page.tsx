@@ -62,13 +62,13 @@ export default function EditRunPage({ params }: { params: { id: string } }) {
               </div>
               <div className="text-justify indent-4">
                 When you edit a run, site maintainers will review your request
-                and update the run archive. If you would like expedite future
-                edits you can send an email to{" "}
+                and update the run archive. If your edits are not visible on the
+                site within a few days, send an email to{" "}
                 <LinkText
                   text="tuxc.org@gmail.com"
                   href={`mailto:tuxc.org@gmail.com`}
                 />{" "}
-                with your GitHub account name to become a site maintainer.
+                .
               </div>
             </div>
 

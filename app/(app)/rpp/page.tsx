@@ -3,8 +3,8 @@ import { LinkText } from "@/app/widgets/link-text";
 
 export default function RppPage() {
   return (
-    <div className="flex flex-row justify-center gap-10 px-5 py-20 md:px-32">
-      <div className="flex flex-col items-center justify-center gap-10">
+    <div className="flex flex-row justify-center gap-10 px-5 py-14 md:px-32 md:py-20">
+      <div className="flex flex-col items-center justify-center gap-7">
         <div className="text-xl font-bold text-black/60">About the Project</div>
         <span className="text-justify indent-4">
           Welcome to the Run Preservation Project! This initiative was started
@@ -18,6 +18,29 @@ export default function RppPage() {
           let&apos;s record some runs!
         </span>
         <LinkButton text="View all runs" href="/runs" iconName="shoe" />
+        <span className="text-justify indent-4">
+          This site cannot function without volunteers to review run submissions
+          and edits. If you want to volunteer to help out please shoot an email
+          to{" "}
+          <LinkText
+            text="tuxc.org@gmail.com"
+            href={`mailto:tuxc.org@gmail.com`}
+          />
+          . You will need to create GitHub account to make edits, but you do not
+          need to know how to code. Bug reports and feature requests can either
+          be filed on the{" "}
+          <LinkText
+            text="GitHub repository"
+            href="https://github.com/gregorybchris/tuxc"
+            target="_blank"
+          />{" "}
+          or by sending an email to{" "}
+          <LinkText
+            text="tuxc.org@gmail.com"
+            href={`mailto:tuxc.org@gmail.com`}
+          />
+          . If you have any questions about the project, feel free to reach out!
+        </span>
       </div>
     </div>
   );

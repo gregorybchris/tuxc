@@ -15,13 +15,13 @@ export default function SubmitRunPage() {
           <div className="w-full md:w-[500px]">
             <div className="text-justify indent-4">
               When you submit a run, site maintainers will review your request
-              and update the run archive. If you would like expedite future
-              submissions you can send an email to{" "}
+              and update the run archive. If your run is not visible on the site
+              within a few days, send an email to{" "}
               <LinkText
                 text="tuxc.org@gmail.com"
                 href={`mailto:tuxc.org@gmail.com`}
-              />{" "}
-              with your GitHub account name to become a site maintainer.
+              />
+              .
             </div>
           </div>
 
