@@ -66,7 +66,7 @@ export default function EditRunPage({ params }: { params: { id: string } }) {
                 edits you can send an email to{" "}
                 <LinkText
                   text="tuxc.org@gmail.com"
-                  href={`mailto:$tuxc.org@gmail.com`}
+                  href={`mailto:tuxc.org@gmail.com`}
                 />{" "}
                 with your GitHub account name to become a site maintainer.
               </div>
