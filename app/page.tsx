@@ -2,7 +2,7 @@ import { LinkButton } from "./widgets/link-button";
 
 export default function SplashPage() {
   return (
-    <div className="h-full w-full px-5 py-10 md:px-20 md:py-16">
+    <div className="h-full w-full px-5 py-10 md:px-[20%] md:py-16">
       <div className="flex flex-col items-center justify-center gap-6">
         <div className="text-xl font-bold text-black/60">
           Tufts University Cross Country

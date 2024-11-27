@@ -3,7 +3,7 @@ import { LinkText } from "@/app/widgets/link-text";
 
 export default function RppPage() {
   return (
-    <div className="flex flex-row justify-center gap-10 px-5 py-14 md:px-32 md:py-20">
+    <div className="flex flex-row justify-center gap-10 px-5 py-14 md:px-[20%] md:py-20">
       <div className="flex flex-col items-center justify-center gap-7">
         <div className="text-xl font-bold text-black/60">About the Project</div>
         <span className="text-justify indent-4">
