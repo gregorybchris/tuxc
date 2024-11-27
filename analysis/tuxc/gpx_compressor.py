@@ -96,7 +96,7 @@ class GpxCompressor:
         n_after = len(points_after)
         dist_after = GpxCompressor.path_dist(points_after)
 
-        n_reduction = n_after / n_before
+        n_reduction = 1.0 - n_after / n_before
         dist_reduction = 1.0 - dist_after / dist_before
 
         print(f"\n[blue]{name}")

@@ -34,7 +34,7 @@ def convert_routes(debug: bool) -> None:
         logging.basicConfig(level=logging.INFO)
 
     gpx_dir = Path(__file__).parent.parent.parent / "gpx"
-    jpx_dir = Path(__file__).parent.parent.parent / "app" / "api" / "runs" / "maps"
+    jpx_dir = Path(__file__).parent.parent.parent / "app" / "api" / "runs" / "jpx"
     shutil.rmtree(jpx_dir, ignore_errors=True)
     jpx_dir.mkdir(exist_ok=True, parents=True)
     for gpx_filepath in gpx_dir.iterdir():
@@ -54,6 +54,9 @@ def test_routes(debug: bool) -> None:
         logging.basicConfig(level=logging.INFO)
 
     gpx_dir = Path(__file__).parent.parent.parent / "gpx"
-    for filepath in gpx_dir.iterdir():
-        gpx = Gpx.parse(filepath)
-        GpxCompressor.test(gpx, filepath.stem)
+    for gpx_filepath in gpx_dir.iterdir():
+        if gpx_filepath.suffix != ".gpx":
+            continue
+        logger.info("Converting %s", gpx_filepath)
+        gpx = Gpx.parse(gpx_filepath)
+        GpxCompressor.test(gpx, gpx_filepath.stem)
