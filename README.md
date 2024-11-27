@@ -11,7 +11,7 @@ tuxc.org is an athlete run site and is not officially affiliated with the univer
 
 ## Tech stack
 
-This is a [Next.js](https://nextjs.org) app using [Tailwind CSS](https://tailwindcss.com) for styles and deployed on a free tier of [Vercel](https://vercel.com). A free tier of [Formspree](https://formspree.io) is used for collecting edits and new run submissions. The email <tuxc.org@gmail.com> is used to collect submissions.
+This is a [Next.js](https://nextjs.org) app using [Tailwind CSS](https://tailwindcss.com) for styles and deployed on a free tier of [Vercel](https://vercel.com). A free tier of [Formspree](https://formspree.io) is used for collecting edits and new run submissions. The email <tuxc.org@gmail.com> is used to collect submissions. The same email was used to create the Formspree account. The Vercel account is owned by Chris Gregory (<christopher.b.gregory@gmail.com>).
 
 ## App development
 
