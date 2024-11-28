@@ -23,11 +23,11 @@ export function Dropdown({ value, setValue, choices }: DropdownProps) {
       </Select.Trigger>
 
       <Select.Portal>
-        <Select.Content className="overflow-hidden rounded-md bg-neutral-100">
+        <Select.Content className="overflow-hidden rounded-md bg-white">
           <Select.ScrollUpButton className="flex h-6 cursor-default items-center justify-center bg-white text-black/20">
             <CaretUp size={16} />
           </Select.ScrollUpButton>
-          <Select.Viewport className="p-1">
+          <Select.Viewport className="rounded-md border border-neutral-200 p-1">
             <Select.Group>
               {choices.map((choice) => (
                 <SelectItem key={choice} value={choice} disabled={false}>
@@ -61,7 +61,7 @@ function SelectItem({
   return (
     <Select.Item
       className={cn(
-        "relative flex h-6 select-none items-center rounded pl-6 pr-9 font-manrope text-sm leading-none text-black/90 data-[disabled]:pointer-events-none data-[highlighted]:bg-tufts-blue data-[disabled]:text-stone-800 data-[highlighted]:text-white data-[highlighted]:outline-none",
+        "relative flex h-6 select-none items-center rounded pl-6 pr-9 font-manrope text-sm leading-none text-black/90 data-[disabled]:pointer-events-none data-[highlighted]:bg-black/10 data-[disabled]:text-neutral-800 data-[highlighted]:text-black/90 data-[highlighted]:outline-none",
         className,
       )}
       value={value}
