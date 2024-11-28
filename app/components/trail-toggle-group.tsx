@@ -49,8 +49,8 @@ export function TrailsToggleItem({
   return (
     <div
       className={cn(
-        "flex size-[35px] cursor-pointer items-center justify-center border border-black/10 transition-all first:rounded-l last:rounded-r hover:bg-black/5 focus:z-10 focus:outline-none",
-        selected && "bg-black/15 hover:bg-black/20",
+        "flex size-[35px] cursor-pointer items-center justify-center border border-black/10 transition-all first:rounded-l last:rounded-r focus:z-10 focus:outline-none md:hover:bg-black/5",
+        selected && "bg-black/15 md:hover:bg-black/20",
       )}
       onClick={onClick}
     >
