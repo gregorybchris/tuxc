@@ -13,4 +13,5 @@ export type Run = {
   createdAt: string;
   updatedAt: string;
   mapLink: string;
+  visible: boolean;
 };

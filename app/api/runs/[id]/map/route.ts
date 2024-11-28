@@ -1,8 +1,8 @@
 import { RunMap } from "@/app/lib/models/runMap";
+import { getVisibleRuns } from "@/app/lib/utilities/api-utils";
 import { ErrorResponse } from "@/app/lib/utilities/response-utils";
 import { NextResponse } from "next/server";
-import { MAPS } from "../../maps";
-import runs from "../../runs.json";
+import { MAPS } from "../../../../db/maps";
 
 type GetRunMapParams = {
   params: { id: string };
@@ -15,6 +15,7 @@ export async function GET(
   { params: { id } }: GetRunMapParams,
 ): Promise<NextResponse<GetRunMapResponse> | NextResponse<ErrorResponse>> {
   const idNumber = parseInt(id, 10);
+  const runs = getVisibleRuns();
   const run = runs.find((run) => run.id === idNumber);
   if (!run) {
     return NextResponse.json(

@@ -1,7 +1,7 @@
 import { RunMap } from "@/app/lib/models/runMap";
+import { getVisibleRuns } from "@/app/lib/utilities/api-utils";
 import { NextResponse } from "next/server";
-import { MAPS } from "../maps";
-import runs from "../runs.json";
+import { MAPS } from "../../../db/maps";
 
 export type GetRunMapsResponse = RunMap[];
 
@@ -9,6 +9,7 @@ export async function GET(
   req: Request,
 ): Promise<NextResponse<GetRunMapsResponse>> {
   const runMapsWithRuns: RunMap[] = [];
+  const runs = getVisibleRuns();
   for (const run of runs) {
     const runMap = MAPS.find((map) => map.id === run.id);
     if (runMap) {

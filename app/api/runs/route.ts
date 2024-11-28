@@ -1,8 +1,8 @@
 import { Run } from "@/app/lib/models/run";
+import { getVisibleRuns } from "@/app/lib/utilities/api-utils";
 import { ErrorResponse } from "@/app/lib/utilities/response-utils";
 import { NextResponse } from "next/server";
-import { MAPS } from "./maps";
-import runs from "./runs.json";
+import { MAPS } from "../../db/maps";
 
 export type PostRunRequest = {
   name: string;
@@ -23,6 +23,7 @@ export async function GET(
   req: Request,
 ): Promise<NextResponse<GetRunsResponse>> {
   const runsWithMaps: Run[] = [];
+  const runs = getVisibleRuns();
   for (const run of runs) {
     const runMap = MAPS.find((map) => map.id === run.id);
     if (runMap) {

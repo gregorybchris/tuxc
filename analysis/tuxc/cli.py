@@ -34,7 +34,7 @@ def convert_routes(debug: bool) -> None:
         logging.basicConfig(level=logging.INFO)
 
     gpx_dir = Path(__file__).parent.parent.parent / "gpx"
-    jpx_dir = Path(__file__).parent.parent.parent / "app" / "api" / "runs" / "jpx"
+    jpx_dir = Path(__file__).parent.parent.parent / "app" / "db" / "jpx"
     shutil.rmtree(jpx_dir, ignore_errors=True)
     jpx_dir.mkdir(exist_ok=True, parents=True)
     for gpx_filepath in gpx_dir.iterdir():
