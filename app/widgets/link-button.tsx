@@ -24,7 +24,7 @@ export function LinkButton({
         className,
       )}
     >
-      <div className="flex flex-row items-center gap-2">
+      <div className="flex flex-row items-center justify-center gap-2">
         {iconName && (
           <CommonIcon
             name={iconName}
