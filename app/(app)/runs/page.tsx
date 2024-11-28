@@ -142,7 +142,7 @@ export default function RunsPage() {
                   onChange={setSearchText}
                   id="search"
                   name="search"
-                  placeholder="Search"
+                  placeholder={`Search ${selectedRuns.length} runs`}
                   required
                   icon="search"
                   className="w-full md:w-[300px]"
