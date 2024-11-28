@@ -2,6 +2,13 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useRef } from "react";
 import Map, { Layer, MapRef, Marker, Source } from "react-map-gl";
 import { RunMap } from "../lib/models/runMap";
+import {
+  fitMapBounds,
+  getCenter,
+  getLineFeature,
+  getRunMapBounds,
+  getStart,
+} from "../lib/utilities/map-utils";
 import { cn } from "../lib/utilities/style-utils";
 import { Pin } from "./run-map-pin";
 interface RunMapViewProps {
@@ -12,54 +19,20 @@ interface RunMapViewProps {
 export function RunMapView({ runMap, className }: RunMapViewProps) {
   const mapRef = useRef<MapRef>(null);
 
-  const minLat = Math.min(...runMap.points.map((p) => p.latitude));
-  const maxLat = Math.max(...runMap.points.map((p) => p.latitude));
-  const minLng = Math.min(...runMap.points.map((p) => p.longitude));
-  const maxLng = Math.max(...runMap.points.map((p) => p.longitude));
-  const bounds = {
-    min: { latitude: minLat, longitude: minLng },
-    max: { latitude: maxLat, longitude: maxLng },
-  };
+  const bounds = getRunMapBounds(runMap);
+  const center = getCenter(runMap);
+  const start = getStart(runMap);
+  const lineFeature = getLineFeature(runMap);
+  const initialZoom = 12;
+  const zoomDuration = 1000;
+  const padding = 40;
 
   useEffect(() => {
-    mapRef.current?.fitBounds(
-      [
-        [bounds.min.longitude, bounds.min.latitude],
-        [bounds.max.longitude, bounds.max.latitude],
-      ],
-      { padding: 40, duration: 1000 },
-    );
+    if (mapRef.current) {
+      fitMapBounds(mapRef.current, bounds, padding, zoomDuration);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [runMap]);
-
-  const coordinates = runMap.points.map((point) => [
-    point.longitude,
-    point.latitude,
-  ]);
-
-  const routeGeoJSON: GeoJSON.Feature<GeoJSON.Geometry> = {
-    type: "Feature",
-    properties: {},
-    geometry: {
-      type: "LineString",
-      coordinates: coordinates,
-    },
-  };
-
-  const center = {
-    latitude: (minLat + maxLat) / 2,
-    longitude: (minLng + maxLng) / 2,
-  };
-  const start = {
-    latitude: runMap.points[0].latitude,
-    longitude: runMap.points[0].longitude,
-  };
-
-  const initialViewState = {
-    latitude: center.latitude,
-    longitude: center.longitude,
-    zoom: 12,
-  };
 
   return (
     <div
@@ -67,7 +40,11 @@ export function RunMapView({ runMap, className }: RunMapViewProps) {
     >
       <Map
         ref={mapRef}
-        initialViewState={initialViewState}
+        initialViewState={{
+          latitude: center.latitude,
+          longitude: center.longitude,
+          zoom: initialZoom,
+        }}
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
         style={{ width: "100%", height: "100%" }}
         mapStyle="mapbox://styles/mapbox/streets-v11"
@@ -80,17 +57,35 @@ export function RunMapView({ runMap, className }: RunMapViewProps) {
         >
           <Pin />
         </Marker>
-        <Source type="geojson" data={routeGeoJSON}>
-          <Layer
-            type="line"
-            paint={{
-              "line-color": "#4B87F7",
-              "line-width": 4,
-              "line-opacity": 1,
-            }}
-          />
-        </Source>
+        <LineSource lineFeature={lineFeature} />
       </Map>
     </div>
+  );
+}
+
+interface LineSourceProps {
+  lineFeature: GeoJSON.Feature<GeoJSON.Geometry>;
+  lineColor?: string;
+  lineOpacity?: number;
+  lineWidth?: number;
+}
+
+export function LineSource({
+  lineFeature,
+  lineColor = "#4B87F7",
+  lineOpacity = 1,
+  lineWidth = 4,
+}: LineSourceProps) {
+  return (
+    <Source type="geojson" data={lineFeature}>
+      <Layer
+        type="line"
+        paint={{
+          "line-color": lineColor,
+          "line-width": lineWidth,
+          "line-opacity": lineOpacity,
+        }}
+      />
+    </Source>
   );
 }

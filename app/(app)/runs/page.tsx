@@ -122,7 +122,7 @@ export default function RunsPage() {
                   </Slider.Root>
                 </div>
 
-                <div className="flex flex-row gap-3">
+                <div className="flex flex-row gap-4">
                   <Dropdown
                     value={sortValue}
                     setValue={setSortValue}
@@ -133,6 +133,8 @@ export default function RunsPage() {
                     value={trailsToggle}
                     onChange={setTrailsToggle}
                   />
+
+                  <LinkButton text="Heatmap" href="/runs/map" iconName="map" />
                 </div>
 
                 <Textbox

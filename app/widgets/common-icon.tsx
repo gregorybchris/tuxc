@@ -9,11 +9,13 @@ import {
   IconWeight,
   Info,
   MapPinPlus,
+  MapTrifold,
   Medal,
   Pencil,
   PersonSimpleRun,
   RoadHorizon,
   SneakerMove,
+  SquaresFour,
   TextAa,
   Tree,
   UserPlus,
@@ -40,7 +42,9 @@ export type IconName =
   | "road"
   | "pin-plus"
   | "github"
-  | "mail";
+  | "mail"
+  | "map"
+  | "grid";
 
 interface CommonIconProps {
   name: IconName;
@@ -112,6 +116,12 @@ export function CommonIcon({
     }
     case "mail": {
       return <Envelope {...props} />;
+    }
+    case "map": {
+      return <MapTrifold {...props} />;
+    }
+    case "grid": {
+      return <SquaresFour {...props} />;
     }
     default: {
       return <QuestionMark {...props} />;

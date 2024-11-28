@@ -24,7 +24,7 @@ export async function GET(
 ): Promise<NextResponse<GetRunsResponse>> {
   const runsWithMaps: Run[] = [];
   for (const run of runs) {
-    const runMap = MAPS.get(run.slug);
+    const runMap = MAPS.find((map) => map.id === run.id);
     if (runMap) {
       runsWithMaps.push(run);
     }

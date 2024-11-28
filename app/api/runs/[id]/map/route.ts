@@ -22,7 +22,7 @@ export async function GET(
       { status: 404 },
     );
   }
-  const runMap = MAPS.get(run.slug);
+  const runMap = MAPS.find((map) => map.id === idNumber);
   if (!runMap) {
     return NextResponse.json(
       { error: `Run map not found: ${run.slug}` },
