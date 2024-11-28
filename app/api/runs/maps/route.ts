@@ -13,6 +13,10 @@ export async function GET(
     const runMap = MAPS.find((map) => map.id === run.id);
     if (runMap) {
       runMapsWithRuns.push(runMap);
+    } else {
+      console.warn(
+        `Could not find map for registered run: ${run.id} - ${run.name}`,
+      );
     }
   }
   return NextResponse.json(runMapsWithRuns);

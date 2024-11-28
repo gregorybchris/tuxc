@@ -28,6 +28,10 @@ export async function GET(
       { error: `Run map not found: ${run.slug}` },
       { status: 404 },
     );
+  } else {
+    console.warn(
+      `Could not find map for registered run: ${run.id} - ${run.name}`,
+    );
   }
   return NextResponse.json(runMap);
 }
