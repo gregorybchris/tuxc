@@ -14,7 +14,7 @@ export function RunView({ run, className }: RunViewProps) {
     <div className={cn("group w-40 transition-all md:w-36", className)}>
       <Link href={`/runs/${run.id}`}>
         <div className="flex flex-col items-start gap-1">
-          <div className="flex h-20 w-full flex-row items-center justify-center rounded-md border-4 border-transparent bg-tufts-brown transition-all group-hover:border-white/40 md:h-24">
+          <div className="flex h-16 w-full flex-row items-center justify-center rounded-md border-4 border-transparent bg-tufts-brown/95 transition-all group-hover:border-white/40 md:h-24">
             <DistanceBadge
               distance={run.distance}
               className="group-hover:border-white/30"
