@@ -69,7 +69,7 @@ export default function EditRunPage({ params }: { params: { id: string } }) {
               </div>
             </div>
 
-            <EditRunForm editMode={true} />
+            <EditRunForm editMode={true} run={currentRun} />
           </div>
         )}
       </div>

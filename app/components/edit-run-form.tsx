@@ -1,20 +1,19 @@
 import { useState } from "react";
 
 import { Textbox } from "@/app/widgets/textbox";
+import { Run } from "../lib/models/run";
 import { cn } from "../lib/utilities/style-utils";
 import { SubmitButton } from "../widgets/submit-button";
 
 interface RunFormProps {
-  editMode: boolean;
+  run: Run;
   className?: string;
 }
 
-export function EditRunForm({ editMode, className }: RunFormProps) {
+export function EditRunForm({ run, className }: RunFormProps) {
   const [editorNameText, setEditorNameText] = useState("");
   const [editorEmailText, setEditorEmailText] = useState("");
   const [messageText, setMessageText] = useState("");
-
-  const required = !editMode;
 
   return (
     <form
@@ -28,13 +27,14 @@ export function EditRunForm({ editMode, className }: RunFormProps) {
         onChange={setEditorNameText}
         placeholder="Your full name"
         autoFocus
-        required={required}
+        required
       />
       <Textbox
         name="editorEmail"
         value={editorEmailText}
         onChange={setEditorEmailText}
         placeholder="Your email"
+        required
       />
       <Textbox
         name="message"
@@ -42,6 +42,19 @@ export function EditRunForm({ editMode, className }: RunFormProps) {
         onChange={setMessageText}
         placeholder="Describe what you want to edit"
         autoComplete="false"
+        required
+      />
+      <Textbox
+        name="runId"
+        value={`${run.id}`}
+        onChange={() => {}}
+        className="hidden"
+      />
+      <Textbox
+        name="runName"
+        value={run.name}
+        onChange={() => {}}
+        className="hidden"
       />
       <div className="flex flex-col items-center">
         <SubmitButton>Submit</SubmitButton>

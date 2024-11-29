@@ -25,7 +25,7 @@ export default function SubmitRunPage() {
             </div>
           </div>
 
-          <SubmitRunForm editMode={false} />
+          <SubmitRunForm />
         </div>
       </div>
     </div>

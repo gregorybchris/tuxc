@@ -5,11 +5,10 @@ import { cn } from "../lib/utilities/style-utils";
 import { SubmitButton } from "../widgets/submit-button";
 
 interface RunFormProps {
-  editMode: boolean;
   className?: string;
 }
 
-export function SubmitRunForm({ editMode, className }: RunFormProps) {
+export function SubmitRunForm({ className }: RunFormProps) {
   const [editorNameText, setEditorNameText] = useState("");
   const [editorEmailText, setEditorEmailText] = useState("");
   const [runNameText, setRunNameText] = useState("");
@@ -23,8 +22,6 @@ export function SubmitRunForm({ editMode, className }: RunFormProps) {
   const [firstRunYearText, setFirstRunYearText] = useState("");
   const [somethingElseText, setSomethingElseText] = useState("");
 
-  const required = !editMode;
-
   return (
     <form
       action="https://formspree.io/f/mldepjqk"
@@ -37,13 +34,14 @@ export function SubmitRunForm({ editMode, className }: RunFormProps) {
         onChange={setEditorNameText}
         placeholder="Your full name"
         autoFocus
-        required={required}
+        required
       />
       <Textbox
         name="editorEmail"
         value={editorEmailText}
         onChange={setEditorEmailText}
         placeholder="Your email"
+        required
       />
       <Textbox
         name="runName"
@@ -51,7 +49,7 @@ export function SubmitRunForm({ editMode, className }: RunFormProps) {
         onChange={setRunNameText}
         placeholder="Run name"
         autoComplete="false"
-        required={required}
+        required
       />
       <Textbox
         name="distance"
@@ -59,7 +57,7 @@ export function SubmitRunForm({ editMode, className }: RunFormProps) {
         onChange={setDistanceText}
         placeholder="Distance (in miles)"
         autoComplete="false"
-        required={required}
+        required
       />
       <Textbox
         name="mapLink"
@@ -67,7 +65,7 @@ export function SubmitRunForm({ editMode, className }: RunFormProps) {
         onChange={setMapLinkText}
         placeholder="Map link (e.g. Strava or onthegomap.com)"
         autoComplete="false"
-        required={required}
+        required
       />
       <Textbox
         name="description"
@@ -75,7 +73,7 @@ export function SubmitRunForm({ editMode, className }: RunFormProps) {
         onChange={setDescriptionText}
         placeholder="Description (what is the run like)"
         autoComplete="false"
-        required={required}
+        required
       />
       <Textbox
         name="lore"
@@ -83,33 +81,35 @@ export function SubmitRunForm({ editMode, className }: RunFormProps) {
         onChange={setLoreText}
         placeholder="Lore"
         autoComplete="false"
-        required={required}
       />
       <Textbox
         name="area"
         value={areaText}
         onChange={setAreaText}
         placeholder="Area (e.g. Medford, Cambridge, Fells)"
-        required={required}
+        required
       />
       <Textbox
         name="trail"
         value={trailText}
         onChange={setTrailText}
         placeholder="Does part of this run happen on a trail? (yes or no)"
-        required={required}
+        autoComplete="false"
+        required
       />
       <Textbox
         name="firstRunBy"
         value={firstRunByText}
         onChange={setFirstRunByText}
         placeholder="Who ran it first? (initials or name) (optional)"
+        autoComplete="false"
       />
       <Textbox
         name="firstRunYear"
         value={firstRunYearText}
         onChange={setFirstRunYearText}
         placeholder="When was the run created? (year or date) (optional)"
+        autoComplete="false"
       />
       <Textbox
         name="other"
