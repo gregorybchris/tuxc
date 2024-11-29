@@ -1,6 +1,7 @@
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useRef } from "react";
 import Map, { MapLayerMouseEvent, MapRef } from "react-map-gl";
+import { QueryEngine } from "../lib/mapping/query-engine";
 import { RunMap } from "../lib/models/runMap";
 import {
   aggregateBounds,
@@ -10,7 +11,6 @@ import {
   getLineFeature,
   getRunMapBounds,
   haversineDistance,
-  SpacePartition,
 } from "../lib/utilities/map-utils";
 import { cn } from "../lib/utilities/style-utils";
 import { LineSource } from "./run-map-view";
@@ -26,9 +26,7 @@ export function RunMapsView({
   className,
 }: RunMapViewProps) {
   const mapRef = useRef<MapRef>(null);
-  const partitionRef = useRef<SpacePartition>(
-    new SpacePartition(runMaps, 20, 20),
-  );
+  const engineRef = useRef<QueryEngine>(new QueryEngine(runMaps, 20, 20));
 
   useEffect(() => {
     if (mapRef.current) {
@@ -44,7 +42,7 @@ export function RunMapsView({
     const latitude = event.lngLat.lat;
     const longitude = event.lngLat.lng;
     const queryCoordinate = { latitude, longitude };
-    const results = partitionRef.current.query(queryCoordinate);
+    const results = engineRef.current.query(queryCoordinate);
     const closestResult = results.reduce((prev, current) => {
       const prevDistance = haversineDistance(prev.coordinate, queryCoordinate);
       const currentDistance = haversineDistance(

@@ -4,7 +4,7 @@ import { Run } from "@/app/lib/models/run";
 import { useEffect, useRef, useState } from "react";
 import { Client } from "../lib/clients/client";
 import { RunMap } from "../lib/models/runMap";
-import { generateThumbnail } from "../lib/thumbnail/thumbnail-generator";
+import { ThumbnailGenerator } from "../lib/thumbnail/thumbnail-generator";
 
 interface RunViewProps {
   run: Run;
@@ -26,7 +26,7 @@ export function RunView({ run, className }: RunViewProps) {
       svg.removeChild(svg.firstChild);
     }
 
-    generateThumbnail(runMap, svg);
+    ThumbnailGenerator.generate(runMap, svg);
   }, [runMap]);
 
   useEffect(() => {
