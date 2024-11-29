@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-import { RunForm } from "@/app/components/run-form";
+import { EditRunForm } from "@/app/components/edit-run-form";
 import { Client } from "@/app/lib/clients/client";
 import { Run } from "@/app/lib/models/run";
 import { LinkText } from "@/app/widgets/link-text";
@@ -10,7 +10,6 @@ import { LoadingBox } from "@/app/widgets/loading-box";
 
 export default function EditRunPage({ params }: { params: { id: string } }) {
   const [loading, setLoading] = useState(true);
-  const [runs, setRuns] = useState<Run[]>([]);
   const [currentRun, setCurrentRun] = useState<Run>();
   const client = useRef(new Client());
 
@@ -22,9 +21,7 @@ export default function EditRunPage({ params }: { params: { id: string } }) {
   function fetchRuns() {
     const idNumber = parseInt(params.id, 10);
     setLoading(true);
-    setRuns([]);
     client.current.getRuns().then((runs) => {
-      setRuns(runs);
       const run = runs.find((run) => run.id === idNumber);
       if (run) {
         setCurrentRun(run);
@@ -72,7 +69,7 @@ export default function EditRunPage({ params }: { params: { id: string } }) {
               </div>
             </div>
 
-            <RunForm editMode={true} />
+            <EditRunForm editMode={true} />
           </div>
         )}
       </div>

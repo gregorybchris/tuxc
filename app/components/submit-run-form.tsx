@@ -9,7 +9,7 @@ interface RunFormProps {
   className?: string;
 }
 
-export function RunForm({ editMode, className }: RunFormProps) {
+export function SubmitRunForm({ editMode, className }: RunFormProps) {
   const [editorNameText, setEditorNameText] = useState("");
   const [editorEmailText, setEditorEmailText] = useState("");
   const [runNameText, setRunNameText] = useState("");

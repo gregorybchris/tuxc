@@ -1,6 +1,6 @@
 "use client";
 
-import { RunForm } from "@/app/components/run-form";
+import { SubmitRunForm } from "@/app/components/submit-run-form";
 import { LinkText } from "@/app/widgets/link-text";
 
 export default function SubmitRunPage() {
@@ -25,7 +25,7 @@ export default function SubmitRunPage() {
             </div>
           </div>
 
-          <RunForm editMode={false} />
+          <SubmitRunForm editMode={false} />
         </div>
       </div>
     </div>
