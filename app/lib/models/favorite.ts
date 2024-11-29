@@ -1,0 +1,3 @@
+type Favorite = {
+  id: number;
+};

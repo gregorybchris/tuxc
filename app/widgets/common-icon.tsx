@@ -16,6 +16,7 @@ import {
   RoadHorizon,
   SneakerMove,
   SquaresFour,
+  Star,
   TextAa,
   Tree,
   UserPlus,
@@ -44,13 +45,14 @@ export type IconName =
   | "github"
   | "mail"
   | "map"
-  | "grid";
+  | "grid"
+  | "star";
 
 interface CommonIconProps {
   name: IconName;
   size: number;
   color: string;
-  weight: IconWeight;
+  weight?: IconWeight;
   className?: string;
 }
 
@@ -122,6 +124,9 @@ export function CommonIcon({
     }
     case "grid": {
       return <SquaresFour {...props} />;
+    }
+    case "star": {
+      return <Star {...props} />;
     }
     default: {
       return <QuestionMark {...props} />;

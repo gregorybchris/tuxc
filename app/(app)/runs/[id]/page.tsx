@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 import { RunMapView } from "@/app/components/run-map-view";
 import { Client } from "@/app/lib/clients/client";
+import { useFavorites } from "@/app/lib/hooks/favorites-storage";
 import { Run } from "@/app/lib/models/run";
 import { RunMap } from "@/app/lib/models/runMap";
 import { cn } from "@/app/lib/utilities/style-utils";
@@ -16,6 +17,7 @@ export default function RunPage({ params }: { params: { id: string } }) {
   const [loading, setLoading] = useState(true);
   const [run, setRun] = useState<Run>();
   const [runMap, setRunMap] = useState<RunMap>();
+  const [favorites, saveFavorites] = useFavorites();
 
   const client = useRef(new Client());
 
@@ -35,6 +37,10 @@ export default function RunPage({ params }: { params: { id: string } }) {
       });
     });
   }
+
+  const isFavorite = run
+    ? favorites.some((favorite) => favorite.id === run.id)
+    : false;
 
   return (
     <div className="bg-background flex h-full w-full flex-row">
@@ -59,7 +65,12 @@ export default function RunPage({ params }: { params: { id: string } }) {
                   <LinkButton href="/runs" text="All Runs" iconName="back" />
                 </div>
 
-                <RunDetails run={run} />
+                <RunDetails
+                  run={run}
+                  favorites={favorites}
+                  isFavorite={isFavorite}
+                  saveFavorites={saveFavorites}
+                />
               </div>
 
               <div className="flex flex-col items-center">
@@ -77,17 +88,43 @@ export default function RunPage({ params }: { params: { id: string } }) {
 
 interface RunDetailsProps {
   run: Run;
+  isFavorite: boolean;
+  favorites: Favorite[];
+  saveFavorites: (favorites: Favorite[]) => void;
 }
 
-function RunDetails({ run }: RunDetailsProps) {
+function RunDetails({
+  run,
+  isFavorite,
+  favorites,
+  saveFavorites,
+}: RunDetailsProps) {
   const firstRunYear = run.firstRunYear ? `${run.firstRunYear}` : "Unknown";
+
+  function onClickFavorite() {
+    if (isFavorite) {
+      saveFavorites(favorites.filter((favorite) => favorite.id !== run.id));
+    } else {
+      saveFavorites([...favorites, { id: run.id }]);
+    }
+  }
 
   return (
     <div className="flex flex-col gap-4">
       <div className="flex w-full flex-row items-center justify-between gap-3">
-        <a href={run.mapLink} target="_blank">
-          <div className="text-lg font-bold">{run.name}</div>
-        </a>
+        <div className="flex w-full flex-row items-center gap-2">
+          <a href={run.mapLink} target="_blank">
+            <div className="text-lg font-bold">{run.name}</div>
+          </a>
+          <div onClick={onClickFavorite} className="cursor-pointer p-1">
+            <CommonIcon
+              name="star"
+              size={16}
+              color={isFavorite ? "#3172AE" : "#3172AE"}
+              weight={isFavorite ? "fill" : "regular"}
+            />
+          </div>
+        </div>
         <LinkButton text="Edit" href={`/edit/${run.id}`} iconName="pencil" />
       </div>
 

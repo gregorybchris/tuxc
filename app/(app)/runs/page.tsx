@@ -8,6 +8,7 @@ import {
   TrailsToggleGroup,
 } from "@/app/components/trail-toggle-group";
 import { Client } from "@/app/lib/clients/client";
+import { useFavorites } from "@/app/lib/hooks/favorites-storage";
 import { Run } from "@/app/lib/models/run";
 import { runMatchesSearch } from "@/app/lib/utilities/search-utils";
 import {
@@ -15,6 +16,8 @@ import {
   getRunsByDistance,
   getRunsByName,
 } from "@/app/lib/utilities/sort-utils";
+import { cn } from "@/app/lib/utilities/style-utils";
+import { CommonIcon } from "@/app/widgets/common-icon";
 import { Dropdown } from "@/app/widgets/dropdown";
 import { LinkButton } from "@/app/widgets/link-button";
 import { LoadingRunViews } from "@/app/widgets/loading-run-views";
@@ -30,6 +33,8 @@ export default function RunsPage() {
   const [runs, setRuns] = useState<Run[]>([]);
   const [sortValue, setSortValue] = useState<string>("Alphabetical");
   const [trailsToggle, setTrailsToggle] = useState<TrailsToggle>(undefined);
+  const [favoritesToggle, setFavoritesToggle] = useState<boolean>(false);
+  const [favorites, saveFavorites] = useFavorites();
   const client = useRef(new Client());
   const [distanceRange, setDistanceRange] = useState([
     MIN_DISTANCE,
@@ -68,6 +73,11 @@ export default function RunsPage() {
   selectedRuns = selectedRuns.filter((run) => {
     if (trailsToggle === "trails") return run.includesTrail;
     if (trailsToggle === "no trails") return !run.includesTrail;
+    return true;
+  });
+
+  selectedRuns = selectedRuns.filter((run) => {
+    if (favoritesToggle) return favorites.some((fav) => fav.id === run.id);
     return true;
   });
 
@@ -122,7 +132,23 @@ export default function RunsPage() {
                   </Slider.Root>
                 </div>
 
-                <div className="flex flex-row gap-4">
+                <div className="flex flex-row items-center gap-4">
+                  <div
+                    className={cn(
+                      "flex size-[35px] cursor-pointer flex-row items-center justify-center rounded border border-black/10 transition-all md:hover:bg-black/5",
+                      favoritesToggle && "bg-black/15 md:hover:bg-black/20",
+                    )}
+                    onClick={() => setFavoritesToggle(!favoritesToggle)}
+                  >
+                    <CommonIcon
+                      name="star"
+                      className="text-tufts-blue"
+                      size={16}
+                      color="#3172AE"
+                      weight="duotone"
+                    />
+                  </div>
+
                   <Dropdown
                     value={sortValue}
                     setValue={setSortValue}
@@ -155,8 +181,8 @@ export default function RunsPage() {
 
         {!loading && selectedRuns.length === 0 && (
           <div className="text-darkest-white/50 pt-5 text-center text-sm">
-            {searchText.length === 0 && "no runs created yet"}
-            {searchText.length > 0 && "no runs matching search"}
+            {runs.length === 0 && "no runs created yet"}
+            {runs.length > 0 && "no runs matching search"}
           </div>
         )}
 
