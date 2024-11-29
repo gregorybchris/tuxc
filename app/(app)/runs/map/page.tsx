@@ -44,7 +44,11 @@ export default function RunsMapPage() {
     push(`/runs/${id}`);
   }
 
-  function onHoverRun(id: number) {
+  function onHoverRun(id?: number) {
+    if (id === undefined) {
+      setSelectedRun(null);
+      return;
+    }
     const run = runs.find((run) => run.id === id);
     if (run) {
       setSelectedRun(run);
@@ -60,7 +64,7 @@ export default function RunsMapPage() {
           </div>
         </div>
         <div className="flex w-full flex-col items-center gap-6 md:items-start">
-          <div className="flex w-full flex-row items-center justify-between gap-5">
+          <div className="flex w-full flex-row items-center justify-between gap-5 px-5">
             <LinkButton text="Runs grid" href="/runs" iconName="back" />
             <div className="text-sm">{selectedRun && selectedRun.name}</div>
           </div>

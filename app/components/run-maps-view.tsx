@@ -18,7 +18,7 @@ import { LineSource } from "./run-map-view";
 interface RunMapViewProps {
   runMaps: RunMap[];
   onClickRun: (id: number) => void;
-  onHoverRun: (id: number) => void;
+  onHoverRun: (id?: number) => void;
   className?: string;
 }
 
@@ -31,10 +31,9 @@ export function RunMapsView({
   const mapRef = useRef<MapRef>(null);
   const radius = 0.001;
   const engineRef = useRef<QueryEngine>();
-  const [markerCoordinate, setMarkerCoordinate] = useState<Coordinate>({
-    latitude: 0,
-    longitude: 0,
-  });
+  const [markerCoordinate, setMarkerCoordinate] = useState<Coordinate | null>(
+    null,
+  );
 
   useEffect(() => {
     if (mapRef.current) {
@@ -77,6 +76,9 @@ export function RunMapsView({
     if (closestResult) {
       setMarkerCoordinate(closestResult.coordinate);
       onHoverRun(closestResult.runMap.id);
+    } else {
+      setMarkerCoordinate({ latitude: 0, longitude: 0 });
+      onHoverRun(undefined);
     }
   }
 
@@ -103,13 +105,15 @@ export function RunMapsView({
         onClick={onClick}
         onMouseMove={onHover}
       >
-        <Marker
-          latitude={markerCoordinate.latitude}
-          longitude={markerCoordinate.longitude}
-          anchor="bottom"
-        >
-          <Pin />
-        </Marker>
+        {markerCoordinate && (
+          <Marker
+            latitude={markerCoordinate.latitude}
+            longitude={markerCoordinate.longitude}
+            anchor="bottom"
+          >
+            <Pin />
+          </Marker>
+        )}
 
         {runMaps.map((runMap, i) => {
           const lineFeature = getLineFeature(runMap);
