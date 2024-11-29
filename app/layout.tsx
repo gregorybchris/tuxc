@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { ReactNode } from "react";
 import "./globals.css";
 import { Nav } from "./widgets/nav";
@@ -24,6 +25,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <Nav>{children}</Nav>
         </div>
       </body>
+      <Script
+        data-goatcounter="https://tuxc.goatcounter.com/count"
+        src="//gc.zgo.at/count.js"
+      />
     </html>
   );
 }
