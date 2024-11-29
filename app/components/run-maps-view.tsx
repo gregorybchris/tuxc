@@ -29,7 +29,10 @@ export function RunMapsView({
   className,
 }: RunMapViewProps) {
   const mapRef = useRef<MapRef>(null);
-  const radius = 0.001;
+  // Radius trades off how long it takes to process a query (larger radius takes longer)
+  // with how precise you have to be when hovering to see the pin (smaller radius is more difficult to hover).
+  // This value should generally be a few streets wide.
+  const radius = 0.0004;
   const engineRef = useRef<QueryEngine>();
   const [markerCoordinate, setMarkerCoordinate] = useState<Coordinate | null>(
     null,
