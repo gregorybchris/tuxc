@@ -95,7 +95,7 @@ function RunDetails({ run }: RunDetailsProps) {
         <RunDetail
           name="Distance"
           detail={
-            <span className="rounded-md bg-tufts-brown/80 px-2 py-0.5 text-white">{`${run.distance} mi`}</span>
+            <span className="rounded-md bg-tufts-brown px-2 py-0.5 text-white">{`${run.distance} mi`}</span>
           }
           iconName="ruler"
         />
