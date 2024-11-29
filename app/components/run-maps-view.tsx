@@ -111,7 +111,7 @@ export function RunMapsView({
             longitude={markerCoordinate.longitude}
             anchor="bottom"
           >
-            <Pin />
+            <Pin color="#3172AE" />
           </Marker>
         )}
 

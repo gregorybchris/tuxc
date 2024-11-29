@@ -71,7 +71,7 @@ export function Textbox({
         )}
         onClick={() => onChange("")}
       >
-        <X size={16} color="#999" weight="bold" />
+        <X size={16} color="999999" weight="bold" />
       </div>
     </div>
   );

@@ -43,8 +43,8 @@ export function Nav({ children }: NavProps) {
         </Link>
 
         <div className="cursor-pointer">
-          {menuOpen && <X color="#FFF" size={32} onClick={close} />}
-          {!menuOpen && <List size={32} color="#FFF" onClick={open} />}
+          {menuOpen && <X color="#FFFFFF" size={32} onClick={close} />}
+          {!menuOpen && <List size={32} color="#FFFFFF" onClick={open} />}
         </div>
       </div>
 
