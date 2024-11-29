@@ -16,17 +16,6 @@ def main() -> None:
     pass
 
 
-@main.command(name="route")
-@click.argument("route_id", type=str)
-@click.option("--debug", type=bool, default=False, is_flag=True)
-def get_route(route_id: str, debug: bool) -> None:
-    if debug:
-        logging.basicConfig(level=logging.INFO)
-
-    # TODO: Implement route fetching
-    logger.info("Fetching route information for route %s", route_id)
-
-
 @main.command(name="convert")
 @click.option("--debug", type=bool, default=False, is_flag=True)
 def convert_routes(debug: bool) -> None:
