@@ -1,32 +1,40 @@
 import "mapbox-gl/dist/mapbox-gl.css";
-import { useEffect, useRef } from "react";
-import Map, { MapLayerMouseEvent, MapRef } from "react-map-gl";
-import { QueryEngine } from "../lib/mapping/query-engine";
+import { useEffect, useRef, useState } from "react";
+import Map, { MapLayerMouseEvent, MapRef, Marker } from "react-map-gl";
+import { QueryEngine, QueryResult } from "../lib/mapping/query-engine";
 import { RunMap } from "../lib/models/runMap";
 import {
   aggregateBounds,
   aggregateCenters,
+  Coordinate,
   fitMapBounds,
   getCenter,
   getLineFeature,
   getRunMapBounds,
-  haversineDistance,
 } from "../lib/utilities/map-utils";
 import { cn } from "../lib/utilities/style-utils";
+import { Pin } from "./run-map-pin";
 import { LineSource } from "./run-map-view";
 interface RunMapViewProps {
   runMaps: RunMap[];
   onClickRun: (id: number) => void;
+  onHoverRun: (id: number) => void;
   className?: string;
 }
 
 export function RunMapsView({
   runMaps,
   onClickRun,
+  onHoverRun,
   className,
 }: RunMapViewProps) {
   const mapRef = useRef<MapRef>(null);
-  const engineRef = useRef<QueryEngine>(new QueryEngine(runMaps, 20, 20));
+  const radius = 0.001;
+  const engineRef = useRef<QueryEngine>();
+  const [markerCoordinate, setMarkerCoordinate] = useState<Coordinate>({
+    latitude: 0,
+    longitude: 0,
+  });
 
   useEffect(() => {
     if (mapRef.current) {
@@ -35,28 +43,41 @@ export function RunMapsView({
       );
       fitMapBounds(mapRef.current, bounds, padding, zoomDuration);
     }
+    if (!engineRef.current) {
+      engineRef.current = new QueryEngine(runMaps, radius);
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const onClick = (event: MapLayerMouseEvent) => {
-    const latitude = event.lngLat.lat;
-    const longitude = event.lngLat.lng;
-    const queryCoordinate = { latitude, longitude };
-    const results = engineRef.current.query(queryCoordinate);
-    const closestResult = results.reduce((prev, current) => {
-      const prevDistance = haversineDistance(prev.coordinate, queryCoordinate);
-      const currentDistance = haversineDistance(
-        current.coordinate,
-        queryCoordinate,
-      );
-      return prevDistance < currentDistance ? prev : current;
-    });
+  function getClosestRun(event: MapLayerMouseEvent): QueryResult | null {
+    const coordinate = {
+      latitude: event.lngLat.lat,
+      longitude: event.lngLat.lng,
+    };
+    if (!engineRef.current) {
+      return null;
+    }
+    const results = engineRef.current.query(coordinate);
+    if (results.length === 0) {
+      return null;
+    }
+    return results[0];
+  }
 
-    onClickRun(closestResult.runMap.id);
+  const onClick = (event: MapLayerMouseEvent) => {
+    const closestResult = getClosestRun(event);
+    if (closestResult) {
+      setMarkerCoordinate(closestResult.coordinate);
+      onClickRun(closestResult.runMap.id);
+    }
   };
 
   function onHover(event: MapLayerMouseEvent) {
-    // console.log("Coordinate", event.lngLat);
+    const closestResult = getClosestRun(event);
+    if (closestResult) {
+      setMarkerCoordinate(closestResult.coordinate);
+      onHoverRun(closestResult.runMap.id);
+    }
   }
 
   const center = aggregateCenters(runMaps.map((runMap) => getCenter(runMap)));
@@ -82,6 +103,14 @@ export function RunMapsView({
         onClick={onClick}
         onMouseMove={onHover}
       >
+        <Marker
+          latitude={markerCoordinate.latitude}
+          longitude={markerCoordinate.longitude}
+          anchor="bottom"
+        >
+          <Pin />
+        </Marker>
+
         {runMaps.map((runMap, i) => {
           const lineFeature = getLineFeature(runMap);
           return (

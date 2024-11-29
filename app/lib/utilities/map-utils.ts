@@ -25,8 +25,24 @@ export function getRunMapBounds(runMap: RunMap): CoordinateBounds {
   };
 }
 
-export function getCoordinateTuples(runMap: RunMap): CoordinateTuple[] {
-  return runMap.points.map((point) => [point.longitude, point.latitude]);
+export function extendBounds(
+  bounds: CoordinateBounds,
+  size: number,
+): CoordinateBounds {
+  return {
+    min: {
+      latitude: bounds.min.latitude - size,
+      longitude: bounds.min.longitude - size,
+    },
+    max: {
+      latitude: bounds.max.latitude + size,
+      longitude: bounds.max.longitude + size,
+    },
+  };
+}
+
+export function coordinateToTuple(coordinate: Coordinate): CoordinateTuple {
+  return [coordinate.longitude, coordinate.latitude];
 }
 
 export function getStart(runMap: RunMap): Coordinate {
@@ -47,13 +63,12 @@ export function getCenter(runMap: RunMap): Coordinate {
 export function getLineFeature(
   runMap: RunMap,
 ): GeoJSON.Feature<GeoJSON.Geometry> {
-  const coordinateTuples = getCoordinateTuples(runMap);
   return {
     type: "Feature",
     properties: {},
     geometry: {
       type: "LineString",
-      coordinates: coordinateTuples,
+      coordinates: runMap.points.map(coordinateToTuple),
     },
   };
 }
@@ -97,11 +112,11 @@ export function aggregateBounds(bounds: CoordinateBounds[]): CoordinateBounds {
   };
 }
 
-export function haversineDistance(a: Coordinate, b: Coordinate): number {
-  function radians(degrees: number): number {
-    return degrees * (Math.PI / 180);
-  }
+function radians(degrees: number): number {
+  return degrees * (Math.PI / 180);
+}
 
+export function haversineDistance(a: Coordinate, b: Coordinate): number {
   const [latA, lngA] = [a.latitude, a.longitude];
   const [latB, lngB] = [b.latitude, b.longitude];
 
@@ -124,9 +139,9 @@ export function haversineDistance(a: Coordinate, b: Coordinate): number {
 
 export function toMercator(point: Coordinate): Vector {
   const r = 6378137; // Radius of earth
-  const lat_rad = (point.latitude * Math.PI) / 180;
-  const lon_rad = (point.longitude * Math.PI) / 180;
-  const x = r * lon_rad;
-  const y = r * Math.log(Math.tan(Math.PI / 4 + lat_rad / 2));
-  return { x: x, y: y };
+  const latRadians = radians(point.latitude);
+  const lngRadians = radians(point.longitude);
+  const x = r * lngRadians;
+  const y = r * Math.log(Math.tan(Math.PI / 4 + latRadians / 2));
+  return { x, y };
 }
