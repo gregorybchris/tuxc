@@ -24,11 +24,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <div className="font-manrope">
           <Nav>{children}</Nav>
         </div>
+        <Script
+          data-goatcounter="https://tuxc.goatcounter.com/count"
+          async
+          src="//gc.zgo.at/count.js"
+        />
       </body>
-      <Script
-        data-goatcounter="https://tuxc.goatcounter.com/count"
-        src="//gc.zgo.at/count.js"
-      />
     </html>
   );
 }
