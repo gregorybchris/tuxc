@@ -57,16 +57,16 @@ export default function RunsMapPage() {
 
   return (
     <div className="h-full w-full py-10 md:px-20 md:py-20">
-      <div className="flex w-full flex-col items-center gap-5 md:items-start">
+      <div className="flex w-full flex-col items-center gap-3 md:items-start">
         <div className="flex w-full flex-col items-center">
           <div className="text-xl font-bold text-black/60">
             TUXC Run Preservation Project
           </div>
         </div>
-        <div className="flex w-full flex-col items-center gap-6 md:items-start">
-          <div className="flex w-full flex-row items-center justify-between gap-5 px-5">
-            <LinkButton text="Runs grid" href="/runs" iconName="back" />
-            <div className="text-sm">{selectedRun && selectedRun.name}</div>
+        <div className="flex w-full flex-row items-center justify-between gap-5 px-5">
+          <LinkButton text="Runs grid" href="/runs" iconName="back" />
+          <div className="text-sm font-bold">
+            {selectedRun && selectedRun.name}
           </div>
         </div>
 
