@@ -103,7 +103,7 @@ export function RunMapsView({
         }}
         mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
         style={{ width: "100%", height: "100%" }}
-        mapStyle="mapbox://styles/mapbox/streets-v11"
+        mapStyle="mapbox://styles/mapbox/outdoors-v12"
         attributionControl={false}
         onClick={onClick}
         onMouseMove={onHover}
