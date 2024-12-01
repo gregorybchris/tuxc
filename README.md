@@ -31,7 +31,7 @@ This site is not going for a bootleg 90's internet look (as cool as that would h
 
 ## Tech stack
 
-This is a [Next.js](https://nextjs.org) app using [Tailwind CSS](https://tailwindcss.com) for styles and deployed on a free tier of [Vercel](https://vercel.com). A free tier of [Formspree](https://formspree.io) is used for collecting edits and new run submissions. The email <tuxc.org@gmail.com> is used to collect submissions. The same email was used to create the Formspree account. The Vercel account is owned by Chris Gregory (<christopher.b.gregory@gmail.com>). [GoatCounter](https://www.goatcounter.com) is used for site analytics.
+This is a [Next.js](https://nextjs.org) app using [Tailwind CSS](https://tailwindcss.com) for styles and deployed on a free tier of [Vercel](https://vercel.com). A free tier of [Formspree](https://formspree.io) is used for collecting edits and new run submissions. The email <tuxc.org@gmail.com> is used to collect submissions. The same email was used to create the Formspree account. The Vercel account is owned by [Chris Gregory](mailto:christopher.b.gregory@gmail.com). [GoatCounter](https://www.goatcounter.com) is used for site analytics. Finally, the domain is registered with [GoDaddy](https://www.godaddy.com/) and owned by [Chris Gregory](mailto:christopher.b.gregory@gmail.com).
 
 ## App development
 
