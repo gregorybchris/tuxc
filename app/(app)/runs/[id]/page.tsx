@@ -42,10 +42,12 @@ export default function RunPage({ params }: { params: { id: string } }) {
 
   function onNextRun() {
     if (!run) return;
+    setLoading(true);
     client.current.getRuns().then((runs) => {
       const currentRunIndex = runs.findIndex((r) => r.id === run.id);
       const nextRunIndex = (currentRunIndex + 1) % runs.length;
       const nextRun = runs[nextRunIndex];
+      setLoading(false);
       push(`/runs/${nextRun.id}`);
     });
   }
