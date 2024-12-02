@@ -1,6 +1,7 @@
 "use client";
 import {
   ArrowArcLeft,
+  ArrowRight,
   BookOpenText,
   CalendarPlus,
   Envelope,
@@ -46,7 +47,8 @@ export type IconName =
   | "mail"
   | "map"
   | "grid"
-  | "star";
+  | "star"
+  | "next";
 
 interface CommonIconProps {
   name: IconName;
@@ -127,6 +129,9 @@ export function CommonIcon({
     }
     case "star": {
       return <Star {...props} />;
+    }
+    case "next": {
+      return <ArrowRight {...props} />;
     }
     default: {
       return <QuestionMark {...props} />;

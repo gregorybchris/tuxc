@@ -8,17 +8,19 @@ import { useFavorites } from "@/app/lib/hooks/favorites-storage";
 import { Run } from "@/app/lib/models/run";
 import { RunMap } from "@/app/lib/models/runMap";
 import { cn } from "@/app/lib/utilities/style-utils";
+import { Button } from "@/app/widgets/button";
 import { CommonIcon, IconName } from "@/app/widgets/common-icon";
 import { InitialsBadge } from "@/app/widgets/initials";
 import { LinkButton } from "@/app/widgets/link-button";
 import { LoadingBox } from "@/app/widgets/loading-box";
+import { useRouter } from "next/navigation";
 
 export default function RunPage({ params }: { params: { id: string } }) {
   const [loading, setLoading] = useState(true);
   const [run, setRun] = useState<Run>();
   const [runMap, setRunMap] = useState<RunMap>();
   const [favorites, saveFavorites] = useFavorites();
-
+  const { push } = useRouter();
   const client = useRef(new Client());
 
   useEffect(() => {
@@ -35,6 +37,16 @@ export default function RunPage({ params }: { params: { id: string } }) {
         setRunMap(runMap);
         setLoading(false);
       });
+    });
+  }
+
+  function onNextRun() {
+    if (!run) return;
+    client.current.getRuns().then((runs) => {
+      const currentRunIndex = runs.findIndex((r) => r.id === run.id);
+      const nextRunIndex = (currentRunIndex + 1) % runs.length;
+      const nextRun = runs[nextRunIndex];
+      push(`/runs/${nextRun.id}`);
     });
   }
 
@@ -61,8 +73,14 @@ export default function RunPage({ params }: { params: { id: string } }) {
           <div className="flex w-full flex-col items-center">
             <div className="flex w-full flex-col gap-4 md:w-[80%]">
               <div className="flex flex-col gap-3 px-5 md:px-0">
-                <div className="flex flex-row">
+                <div className="flex flex-row items-center justify-between">
                   <LinkButton href="/runs" text="All Runs" iconName="back" />
+                  <Button
+                    text="Next"
+                    iconName="next"
+                    onClick={onNextRun}
+                    className="px-2"
+                  />
                 </div>
 
                 <RunDetails
