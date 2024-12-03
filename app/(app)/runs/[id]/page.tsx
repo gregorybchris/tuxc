@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
+import hurdlesImage from "@/app/assets/images/tufts-hurdles.jpg";
 import { RunMapView } from "@/app/components/run-map-view";
 import { Client } from "@/app/lib/clients/client";
 import { useFavorites } from "@/app/lib/hooks/favorites-storage";
@@ -13,7 +12,9 @@ import { CommonIcon, IconName } from "@/app/widgets/common-icon";
 import { InitialsBadge } from "@/app/widgets/initials";
 import { LinkButton } from "@/app/widgets/link-button";
 import { LoadingBox } from "@/app/widgets/loading-box";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 
 export default function RunPage({ params }: { params: { id: string } }) {
   const [loading, setLoading] = useState(true);
@@ -31,13 +32,18 @@ export default function RunPage({ params }: { params: { id: string } }) {
   function fetchRun() {
     const idNumber = parseInt(params.id, 10);
     setLoading(true);
-    client.current.getRun(idNumber).then((run) => {
-      setRun(run);
-      client.current.getRunMap(idNumber).then((runMap) => {
-        setRunMap(runMap);
+    client.current
+      .getRun(idNumber)
+      .then((run) => {
+        setRun(run);
+        client.current.getRunMap(idNumber).then((runMap) => {
+          setRunMap(runMap);
+          setLoading(false);
+        });
+      })
+      .catch(() => {
         setLoading(false);
       });
-    });
   }
 
   function onNextRun() {
@@ -69,7 +75,21 @@ export default function RunPage({ params }: { params: { id: string } }) {
           </div>
         )}
 
-        {!loading && (!run || !runMap) && <div>Run not found</div>}
+        {!loading && (!run || !runMap) && (
+          <div className="relative flex w-full flex-col items-center justify-center">
+            <div className="relative flex w-full flex-row justify-center py-8 text-lg">
+              Run not found
+            </div>
+            <div className="relative h-20 w-full bg-tufts-blue">
+              <Image
+                src={hurdlesImage}
+                fill
+                className="object-contain"
+                alt="Tufts hurdles"
+              />
+            </div>
+          </div>
+        )}
 
         {!loading && run && runMap && (
           <div className="flex w-full flex-col items-center">

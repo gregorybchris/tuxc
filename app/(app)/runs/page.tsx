@@ -123,10 +123,10 @@ export default function RunsPage() {
                     <Slider.Track className="relative h-[3px] grow rounded-full bg-black/20">
                       <Slider.Range className="absolute h-full rounded-full bg-black/30" />
                     </Slider.Track>
-                    <Slider.Thumb className="bg-light-blue flex size-5 cursor-pointer flex-col items-center justify-center rounded-[10px] text-[10px] text-white transition-all hover:bg-tufts-blue focus:outline-none">
+                    <Slider.Thumb className="flex size-5 cursor-pointer flex-col items-center justify-center rounded-[10px] bg-light-blue text-[10px] text-white transition-all hover:bg-tufts-blue focus:outline-none">
                       {distanceRange[0].toFixed(0)}
                     </Slider.Thumb>
-                    <Slider.Thumb className="bg-light-blue flex size-5 cursor-pointer flex-col items-center justify-center rounded-[10px] text-[10px] text-white transition-all hover:bg-tufts-blue focus:outline-none">
+                    <Slider.Thumb className="flex size-5 cursor-pointer flex-col items-center justify-center rounded-[10px] bg-light-blue text-[10px] text-white transition-all hover:bg-tufts-blue focus:outline-none">
                       {distanceRange[1].toFixed(0)}
                     </Slider.Thumb>
                   </Slider.Root>
@@ -181,8 +181,8 @@ export default function RunsPage() {
 
         {!loading && selectedRuns.length === 0 && (
           <div className="text-darkest-white/50 pt-5 text-center text-sm">
-            {runs.length === 0 && "no runs created yet"}
-            {runs.length > 0 && "no runs matching search"}
+            {runs.length === 0 && "No runs created yet"}
+            {runs.length > 0 && "No runs matching search"}
           </div>
         )}
 

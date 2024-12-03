@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-
+import hurdlesImage from "@/app/assets/images/tufts-hurdles.jpg";
 import { EditRunForm } from "@/app/components/edit-run-form";
 import { Client } from "@/app/lib/clients/client";
 import { Run } from "@/app/lib/models/run";
 import { LinkText } from "@/app/widgets/link-text";
 import { LoadingBox } from "@/app/widgets/loading-box";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export default function EditRunPage({ params }: { params: { id: string } }) {
   const [loading, setLoading] = useState(true);
@@ -36,6 +37,7 @@ export default function EditRunPage({ params }: { params: { id: string } }) {
         <div className="flex w-full flex-col items-center text-xl">
           <div className="text-xl font-bold text-black/60">Edit a Run</div>
         </div>
+
         {loading && (
           <div className="flex w-full flex-col items-center">
             <div className="flex w-full flex-col gap-3 px-2 md:w-[400px] md:px-2">
@@ -45,7 +47,21 @@ export default function EditRunPage({ params }: { params: { id: string } }) {
           </div>
         )}
 
-        {!loading && !currentRun && <div>Run not found</div>}
+        {!loading && !currentRun && (
+          <div className="relative flex w-full flex-col items-center justify-center">
+            <div className="relative flex w-full flex-row justify-center py-8 text-lg">
+              Run not found
+            </div>
+            <div className="relative h-20 w-full bg-tufts-blue">
+              <Image
+                src={hurdlesImage}
+                fill
+                className="object-contain"
+                alt="Tufts hurdles"
+              />
+            </div>
+          </div>
+        )}
 
         {!loading && currentRun && (
           <div className="flex w-full flex-col items-center gap-6">
