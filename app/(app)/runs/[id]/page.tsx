@@ -53,7 +53,6 @@ export default function RunPage({ params }: { params: { id: string } }) {
       const currentRunIndex = runs.findIndex((r) => r.id === run.id);
       const nextRunIndex = (currentRunIndex + 1) % runs.length;
       const nextRun = runs[nextRunIndex];
-      setLoading(false);
       push(`/runs/${nextRun.id}`);
     });
   }
