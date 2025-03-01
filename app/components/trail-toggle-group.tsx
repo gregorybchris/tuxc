@@ -25,11 +25,13 @@ export function TrailsToggleGroup({ value, onChange }: TrailsToggleGroupProps) {
         onClick={() => update("trails")}
         iconName="tree"
         selected={value === "trails"}
+        title="Trails"
       />
       <TrailsToggleItem
         onClick={() => update("no trails")}
         iconName="road"
         selected={value === "no trails"}
+        title="No trails"
       />
     </div>
   );
@@ -39,12 +41,14 @@ interface TrailsToggleItemProps {
   onClick: () => void;
   selected: boolean;
   iconName: IconName;
+  title?: string;
 }
 
 export function TrailsToggleItem({
   onClick,
   selected,
   iconName,
+  title,
 }: TrailsToggleItemProps) {
   return (
     <div
@@ -53,6 +57,7 @@ export function TrailsToggleItem({
         selected && "bg-black/15 md:hover:bg-black/20",
       )}
       onClick={onClick}
+      title={title}
     >
       <CommonIcon name={iconName} size={16} color="#3172AE" weight="duotone" />
     </div>

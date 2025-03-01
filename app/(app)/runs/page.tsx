@@ -139,6 +139,7 @@ export default function RunsPage() {
                       favoritesToggle && "bg-black/15 md:hover:bg-black/20",
                     )}
                     onClick={() => setFavoritesToggle(!favoritesToggle)}
+                    title="Favorites"
                   >
                     <CommonIcon
                       name="star"
