@@ -1,15 +1,15 @@
 <div align="center">
     <h1>tuxc.org</h1>
     <p>
-        <strong>Athlete-run home of Tufts cross country</strong>
+        <strong>Tufts cross country run archive</strong>
     </p>
 </div>
 
 ## About
 
-tuxc.org is an athlete run site and is not officially affiliated with the university. This site is created and maintained by the athletes of TUXC.
+tuxc.org is not officially affiliated with the university.
 
-This is not intended as a replacement for [gojumbos.com](https://www.gojumbos.com), although there is a [good archive of runs](https://www.gojumbos.com/maps.php) there as well. Over time it seems less and less likely an enterprising PHP dev will come along and take up the cause, so for now we have TypeScript.
+This site is not intended as a replacement for [gojumbos.com](https://www.gojumbos.com), which has a ton of team history as well as a [great archive of runs](https://www.gojumbos.com/maps.php). Unfortunately, over time some links to original running routes have broken. This site directly embeds maps and this repository hosts route files in GPX format for safe-keeping.
 
 ## Goals
 
