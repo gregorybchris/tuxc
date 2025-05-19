@@ -25,15 +25,9 @@ tuxc = "tuxc.cli:main"
 [dependency-groups]
 dev = ["mypy>=1.15.0", "pytest>=8.3.5", "ruff>=0.11.10", "semver>=3.0.4"]
 
-[tool.hatch.build.targets.sdist]
-include = ["tuxc"]
-
-[tool.hatch.build.targets.wheel]
-include = ["tuxc"]
-
 [build-system]
-requires = ["hatchling"]
 build-backend = "hatchling.build"
+requires = ["hatchling"]
 
 [tool.mypy]
 disallow_incomplete_defs = true
@@ -44,7 +38,7 @@ plugins = ["pydantic.mypy"]
 
 [tool.ruff]
 line-length = 120
-src = ["tuxc"]
+src = ["src"]
 
 [tool.ruff.lint]
 ignore = ["D100", "D104", "FIX002", "TD002", "TD003"]
