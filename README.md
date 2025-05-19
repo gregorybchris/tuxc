@@ -56,11 +56,11 @@ Name this file with a kebab case name and put it in the [gpx](gpx) folder at the
 
 ### 2. Install the tuxc Python package
 
-[Poetry](https://python-poetry.org/docs/#installation) is a requirement for installing the tuxc Python package.
+[uv](https://docs.astral.sh/uv) is a requirement for installing the tuxc Python package.
 
 ```bash
 cd analysis
-poetry install
+uv sync
 ```
 
 ### 3. Convert your GPX file to JSON
@@ -68,7 +68,7 @@ poetry install
 Run the `convert` command to convert all GPX files into JSON
 
 ```bash
-poetry run tuxc convert
+uv run tuxc convert
 ```
 
 This command will put your converted map file in the [app/db/jpx](app/db/jpx) folder.

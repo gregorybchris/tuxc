@@ -15,10 +15,6 @@
   "editor.formatOnSave": true,
   "editor.insertSpaces": true,
   "editor.rulers": [120],
-  "mypy-type-checker.args": [
-    "--config-file=analysis/pyproject.toml",
-    "--enable-incomplete-feature=NewGenericSyntax"
-  ],
   "prettier.printWidth": 120,
   "python.analysis.extraPaths": ["python"],
   "ruff.configuration": "analysis/pyproject.toml",

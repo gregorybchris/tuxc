@@ -1,4 +1,4 @@
-name: Backend CI
+name: Analysis CI
 
 on:
   workflow_dispatch:
@@ -7,58 +7,56 @@ on:
       - main
     paths:
       - analysis/**
-      - .github/workflows/backend-ci.yaml
+      - .github/workflows/analysis-ci.yaml
   pull_request:
     branches:
       - main
     paths:
       - analysis/**
-      - .github/workflows/backend-ci.yaml
+      - .github/workflows/analysis-ci.yaml
 
 jobs:
-  backend-ci:
+  analysis-ci:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
       - name: Setup Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v5.6.0
         with:
           python-version: "3.12"
 
+      - name: Setup uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          version: 0.6.14
+          enable-cache: true
+          cache-local-path: ~/.cache/uv
+          cache-dependency-glob: analysis/pyproject.toml
+
       - name: Install package
         id: install
-        shell: bash
         working-directory: analysis
-        run: |
-          pip install poetry
-
-          if [ -d /poetryenvs ]; then rm -rf ~/poetryenvs; fi
-          poetry config virtualenvs.path ~/poetryenvs
-          poetry install
+        run: uv sync --all-extras --dev
 
       - name: Run ruff
-        id: ruff
         shell: bash
         working-directory: analysis
         run: |
-          poetry run ruff check .
-          poetry run ruff format . --check
+          uv run ruff check .
+          uv run ruff format . --check
 
       - name: Run mypy
-        id: mypy
         shell: bash
         working-directory: analysis
         run: |
-          poetry run mypy . --config pyproject.toml --enable-incomplete-feature=NewGenericSyntax
+          uv run mypy src --config pyproject.toml
         if: (success() || failure()) && steps.install.outcome == 'success'
 
       - name: Run pytest
-        id: pytest
         shell: bash
         working-directory: analysis
         run: |
-          poetry run pytest tests
+          uv run pytest tests
         if: (success() || failure()) && steps.install.outcome == 'success'
