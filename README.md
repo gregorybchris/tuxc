@@ -37,6 +37,18 @@ This is a [Next.js](https://nextjs.org) app using [Tailwind CSS](https://tailwin
 
 [pnpm](https://pnpm.io/installation) is a requirement for developing on the tuxc.org app.
 
+### 1. Create an environment file with a MapBox API key
+
+You can create an account on [mapbox.com](https://www.mapbox.com) and get your own API key for development. Then create a file called `.env.local` in the root of this repository.
+
+```env
+NEXT_PUBLIC_MAPBOX_TOKEN=<your-key>
+```
+
+> Remember to replace `<your-key>` with the key copied from the Mapbox website
+
+### 2. Startup the dev server
+
 ```bash
 pnpm install
 pnpm dev
