@@ -56,11 +56,11 @@ Name this file with a kebab case name and put it in the [gpx](gpx) folder at the
 
 ### 2. Install the tuxc Python package
 
-[Poetry](https://python-poetry.org/docs/#installation) is a requirement for installing the tuxc Python package.
+[uv](https://docs.astral.sh/uv) is a requirement for installing the tuxc Python package.
 
 ```bash
 cd analysis
-poetry install
+uv sync
 ```
 
 ### 3. Convert your GPX file to JSON
@@ -68,12 +68,12 @@ poetry install
 Run the `convert` command to convert all GPX files into JSON
 
 ```bash
-poetry run tuxc convert
+uv run tuxc convert
 ```
 
 This command will put your converted map file in the [app/db/jpx](app/db/jpx) folder.
 
-> Note: This command also attempts to "simplify" the route by removing collinear points. The route length is reduced by less than 0.01% and the number of points is reduced by 20-40%. This makes the payloads over web requests smaller and decreases load time. You can run the `tuxc test` command to check what the reduction factors are.
+> Note: This command also attempts to "simplify" the route by removing collinear points. The route length is reduced by less than 0.01% and the number of points is reduced by 20-40%. This makes the payloads over web requests smaller and decreases load time. You can run the `tuxc benchmark` command to check what the reduction factors are.
 
 ### 4. Update runs.json
 

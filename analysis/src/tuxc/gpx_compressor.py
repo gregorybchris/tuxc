@@ -1,7 +1,7 @@
 import math
 from dataclasses import dataclass
 
-from rich import print
+from rich.console import Console
 
 from tuxc.gpx import Gpx, Point
 from tuxc.jpx import Jpx
@@ -86,7 +86,9 @@ class GpxCompressor:
         return Jpx(points=jpx_points)
 
     @classmethod
-    def test(cls, gpx: Gpx, name: str) -> None:
+    def benchmark(cls, gpx: Gpx, name: str) -> None:
+        console = Console()
+
         # TODO: Update this to return a new Gpx object with fewer points
         points_before = GpxCompressor.to_points(gpx)
         n_before = len(points_before)
@@ -99,10 +101,8 @@ class GpxCompressor:
         n_reduction = 1.0 - n_after / n_before
         dist_reduction = 1.0 - dist_after / dist_before
 
-        print(f"\n[blue]{name}")
-        print("  {:.0f}% fewer points ({:d} -> {:d})".format(n_reduction * 100, n_before, n_after))
-        print("  {:.3f}% shorter distance ({:.3f} -> {:.3f})".format(dist_reduction * 100, dist_before, dist_after))
-
-        point = Point(latitude=40.7128, longitude=-74.0060, elevation=0.0)  # New York City
-        x, y = GpxCompressor.to_mercator(point)
-        print("Mercator x: {:.1f}, y: {:.1f}".format(x, y))
+        console.print(f"\n[blue]{name}")
+        console.print("  {:.0f}% fewer points ({:d} -> {:d})".format(n_reduction * 100, n_before, n_after))
+        console.print(
+            "  {:.3f}% shorter distance ({:.3f} -> {:.3f})".format(dist_reduction * 100, dist_before, dist_after)
+        )

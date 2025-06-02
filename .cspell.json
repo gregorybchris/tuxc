@@ -1,0 +1,15 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "dictionaries": ["routes", "other"],
+  "dictionaryDefinitions": [
+    {
+      "name": "routes",
+      "path": "./dictionaries/routes.txt"
+    },
+    {
+      "name": "other",
+      "path": "./dictionaries/other.txt"
+    }
+  ]
+}
