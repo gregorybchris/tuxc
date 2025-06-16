@@ -29,6 +29,12 @@ export default function SplashPage() {
           iconName="shoe"
           className="px-6"
         />
+        <LinkButton
+          text="Town Lines Map"
+          href="/town-lines"
+          iconName="map"
+          className="px-6"
+        />
       </div>
     </div>
   );
