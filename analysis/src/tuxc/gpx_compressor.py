@@ -60,9 +60,8 @@ class GpxCompressor:
         return total_dist
 
     @classmethod
-    def simplify_route(cls, points: list[Point]) -> list[Point]:
+    def simplify_route(cls, points: list[Point], percent_threshold: float = 0.0001) -> list[Point]:
         # TODO: Update to iteratively remove the most redundant points, use a heap
-        percent_threshold = 0.0001
         i = 1
         while i < len(points) - 1:
             point_a, point_b, point_c = points[i - 1], points[i], points[i + 1]
@@ -76,8 +75,8 @@ class GpxCompressor:
 
     @classmethod
     def compress(cls, gpx: Gpx) -> Jpx:
-        points_before = GpxCompressor.to_points(gpx)
-        points_after = GpxCompressor.simplify_route(points_before)
+        points_before = cls.to_points(gpx)
+        points_after = cls.simplify_route(points_before)
 
         def gpx_point_to_jpx(point: Point) -> JpxPoint:
             return JpxPoint(latitude=point.latitude, longitude=point.longitude, elevation=point.elevation)
@@ -90,13 +89,13 @@ class GpxCompressor:
         console = Console()
 
         # TODO: Update this to return a new Gpx object with fewer points
-        points_before = GpxCompressor.to_points(gpx)
+        points_before = cls.to_points(gpx)
         n_before = len(points_before)
-        dist_before = GpxCompressor.path_dist(points_before)
+        dist_before = cls.path_dist(points_before)
 
-        points_after = GpxCompressor.simplify_route(points_before)
+        points_after = cls.simplify_route(points_before)
         n_after = len(points_after)
-        dist_after = GpxCompressor.path_dist(points_after)
+        dist_after = cls.path_dist(points_after)
 
         n_reduction = 1.0 - n_after / n_before
         dist_reduction = 1.0 - dist_after / dist_before
