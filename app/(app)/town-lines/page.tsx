@@ -3,18 +3,19 @@
 import { useRef } from "react";
 import Map, { Layer, MapRef, Source } from "react-map-gl";
 import intersections from "../../db/geos/intersections.json";
-import townLines from "../../db/geos/town_line_poly.json";
+import townLines from "../../db/geos/town-line-poly.json";
 
 export default function TownLinesPage() {
   const mapRef = useRef<MapRef>(null);
 
   return (
     <div className="flex flex-row justify-center gap-10 px-5 py-14 md:px-[20%] md:py-20">
-      <div className="flex flex-col items-center justify-center gap-7">
+      <div className="flex w-full flex-col items-center justify-center gap-7">
         <div className="text-xl font-bold text-black/60">Town Lines Map</div>
         <span className="text-justify indent-4">
           It has long been a tradition for TUXC to race for the town lines in
-          the Boston Area. Here, you can find a map of the surrounding town borders along with all crossing points marked in red.
+          the Boston Area. Here, you can find a map of the surrounding town
+          borders along with all crossing points marked in red.
         </span>
         <div className="h-[500px] w-full overflow-hidden rounded-xl">
           <Map
@@ -35,15 +36,15 @@ export default function TownLinesPage() {
                   id="geojson-layer"
                   type="fill"
                   paint={{
-                    "fill-color": "#add8e6",
-                    "fill-opacity": 0.5,
+                    "fill-color": "#3172AE",
+                    "fill-opacity": 0.15,
                   }}
                 />
                 <Layer
                   id="geojson-line-layer"
                   type="line"
                   paint={{
-                    "line-color": "#6495ed",
+                    "line-color": "#3172AE",
                     "line-width": 2,
                   }}
                 />
@@ -56,7 +57,7 @@ export default function TownLinesPage() {
                   type="circle"
                   paint={{
                     "circle-radius": 5,
-                    "circle-color": "#ff4d4f",
+                    "circle-color": "#FF4040",
                   }}
                 />
               </Source>
