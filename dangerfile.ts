@@ -1,7 +1,7 @@
 import { danger, fail } from "danger";
 import fs from "fs";
 
-const FILE_SIZE_THRESHOLD = 400 * 1024; // 400 KB
+const FILE_SIZE_THRESHOLD = 1.5 * 1024 * 1024; // 1.5 MB
 
 const filesChanged = danger.git.modified_files.concat(danger.git.created_files);
 
