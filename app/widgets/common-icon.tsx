@@ -15,6 +15,7 @@ import {
   Pencil,
   PersonSimpleRun,
   RoadHorizon,
+  Signpost,
   SneakerMove,
   SquaresFour,
   Star,
@@ -47,6 +48,7 @@ export type IconName =
   | "mail"
   | "map"
   | "grid"
+  | "signpost"
   | "star"
   | "next";
 
@@ -126,6 +128,9 @@ export function CommonIcon({
     }
     case "grid": {
       return <SquaresFour {...props} />;
+    }
+    case "signpost": {
+      return <Signpost {...props} />;
     }
     case "star": {
       return <Star {...props} />;
