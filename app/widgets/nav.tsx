@@ -57,6 +57,18 @@ export function Nav({ children }: NavProps) {
         >
           <NavLink text="Home" iconName="home" href="/" onClick={close} />
           <NavLink text="Runs" iconName="shoe" href="/runs" onClick={close} />
+          <NavLink
+            text="Heatmap"
+            iconName="map"
+            href="/runs/map"
+            onClick={close}
+          />
+          <NavLink
+            text="Town Lines"
+            iconName="signpost"
+            href="/town-lines"
+            onClick={close}
+          />
         </div>
 
         <div className={cn(menuOpen && "invisible opacity-0")}>{children}</div>
