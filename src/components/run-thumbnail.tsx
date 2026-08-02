@@ -1,47 +1,58 @@
+import { Client } from "@/lib/clients/client";
 import { Run } from "@/lib/models/run";
-import { useEffect, useRef, useState } from "react";
-import { Client } from "../lib/clients/client";
-import { RunMap } from "../lib/models/runMap";
-import { ThumbnailGenerator } from "../lib/thumbnail/thumbnail-generator";
+import { RunMap } from "@/lib/models/runMap";
+import { getRouteOutline } from "@/lib/thumbnail/route-outline";
+import { useEffect, useMemo, useRef, useState } from "react";
 
-interface RunViewProps {
+// Strokes are set in pixels rather than grid units so a short loop and a
+// marathon come out drawn with the same weight.
+const STROKE_WIDTH = 2;
+
+interface RunThumbnailProps {
   run: Run;
   className?: string;
 }
 
-export function RunView({ run, className }: RunViewProps) {
+export function RunThumbnail({ run, className }: RunThumbnailProps) {
   const [runMap, setRunMap] = useState<RunMap>();
-  const thumbnailRef = useRef<SVGSVGElement | null>(null);
   const client = useRef(new Client());
 
   useEffect(() => {
-    const svg = thumbnailRef.current;
-    if (!svg) return;
-
-    if (!runMap) return;
-
-    while (svg.firstChild) {
-      svg.removeChild(svg.firstChild);
-    }
-
-    ThumbnailGenerator.generate(runMap, svg);
-  }, [runMap]);
-
-  useEffect(() => {
-    fetchRun();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  function fetchRun() {
+    let current = true;
     client.current.getRunMap(run.id).then((runMap) => {
-      setRunMap(runMap);
+      if (current) setRunMap(runMap);
     });
-  }
+    return () => {
+      current = false;
+    };
+  }, [run.id]);
+
+  const outline = useMemo(
+    () => (runMap ? getRouteOutline(runMap) : null),
+    [runMap],
+  );
+
+  if (!outline) return <div className={className} />;
 
   return (
     <svg
-      ref={thumbnailRef}
-      className="h-20 w-full border-4 border-transparent transition-all group-hover:border-white/40 md:h-24"
-    />
+      className={className}
+      viewBox={outline.viewBox}
+      role="img"
+      aria-label={`Route map for ${run.name}`}
+    >
+      {outline.loops.map((loop, index) => (
+        <path key={index} d={loop} className="fill-light-blue/20" />
+      ))}
+      <path
+        d={outline.route}
+        className="stroke-light-blue"
+        fill="none"
+        strokeWidth={STROKE_WIDTH}
+        strokeLinejoin="round"
+        strokeLinecap="round"
+        vectorEffect="non-scaling-stroke"
+      />
+    </svg>
   );
 }

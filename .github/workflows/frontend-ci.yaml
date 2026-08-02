@@ -1,24 +1,25 @@
 name: Frontend CI
 
+# eslint, prettier, and the production build via pnpm.
+
+concurrency:
+  group: frontend-ci-${{ github.ref }}
+  cancel-in-progress: true
+
 on:
   workflow_dispatch:
   push:
     branches:
       - main
-    paths:
-      - "**"
-      - .github/workflows/frontend-ci.yaml
   pull_request:
     branches:
       - main
-    paths:
-      - "**"
-      - .github/workflows/frontend-ci.yaml
 
 jobs:
   frontend-ci:
     runs-on: ubuntu-latest
 
+    # Danger needs to write its report back onto the pull request.
     permissions:
       actions: write
       checks: write
@@ -27,6 +28,7 @@ jobs:
       pull-requests: write
       statuses: write
 
+    timeout-minutes: 15
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -44,15 +46,23 @@ jobs:
           cache-dependency-path: pnpm-lock.yaml
 
       - name: Install package
+        id: install
         run: pnpm install
 
       - name: Run eslint
         run: pnpm lint
+        if: (success() || failure()) && steps.install.outcome == 'success'
+
+      - name: Run prettier
+        run: pnpm format:check
+        if: (success() || failure()) && steps.install.outcome == 'success'
 
       - name: Build
         run: pnpm build
+        if: (success() || failure()) && steps.install.outcome == 'success'
 
       - name: Run danger
         run: pnpm danger ci
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if: (success() || failure()) && steps.install.outcome == 'success'

@@ -1,7 +1,9 @@
 from dataclasses import dataclass
-from pathlib import Path
-from typing import Optional, Self
+from typing import TYPE_CHECKING, Self
 from xml.etree import ElementTree as ET
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 
 @dataclass
@@ -50,10 +52,11 @@ class Gpx:
 
     @classmethod
     def tag_match(cls, element: ET.Element, tag: str) -> bool:
+        """Whether an element carries the given tag, ignoring any XML namespace on it."""
         return element.tag.endswith(tag)
 
     @classmethod
-    def find(cls, element: ET.Element, tag: str) -> Optional[ET.Element]:
+    def find(cls, element: ET.Element, tag: str) -> ET.Element | None:
         for child in element:
             if cls.tag_match(child, tag):
                 return child
