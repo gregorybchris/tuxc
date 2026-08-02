@@ -17,7 +17,7 @@ export function Dropdown({ value, setValue, choices, label }: DropdownProps) {
     <Select.Root value={value} onValueChange={setValue}>
       <Select.Trigger
         aria-label={label}
-        className="inline-flex h-9 items-center justify-center gap-2 rounded px-1 text-sm leading-none text-black/70 outline-none transition-colors hover:text-black/90 focus-visible:ring-2 focus-visible:ring-tufts-blue"
+        className="inline-flex h-9 items-center justify-center gap-2 rounded px-1 text-sm leading-none text-ink/70 outline-none transition-colors hover:text-ink/90 focus-visible:ring-2 focus-visible:ring-accent"
       >
         <Select.Value />
         <Select.Icon>
@@ -32,9 +32,9 @@ export function Dropdown({ value, setValue, choices, label }: DropdownProps) {
           position="popper"
           sideOffset={6}
           align="end"
-          className="z-50 overflow-hidden rounded-md border border-black/10 bg-white shadow-lg"
+          className="z-50 overflow-hidden rounded-md border border-ink/10 bg-raised text-ink shadow-lg"
         >
-          <Select.ScrollUpButton className="flex h-6 cursor-default items-center justify-center bg-white text-black/30">
+          <Select.ScrollUpButton className="flex h-6 cursor-default items-center justify-center bg-raised text-ink/30">
             <CaretUp size={16} />
           </Select.ScrollUpButton>
 
@@ -48,7 +48,7 @@ export function Dropdown({ value, setValue, choices, label }: DropdownProps) {
             </Select.Group>
           </Select.Viewport>
 
-          <Select.ScrollDownButton className="flex h-6 cursor-default items-center justify-center bg-white text-black/30">
+          <Select.ScrollDownButton className="flex h-6 cursor-default items-center justify-center bg-raised text-ink/30">
             <CaretDown size={16} />
           </Select.ScrollDownButton>
         </Select.Content>
@@ -73,7 +73,7 @@ function SelectItem({
   return (
     <Select.Item
       className={cn(
-        "relative flex h-8 cursor-pointer select-none items-center rounded pl-7 pr-4 font-manrope text-sm leading-none text-black/80 outline-none data-[disabled]:pointer-events-none data-[highlighted]:bg-black/5 data-[disabled]:text-black/30 data-[highlighted]:text-black",
+        "relative flex h-8 cursor-pointer select-none items-center rounded pl-7 pr-4 font-manrope text-sm leading-none text-ink/80 outline-none data-[disabled]:pointer-events-none data-[highlighted]:bg-ink/5 data-[disabled]:text-ink/30 data-[highlighted]:text-ink",
         className,
       )}
       value={value}

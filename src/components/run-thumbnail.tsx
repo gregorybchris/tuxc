@@ -42,11 +42,11 @@ export function RunThumbnail({ run, className }: RunThumbnailProps) {
       aria-label={`Route map for ${run.name}`}
     >
       {outline.loops.map((loop, index) => (
-        <path key={index} d={loop} className="fill-light-blue/[0.16]" />
+        <path key={index} d={loop} className="fill-route/[0.16]" />
       ))}
       <path
         d={outline.route}
-        className="stroke-light-blue"
+        className="stroke-route"
         fill="none"
         strokeWidth={STROKE_WIDTH}
         strokeLinejoin="round"

@@ -10,8 +10,9 @@ export function LoadingBox({ duration, delay, className }: BoxLoadingProps) {
   return (
     <div
       className={cn(
-        // Warm and light, so a loading grid reads as the cards that will replace it.
-        "h-8 w-8 animate-pulse rounded bg-tufts-brown/15",
+        // The colour of the plate a route is drawn on, so a loading grid reads
+        // as the cards that will replace it: warm in light, cool in dark.
+        "h-8 w-8 animate-pulse rounded bg-edge/15",
         className,
       )}
       style={{

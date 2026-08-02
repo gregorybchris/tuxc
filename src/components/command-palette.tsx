@@ -71,24 +71,24 @@ export function CommandPalette({ open, onOpenChange }: CommandPaletteProps) {
       onOpenChange={onOpenChange}
       label="Search the archive"
       shouldFilter
-      overlayClassName="fixed inset-0 z-40 bg-black/40"
-      contentClassName="fixed left-1/2 top-1/2 z-50 w-[calc(100vw-2rem)] max-w-measure -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xl bg-white shadow-xl focus:outline-none"
+      overlayClassName="fixed inset-0 z-40 bg-black/40 dark:bg-black/70"
+      contentClassName="fixed left-1/2 top-1/2 z-50 w-[calc(100vw-2rem)] max-w-measure -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-xl bg-raised shadow-xl focus:outline-none"
     >
-      <div className="flex flex-row items-center gap-2 border-b border-black/10 px-4">
-        <MagnifyingGlass size={18} color="#3172AE" weight="bold" />
+      <div className="flex flex-row items-center gap-2 border-b border-ink/10 px-4">
+        <MagnifyingGlass size={18} className="text-accent" weight="bold" />
         <Command.Input
           value={search}
           onValueChange={setSearch}
           placeholder="Search runs and pages"
-          className="h-12 w-full bg-transparent text-sm text-black/80 outline-none placeholder:text-black/45"
+          className="h-12 w-full bg-transparent text-sm text-ink/80 outline-none placeholder:text-ink/45"
         />
-        <kbd className="hidden rounded border border-black/15 px-1.5 py-0.5 text-[11px] text-black/40 sm:block">
+        <kbd className="hidden rounded border border-ink/15 px-1.5 py-0.5 text-[11px] text-ink/40 sm:block">
           esc
         </kbd>
       </div>
 
       <Command.List className="max-h-[min(24rem,60vh)] overflow-y-auto p-2">
-        <Command.Empty className="px-3 py-8 text-center text-sm text-black/50">
+        <Command.Empty className="px-3 py-8 text-center text-sm text-ink/50">
           Nothing matches that.
         </Command.Empty>
 
@@ -103,10 +103,10 @@ export function CommandPalette({ open, onOpenChange }: CommandPaletteProps) {
               <CommonIcon
                 name={page.iconName}
                 size={16}
-                color="#3172AE"
+                className="text-accent"
                 weight="duotone"
               />
-              <span className="text-black/80">{page.text}</span>
+              <span className="text-ink/80">{page.text}</span>
             </Command.Item>
           ))}
         </Command.Group>
@@ -126,10 +126,10 @@ export function CommandPalette({ open, onOpenChange }: CommandPaletteProps) {
 }
 
 const GROUP_CLASS =
-  "[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:pb-1 [&_[cmdk-group-heading]]:pt-3 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-bold [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.14em] [&_[cmdk-group-heading]]:text-black/40";
+  "[&_[cmdk-group-heading]]:px-3 [&_[cmdk-group-heading]]:pb-1 [&_[cmdk-group-heading]]:pt-3 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-bold [&_[cmdk-group-heading]]:uppercase [&_[cmdk-group-heading]]:tracking-[0.14em] [&_[cmdk-group-heading]]:text-ink/40";
 
 const ITEM_CLASS =
-  "flex cursor-pointer flex-row items-center gap-3 rounded px-3 py-2 text-sm data-[selected=true]:bg-black/5";
+  "flex cursor-pointer flex-row items-center gap-3 rounded px-3 py-2 text-sm data-[selected=true]:bg-ink/5";
 
 interface RunItemProps {
   run: Run;
@@ -144,13 +144,18 @@ function RunItem({ run, onSelect }: RunItemProps) {
       onSelect={onSelect}
       className={ITEM_CLASS}
     >
-      <CommonIcon name="shoe" size={16} color="#3172AE" weight="duotone" />
-      <span className="min-w-0 flex-1 truncate text-black/80">{run.name}</span>
+      <CommonIcon
+        name="shoe"
+        size={16}
+        className="text-accent"
+        weight="duotone"
+      />
+      <span className="min-w-0 flex-1 truncate text-ink/80">{run.name}</span>
       {/* Capped, so a route that crosses six towns does not squeeze its name. */}
-      <span className="hidden min-w-0 max-w-[40%] truncate text-xs text-black/40 sm:block">
+      <span className="hidden min-w-0 max-w-[40%] truncate text-xs text-ink/40 sm:block">
         {run.area}
       </span>
-      <span className="shrink-0 text-xs text-black/50">{run.distance} mi</span>
+      <span className="shrink-0 text-xs text-ink/50">{run.distance} mi</span>
     </Command.Item>
   );
 }

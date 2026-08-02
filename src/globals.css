@@ -5,8 +5,62 @@
 @tailwind utilities;
 
 @layer base {
+  /* The two palettes, as bare RGB channels so Tailwind can fold an opacity in.
+     See the `themed` colours in tailwind.config.ts for what each one is for. */
+  :root {
+    --surface: 255 255 255;
+    --raised: 255 255 255;
+    --ink: 0 0 0;
+    --accent: 49 114 174; /* tufts-blue */
+    --accent-ink: 255 255 255;
+    --accent-hover: 0 46 109; /* tufts-dark-blue */
+    --link-hover: 94 75 60; /* tufts-brown */
+    --header: 49 114 174; /* tufts-blue */
+    --canvas: 246 241 235; /* tufts-paper */
+    --edge: 94 75 60; /* tufts-brown */
+    --chip: 94 75 60; /* tufts-brown */
+    --chip-ink: 255 255 255;
+    --route: 75 135 247; /* light-blue */
+    --route-hover: 49 114 174; /* tufts-blue */
+
+    --selection: 204 204 204;
+  }
+
+  .dark {
+    /* Nearly black, with just enough blue in it that the accents look like they
+       belong to the same page rather than sitting on top of grey. */
+    --surface: 10 14 20;
+    --raised: 20 27 36;
+    /* A cool light grey. Used at 80% and below for text, at 10% and below for
+       hairlines, which is why it is one colour rather than a scale. */
+    --ink: 221 230 242;
+    /* Tufts blue is too dark to carry text against a near-black page, so the
+       accent moves up the same hue instead of staying put. */
+    --accent: 91 155 239;
+    --accent-ink: 8 17 28;
+    --accent-hover: 140 184 255;
+    /* Brown next to black goes muddy, so links brighten instead of warming. */
+    --link-hover: 168 200 255;
+    /* Still Tufts blue — the same hue and saturation as #3172AE, taken down
+       from 44% lightness to 29% so it sits on a near-black page without
+       glowing. Deepening it any further turns it into navy, which is a
+       different colour rather than a darker one. */
+    --header: 33 75 115;
+    --canvas: 16 23 32;
+    /* Steel blue, doing what the brown hairline does in light. */
+    --edge: 74 108 147;
+    /* The one light-grey block on the page. Dark type on it, so the badge
+       reads the way the brown one does with white. */
+    --chip: 199 212 228;
+    --chip-ink: 10 14 20;
+    --route: 107 160 255;
+    --route-hover: 168 200 255;
+
+    --selection: 58 84 122;
+  }
+
   ::selection {
-    background: #cccccc;
+    background: rgb(var(--selection));
   }
 
   /* Anchored jumps have to clear the sticky header. */
@@ -17,6 +71,7 @@
   body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    background-color: rgb(var(--surface));
   }
 }
 

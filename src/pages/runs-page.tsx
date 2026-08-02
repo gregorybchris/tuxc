@@ -159,7 +159,7 @@ export default function RunsPage() {
       />
 
       {!loading && (
-        <div className="sticky top-14 z-20 -mx-5 flex flex-col gap-3 border-b border-black/10 bg-white px-5 py-3 sm:-mx-8 sm:px-8 md:top-16">
+        <div className="sticky top-14 z-20 -mx-5 flex flex-col gap-3 border-b border-ink/10 bg-surface px-5 py-3 sm:-mx-8 sm:px-8 md:top-16">
           <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
             <Textbox
               value={searchText}
@@ -172,10 +172,7 @@ export default function RunsPage() {
             />
 
             <div className="flex flex-row items-center gap-2">
-              <label
-                htmlFor="distance-slider"
-                className="text-sm text-black/50"
-              >
+              <label htmlFor="distance-slider" className="text-sm text-ink/50">
                 Distance
               </label>
               <Slider.Root
@@ -188,13 +185,13 @@ export default function RunsPage() {
                 value={distanceRange}
                 onValueChange={setDistanceRange}
               >
-                <Slider.Track className="relative h-[3px] grow rounded-full bg-black/20">
-                  <Slider.Range className="absolute h-full rounded-full bg-black/30" />
+                <Slider.Track className="relative h-[3px] grow rounded-full bg-ink/20">
+                  <Slider.Range className="absolute h-full rounded-full bg-ink/30" />
                 </Slider.Track>
-                <Slider.Thumb className="flex size-5 cursor-pointer flex-col items-center justify-center rounded-full bg-light-blue text-[10px] text-white outline-none transition-colors hover:bg-tufts-blue focus-visible:ring-2 focus-visible:ring-tufts-blue focus-visible:ring-offset-2">
+                <Slider.Thumb className="flex size-5 cursor-pointer flex-col items-center justify-center rounded-full bg-route text-[10px] text-accent-ink outline-none transition-colors hover:bg-route-hover focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface">
                   {distanceRange[0].toFixed(0)}
                 </Slider.Thumb>
-                <Slider.Thumb className="flex size-5 cursor-pointer flex-col items-center justify-center rounded-full bg-light-blue text-[10px] text-white outline-none transition-colors hover:bg-tufts-blue focus-visible:ring-2 focus-visible:ring-tufts-blue focus-visible:ring-offset-2">
+                <Slider.Thumb className="flex size-5 cursor-pointer flex-col items-center justify-center rounded-full bg-route text-[10px] text-accent-ink outline-none transition-colors hover:bg-route-hover focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-surface">
                   {distanceRange[1].toFixed(0)}
                 </Slider.Thumb>
               </Slider.Root>
@@ -204,8 +201,8 @@ export default function RunsPage() {
               <button
                 type="button"
                 className={cn(
-                  "flex size-[35px] flex-row items-center justify-center rounded border border-black/10 outline-none transition-colors focus-visible:ring-2 focus-visible:ring-tufts-blue md:hover:bg-black/5",
-                  favoritesToggle && "bg-black/15 md:hover:bg-black/20",
+                  "flex size-[35px] flex-row items-center justify-center rounded border border-ink/10 outline-none transition-colors focus-visible:ring-2 focus-visible:ring-accent md:hover:bg-ink/5",
+                  favoritesToggle && "bg-ink/15 md:hover:bg-ink/20",
                 )}
                 onClick={() => setFavoritesToggle(!favoritesToggle)}
                 aria-pressed={favoritesToggle}
@@ -214,7 +211,7 @@ export default function RunsPage() {
                 <CommonIcon
                   name="star"
                   size={16}
-                  color="#3172AE"
+                  className="text-accent"
                   weight="duotone"
                 />
               </button>
@@ -232,7 +229,7 @@ export default function RunsPage() {
             </div>
           </div>
 
-          <div className="flex flex-row items-center gap-3 text-sm text-black/50">
+          <div className="flex flex-row items-center gap-3 text-sm text-ink/50">
             <span>
               {selectedRuns.length}{" "}
               {selectedRuns.length === 1 ? "route" : "routes"}
@@ -253,7 +250,7 @@ export default function RunsPage() {
 
       {!loading && selectedRuns.length === 0 && (
         <div className="flex flex-col items-center gap-4 py-16 text-center">
-          <p className="text-black/50">
+          <p className="text-ink/50">
             {runs.length === 0
               ? "No runs in the archive yet."
               : "No routes match these filters."}
@@ -287,7 +284,7 @@ export default function RunsPage() {
           {visibleRuns.length < selectedRuns.length && (
             <div
               ref={sentinelRef}
-              className="flex flex-row justify-center py-6 text-sm text-black/40"
+              className="flex flex-row justify-center py-6 text-sm text-ink/40"
             >
               Loading more routes…
             </div>

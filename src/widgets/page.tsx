@@ -64,19 +64,19 @@ export function PageHeader({
       )}
     >
       {eyebrow && (
-        <p className="text-xs font-bold uppercase tracking-[0.14em] text-black/40">
+        <p className="text-xs font-bold uppercase tracking-[0.14em] text-ink/40">
           {eyebrow}
         </p>
       )}
 
-      <h1 className="text-balance text-2xl font-bold tracking-tight text-black/80 md:text-3xl">
+      <h1 className="text-balance text-2xl font-bold tracking-tight text-ink/80 md:text-3xl">
         {title}
       </h1>
 
       {lede && (
         <div
           className={cn(
-            "max-w-measure text-pretty leading-relaxed text-black/60",
+            "max-w-measure text-pretty leading-relaxed text-ink/60",
             centered && "mx-auto",
           )}
         >
@@ -109,7 +109,7 @@ export function Section({ heading, children, className }: SectionProps) {
   return (
     <section className={cn("flex flex-col gap-4", className)}>
       {heading && (
-        <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-black/40">
+        <h2 className="text-xs font-bold uppercase tracking-[0.14em] text-ink/40">
           {heading}
         </h2>
       )}

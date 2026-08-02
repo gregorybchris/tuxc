@@ -103,10 +103,10 @@ export default function RunPage() {
         width="measure"
         className="flex flex-col items-center gap-5 py-24 text-center"
       >
-        <h1 className="text-2xl font-bold tracking-tight text-black/80">
+        <h1 className="text-2xl font-bold tracking-tight text-ink/80">
           That route is not in the archive
         </h1>
-        <p className="text-black/60">
+        <p className="text-ink/60">
           The link may be old, or the run may not have been mapped yet.
         </p>
         <LinkButton
@@ -129,9 +129,9 @@ export default function RunPage() {
         className="-ml-3 self-start"
       />
 
-      <div className="flex flex-col gap-4 border-b border-black/10 pb-5 sm:flex-row sm:items-start sm:justify-between">
+      <div className="flex flex-col gap-4 border-b border-ink/10 pb-5 sm:flex-row sm:items-start sm:justify-between">
         <div className="flex flex-row items-center gap-1">
-          <h1 className="text-balance text-2xl font-bold tracking-tight text-black/80 md:text-3xl">
+          <h1 className="text-balance text-2xl font-bold tracking-tight text-ink/80 md:text-3xl">
             {run.name}
           </h1>
           <FavoriteStar
@@ -163,7 +163,7 @@ export default function RunPage() {
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[1fr_22rem] lg:gap-8">
-        <div className="h-[24rem] w-full overflow-hidden rounded-xl border border-black/10 sm:h-[28rem] lg:h-[34rem]">
+        <div className="h-[24rem] w-full overflow-hidden rounded-xl border border-ink/10 sm:h-[28rem] lg:h-[34rem]">
           <RunMapView runMap={runMap} />
         </div>
 
@@ -175,15 +175,14 @@ export default function RunPage() {
 
 // The three things you can do with a run, all reading as one list.
 const ACTION_CLASS =
-  "flex flex-row items-center gap-2 rounded text-tufts-blue outline-none transition-colors hover:text-tufts-brown focus-visible:ring-2 focus-visible:ring-tufts-blue";
+  "flex flex-row items-center gap-2 rounded text-accent outline-none transition-colors hover:text-link-hover focus-visible:ring-2 focus-visible:ring-accent";
 
 function ActionIcon({ name }: { name: IconName }) {
   return (
     <CommonIcon
       name={name}
-      className="shrink-0"
+      className="shrink-0 text-accent"
       size={16}
-      color="#3172AE"
       weight="duotone"
     />
   );
@@ -199,10 +198,10 @@ function RunFacts({ run, editOpen, setEditOpen }: RunFactsProps) {
   const gpxUrl = getGpxUrl(run.slug);
 
   return (
-    <aside className="flex h-fit flex-col gap-4 rounded-xl border border-black/10 p-5">
+    <aside className="flex h-fit flex-col gap-4 rounded-xl border border-ink/10 p-5">
       <dl className="flex flex-col gap-3">
         <Fact iconName="ruler" term="Distance">
-          <span className="rounded-md bg-tufts-brown px-2 py-0.5 text-sm text-white">
+          <span className="rounded-md bg-chip px-2 py-0.5 text-sm text-chip-ink">
             {run.distance} mi
           </span>
         </Fact>
@@ -244,7 +243,7 @@ function RunFacts({ run, editOpen, setEditOpen }: RunFactsProps) {
         </Note>
       )}
 
-      <div className="flex flex-col items-start gap-2 border-t border-black/10 pt-4 text-sm">
+      <div className="flex flex-col items-start gap-2 border-t border-ink/10 pt-4 text-sm">
         {run.mapLink && (
           <a href={run.mapLink} target="_blank" className={ACTION_CLASS}>
             <ActionIcon name="map" />
@@ -285,18 +284,17 @@ interface NoteProps {
 /** A paragraph of writing about the run, sitting under the facts it belongs to. */
 function Note({ heading, iconName, children }: NoteProps) {
   return (
-    <div className="flex flex-col gap-1.5 border-t border-black/10 pt-4">
-      <h2 className="flex flex-row items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-black/40">
+    <div className="flex flex-col gap-1.5 border-t border-ink/10 pt-4">
+      <h2 className="flex flex-row items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-ink/40">
         <CommonIcon
           name={iconName}
-          className="shrink-0"
+          className="shrink-0 text-accent"
           size={16}
-          color="#3172AE"
           weight="duotone"
         />
         {heading}
       </h2>
-      <p className="text-sm leading-relaxed text-black/70">{children}</p>
+      <p className="text-sm leading-relaxed text-ink/70">{children}</p>
     </div>
   );
 }
@@ -330,17 +328,16 @@ function Fact({ term, iconName, children, className }: FactProps) {
         className,
       )}
     >
-      <dt className="flex flex-row items-center gap-2 text-black/50">
+      <dt className="flex flex-row items-center gap-2 text-ink/50">
         <CommonIcon
           name={iconName}
-          className="shrink-0"
+          className="shrink-0 text-accent"
           size={16}
-          color="#3172AE"
           weight="duotone"
         />
         {term}
       </dt>
-      <dd className="text-black/80">{children}</dd>
+      <dd className="text-ink/80">{children}</dd>
     </div>
   );
 }

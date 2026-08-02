@@ -6,6 +6,7 @@ import { List, MagnifyingGlass, X } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { CommonIcon, IconName } from "./common-icon";
+import { ThemeToggle } from "./theme-toggle";
 
 interface NavItem {
   text: string;
@@ -54,7 +55,7 @@ export function Nav() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-30 bg-tufts-blue">
+    <header className="sticky top-0 z-30 bg-header">
       {/* The height here is what the run filters stick to, as top-14 md:top-16. */}
       <div className="mx-auto flex h-14 max-w-page flex-row items-center justify-between gap-4 px-5 sm:px-8 md:h-16">
         <Link
@@ -119,6 +120,8 @@ export function Nav() {
               </kbd>
             </button>
 
+            <ThemeToggle />
+
             <button
               type="button"
               className="rounded p-1 text-white outline-none transition-colors hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white/70 md:hidden"
@@ -139,7 +142,7 @@ export function Nav() {
         id="mobile-menu"
         aria-label="Main"
         className={cn(
-          "border-t border-white/15 bg-tufts-blue md:hidden",
+          "border-t border-white/15 bg-header md:hidden",
           !menuOpen && "hidden",
         )}
       >

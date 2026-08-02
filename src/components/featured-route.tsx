@@ -47,7 +47,7 @@ export function FeaturedRoute() {
     <figure className="flex flex-col items-center gap-3">
       <Link
         to={`/runs/${run.slug}`}
-        className="group w-full rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-tufts-blue"
+        className="group w-full rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-accent"
         aria-label={`${run.name}, ${run.distance} miles`}
       >
         <svg
@@ -61,14 +61,14 @@ export function FeaturedRoute() {
             <path
               key={index}
               d={loop}
-              className="animate-fade fill-tufts-blue/10 transition-colors [animation-delay:1.15s] group-hover:fill-tufts-blue/20"
+              className="animate-fade fill-route/10 transition-colors [animation-delay:1.15s] group-hover:fill-route/20"
             />
           ))}
           <path
             d={outline.route}
             fill="none"
             pathLength={1}
-            className="animate-trace stroke-light-blue transition-colors [animation-delay:0.35s] group-hover:stroke-tufts-blue"
+            className="animate-trace stroke-route transition-colors [animation-delay:0.35s] group-hover:stroke-route-hover"
             strokeWidth={3}
             strokeLinejoin="round"
             strokeLinecap="round"
@@ -78,14 +78,14 @@ export function FeaturedRoute() {
       </Link>
 
       <figcaption className="animate-rise flex flex-row items-baseline gap-2 text-sm [animation-delay:1.5s]">
-        <span className="text-black/40">Featured route</span>
+        <span className="text-ink/40">Featured route</span>
         <Link
           to={`/runs/${run.slug}`}
-          className="font-bold text-black/70 underline-offset-4 hover:underline"
+          className="font-bold text-ink/70 underline-offset-4 hover:underline"
         >
           {run.name}
         </Link>
-        <span className="text-black/40">{run.distance} mi</span>
+        <span className="text-ink/40">{run.distance} mi</span>
       </figcaption>
     </figure>
   );

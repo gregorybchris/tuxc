@@ -38,10 +38,10 @@ export default function EditRunPage() {
         width="measure"
         className="flex flex-col items-center gap-5 py-24 text-center"
       >
-        <h1 className="text-2xl font-bold tracking-tight text-black/80">
+        <h1 className="text-2xl font-bold tracking-tight text-ink/80">
           That route is not in the archive
         </h1>
-        <p className="text-black/60">
+        <p className="text-ink/60">
           You can only edit a run that has already been mapped.
         </p>
         <LinkButton

@@ -53,13 +53,18 @@ export function TrailsToggleItem({
   return (
     <div
       className={cn(
-        "flex size-[35px] cursor-pointer items-center justify-center border border-black/10 transition-all first:rounded-l last:rounded-r focus:z-10 focus:outline-none md:hover:bg-black/5",
-        selected && "bg-black/15 md:hover:bg-black/20",
+        "flex size-[35px] cursor-pointer items-center justify-center border border-ink/10 transition-all first:rounded-l last:rounded-r focus:z-10 focus:outline-none md:hover:bg-ink/5",
+        selected && "bg-ink/15 md:hover:bg-ink/20",
       )}
       onClick={onClick}
       title={title}
     >
-      <CommonIcon name={iconName} size={16} color="#3172AE" weight="duotone" />
+      <CommonIcon
+        name={iconName}
+        size={16}
+        className="text-accent"
+        weight="duotone"
+      />
     </div>
   );
 }
