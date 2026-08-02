@@ -1,6 +1,8 @@
-This favicon was generated using the following font:
+These icons are the Jumbo silhouette from the site header
+(src/assets/images/jumbo-head-simplified.png), knocked out in white on
+#4B87F7, the blue a route is drawn in on a map or a thumbnail.
 
-- Font Title: Martel
-- Font Author: undefined
-- Font Source: https://fonts.gstatic.com/s/martel/v11/PN_yRfK9oXHga0XV3e0ahRbX9vnDzw.ttf
-- Font License: undefined)
+The 16px, 32px and 48px tab icons hold the silhouette a little wider in
+the frame, since the trunk is the first thing to disappear when the mark
+is scaled down. The 180px Apple and 192/512px Android icons are padded
+instead, so nothing is clipped when a platform masks the corners.
