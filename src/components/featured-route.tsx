@@ -56,17 +56,19 @@ export function FeaturedRoute() {
           role="img"
           aria-hidden="true"
         >
+          {/* The wash arrives late, as the line closes the loop it belongs to. */}
           {outline.loops.map((loop, index) => (
             <path
               key={index}
               d={loop}
-              className="fill-tufts-blue/10 transition-colors group-hover:fill-tufts-blue/20"
+              className="animate-fade fill-tufts-blue/10 transition-colors [animation-delay:1.15s] group-hover:fill-tufts-blue/20"
             />
           ))}
           <path
             d={outline.route}
             fill="none"
-            className="stroke-light-blue transition-colors group-hover:stroke-tufts-blue"
+            pathLength={1}
+            className="animate-trace stroke-light-blue transition-colors [animation-delay:0.35s] group-hover:stroke-tufts-blue"
             strokeWidth={3}
             strokeLinejoin="round"
             strokeLinecap="round"
@@ -75,7 +77,7 @@ export function FeaturedRoute() {
         </svg>
       </Link>
 
-      <figcaption className="flex flex-row items-baseline gap-2 text-sm">
+      <figcaption className="animate-rise flex flex-row items-baseline gap-2 text-sm [animation-delay:1.5s]">
         <span className="text-black/40">Featured route</span>
         <Link
           to={`/runs/${run.slug}`}

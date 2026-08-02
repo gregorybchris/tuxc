@@ -75,53 +75,61 @@ export function Nav() {
           </span>
         </Link>
 
-        <nav aria-label="Main" className="hidden md:block">
-          <ul className="flex flex-row items-center gap-1">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
-                <Link
-                  to={item.href}
-                  aria-current={
-                    isCurrent(pathname, item.href) ? "page" : undefined
-                  }
-                  className={cn(
-                    "rounded px-3 py-2 text-sm text-white/80 outline-none transition-colors hover:bg-white/10 hover:text-white focus-visible:ring-2 focus-visible:ring-white/70",
-                    isCurrent(pathname, item.href) && "bg-white/15 text-white",
-                  )}
-                >
-                  {item.text}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        {/* Grouped with the search bar and menu button so the whole cluster
+            stays pinned to the right edge, instead of floating in the middle
+            of the header. */}
+        <div className="flex min-w-0 flex-1 flex-row items-center justify-end gap-4">
+          <nav aria-label="Main" className="hidden md:block">
+            <ul className="flex flex-row items-center gap-1">
+              {NAV_ITEMS.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    to={item.href}
+                    aria-current={
+                      isCurrent(pathname, item.href) ? "page" : undefined
+                    }
+                    className={cn(
+                      "rounded px-3 py-2 text-sm text-white/80 outline-none transition-colors hover:bg-white/10 hover:text-white focus-visible:ring-2 focus-visible:ring-white/70",
+                      isCurrent(pathname, item.href) &&
+                        "bg-white/15 text-white",
+                    )}
+                  >
+                    {item.text}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-        <div className="flex flex-row items-center gap-1">
-          {/* Wide enough to name its own shortcut on desktop; an icon on phones,
-              where there is no keyboard to press it with. */}
-          <button
-            type="button"
-            onClick={() => setSearchOpen(true)}
-            aria-label="Search the archive"
-            className="flex flex-row items-center gap-2 rounded px-2 py-1.5 text-sm text-white/80 outline-none transition-colors hover:bg-white/10 hover:text-white focus-visible:ring-2 focus-visible:ring-white/70 md:border md:border-white/25 md:pl-2.5 md:pr-2"
-          >
-            <MagnifyingGlass size={18} weight="bold" />
-            <span className="hidden md:inline">Search</span>
-            <kbd className="hidden rounded bg-white/15 px-1.5 py-0.5 font-manrope text-[11px] text-white/80 md:inline">
-              {shortcutLabel()}
-            </kbd>
-          </button>
+          <div className="flex flex-row items-center gap-1">
+            {/* Wide enough to name its own shortcut on desktop; an icon on
+                phones, where there is no keyboard to press it with. */}
+            <button
+              type="button"
+              onClick={() => setSearchOpen(true)}
+              aria-label="Search the archive"
+              className="flex flex-row items-center gap-2 rounded px-2 py-1.5 text-sm text-white/80 outline-none transition-colors hover:bg-white/10 hover:text-white focus-visible:ring-2 focus-visible:ring-white/70 md:w-44 md:justify-between md:border md:border-white/25 md:pl-2.5 md:pr-2 lg:w-56"
+            >
+              <span className="flex flex-row items-center gap-2">
+                <MagnifyingGlass size={18} weight="bold" />
+                <span className="hidden md:inline">Search</span>
+              </span>
+              <kbd className="hidden rounded bg-white/15 px-1.5 py-0.5 font-manrope text-[11px] text-white/80 md:inline">
+                {shortcutLabel()}
+              </kbd>
+            </button>
 
-          <button
-            type="button"
-            className="rounded p-1 text-white outline-none transition-colors hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white/70 md:hidden"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-expanded={menuOpen}
-            aria-controls="mobile-menu"
-            aria-label={menuOpen ? "Close menu" : "Open menu"}
-          >
-            {menuOpen ? <X size={28} /> : <List size={28} />}
-          </button>
+            <button
+              type="button"
+              className="rounded p-1 text-white outline-none transition-colors hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white/70 md:hidden"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-expanded={menuOpen}
+              aria-controls="mobile-menu"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+            >
+              {menuOpen ? <X size={28} /> : <List size={28} />}
+            </button>
+          </div>
         </div>
       </div>
 
