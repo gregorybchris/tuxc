@@ -1,3 +1,4 @@
+import { Favorite } from "@/lib/models/favorite";
 import { useStorage } from "./storage";
 
 export function useFavorites() {
