@@ -4,13 +4,13 @@ import { Client } from "@/lib/clients/client";
 import { useFavorites } from "@/lib/hooks/favorites-storage";
 import { Run } from "@/lib/models/run";
 import { RunMap } from "@/lib/models/runMap";
+import { getGpxUrl } from "@/lib/utilities/gpx-utils";
 import { cn } from "@/lib/utilities/style-utils";
 import { Button } from "@/widgets/button";
 import { CommonIcon, IconName } from "@/widgets/common-icon";
 import { FavoriteStar } from "@/widgets/favorite-star";
 import { InitialsBadge } from "@/widgets/initials";
 import { LinkButton } from "@/widgets/link-button";
-import { LinkText } from "@/widgets/link-text";
 import { LoadingBox } from "@/widgets/loading-box";
 import { Page } from "@/widgets/page";
 import { useCallback, useEffect, useRef, useState } from "react";
@@ -169,6 +169,22 @@ export default function RunPage() {
   );
 }
 
+// The three things you can do with a run, all reading as one list.
+const ACTION_CLASS =
+  "flex flex-row items-center gap-2 rounded text-tufts-blue outline-none transition-colors hover:text-tufts-brown focus-visible:ring-2 focus-visible:ring-tufts-blue";
+
+function ActionIcon({ name }: { name: IconName }) {
+  return (
+    <CommonIcon
+      name={name}
+      className="shrink-0"
+      size={16}
+      color="#3172AE"
+      weight="duotone"
+    />
+  );
+}
+
 interface RunFactsProps {
   run: Run;
   editOpen: boolean;
@@ -176,6 +192,8 @@ interface RunFactsProps {
 }
 
 function RunFacts({ run, editOpen, setEditOpen }: RunFactsProps) {
+  const gpxUrl = getGpxUrl(run.slug);
+
   return (
     <aside className="flex h-fit flex-col gap-4 rounded-xl border border-black/10 p-5">
       <dl className="flex flex-col gap-3">
@@ -224,14 +242,28 @@ function RunFacts({ run, editOpen, setEditOpen }: RunFactsProps) {
 
       <div className="flex flex-col items-start gap-2 border-t border-black/10 pt-4 text-sm">
         {run.mapLink && (
-          <LinkText text="Original map" href={run.mapLink} target="_blank" />
+          <a href={run.mapLink} target="_blank" className={ACTION_CLASS}>
+            <ActionIcon name="map" />
+            Original map
+          </a>
+        )}
+
+        {gpxUrl && (
+          // A plain anchor rather than LinkText: this points at a file, so it
+          // must not be handled as an in-app route.
+          <a
+            href={gpxUrl}
+            download={`${run.slug}.gpx`}
+            className={ACTION_CLASS}
+          >
+            <ActionIcon name="download" />
+            Download GPX
+          </a>
         )}
 
         <EditRunDialog run={run} open={editOpen} onOpenChange={setEditOpen}>
-          <button
-            type="button"
-            className="rounded text-tufts-blue outline-none transition-colors hover:text-tufts-brown focus-visible:ring-2 focus-visible:ring-tufts-blue"
-          >
+          <button type="button" className={ACTION_CLASS}>
+            <ActionIcon name="pencil" />
             Suggest an edit
           </button>
         </EditRunDialog>

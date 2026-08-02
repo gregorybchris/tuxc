@@ -3,6 +3,7 @@ import {
   ArrowRight,
   BookOpenText,
   CalendarPlus,
+  DownloadSimple,
   Envelope,
   GithubLogo,
   GlobeHemisphereWest,
@@ -34,6 +35,7 @@ export type IconName =
   | "globe"
   | "book"
   | "calendar-plus"
+  | "download"
   | "letters"
   | "medal"
   | "info"
@@ -89,6 +91,9 @@ export function CommonIcon({
     }
     case "calendar-plus": {
       return <CalendarPlus {...props} />;
+    }
+    case "download": {
+      return <DownloadSimple {...props} />;
     }
     case "letters": {
       return <TextAa {...props} />;
