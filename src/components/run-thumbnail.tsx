@@ -6,7 +6,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 // Strokes are set in pixels rather than grid units so a short loop and a
 // marathon come out drawn with the same weight.
-const STROKE_WIDTH = 2;
+const STROKE_WIDTH = 2.5;
 
 interface RunThumbnailProps {
   run: Run;
@@ -42,7 +42,7 @@ export function RunThumbnail({ run, className }: RunThumbnailProps) {
       aria-label={`Route map for ${run.name}`}
     >
       {outline.loops.map((loop, index) => (
-        <path key={index} d={loop} className="fill-light-blue/20" />
+        <path key={index} d={loop} className="fill-light-blue/[0.16]" />
       ))}
       <path
         d={outline.route}

@@ -26,14 +26,17 @@ export function RunView({
         to={`/runs/${run.id}`}
         className="flex w-full min-w-0 flex-col gap-2 rounded-md outline-none focus-visible:ring-2 focus-visible:ring-tufts-blue focus-visible:ring-offset-2"
       >
-        <div className="relative aspect-[3/2] w-full overflow-hidden rounded-md bg-tufts-brown ring-0 ring-tufts-blue/40 transition-all group-hover/card:ring-4">
+        {/* The brown is carried by the paper, the hairline and the badge rather
+            than by a solid block of it. */}
+        {/* Hover deepens the hairline to the same brown as the distance chip. */}
+        <div className="relative aspect-[3/2] w-full overflow-hidden rounded-md border border-tufts-brown/25 bg-tufts-paper ring-0 ring-tufts-brown/25 transition-all group-hover/card:border-tufts-brown group-hover/card:ring-2">
           <RunThumbnail run={run} className="h-full w-full" />
           <DistanceBadge distance={run.distance} />
         </div>
 
         {/* Padded on the right so a long name never runs under the star. */}
         <div className="group/label flex min-w-0 flex-col pr-8">
-          <span className="text-sm leading-snug text-black/70 transition-colors group-hover/card:text-black">
+          <span className="text-sm leading-snug text-black/85 transition-colors group-hover/card:text-black">
             {run.name}
           </span>
           <span className="truncate text-xs text-black/40">{run.area}</span>
@@ -62,7 +65,8 @@ function DistanceBadge({ distance, className }: DistanceBadgeProps) {
   return (
     <div
       className={cn(
-        "absolute bottom-1.5 right-1.5 flex flex-row items-baseline gap-0.5 rounded-full bg-tufts-blue px-2 py-0.5 text-white ring-2 ring-white/20",
+        // Brown, matching the distance chip on the run page.
+        "absolute bottom-1.5 right-1.5 flex flex-row items-baseline gap-0.5 rounded-full bg-tufts-brown px-2 py-0.5 text-white",
         className,
       )}
     >
