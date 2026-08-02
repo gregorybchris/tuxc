@@ -116,11 +116,23 @@ This command will put your converted map file in the [src/db/jpx](src/db/jpx) fo
 
 > Note: This command also attempts to "simplify" the route by removing collinear points. The route length is reduced by less than 0.01% and the number of points is reduced by 20-40%. This makes the payloads over web requests smaller and decreases load time. You can run the `tuxc benchmark` command to check what the reduction factors are, and pass `--threshold` to either command to trade more length for fewer points.
 
-### 4. Update runs.json
+### 4. Render the map thumbnail
+
+Run the `thumbnails` command to draw the map that shows on your run's card.
+
+```bash
+uv run tuxc thumbnails
+```
+
+This command will put two images — one for the light page and one for the dark one — in the [public/thumbnails](public/thumbnails) folder. Commit them along with everything else.
+
+> Note: The images come from the Mapbox Static Images API, but only once. Routes in the archive never change, so the site serves the pictures itself and no reader's browser ever calls Mapbox. The command only draws routes that do not have an image yet, so adding a run costs two requests rather than the whole archive; pass `--force` to redraw everything, which you would only want after changing how the maps look. It reads your Mapbox token from `.env.local`, the same one the app builds with.
+
+### 5. Update runs.json
 
 Add your run details in [runs.json](src/db/runs.json). Try to include as much information as possible and make sure your entry conforms to the schema at [run.ts](src/lib/models/run.ts). Remember to avoid including easily personally identifiable information and prefer initials over real names.
 
-Give your run the same `slug` as its GPX and JSON files. That slug is what ties the three together, and it is what appears in the URL: a run with the slug `fresh-pond` lives at `/runs/fresh-pond`.
+Give your run the same `slug` as its GPX and JSON files. That slug is what ties them together, and it is what appears in the URL: a run with the slug `fresh-pond` lives at `/runs/fresh-pond`, and its thumbnails are `fresh-pond-light.webp` and `fresh-pond-dark.webp`.
 
 That is the whole checklist. [maps.ts](src/db/maps.ts) picks up every file in [src/db/jpx](src/db/jpx) automatically, so there is no list of routes to maintain by hand.
 

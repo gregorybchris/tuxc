@@ -1,3 +1,4 @@
+import heapq
 import math
 from dataclasses import dataclass
 from itertools import pairwise
@@ -5,10 +6,13 @@ from typing import TYPE_CHECKING
 
 from rich.console import Console
 
+from tuxc.coordinate import Coordinate
 from tuxc.jpx import Jpx
 from tuxc.jpx import Point as JpxPoint
 
 if TYPE_CHECKING:
+    from collections.abc import Sequence
+
     from tuxc.gpx import Gpx, Point
 
 EARTH_RADIUS_KM = 6371
@@ -35,7 +39,7 @@ class GpxCompressor:
         return x, y
 
     @classmethod
-    def dist(cls, point_a: Point, point_b: Point) -> float:
+    def dist(cls, point_a: Coordinate, point_b: Coordinate) -> float:
         """Distance between two points in miles, via the haversine formula."""
         lat_a, lon_a = point_a.latitude, point_a.longitude
         lat_b, lon_b = point_b.latitude, point_b.longitude
@@ -57,7 +61,7 @@ class GpxCompressor:
         return d * KM_TO_MILES
 
     @classmethod
-    def path_dist(cls, points: list[Point]) -> float:
+    def path_dist(cls, points: Sequence[Coordinate]) -> float:
         """Distance covered along a route, in miles."""
         return sum((cls.dist(point_a, point_b) for point_a, point_b in pairwise(points)), 0.0)
 
@@ -80,6 +84,55 @@ class GpxCompressor:
             else:
                 i += 1
         return kept
+
+    @classmethod
+    def detour_cost(cls, point_a: Coordinate, point_b: Coordinate, point_c: Coordinate) -> float:
+        """How much longer stopping at the middle point makes the trip, in miles."""
+        return cls.dist(point_a, point_b) + cls.dist(point_b, point_c) - cls.dist(point_a, point_c)
+
+    @classmethod
+    def simplify_to_count[PointT: Coordinate](cls, points: Sequence[PointT], max_points: int) -> list[PointT]:
+        """Wear a route down to at most max_points, leaving the start and finish where they are.
+
+        Same idea as `simplify_route`, but stopping on a count rather than on a
+        length budget: the corner that bends the route least goes first, and its
+        neighbours are re-costed once it has, so what is left is the corners you
+        would actually be able to see.
+        """
+        if len(points) <= max_points:
+            return list(points)
+
+        previous = list(range(-1, len(points) - 1))
+        following = list(range(1, len(points) + 1))
+        removed = [False] * len(points)
+        # Bumped whenever a neighbour disappears, which stales any heap entry
+        # already sitting there for this point.
+        versions = [0] * len(points)
+
+        def cost_at(index: int) -> float:
+            return cls.detour_cost(points[previous[index]], points[index], points[following[index]])
+
+        candidates = [(cost_at(index), 0, index) for index in range(1, len(points) - 1)]
+        heapq.heapify(candidates)
+
+        n_kept = len(points)
+        while n_kept > max_points and candidates:
+            _, version, index = heapq.heappop(candidates)
+            if removed[index] or version != versions[index]:
+                continue
+
+            removed[index] = True
+            n_kept -= 1
+            before, after = previous[index], following[index]
+            following[before] = after
+            previous[after] = before
+
+            for neighbor in (before, after):
+                if 0 < neighbor < len(points) - 1:
+                    versions[neighbor] += 1
+                    heapq.heappush(candidates, (cost_at(neighbor), versions[neighbor], neighbor))
+
+        return [point for index, point in enumerate(points) if not removed[index]]
 
     @classmethod
     def compress(cls, gpx: Gpx, percent_threshold: float = DEFAULT_THRESHOLD) -> Jpx:

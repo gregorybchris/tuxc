@@ -5,12 +5,10 @@ export type Theme = "light" | "dark";
 const STORAGE_KEY = "tuxc-theme";
 const DARK_QUERY = "(prefers-color-scheme: dark)";
 
-// Matches the band at the top of the page in each theme, so the browser chrome
-// on a phone continues the header rather than cutting it off.
-const THEME_COLORS: Record<Theme, string> = {
-  light: "#3172AE",
-  dark: "#214B73",
-};
+// Matches the band at the top of the page, so the browser chrome on a phone
+// continues the header rather than cutting it off. One value rather than one
+// per theme: the band is official Tufts blue in light and dark alike.
+const HEADER_COLOR = "#3E8EDE";
 
 const listeners = new Set<() => void>();
 
@@ -45,7 +43,7 @@ function applyTheme(theme: Theme): void {
   root.style.colorScheme = theme;
   document
     .querySelector('meta[name="theme-color"]')
-    ?.setAttribute("content", THEME_COLORS[theme]);
+    ?.setAttribute("content", HEADER_COLOR);
   listeners.forEach((listener) => listener());
 }
 

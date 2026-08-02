@@ -15,7 +15,7 @@
     --accent-ink: 255 255 255;
     --accent-hover: 0 46 109; /* tufts-dark-blue */
     --link-hover: 94 75 60; /* tufts-brown */
-    --header: 49 114 174; /* tufts-blue */
+    --header: 62 142 222; /* official Tufts blue, PMS 279 */
     --canvas: 246 241 235; /* tufts-paper */
     --edge: 94 75 60; /* tufts-brown */
     --chip: 94 75 60; /* tufts-brown */
@@ -41,11 +41,10 @@
     --accent-hover: 140 184 255;
     /* Brown next to black goes muddy, so links brighten instead of warming. */
     --link-hover: 168 200 255;
-    /* Still Tufts blue — the same hue and saturation as #3172AE, taken down
-       from 44% lightness to 29% so it sits on a near-black page without
-       glowing. Deepening it any further turns it into navy, which is a
-       different colour rather than a darker one. */
-    --header: 33 75 115;
+    /* The one colour that does not change with the theme. Everything else here
+       is rebuilt for a near-black page, but the band stays official Tufts blue
+       so the top of the site is the same object in both. */
+    --header: 62 142 222;
     --canvas: 16 23 32;
     /* Steel blue, doing what the brown hairline does in light. */
     --edge: 74 108 147;
