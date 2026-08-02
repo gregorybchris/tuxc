@@ -20,6 +20,60 @@
   }
 }
 
+@layer components {
+  /* The home page introduces itself: the text settles into place, then the
+     featured route draws itself the way you would run it, and the ground it
+     encloses washes in behind the line as it closes.
+
+     Every one of these uses `both` for fill-mode. Under prefers-reduced-motion
+     the rule below cuts each duration to nothing, and fill-mode is what makes
+     elements land on their finished state rather than sit at opacity 0. */
+
+  .animate-rise {
+    animation: rise 0.55s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+  }
+
+  .animate-fade {
+    animation: fade 0.8s ease both;
+  }
+
+  /* Paired with pathLength="1" on the path, so a single dash covers the whole
+     route whether it is half a mile or twenty. */
+  .animate-trace {
+    stroke-dasharray: 1;
+    animation: trace 1.6s cubic-bezier(0.45, 0.05, 0.25, 1) both;
+  }
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(0.6rem);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes trace {
+    from {
+      stroke-dashoffset: 1;
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

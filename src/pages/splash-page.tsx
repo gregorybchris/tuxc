@@ -18,11 +18,11 @@ export default function SplashPage() {
     <Page className="flex flex-1 flex-col justify-center md:pt-16">
       <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div className="flex flex-col gap-5">
-          <h1 className="text-balance text-3xl font-bold leading-tight tracking-tight text-black/80 md:text-5xl">
+          <h1 className="animate-rise text-balance text-3xl font-bold leading-tight tracking-tight text-black/80 md:text-5xl">
             TUXC Digital Run Preservation Project
           </h1>
 
-          <p className="max-w-measure text-pretty leading-relaxed text-black/60 md:text-lg">
+          <p className="animate-rise max-w-measure text-pretty leading-relaxed text-black/60 [animation-delay:90ms] md:text-lg">
             <LinkText
               text="Gojumbos"
               href="https://www.gojumbos.com"
@@ -35,13 +35,13 @@ export default function SplashPage() {
             the team&apos;s running routes over the years.
           </p>
 
-          <p className="text-sm text-black/50">
+          <p className="animate-rise text-sm text-black/50 [animation-delay:180ms]">
             <span className="font-bold text-black/70">{count} routes</span>{" "}
             mapped · <span className="font-bold text-black/70">{miles} mi</span>{" "}
             of Boston covered
           </p>
 
-          <div className="flex flex-wrap items-center gap-3 pt-1">
+          <div className="animate-rise flex flex-wrap items-center gap-3 pt-1 [animation-delay:270ms]">
             <LinkButton
               text="Explore the Archive"
               href="/runs"
