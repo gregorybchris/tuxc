@@ -7,6 +7,9 @@ export default {
       colors: {
         "tufts-blue": "#3172AE",
         "tufts-brown": "#5E4B3C",
+        // The brown lightened but kept warm. Fading the brown with opacity alone
+        // turns it grey, which is how the palette loses its warmth.
+        "tufts-paper": "#F6F1EB",
         "tufts-dark-blue": "#002E6D",
         "light-blue": "#4B87F7",
         // Only ever used to fill a favorited star.
