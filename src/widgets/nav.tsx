@@ -14,9 +14,9 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
   { text: "Runs", href: "/runs", iconName: "shoe" },
   { text: "Heatmap", href: "/runs/map", iconName: "map" },
-  { text: "Town lines", href: "/town-lines", iconName: "globe" },
+  { text: "Town Lines", href: "/town-lines", iconName: "globe" },
   { text: "About", href: "/rpp", iconName: "info" },
-  { text: "Submit a run", href: "/edit", iconName: "pin-plus" },
+  { text: "Submit a Run", href: "/edit", iconName: "pin-plus" },
 ];
 
 /** Whether a nav item points at the page you are on, or at a page inside it. */

@@ -1,11 +1,11 @@
 import { LinkText } from "./link-text";
 
 const FOOTER_LINKS = [
-  { text: "All runs", href: "/runs" },
+  { text: "All Runs", href: "/runs" },
   { text: "Heatmap", href: "/runs/map" },
-  { text: "Town lines", href: "/town-lines" },
-  { text: "About the project", href: "/rpp" },
-  { text: "Submit a run", href: "/edit" },
+  { text: "Town Lines", href: "/town-lines" },
+  { text: "Submit a Run", href: "/edit" },
+  { text: "About", href: "/rpp" },
 ];
 
 export function Footer() {
