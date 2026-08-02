@@ -1,4 +1,4 @@
-import { MAPS } from "@/db/maps";
+import { hasRunMap } from "@/db/maps";
 import { Run } from "@/lib/models/run";
 import { getVisibleRuns } from "@/lib/utilities/api-utils";
 import { getRunsByName } from "@/lib/utilities/sort-utils";
@@ -40,10 +40,7 @@ export function CommandPalette({ open, onOpenChange }: CommandPaletteProps) {
 
   // Alphabetical, so an unfiltered list is something you can actually scan.
   const runs = useMemo(
-    () =>
-      getRunsByName(
-        getVisibleRuns().filter((run) => MAPS.some((map) => map.id === run.id)),
-      ),
+    () => getRunsByName(getVisibleRuns().filter((run) => hasRunMap(run.slug))),
     [],
   );
 
@@ -119,7 +116,7 @@ export function CommandPalette({ open, onOpenChange }: CommandPaletteProps) {
             <RunItem
               key={run.id}
               run={run}
-              onSelect={() => go(`/runs/${run.id}`)}
+              onSelect={() => go(`/runs/${run.slug}`)}
             />
           ))}
         </Command.Group>

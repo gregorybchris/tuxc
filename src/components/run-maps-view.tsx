@@ -13,8 +13,8 @@ import { Pin } from "./run-map-pin";
 import { LineSource } from "./run-map-view";
 interface RunMapViewProps {
   runMaps: RunMap[];
-  onClickRun: (id: number) => void;
-  onHoverRun: (id?: number) => void;
+  onClickRun: (slug: string) => void;
+  onHoverRun: (slug?: string) => void;
   className?: string;
 }
 
@@ -60,7 +60,7 @@ export function RunMapsView({
     const closestResult = getClosestRun(event);
     if (closestResult) {
       setMarkerCoordinate(closestResult.coordinate);
-      onClickRun(closestResult.runMap.id);
+      onClickRun(closestResult.runMap.slug);
     }
   };
 
@@ -68,7 +68,7 @@ export function RunMapsView({
     const closestResult = getClosestRun(event);
     if (closestResult) {
       setMarkerCoordinate(closestResult.coordinate);
-      onHoverRun(closestResult.runMap.id);
+      onHoverRun(closestResult.runMap.slug);
     } else {
       setMarkerCoordinate({ latitude: 0, longitude: 0 });
       onHoverRun(undefined);
@@ -108,11 +108,11 @@ export function RunMapsView({
           </Marker>
         )}
 
-        {runMaps.map((runMap, i) => {
+        {runMaps.map((runMap) => {
           const lineFeature = getLineFeature(runMap);
           return (
             <LineSource
-              key={i}
+              key={runMap.slug}
               lineFeature={lineFeature}
               lineOpacity={0.3}
               lineWidth={5}

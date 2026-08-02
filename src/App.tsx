@@ -22,9 +22,9 @@ export default function App() {
             <Route path="/" element={<SplashPage />} />
             <Route path="/runs" element={<RunsPage />} />
             <Route path="/runs/map" element={<RunsMapPage />} />
-            <Route path="/runs/:id" element={<RunPage />} />
+            <Route path="/runs/:slug" element={<RunPage />} />
             <Route path="/edit" element={<SubmitRunPage />} />
-            <Route path="/edit/:id" element={<EditRunPage />} />
+            <Route path="/edit/:slug" element={<EditRunPage />} />
             <Route path="/rpp" element={<RppPage />} />
             <Route path="/town-lines" element={<TownLinesPage />} />
           </Routes>

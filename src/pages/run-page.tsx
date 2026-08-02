@@ -17,7 +17,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function RunPage() {
-  const { id } = useParams<{ id: string }>();
+  const { slug } = useParams<{ slug: string }>();
   const [loading, setLoading] = useState(true);
   const [run, setRun] = useState<Run>();
   const [runMap, setRunMap] = useState<RunMap>();
@@ -27,31 +27,35 @@ export default function RunPage() {
   const client = useRef(new Client());
 
   useEffect(() => {
-    const idNumber = parseInt(id ?? "", 10);
     setLoading(true);
     setRun(undefined);
     setRunMap(undefined);
-    client.current
-      .getRun(idNumber)
-      .then((run) => {
-        setRun(run);
-        return client.current.getRunMap(idNumber).then((runMap) => {
-          setRunMap(runMap);
-          setLoading(false);
-        });
-      })
-      .catch(() => {
+
+    client.current.findRun(slug ?? "").then((found) => {
+      if (!found) {
         setLoading(false);
-      });
-  }, [id]);
+        return;
+      }
+      // An old link carrying the numeric id: swap the address for the slug.
+      if (found.slug !== slug) {
+        navigate(`/runs/${found.slug}`, { replace: true });
+        return;
+      }
+      setRun(found);
+      client.current
+        .getRunMap(found.slug)
+        .then((runMap) => setRunMap(runMap))
+        .finally(() => setLoading(false));
+    });
+  }, [slug, navigate]);
 
   const onStepRun = useCallback(
     (step: number) => {
       if (!run) return;
       client.current.getRuns().then((runs) => {
-        const index = runs.findIndex((r) => r.id === run.id);
+        const index = runs.findIndex((r) => r.slug === run.slug);
         const nextIndex = (index + step + runs.length) % runs.length;
-        navigate(`/runs/${runs[nextIndex].id}`);
+        navigate(`/runs/${runs[nextIndex].slug}`);
       });
     },
     [run, navigate],

@@ -26,16 +26,16 @@ export default function RunsMapPage() {
     client.current.getRuns().then(setRuns);
   }, []);
 
-  function onClickRun(id: number) {
-    navigate(`/runs/${id}`);
+  function onClickRun(slug: string) {
+    navigate(`/runs/${slug}`);
   }
 
-  function onHoverRun(id?: number) {
-    if (id === undefined) {
+  function onHoverRun(slug?: string) {
+    if (slug === undefined) {
       setSelectedRun(null);
       return;
     }
-    setSelectedRun(runs.find((run) => run.id === id) ?? null);
+    setSelectedRun(runs.find((run) => run.slug === slug) ?? null);
   }
 
   return (
