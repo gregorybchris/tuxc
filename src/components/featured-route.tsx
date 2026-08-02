@@ -1,4 +1,4 @@
-import { MAPS } from "@/db/maps";
+import { getRunMap, hasRunMap } from "@/db/maps";
 import { Run } from "@/lib/models/run";
 import { getRouteOutline } from "@/lib/thumbnail/route-outline";
 import { getVisibleRuns } from "@/lib/utilities/api-utils";
@@ -22,9 +22,7 @@ const FEATURED_SLUGS = [
 
 function pickFeaturedRun(): Run | undefined {
   const runs = getVisibleRuns().filter(
-    (run) =>
-      FEATURED_SLUGS.includes(run.slug) &&
-      MAPS.some((map) => map.id === run.id),
+    (run) => FEATURED_SLUGS.includes(run.slug) && hasRunMap(run.slug),
   );
   if (runs.length === 0) return undefined;
   return runs[Math.floor(Math.random() * runs.length)];
@@ -40,7 +38,7 @@ export function FeaturedRoute() {
   // Picked once per mount, so a re-render does not swap the drawing out from
   // under the reader.
   const [run] = useState(pickFeaturedRun);
-  const runMap = run ? MAPS.find((map) => map.id === run.id) : undefined;
+  const runMap = run ? getRunMap(run.slug) : undefined;
   const outline = runMap ? getRouteOutline(runMap) : null;
 
   if (!run || !outline) return null;
@@ -48,7 +46,7 @@ export function FeaturedRoute() {
   return (
     <figure className="flex flex-col items-center gap-3">
       <Link
-        to={`/runs/${run.id}`}
+        to={`/runs/${run.slug}`}
         className="group w-full rounded-xl outline-none focus-visible:ring-2 focus-visible:ring-tufts-blue"
         aria-label={`${run.name}, ${run.distance} miles`}
       >
@@ -80,7 +78,7 @@ export function FeaturedRoute() {
       <figcaption className="flex flex-row items-baseline gap-2 text-sm">
         <span className="text-black/40">Featured route</span>
         <Link
-          to={`/runs/${run.id}`}
+          to={`/runs/${run.slug}`}
           className="font-bold text-black/70 underline-offset-4 hover:underline"
         >
           {run.name}

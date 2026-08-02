@@ -1,36 +1,43 @@
-import { MAPS } from "@/db/maps";
-import { getVisibleRuns } from "../utilities/api-utils";
+import { getRunMap, getRunMaps, hasRunMap } from "@/db/maps";
 import { Run } from "../models/run";
 import { RunMap } from "../models/runMap";
+import { getVisibleRuns } from "../utilities/api-utils";
 
+/** Runs are addressed by slug, which is what the URLs carry. */
 export class Client {
   async getRuns(): Promise<Run[]> {
-    return getVisibleRuns().filter((run) =>
-      MAPS.some((map) => map.id === run.id),
-    );
+    return getVisibleRuns().filter((run) => hasRunMap(run.slug));
   }
 
-  async getRun(id: number): Promise<Run> {
-    const run = getVisibleRuns().find((run) => run.id === id);
+  async getRun(slug: string): Promise<Run> {
+    const run = (await this.getRuns()).find((run) => run.slug === slug);
     if (!run) {
-      throw new Error(`Run not found: ${id}`);
+      throw new Error(`Run not found: ${slug}`);
     }
     return run;
   }
 
-  async getRunMaps(): Promise<RunMap[]> {
-    const runs = getVisibleRuns();
-    return MAPS.filter((map) => runs.some((run) => run.id === map.id));
+  /**
+   * Find a run by slug, falling back to its numeric id.
+   *
+   * Runs used to be linked by id, and those links are out in the world.
+   */
+  async findRun(slugOrId: string): Promise<Run | undefined> {
+    const runs = await this.getRuns();
+    const bySlug = runs.find((run) => run.slug === slugOrId);
+    if (bySlug) return bySlug;
+    const id = Number(slugOrId);
+    return Number.isInteger(id) ? runs.find((run) => run.id === id) : undefined;
   }
 
-  async getRunMap(id: number): Promise<RunMap> {
-    const run = getVisibleRuns().find((run) => run.id === id);
-    if (!run) {
-      throw new Error(`Run metadata not found: ${id}`);
-    }
-    const runMap = MAPS.find((map) => map.id === id);
+  async getRunMaps(): Promise<RunMap[]> {
+    return getRunMaps((await this.getRuns()).map((run) => run.slug));
+  }
+
+  async getRunMap(slug: string): Promise<RunMap> {
+    const runMap = getRunMap(slug);
     if (!runMap) {
-      throw new Error(`Run map not found: ${run.slug}`);
+      throw new Error(`Run map not found: ${slug}`);
     }
     return runMap;
   }

@@ -104,15 +104,15 @@ export class QueryEngine {
     const centerLoc = this.getLoc(coordinate);
     const locs = this.getNeighborLocs(centerLoc);
     const candidates = locs.map((cell) => this.cells[cell.r][cell.c]).flat();
-    const closest = new Map<number, QueryResult>();
+    const closest = new Map<string, QueryResult>();
     for (const candidate of candidates) {
       const distance = haversineDistance(candidate.coordinate, coordinate);
-      const current = closest.get(candidate.runMap.id);
+      const current = closest.get(candidate.runMap.slug);
       if (
         !current ||
         distance < haversineDistance(current.coordinate, coordinate)
       ) {
-        closest.set(candidate.runMap.id, candidate);
+        closest.set(candidate.runMap.slug, candidate);
       }
     }
     return Array.from(closest.values()).sort(

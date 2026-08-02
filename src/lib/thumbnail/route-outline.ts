@@ -105,7 +105,7 @@ export function buildRouteOutline(points: Point[]): RouteOutline | null {
   };
 }
 
-const outlines = new Map<number, RouteOutline | null>();
+const outlines = new Map<string, RouteOutline | null>();
 
 /**
  * The outline for a run, traced once and kept.
@@ -114,10 +114,10 @@ const outlines = new Map<number, RouteOutline | null>();
  * change.
  */
 export function getRouteOutline(runMap: RunMap): RouteOutline | null {
-  const cached = outlines.get(runMap.id);
+  const cached = outlines.get(runMap.slug);
   if (cached !== undefined) return cached;
 
   const outline = buildRouteOutline(runMap.points);
-  outlines.set(runMap.id, outline);
+  outlines.set(runMap.slug, outline);
   return outline;
 }

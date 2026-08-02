@@ -1,14 +1,12 @@
 import { FeaturedRoute } from "@/components/featured-route";
-import { MAPS } from "@/db/maps";
+import { hasRunMap } from "@/db/maps";
 import { getVisibleRuns } from "@/lib/utilities/api-utils";
 import { LinkButton } from "@/widgets/link-button";
 import { LinkText } from "@/widgets/link-text";
 import { Page } from "@/widgets/page";
 
 function getArchiveFacts() {
-  const runs = getVisibleRuns().filter((run) =>
-    MAPS.some((map) => map.id === run.id),
-  );
+  const runs = getVisibleRuns().filter((run) => hasRunMap(run.slug));
   const miles = runs.reduce((total, run) => total + run.distance, 0);
   return { count: runs.length, miles: Math.round(miles) };
 }

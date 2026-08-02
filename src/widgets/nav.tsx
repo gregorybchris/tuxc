@@ -23,8 +23,13 @@ const NAV_ITEMS: NavItem[] = [
 
 /** Whether a nav item points at the page you are on, or at a page inside it. */
 function isCurrent(pathname: string, href: string): boolean {
+  // A single run lives under /runs/<slug>, which the heatmap's own path would
+  // otherwise look like.
   if (href === "/runs") {
-    return pathname === "/runs" || /^\/runs\/\d+$/.test(pathname);
+    return (
+      pathname === "/runs" ||
+      (pathname.startsWith("/runs/") && pathname !== "/runs/map")
+    );
   }
   return pathname === href;
 }

@@ -9,19 +9,18 @@ import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 
 export default function EditRunPage() {
-  const { id } = useParams<{ id: string }>();
+  const { slug } = useParams<{ slug: string }>();
   const [loading, setLoading] = useState(true);
   const [currentRun, setCurrentRun] = useState<Run>();
   const client = useRef(new Client());
 
   useEffect(() => {
-    const idNumber = parseInt(id ?? "", 10);
     setLoading(true);
-    client.current.getRuns().then((runs) => {
-      setCurrentRun(runs.find((run) => run.id === idNumber));
+    client.current.findRun(slug ?? "").then((run) => {
+      setCurrentRun(run);
       setLoading(false);
     });
-  }, [id]);
+  }, [slug]);
 
   if (loading) {
     return (
@@ -64,8 +63,11 @@ export default function EditRunPage() {
         lede={
           <>
             When you edit{" "}
-            <LinkText text={currentRun.name} href={`/runs/${currentRun.id}`} />,
-            site maintainers will review your request and update the run
+            <LinkText
+              text={currentRun.name}
+              href={`/runs/${currentRun.slug}`}
+            />
+            , site maintainers will review your request and update the run
             archive. If your edits are not visible on the site within a few
             days, send an email to{" "}
             <LinkText

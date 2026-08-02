@@ -120,9 +120,9 @@ This command will put your converted map file in the [src/db/jpx](src/db/jpx) fo
 
 Add your run details in [runs.json](src/db/runs.json). Try to include as much information as possible and make sure your entry conforms to the schema at [run.ts](src/lib/models/run.ts). Remember to avoid including easily personally identifiable information and prefer initials over real names.
 
-### 5. Update maps.ts
+Give your run the same `slug` as its GPX and JSON files. That slug is what ties the three together, and it is what appears in the URL: a run with the slug `fresh-pond` lives at `/runs/fresh-pond`.
 
-[maps.ts](src/db/maps.ts) contains a list of all runs in the archive. Add your run there and it will get picked up by the frontend. Try to keep the same structure as existing routes.
+That is the whole checklist. [maps.ts](src/db/maps.ts) picks up every file in [src/db/jpx](src/db/jpx) automatically, so there is no list of routes to maintain by hand.
 
 ## Editing a run
 

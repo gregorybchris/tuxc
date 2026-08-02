@@ -19,13 +19,13 @@ export function RunThumbnail({ run, className }: RunThumbnailProps) {
 
   useEffect(() => {
     let current = true;
-    client.current.getRunMap(run.id).then((runMap) => {
+    client.current.getRunMap(run.slug).then((runMap) => {
       if (current) setRunMap(runMap);
     });
     return () => {
       current = false;
     };
-  }, [run.id]);
+  }, [run.slug]);
 
   const outline = useMemo(
     () => (runMap ? getRouteOutline(runMap) : null),

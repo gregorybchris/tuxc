@@ -23,7 +23,7 @@ export function RunView({
     // min-w-0 keeps the truncated area name from widening its grid track.
     <div className={cn("group/card relative w-full min-w-0", className)}>
       <Link
-        to={`/runs/${run.id}`}
+        to={`/runs/${run.slug}`}
         className="flex w-full min-w-0 flex-col gap-2 rounded-md outline-none focus-visible:ring-2 focus-visible:ring-tufts-blue focus-visible:ring-offset-2"
       >
         {/* The brown is carried by the paper, the hairline and the badge rather
