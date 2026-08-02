@@ -11,6 +11,9 @@
 # vite
 /dist/
 
+# typescript
+tsconfig.tsbuildinfo
+
 # misc
 .DS_Store
 *.pem

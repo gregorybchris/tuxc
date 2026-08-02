@@ -1,6 +1,9 @@
-from pathlib import Path
+from typing import TYPE_CHECKING
 
 from pydantic import BaseModel
+
+if TYPE_CHECKING:
+    from pathlib import Path
 
 
 class Point(BaseModel):

@@ -1,3 +1,4 @@
+import { RunThumbnail } from "@/components/run-thumbnail";
 import { Run } from "@/lib/models/run";
 import { cn } from "@/lib/utilities/style-utils";
 import { Link } from "react-router-dom";
@@ -12,10 +13,11 @@ export function RunView({ run, className }: RunViewProps) {
     <div className={cn("group w-40 transition-all md:w-36", className)}>
       <Link to={`/runs/${run.id}`}>
         <div className="flex flex-col items-start gap-1">
-          <div className="flex h-16 w-full flex-row items-center justify-center rounded-md border-4 border-transparent bg-tufts-brown transition-all group-hover:border-white/40 md:h-24">
+          <div className="relative h-16 w-full overflow-hidden rounded-md border-4 border-transparent bg-tufts-brown transition-all group-hover:border-white/40 md:h-24">
+            <RunThumbnail run={run} className="h-full w-full" />
             <DistanceBadge
               distance={run.distance}
-              className="group-hover:border-white/30"
+              className="absolute bottom-1 right-1 group-hover:border-white/30"
             />
           </div>
           <div className="text-near-white text-sm transition-all group-hover:text-black/70">

@@ -13,13 +13,7 @@
     "ecmaFeatures": { "jsx": true }
   },
   "plugins": ["@typescript-eslint", "react-refresh"],
-  "ignorePatterns": [
-    "dist",
-    "node_modules",
-    "planning",
-    "analysis",
-    "gpx"
-  ],
+  "ignorePatterns": ["dist", "node_modules", "planning", "analysis", "gpx"],
   "rules": {
     "react-refresh/only-export-components": [
       "warn",

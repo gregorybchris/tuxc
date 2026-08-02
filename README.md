@@ -56,6 +56,35 @@ pnpm dev
 
 The site should be available at [localhost:5173](http://localhost:5173)
 
+### 3. Run the checks
+
+The app is linted with [ESLint](https://eslint.org), formatted with [Prettier](https://prettier.io), and type checked with `tsc`.
+
+```bash
+pnpm lint
+pnpm format:check
+pnpm typecheck
+```
+
+`pnpm format` writes the formatting fixes rather than just reporting them.
+
+The Python package in [analysis](analysis) has the same four checks behind a Makefile, run from that folder.
+
+```bash
+cd analysis
+make lint
+make typecheck
+make test
+```
+
+### 4. Enable the git hooks (optional)
+
+A pre-commit hook runs the checks for whichever half of the repo you touched, so a broken commit is caught before CI.
+
+```bash
+git config core.hooksPath .githooks
+```
+
 ## Adding a run
 
 ### 1. Download the GPX file for your route
@@ -85,7 +114,7 @@ uv run tuxc convert
 
 This command will put your converted map file in the [src/db/jpx](src/db/jpx) folder.
 
-> Note: This command also attempts to "simplify" the route by removing collinear points. The route length is reduced by less than 0.01% and the number of points is reduced by 20-40%. This makes the payloads over web requests smaller and decreases load time. You can run the `tuxc benchmark` command to check what the reduction factors are.
+> Note: This command also attempts to "simplify" the route by removing collinear points. The route length is reduced by less than 0.01% and the number of points is reduced by 20-40%. This makes the payloads over web requests smaller and decreases load time. You can run the `tuxc benchmark` command to check what the reduction factors are, and pass `--threshold` to either command to trade more length for fewer points.
 
 ### 4. Update runs.json
 

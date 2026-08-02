@@ -1,5 +1,14 @@
 name: Analysis CI
 
+# ruff, ty, and pytest via uv.
+
+concurrency:
+  group: analysis-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
 on:
   workflow_dispatch:
   push:
@@ -7,38 +16,46 @@ on:
       - main
     paths:
       - analysis/**
+      - gpx/**
       - .github/workflows/analysis-ci.yaml
   pull_request:
     branches:
       - main
     paths:
       - analysis/**
+      - gpx/**
       - .github/workflows/analysis-ci.yaml
 
 jobs:
   analysis-ci:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        python-version:
+          - "3.14"
+
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5.6.0
+      - name: Python ${{ matrix.python-version }} setup
+        uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: ${{ matrix.python-version }}
 
       - name: Setup uv
-        uses: astral-sh/setup-uv@v5
+        uses: astral-sh/setup-uv@v6
         with:
-          version: 0.6.14
+          version: 0.8.17
           enable-cache: true
           cache-local-path: ~/.cache/uv
-          cache-dependency-glob: analysis/pyproject.toml
+          cache-dependency-glob: analysis/uv.lock
 
       - name: Install package
         id: install
         working-directory: analysis
-        run: uv sync --all-extras --dev
+        run: uv sync --dev
 
       - name: Run ruff
         shell: bash
@@ -46,17 +63,18 @@ jobs:
         run: |
           uv run ruff check .
           uv run ruff format . --check
+        if: (success() || failure()) && steps.install.outcome == 'success'
 
-      - name: Run mypy
+      - name: Run ty
         shell: bash
         working-directory: analysis
         run: |
-          uv run mypy src --config pyproject.toml
+          uv run ty check
         if: (success() || failure()) && steps.install.outcome == 'success'
 
       - name: Run pytest
         shell: bash
         working-directory: analysis
         run: |
-          uv run pytest tests
+          uv run pytest tests --log-cli-level=INFO
         if: (success() || failure()) && steps.install.outcome == 'success'
