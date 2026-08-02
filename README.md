@@ -39,13 +39,13 @@ This is a [Vite](https://vitejs.dev) + [React](https://react.dev) single-page ap
 
 ### 1. Create an environment file with a MapBox API key
 
-You can create an account on [mapbox.com](https://www.mapbox.com) and get your own API key for development. Then create a file called `.env.local` in the root of this repository.
+You can create an account on [mapbox.com](https://www.mapbox.com) and get your own API key for development. Then copy [.env.example](.env.example) to `.env.local` in the root of this repository.
 
-```env
-VITE_MAPBOX_TOKEN=<your-key>
+```bash
+cp .env.example .env.local
 ```
 
-> Remember to replace `<your-key>` with the key copied from the Mapbox website
+> Remember to fill in `VITE_MAPBOX_TOKEN` with the key copied from the Mapbox website
 
 ### 2. Startup the dev server
 
