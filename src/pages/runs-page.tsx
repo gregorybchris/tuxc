@@ -97,8 +97,9 @@ export default function RunsPage() {
     favorites,
   ]);
 
-  // Drawing a route outline costs real work per card, so the grid fills in as
-  // you scroll rather than tracing all 150-odd of them up front.
+  // Thumbnails are images and load lazily on their own, but the grid still
+  // fills in as you scroll rather than putting all 150-odd cards in the
+  // document up front.
   const [visibleCount, setVisibleCount] = useState(BATCH_SIZE);
   const sentinelRef = useRef<HTMLDivElement>(null);
 

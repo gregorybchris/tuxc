@@ -1,58 +1,29 @@
-import { Client } from "@/lib/clients/client";
+import { useTheme } from "@/lib/hooks/theme";
 import { Run } from "@/lib/models/run";
-import { RunMap } from "@/lib/models/runMap";
-import { getRouteOutline } from "@/lib/thumbnail/route-outline";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { cn } from "@/lib/utilities/style-utils";
 
-// Strokes are set in pixels rather than grid units so a short loop and a
-// marathon come out drawn with the same weight.
-const STROKE_WIDTH = 2.5;
-
+/**
+ * The map on a run's card.
+ *
+ * Drawn by Mapbox once, by `tuxc thumbnails`, and served from this site rather
+ * than fetched: routes in the archive do not change, so there is nothing here
+ * for a reader's browser to work out or for Mapbox to be asked about.
+ */
 interface RunThumbnailProps {
   run: Run;
   className?: string;
 }
 
 export function RunThumbnail({ run, className }: RunThumbnailProps) {
-  const [runMap, setRunMap] = useState<RunMap>();
-  const client = useRef(new Client());
-
-  useEffect(() => {
-    let current = true;
-    client.current.getRunMap(run.slug).then((runMap) => {
-      if (current) setRunMap(runMap);
-    });
-    return () => {
-      current = false;
-    };
-  }, [run.slug]);
-
-  const outline = useMemo(
-    () => (runMap ? getRouteOutline(runMap) : null),
-    [runMap],
-  );
-
-  if (!outline) return <div className={className} />;
+  const { theme } = useTheme();
 
   return (
-    <svg
-      className={className}
-      viewBox={outline.viewBox}
-      role="img"
-      aria-label={`Route map for ${run.name}`}
-    >
-      {outline.loops.map((loop, index) => (
-        <path key={index} d={loop} className="fill-route/[0.16]" />
-      ))}
-      <path
-        d={outline.route}
-        className="stroke-route"
-        fill="none"
-        strokeWidth={STROKE_WIDTH}
-        strokeLinejoin="round"
-        strokeLinecap="round"
-        vectorEffect="non-scaling-stroke"
-      />
-    </svg>
+    <img
+      src={`/thumbnails/${run.slug}-${theme}.webp`}
+      className={cn("object-cover", className)}
+      loading="lazy"
+      decoding="async"
+      alt={`Route map for ${run.name}`}
+    />
   );
 }

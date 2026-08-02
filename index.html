@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#3172AE" />
+    <meta name="theme-color" content="#3E8EDE" />
     <title>tuxc</title>
     <script>
       // Runs before anything paints, so a reader who has chosen dark — or whose
@@ -25,9 +25,8 @@
           document.documentElement.classList.toggle("dark", dark);
           // Tells the browser which way to paint scrollbars and form controls.
           document.documentElement.style.colorScheme = dark ? "dark" : "light";
-          document
-            .querySelector('meta[name="theme-color"]')
-            .setAttribute("content", dark ? "#214B73" : "#3172AE");
+          // The header band is the same blue in both themes, so the static
+          // theme-color above already holds; nothing to set here.
         } catch (error) {
           // Private browsing can refuse localStorage. Light is the fallback.
         }

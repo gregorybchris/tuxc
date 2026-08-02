@@ -110,8 +110,8 @@ const outlines = new Map<string, RouteOutline | null>();
 /**
  * The outline for a run, traced once and kept.
  *
- * The runs page draws every route in the archive at once, and none of them ever
- * change.
+ * The splash page redraws its featured routes as the reader cycles through
+ * them, and none of them ever change.
  */
 export function getRouteOutline(runMap: RunMap): RouteOutline | null {
   const cached = outlines.get(runMap.slug);
