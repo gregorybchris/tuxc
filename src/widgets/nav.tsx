@@ -1,6 +1,8 @@
 import jumboIcon from "@/assets/images/jumbo-head-simplified.png";
+import { CommandPalette } from "@/components/command-palette";
+import { shortcutLabel } from "@/lib/utilities/shortcut-utils";
 import { cn } from "@/lib/utilities/style-utils";
-import { List, X } from "@phosphor-icons/react";
+import { List, MagnifyingGlass, X } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { CommonIcon, IconName } from "./common-icon";
@@ -29,6 +31,7 @@ function isCurrent(pathname: string, href: string): boolean {
 
 export function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const { pathname } = useLocation();
 
   // Following a link should land you on the new page, not on the menu you
@@ -88,17 +91,36 @@ export function Nav() {
           </ul>
         </nav>
 
-        <button
-          type="button"
-          className="rounded p-1 text-white outline-none transition-colors hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white/70 md:hidden"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-expanded={menuOpen}
-          aria-controls="mobile-menu"
-          aria-label={menuOpen ? "Close menu" : "Open menu"}
-        >
-          {menuOpen ? <X size={28} /> : <List size={28} />}
-        </button>
+        <div className="flex flex-row items-center gap-1">
+          {/* Wide enough to name its own shortcut on desktop; an icon on phones,
+              where there is no keyboard to press it with. */}
+          <button
+            type="button"
+            onClick={() => setSearchOpen(true)}
+            aria-label="Search the archive"
+            className="flex flex-row items-center gap-2 rounded px-2 py-1.5 text-sm text-white/80 outline-none transition-colors hover:bg-white/10 hover:text-white focus-visible:ring-2 focus-visible:ring-white/70 md:border md:border-white/25 md:pl-2.5 md:pr-2"
+          >
+            <MagnifyingGlass size={18} weight="bold" />
+            <span className="hidden md:inline">Search</span>
+            <kbd className="hidden rounded bg-white/15 px-1.5 py-0.5 font-manrope text-[11px] text-white/80 md:inline">
+              {shortcutLabel()}
+            </kbd>
+          </button>
+
+          <button
+            type="button"
+            className="rounded p-1 text-white outline-none transition-colors hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white/70 md:hidden"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-menu"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+          >
+            {menuOpen ? <X size={28} /> : <List size={28} />}
+          </button>
+        </div>
       </div>
+
+      <CommandPalette open={searchOpen} onOpenChange={setSearchOpen} />
 
       <nav
         id="mobile-menu"
