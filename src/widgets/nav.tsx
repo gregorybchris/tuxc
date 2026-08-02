@@ -2,100 +2,137 @@ import jumboIcon from "@/assets/images/jumbo-head-simplified.png";
 import { cn } from "@/lib/utilities/style-utils";
 import { List, X } from "@phosphor-icons/react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { CommonIcon, IconName } from "./common-icon";
 
-type NavProps = {
-  children: React.ReactNode;
-};
+interface NavItem {
+  text: string;
+  href: string;
+  iconName: IconName;
+}
 
-export function Nav({ children }: NavProps) {
+const NAV_ITEMS: NavItem[] = [
+  { text: "Runs", href: "/runs", iconName: "shoe" },
+  { text: "Heatmap", href: "/runs/map", iconName: "map" },
+  { text: "Town lines", href: "/town-lines", iconName: "globe" },
+  { text: "About", href: "/rpp", iconName: "info" },
+  { text: "Submit a run", href: "/edit", iconName: "pin-plus" },
+];
+
+/** Whether a nav item points at the page you are on, or at a page inside it. */
+function isCurrent(pathname: string, href: string): boolean {
+  if (href === "/runs") {
+    return pathname === "/runs" || /^\/runs\/\d+$/.test(pathname);
+  }
+  return pathname === href;
+}
+
+export function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { pathname } = useLocation();
 
-  function open() {
-    setMenuOpen(true);
-  }
-
-  function close() {
+  // Following a link should land you on the new page, not on the menu you
+  // opened to get there.
+  useEffect(() => {
     setMenuOpen(false);
-  }
+  }, [pathname]);
 
   useEffect(() => {
     function handleKeyDown(event: KeyboardEvent) {
-      if (event.key === "Escape") {
-        close();
-      }
+      if (event.key === "Escape") setMenuOpen(false);
     }
-
     document.addEventListener("keydown", handleKeyDown);
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, []);
 
   return (
-    <div>
-      <div className="flex flex-row items-center justify-between bg-tufts-blue px-7 py-3">
-        <Link to="/" onClick={close}>
-          <img src={jumboIcon} width={60} height={60} alt="Jumbo" />
+    <header className="sticky top-0 z-30 bg-tufts-blue">
+      {/* The height here is what the run filters stick to, as top-14 md:top-16. */}
+      <div className="mx-auto flex h-14 max-w-page flex-row items-center justify-between gap-4 px-5 sm:px-8 md:h-16">
+        <Link
+          to="/"
+          className="flex flex-row items-center gap-2.5 rounded outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+          aria-label="tuxc home"
+        >
+          {/* The artwork is wider than it is tall, so only the height is set. */}
+          <img
+            src={jumboIcon}
+            width={4600}
+            height={3694}
+            alt=""
+            className="h-9 w-auto md:h-11"
+          />
+          <span className="text-lg font-bold tracking-tight text-white">
+            tuxc
+          </span>
         </Link>
 
-        <div className="cursor-pointer">
-          {menuOpen && <X color="#FFFFFF" size={32} onClick={close} />}
-          {!menuOpen && <List size={32} color="#FFFFFF" onClick={open} />}
-        </div>
-      </div>
+        <nav aria-label="Main" className="hidden md:block">
+          <ul className="flex flex-row items-center gap-1">
+            {NAV_ITEMS.map((item) => (
+              <li key={item.href}>
+                <Link
+                  to={item.href}
+                  aria-current={
+                    isCurrent(pathname, item.href) ? "page" : undefined
+                  }
+                  className={cn(
+                    "rounded px-3 py-2 text-sm text-white/80 outline-none transition-colors hover:bg-white/10 hover:text-white focus-visible:ring-2 focus-visible:ring-white/70",
+                    isCurrent(pathname, item.href) && "bg-white/15 text-white",
+                  )}
+                >
+                  {item.text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
 
-      <div className="absolute w-full">
-        <div
-          className={cn(
-            "absolute flex w-full flex-col gap-4 px-5 pt-10 font-manrope text-2xl",
-            !menuOpen && "invisible opacity-0",
-          )}
+        <button
+          type="button"
+          className="rounded p-1 text-white outline-none transition-colors hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white/70 md:hidden"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
         >
-          <NavLink text="Home" iconName="home" href="/" onClick={close} />
-          <NavLink text="Runs" iconName="shoe" href="/runs" onClick={close} />
-        </div>
-
-        <div className={cn(menuOpen && "invisible opacity-0")}>{children}</div>
+          {menuOpen ? <X size={28} /> : <List size={28} />}
+        </button>
       </div>
-    </div>
-  );
-}
 
-interface NavLinkProps {
-  text: string;
-  iconName: IconName;
-  href: string;
-  disabled?: boolean;
-  onClick: () => void;
-}
-
-function NavLink({ text, iconName, href, disabled, onClick }: NavLinkProps) {
-  const size = 24;
-  const color = "#3172AE";
-  const weight = "duotone";
-
-  return (
-    <Link
-      to={href}
-      aria-disabled={disabled}
-      tabIndex={disabled ? -1 : undefined}
-      className={cn(
-        "group flex flex-row items-center gap-5",
-        disabled && "pointer-events-none",
-      )}
-      onClick={onClick}
-    >
-      <CommonIcon name={iconName} size={size} color={color} weight={weight} />
-      <div
+      <nav
+        id="mobile-menu"
+        aria-label="Main"
         className={cn(
-          disabled && "text-black/20",
-          !disabled && "text-black underline-offset-4 group-hover:underline",
+          "border-t border-white/15 bg-tufts-blue md:hidden",
+          !menuOpen && "hidden",
         )}
       >
-        {text}
-      </div>
-    </Link>
+        <ul className="flex flex-col px-3 py-2">
+          {NAV_ITEMS.map((item) => (
+            <li key={item.href}>
+              <Link
+                to={item.href}
+                aria-current={
+                  isCurrent(pathname, item.href) ? "page" : undefined
+                }
+                className={cn(
+                  "flex flex-row items-center gap-3 rounded px-2 py-3 text-white/85 outline-none transition-colors hover:bg-white/10 focus-visible:ring-2 focus-visible:ring-white/70",
+                  isCurrent(pathname, item.href) && "bg-white/15 text-white",
+                )}
+              >
+                <CommonIcon
+                  name={item.iconName}
+                  size={20}
+                  color="#FFFFFF"
+                  weight="duotone"
+                />
+                {item.text}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
   );
 }

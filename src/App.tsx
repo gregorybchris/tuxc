@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Footer } from "./widgets/footer";
 import { Nav } from "./widgets/nav";
 
 import EditRunPage from "./pages/edit-run-page";
@@ -13,8 +14,10 @@ import TownLinesPage from "./pages/town-lines-page";
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="font-manrope">
-        <Nav>
+      <div className="flex min-h-screen flex-col font-manrope text-black/80">
+        <Nav />
+
+        <main className="flex flex-1 flex-col">
           <Routes>
             <Route path="/" element={<SplashPage />} />
             <Route path="/runs" element={<RunsPage />} />
@@ -25,7 +28,9 @@ export default function App() {
             <Route path="/rpp" element={<RppPage />} />
             <Route path="/town-lines" element={<TownLinesPage />} />
           </Routes>
-        </Nav>
+        </main>
+
+        <Footer />
       </div>
     </BrowserRouter>
   );

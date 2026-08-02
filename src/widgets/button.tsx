@@ -1,5 +1,12 @@
 import { cn } from "../lib/utilities/style-utils";
 import { CommonIcon, IconName } from "./common-icon";
+import {
+  BUTTON_BASE,
+  ButtonVariant,
+  VARIANT_CLASSES,
+  VARIANT_ICON_COLORS,
+} from "./button-styles";
+
 type ButtonTypes = "button" | "submit" | "reset";
 
 interface ButtonProps {
@@ -7,6 +14,10 @@ interface ButtonProps {
   type?: ButtonTypes;
   onClick?: () => void;
   iconName?: IconName;
+  /** Puts the icon after the text, for anything that moves you forward. */
+  iconSide?: "left" | "right";
+  variant?: ButtonVariant;
+  disabled?: boolean;
   className?: string;
 }
 
@@ -15,28 +26,35 @@ export function Button({
   type,
   onClick,
   iconName,
+  iconSide = "left",
+  variant = "quiet",
+  disabled,
   className,
 }: ButtonProps) {
+  const icon = iconName && (
+    <CommonIcon
+      name={iconName}
+      size={16}
+      color={VARIANT_ICON_COLORS[variant]}
+      weight="duotone"
+    />
+  );
+
   return (
     <button
       onClick={onClick}
       type={type}
+      disabled={disabled}
       className={cn(
-        "hover-bg-black/5 flex cursor-pointer select-none flex-col items-center justify-center rounded px-6 py-1.5 text-center text-sm text-black/80 transition-all hover:bg-black/5 hover:text-black/90",
+        BUTTON_BASE,
+        VARIANT_CLASSES[variant],
+        "cursor-pointer disabled:pointer-events-none disabled:opacity-40",
         className,
       )}
     >
-      <div className="flex flex-row items-center justify-center gap-2">
-        {iconName && (
-          <CommonIcon
-            name={iconName}
-            size={16}
-            color="#3172AE"
-            weight="duotone"
-          />
-        )}
-        <span>{text}</span>
-      </div>
+      {iconSide === "left" && icon}
+      <span>{text}</span>
+      {iconSide === "right" && icon}
     </button>
   );
 }

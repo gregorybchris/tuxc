@@ -88,6 +88,26 @@ export function fitMapBounds(
   );
 }
 
+function median(values: number[]): number {
+  const sorted = [...values].sort((a, b) => a - b);
+  const middle = Math.floor(sorted.length / 2);
+  if (sorted.length % 2 === 1) return sorted[middle];
+  return (sorted[middle - 1] + sorted[middle]) / 2;
+}
+
+/**
+ * The middle of a pile of coordinates, taken as the median of each axis.
+ *
+ * Half the points sit either side of it on both axes, so a handful of routes out
+ * in Concord cannot drag the view away from the ones everybody actually runs.
+ */
+export function medianCenter(coordinates: Coordinate[]): Coordinate {
+  return {
+    latitude: median(coordinates.map((c) => c.latitude)),
+    longitude: median(coordinates.map((c) => c.longitude)),
+  };
+}
+
 export function aggregateCenters(coordinates: Coordinate[]): Coordinate {
   const latitudes = coordinates.map((c) => c.latitude);
   const longitudes = coordinates.map((c) => c.longitude);

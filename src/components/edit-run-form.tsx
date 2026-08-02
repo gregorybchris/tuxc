@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+import { Textarea } from "@/widgets/textarea";
 import { Textbox } from "@/widgets/textbox";
 import { Run } from "../lib/models/run";
 import { cn } from "../lib/utilities/style-utils";
@@ -19,7 +20,7 @@ export function EditRunForm({ run, className }: RunFormProps) {
     <form
       action="https://formspree.io/f/mldepjqk"
       method="POST"
-      className={cn("flex w-full flex-col gap-3 md:w-[400px]", className)}
+      className={cn("flex w-full flex-col gap-3", className)}
     >
       <Textbox
         name="editorName"
@@ -36,12 +37,12 @@ export function EditRunForm({ run, className }: RunFormProps) {
         placeholder="Your email"
         required
       />
-      <Textbox
+      <Textarea
         name="message"
         value={messageText}
         onChange={setMessageText}
         placeholder="Describe what you want to edit"
-        autoComplete="false"
+        rows={5}
         required
       />
       <Textbox
@@ -56,7 +57,7 @@ export function EditRunForm({ run, className }: RunFormProps) {
         onChange={() => {}}
         className="hidden"
       />
-      <div className="flex flex-col items-center">
+      <div className="flex flex-row pt-1">
         <SubmitButton>Submit</SubmitButton>
       </div>
     </form>

@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { cn } from "../lib/utilities/style-utils";
+import { BUTTON_BASE, VARIANT_CLASSES } from "./button-styles";
 
 interface SubmitButtonProps {
   children: ReactNode;
@@ -11,7 +12,9 @@ export function SubmitButton({ children, className }: SubmitButtonProps) {
     <button
       type="submit"
       className={cn(
-        "flex flex-col items-center justify-center rounded-md px-6 py-1.5 text-center text-sm text-black/80 transition-all hover:bg-black/5 focus:outline-none",
+        BUTTON_BASE,
+        VARIANT_CLASSES.primary,
+        "px-5 py-2.5",
         className,
       )}
     >

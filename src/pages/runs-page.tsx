@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import { RunView } from "@/components/run-view";
 import {
@@ -15,21 +15,37 @@ import {
   getRunsByName,
 } from "@/lib/utilities/sort-utils";
 import { cn } from "@/lib/utilities/style-utils";
+import { Button } from "@/widgets/button";
 import { CommonIcon } from "@/widgets/common-icon";
 import { Dropdown } from "@/widgets/dropdown";
-import { LinkButton } from "@/widgets/link-button";
 import { LoadingRunViews } from "@/widgets/loading-run-views";
+import { Page, PageHeader } from "@/widgets/page";
 import { Textbox } from "@/widgets/textbox";
 import * as Slider from "@radix-ui/react-slider";
 
 const MIN_DISTANCE = 0;
 const MAX_DISTANCE = 100;
 
+const SORT_CHOICES = ["Alphabetical", "Distance", "Recently added"];
+
+// How many cards to add each time the end of the grid comes into view.
+const BATCH_SIZE = 24;
+
+function getDistanceRange(runs: Run[]): [number, number] {
+  const minDistance =
+    runs.reduce((min, run) => Math.min(min, run.distance), MAX_DISTANCE) ||
+    MIN_DISTANCE;
+  const maxDistance =
+    runs.reduce((max, run) => Math.max(max, run.distance), MIN_DISTANCE) ||
+    MAX_DISTANCE;
+  return [minDistance, maxDistance];
+}
+
 export default function RunsPage() {
   const [loading, setLoading] = useState(true);
   const [searchText, setSearchText] = useState("");
   const [runs, setRuns] = useState<Run[]>([]);
-  const [sortValue, setSortValue] = useState<string>("Alphabetical");
+  const [sortValue, setSortValue] = useState<string>(SORT_CHOICES[0]);
   const [trailsToggle, setTrailsToggle] = useState<TrailsToggle>(undefined);
   const [favoritesToggle, setFavoritesToggle] = useState<boolean>(false);
   const [favorites, saveFavorites] = useFavorites();
@@ -40,159 +56,244 @@ export default function RunsPage() {
   ]);
 
   useEffect(() => {
-    fetchRuns();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  function fetchRuns() {
     setLoading(true);
-    setRuns([]);
     client.current.getRuns().then((runs) => {
       setRuns(runs);
       setDistanceRange(getDistanceRange(runs));
       setLoading(false);
     });
-  }
-
-  let selectedRuns = runs.filter((run) => runMatchesSearch(run, searchText));
-  if (sortValue === "Alphabetical") {
-    selectedRuns = getRunsByName(selectedRuns);
-  } else if (sortValue === "Recently added") {
-    selectedRuns = getRunsByCreated(selectedRuns);
-  } else if (sortValue === "Distance") {
-    selectedRuns = getRunsByDistance(selectedRuns);
-  }
-
-  selectedRuns = selectedRuns.filter(
-    (run) =>
-      run.distance >= distanceRange[0] && run.distance <= distanceRange[1],
-  );
-
-  selectedRuns = selectedRuns.filter((run) => {
-    if (trailsToggle === "trails") return run.includesTrail;
-    if (trailsToggle === "no trails") return !run.includesTrail;
-    return true;
-  });
-
-  selectedRuns = selectedRuns.filter((run) => {
-    if (favoritesToggle) return favorites.some((fav) => fav.id === run.id);
-    return true;
-  });
-
-  function getDistanceRange(runs: Run[]): [number, number] {
-    const minDistance =
-      runs.reduce((min, run) => Math.min(min, run.distance), MAX_DISTANCE) ||
-      MIN_DISTANCE;
-    const maxDistance =
-      runs.reduce((max, run) => Math.max(max, run.distance), MIN_DISTANCE) ||
-      MAX_DISTANCE;
-    return [minDistance, maxDistance];
-  }
+  }, []);
 
   const [minDistance, maxDistance] = getDistanceRange(runs);
 
+  const selectedRuns = useMemo(() => {
+    let selected = runs.filter((run) => runMatchesSearch(run, searchText));
+
+    if (sortValue === "Alphabetical") selected = getRunsByName(selected);
+    else if (sortValue === "Recently added")
+      selected = getRunsByCreated(selected);
+    else if (sortValue === "Distance") selected = getRunsByDistance(selected);
+
+    selected = selected.filter(
+      (run) =>
+        run.distance >= distanceRange[0] && run.distance <= distanceRange[1],
+    );
+    selected = selected.filter((run) => {
+      if (trailsToggle === "trails") return run.includesTrail;
+      if (trailsToggle === "no trails") return !run.includesTrail;
+      return true;
+    });
+    return selected.filter((run) => {
+      if (favoritesToggle) return favorites.some((fav) => fav.id === run.id);
+      return true;
+    });
+  }, [
+    runs,
+    searchText,
+    sortValue,
+    distanceRange,
+    trailsToggle,
+    favoritesToggle,
+    favorites,
+  ]);
+
+  // Drawing a route outline costs real work per card, so the grid fills in as
+  // you scroll rather than tracing all 150-odd of them up front.
+  const [visibleCount, setVisibleCount] = useState(BATCH_SIZE);
+  const sentinelRef = useRef<HTMLDivElement>(null);
+
+  // Reset on what the reader changed, not on the filtered list itself, so
+  // favoriting a run mid-scroll does not throw them back to the first batch.
+  useEffect(() => {
+    setVisibleCount(BATCH_SIZE);
+  }, [searchText, sortValue, distanceRange, trailsToggle, favoritesToggle]);
+
+  useEffect(() => {
+    const sentinel = sentinelRef.current;
+    if (!sentinel) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (!entries[0].isIntersecting) return;
+        setVisibleCount((count) =>
+          Math.min(count + BATCH_SIZE, selectedRuns.length),
+        );
+      },
+      // Start on the next batch before the reader reaches the end of this one.
+      { rootMargin: "600px" },
+    );
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, [selectedRuns.length, visibleCount]);
+
+  const visibleRuns = selectedRuns.slice(0, visibleCount);
+
+  const filtered =
+    searchText.length > 0 ||
+    trailsToggle !== undefined ||
+    favoritesToggle ||
+    distanceRange[0] !== minDistance ||
+    distanceRange[1] !== maxDistance;
+
+  function toggleFavorite(run: Run) {
+    const isFavorite = favorites.some((favorite) => favorite.id === run.id);
+    saveFavorites(
+      isFavorite
+        ? favorites.filter((favorite) => favorite.id !== run.id)
+        : [...favorites, { id: run.id }],
+    );
+  }
+
+  function clearFilters() {
+    setSearchText("");
+    setTrailsToggle(undefined);
+    setFavoritesToggle(false);
+    setDistanceRange([minDistance, maxDistance]);
+  }
+
   return (
-    <div className="h-full w-full px-5 py-10 md:px-20 md:py-20">
-      <div className="flex w-full flex-col items-center gap-5 md:items-start">
-        <div className="flex w-full flex-col items-center">
-          <div className="text-xl font-bold text-black/60">
-            TUXC Run Preservation Project
+    <Page className="flex flex-col gap-6">
+      <PageHeader
+        title="TUXC Run Preservation Project"
+        lede="All routes in the archive."
+      />
+
+      {!loading && (
+        <div className="sticky top-14 z-20 -mx-5 flex flex-col gap-3 border-b border-black/10 bg-white px-5 py-3 sm:-mx-8 sm:px-8 md:top-16">
+          <div className="flex flex-wrap items-center gap-x-4 gap-y-3">
+            <Textbox
+              value={searchText}
+              onChange={setSearchText}
+              id="search"
+              name="search"
+              placeholder={`Search ${runs.length} runs`}
+              icon="search"
+              className="w-full min-w-[12rem] sm:w-auto sm:flex-1"
+            />
+
+            <div className="flex flex-row items-center gap-2">
+              <label
+                htmlFor="distance-slider"
+                className="text-sm text-black/50"
+              >
+                Distance
+              </label>
+              <Slider.Root
+                id="distance-slider"
+                className="relative flex h-5 w-[9rem] touch-none select-none items-center"
+                min={minDistance}
+                max={maxDistance}
+                step={0.1}
+                minStepsBetweenThumbs={1}
+                value={distanceRange}
+                onValueChange={setDistanceRange}
+              >
+                <Slider.Track className="relative h-[3px] grow rounded-full bg-black/20">
+                  <Slider.Range className="absolute h-full rounded-full bg-black/30" />
+                </Slider.Track>
+                <Slider.Thumb className="flex size-5 cursor-pointer flex-col items-center justify-center rounded-full bg-light-blue text-[10px] text-white outline-none transition-colors hover:bg-tufts-blue focus-visible:ring-2 focus-visible:ring-tufts-blue focus-visible:ring-offset-2">
+                  {distanceRange[0].toFixed(0)}
+                </Slider.Thumb>
+                <Slider.Thumb className="flex size-5 cursor-pointer flex-col items-center justify-center rounded-full bg-light-blue text-[10px] text-white outline-none transition-colors hover:bg-tufts-blue focus-visible:ring-2 focus-visible:ring-tufts-blue focus-visible:ring-offset-2">
+                  {distanceRange[1].toFixed(0)}
+                </Slider.Thumb>
+              </Slider.Root>
+            </div>
+
+            <div className="flex flex-row items-center gap-3">
+              <button
+                type="button"
+                className={cn(
+                  "flex size-[35px] flex-row items-center justify-center rounded border border-black/10 outline-none transition-colors focus-visible:ring-2 focus-visible:ring-tufts-blue md:hover:bg-black/5",
+                  favoritesToggle && "bg-black/15 md:hover:bg-black/20",
+                )}
+                onClick={() => setFavoritesToggle(!favoritesToggle)}
+                aria-pressed={favoritesToggle}
+                title="Favorites"
+              >
+                <CommonIcon
+                  name="star"
+                  size={16}
+                  color="#3172AE"
+                  weight="duotone"
+                />
+              </button>
+
+              <TrailsToggleGroup
+                value={trailsToggle}
+                onChange={setTrailsToggle}
+              />
+
+              <Dropdown
+                value={sortValue}
+                setValue={setSortValue}
+                choices={SORT_CHOICES}
+              />
+            </div>
+          </div>
+
+          <div className="flex flex-row items-center gap-3 text-sm text-black/50">
+            <span>
+              {selectedRuns.length}{" "}
+              {selectedRuns.length === 1 ? "route" : "routes"}
+              {filtered && ` of ${runs.length}`}
+            </span>
+            {filtered && (
+              <Button
+                text="Clear filters"
+                onClick={clearFilters}
+                className="px-2 py-1 text-sm"
+              />
+            )}
           </div>
         </div>
-        <div className="flex w-full flex-col items-center gap-6 md:items-start">
-          <div className="flex flex-row items-center gap-5">
-            <LinkButton text="About the project" href="/rpp" iconName="info" />
-            <LinkButton text="Submit a run" href="/edit" iconName="pin-plus" />
-          </div>
-          {!loading && (
-            <>
-              <div className="flex w-full flex-col items-center gap-5 md:flex-row">
-                <div className="flex flex-row gap-3">
-                  <div className="text-sm">Distance</div>
-                  <Slider.Root
-                    className="relative flex h-5 w-[200px] touch-none select-none items-center"
-                    min={minDistance}
-                    max={maxDistance}
-                    step={0.1}
-                    minStepsBetweenThumbs={1}
-                    value={distanceRange}
-                    onValueChange={setDistanceRange}
-                  >
-                    <Slider.Track className="relative h-[3px] grow rounded-full bg-black/20">
-                      <Slider.Range className="absolute h-full rounded-full bg-black/30" />
-                    </Slider.Track>
-                    <Slider.Thumb className="flex size-5 cursor-pointer flex-col items-center justify-center rounded-[10px] bg-light-blue text-[10px] text-white transition-all hover:bg-tufts-blue focus:outline-none">
-                      {distanceRange[0].toFixed(0)}
-                    </Slider.Thumb>
-                    <Slider.Thumb className="flex size-5 cursor-pointer flex-col items-center justify-center rounded-[10px] bg-light-blue text-[10px] text-white transition-all hover:bg-tufts-blue focus:outline-none">
-                      {distanceRange[1].toFixed(0)}
-                    </Slider.Thumb>
-                  </Slider.Root>
-                </div>
+      )}
 
-                <div className="flex flex-row items-center gap-4">
-                  <div
-                    className={cn(
-                      "flex size-[35px] cursor-pointer flex-row items-center justify-center rounded border border-black/10 transition-all md:hover:bg-black/5",
-                      favoritesToggle && "bg-black/15 md:hover:bg-black/20",
-                    )}
-                    onClick={() => setFavoritesToggle(!favoritesToggle)}
-                    title="Favorites"
-                  >
-                    <CommonIcon
-                      name="star"
-                      className="text-tufts-blue"
-                      size={16}
-                      color="#3172AE"
-                      weight="duotone"
-                    />
-                  </div>
+      {loading && <LoadingRunViews numLoading={15} />}
 
-                  <Dropdown
-                    value={sortValue}
-                    setValue={setSortValue}
-                    choices={["Alphabetical", "Distance", "Recently added"]}
-                  />
-
-                  <TrailsToggleGroup
-                    value={trailsToggle}
-                    onChange={setTrailsToggle}
-                  />
-
-                  <LinkButton text="Heatmap" href="/runs/map" iconName="map" />
-                </div>
-
-                <Textbox
-                  value={searchText}
-                  onChange={setSearchText}
-                  id="search"
-                  name="search"
-                  placeholder={`Search ${selectedRuns.length} runs`}
-                  required
-                  icon="search"
-                  className="w-full md:w-[300px]"
-                />
-              </div>
-            </>
+      {!loading && selectedRuns.length === 0 && (
+        <div className="flex flex-col items-center gap-4 py-16 text-center">
+          <p className="text-black/50">
+            {runs.length === 0
+              ? "No runs in the archive yet."
+              : "No routes match these filters."}
+          </p>
+          {filtered && (
+            <Button
+              text="Clear filters"
+              onClick={clearFilters}
+              variant="outline"
+            />
           )}
         </div>
-        {loading && <LoadingRunViews numLoading={12} />}
+      )}
 
-        {!loading && selectedRuns.length === 0 && (
-          <div className="text-darkest-white/50 pt-5 text-center text-sm">
-            {runs.length === 0 && "No runs created yet"}
-            {runs.length > 0 && "No runs matching search"}
-          </div>
-        )}
-
-        {!loading && selectedRuns.length !== 0 && (
-          <div className="flex flex-row flex-wrap justify-center gap-6 md:justify-start">
-            {selectedRuns.map((run) => (
-              <RunView key={run.id} run={run} />
+      {!loading && selectedRuns.length > 0 && (
+        <>
+          <ul className="grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+            {visibleRuns.map((run) => (
+              <li key={run.id}>
+                <RunView
+                  run={run}
+                  isFavorite={favorites.some((fav) => fav.id === run.id)}
+                  onToggleFavorite={toggleFavorite}
+                />
+              </li>
             ))}
-          </div>
-        )}
-      </div>
-    </div>
+          </ul>
+
+          {/* Scrolling within reach of this loads the next batch. Every route is
+              still counted in the summary above, whether it is drawn yet or not. */}
+          {visibleRuns.length < selectedRuns.length && (
+            <div
+              ref={sentinelRef}
+              className="flex flex-row justify-center py-6 text-sm text-black/40"
+            >
+              Loading more routes…
+            </div>
+          )}
+        </>
+      )}
+    </Page>
   );
 }

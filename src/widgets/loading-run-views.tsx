@@ -13,12 +13,14 @@ export function LoadingRunViews({
   className,
 }: LoadingRunViewsProps) {
   const sequentialDelay = (duration || 1000) / numLoading;
+
   return (
     <div
       className={cn(
-        "flex flex-row flex-wrap justify-center gap-6 md:justify-start",
+        "grid grid-cols-2 gap-x-4 gap-y-6 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5",
         className,
       )}
+      aria-hidden="true"
     >
       {[...Array(numLoading).keys()].map((i) => (
         <LoadingRunView
@@ -38,12 +40,13 @@ interface LoadingRunViewProps {
 
 export function LoadingRunView({ duration, delay }: LoadingRunViewProps) {
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-2">
       <LoadingBox
-        className="md:h-30 h-24 w-40 md:w-36"
+        className="aspect-[3/2] h-auto w-full"
         duration={duration}
         delay={delay}
       />
+      <LoadingBox className="h-3 w-2/3" duration={duration} delay={delay} />
     </div>
   );
 }
