@@ -62,6 +62,10 @@ export default function RppPage() {
           />
           . If you have any questions about the project, feel free to reach out!
         </p>
+
+        <p className="leading-relaxed text-ink/70">
+          Special thanks to LC for his contributions to the site!
+        </p>
       </Section>
     </Page>
   );
