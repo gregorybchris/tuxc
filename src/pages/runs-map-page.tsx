@@ -6,6 +6,7 @@ import { Run } from "@/lib/models/run";
 import { RunMap } from "@/lib/models/runMap";
 import { LinkButton } from "@/widgets/link-button";
 import { LoadingBox } from "@/widgets/loading-box";
+import { Page, PageHeader } from "@/widgets/page";
 import { useNavigate } from "react-router-dom";
 
 export default function RunsMapPage() {
@@ -17,28 +18,15 @@ export default function RunsMapPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetchRuns();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  function fetchRuns() {
     setLoading(true);
-    setRunMaps([]);
     client.current.getRunMaps().then((runMaps) => {
       setRunMaps(runMaps);
       setLoading(false);
     });
-    setRuns([]);
-    client.current.getRuns().then((runs) => {
-      setRuns(runs);
-    });
-  }
+    client.current.getRuns().then(setRuns);
+  }, []);
 
   function onClickRun(id: number) {
-    const run = runs.find((run) => run.id === id);
-    if (run) {
-      console.log(`Clicked run ${run.id} ${run.name} ${run.distance}`);
-    }
     navigate(`/runs/${id}`);
   }
 
@@ -47,45 +35,47 @@ export default function RunsMapPage() {
       setSelectedRun(null);
       return;
     }
-    const run = runs.find((run) => run.id === id);
-    if (run) {
-      setSelectedRun(run);
-    }
+    setSelectedRun(runs.find((run) => run.id === id) ?? null);
   }
 
   return (
-    <div className="h-full w-full py-10 md:px-20 md:py-20">
-      <div className="flex w-full flex-col items-center gap-3 md:items-start">
-        <div className="flex w-full flex-col items-center">
-          <div className="text-xl font-bold text-black/60">
-            TUXC Run Preservation Project
-          </div>
-        </div>
-        <div className="flex w-full flex-row items-center justify-between gap-5 px-5">
-          <LinkButton text="Runs grid" href="/runs" iconName="back" />
-          <div className="text-sm font-bold">
-            {selectedRun && selectedRun.name}
-          </div>
-        </div>
+    <Page className="flex flex-col gap-6">
+      <PageHeader
+        title="Heatmap"
+        lede="Works best on desktop. Hover over a route to see its name, click to open it."
+        actions={
+          <LinkButton
+            text="Back to the grid"
+            href="/runs"
+            iconName="grid"
+            className="-ml-3"
+          />
+        }
+      />
 
-        {loading && (
-          <div className="flex w-full flex-col items-center">
-            <LoadingBox className="h-[500px] w-full" />
-          </div>
-        )}
+      {loading && <LoadingBox className="h-[60vh] min-h-[24rem] w-full" />}
 
-        {!loading && (
-          <div className="w-full">
-            <div className="h-[500px] w-full">
-              <RunMapsView
-                runMaps={runMaps}
-                onClickRun={onClickRun}
-                onHoverRun={onHoverRun}
-              />
+      {!loading && (
+        <div className="relative h-[60vh] min-h-[24rem] w-full overflow-hidden rounded-xl border border-black/10">
+          <RunMapsView
+            runMaps={runMaps}
+            onClickRun={onClickRun}
+            onHoverRun={onHoverRun}
+          />
+
+          {selectedRun && (
+            <div className="pointer-events-none absolute left-3 top-3 flex flex-col rounded-md bg-white/95 px-3 py-1.5 shadow-sm">
+              <span className="text-sm font-bold text-black/80">
+                {selectedRun.name}
+                <span className="pl-2 font-normal text-black/50">
+                  {selectedRun.distance} mi
+                </span>
+              </span>
+              <span className="text-xs text-black/40">{selectedRun.area}</span>
             </div>
-          </div>
-        )}
-      </div>
-    </div>
+          )}
+        </div>
+      )}
+    </Page>
   );
 }

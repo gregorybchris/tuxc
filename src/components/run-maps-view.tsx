@@ -4,13 +4,9 @@ import Map, { MapLayerMouseEvent, MapRef, Marker } from "react-map-gl";
 import { QueryEngine, QueryResult } from "../lib/mapping/query-engine";
 import { RunMap } from "../lib/models/runMap";
 import {
-  aggregateBounds,
-  aggregateCenters,
   Coordinate,
-  fitMapBounds,
-  getCenter,
   getLineFeature,
-  getRunMapBounds,
+  medianCenter,
 } from "../lib/utilities/map-utils";
 import { cn } from "../lib/utilities/style-utils";
 import { Pin } from "./run-map-pin";
@@ -39,12 +35,6 @@ export function RunMapsView({
   );
 
   useEffect(() => {
-    if (mapRef.current) {
-      const bounds = aggregateBounds(
-        runMaps.map((runMap) => getRunMapBounds(runMap)),
-      );
-      fitMapBounds(mapRef.current, bounds, padding, zoomDuration);
-    }
     if (!engineRef.current) {
       engineRef.current = new QueryEngine(runMaps, radius);
     }
@@ -85,10 +75,10 @@ export function RunMapsView({
     }
   }
 
-  const center = aggregateCenters(runMaps.map((runMap) => getCenter(runMap)));
-  const initialZoom = 10;
-  const zoomDuration = 1000;
-  const padding = 20;
+  // Every point of every route, so the middle lands where the running is
+  // densest rather than halfway to the furthest outlier.
+  const center = medianCenter(runMaps.flatMap((runMap) => runMap.points));
+  const initialZoom = 11;
 
   return (
     <div

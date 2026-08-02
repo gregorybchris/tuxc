@@ -26,7 +26,7 @@ export function SubmitRunForm({ className }: RunFormProps) {
     <form
       action="https://formspree.io/f/mldepjqk"
       method="POST"
-      className={cn("flex w-full flex-col gap-3 md:w-[400px]", className)}
+      className={cn("flex w-full flex-col gap-3", className)}
     >
       <Textbox
         name="editorName"
@@ -118,7 +118,7 @@ export function SubmitRunForm({ className }: RunFormProps) {
         placeholder="Anything else? (optional)"
         autoComplete="false"
       />
-      <div className="flex flex-col items-center">
+      <div className="flex flex-row pt-1">
         <SubmitButton>Submit</SubmitButton>
       </div>
     </form>

@@ -1,17 +1,19 @@
-import hurdlesImage from "@/assets/images/tufts-hurdles.jpg";
+import { EditRunDialog } from "@/components/edit-run-dialog";
 import { RunMapView } from "@/components/run-map-view";
 import { Client } from "@/lib/clients/client";
 import { useFavorites } from "@/lib/hooks/favorites-storage";
 import { Run } from "@/lib/models/run";
-import { Favorite } from "@/lib/models/favorite";
 import { RunMap } from "@/lib/models/runMap";
 import { cn } from "@/lib/utilities/style-utils";
 import { Button } from "@/widgets/button";
 import { CommonIcon, IconName } from "@/widgets/common-icon";
+import { FavoriteStar } from "@/widgets/favorite-star";
 import { InitialsBadge } from "@/widgets/initials";
 import { LinkButton } from "@/widgets/link-button";
+import { LinkText } from "@/widgets/link-text";
 import { LoadingBox } from "@/widgets/loading-box";
-import { useEffect, useRef, useState } from "react";
+import { Page } from "@/widgets/page";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
 export default function RunPage() {
@@ -19,23 +21,21 @@ export default function RunPage() {
   const [loading, setLoading] = useState(true);
   const [run, setRun] = useState<Run>();
   const [runMap, setRunMap] = useState<RunMap>();
+  const [editOpen, setEditOpen] = useState(false);
   const [favorites, saveFavorites] = useFavorites();
   const navigate = useNavigate();
   const client = useRef(new Client());
 
   useEffect(() => {
-    fetchRun();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  function fetchRun() {
     const idNumber = parseInt(id ?? "", 10);
     setLoading(true);
+    setRun(undefined);
+    setRunMap(undefined);
     client.current
       .getRun(idNumber)
       .then((run) => {
         setRun(run);
-        client.current.getRunMap(idNumber).then((runMap) => {
+        return client.current.getRunMap(idNumber).then((runMap) => {
           setRunMap(runMap);
           setLoading(false);
         });
@@ -43,180 +43,224 @@ export default function RunPage() {
       .catch(() => {
         setLoading(false);
       });
-  }
+  }, [id]);
 
-  function onNextRun() {
-    if (!run) return;
-    setLoading(true);
-    client.current.getRuns().then((runs) => {
-      const currentRunIndex = runs.findIndex((r) => r.id === run.id);
-      const nextRunIndex = (currentRunIndex + 1) % runs.length;
-      const nextRun = runs[nextRunIndex];
-      navigate(`/runs/${nextRun.id}`);
-    });
-  }
+  const onStepRun = useCallback(
+    (step: number) => {
+      if (!run) return;
+      client.current.getRuns().then((runs) => {
+        const index = runs.findIndex((r) => r.id === run.id);
+        const nextIndex = (index + step + runs.length) % runs.length;
+        navigate(`/runs/${runs[nextIndex].id}`);
+      });
+    },
+    [run, navigate],
+  );
+
+  // Arrow keys walk the archive, the same as the Previous and Next buttons.
+  useEffect(() => {
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+      if (event.metaKey || event.ctrlKey || event.altKey) return;
+      // Not while the reader is typing, or while the edit dialog has the page.
+      if (editOpen) return;
+      const target = event.target as HTMLElement | null;
+      if (target?.closest("input, textarea, select, [contenteditable=true]")) {
+        return;
+      }
+      event.preventDefault();
+      onStepRun(event.key === "ArrowRight" ? 1 : -1);
+    }
+
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [onStepRun, editOpen]);
 
   const isFavorite = run
     ? favorites.some((favorite) => favorite.id === run.id)
     : false;
 
-  return (
-    <div className="bg-background flex h-full w-full flex-row">
-      <div className="flex h-full w-full flex-col py-5 md:py-8">
-        {loading && (
-          <div className="flex w-full flex-col items-center">
-            <div className="flex w-full flex-col gap-3 px-2 md:w-[80%] md:px-2">
-              <LoadingBox className="h-12 w-full" />
-              <LoadingBox className="h-40 w-full" />
-              <LoadingBox className="h-[400px] w-full" />
-            </div>
-          </div>
-        )}
+  if (loading) {
+    return (
+      <Page className="flex flex-col gap-6">
+        <LoadingBox className="h-4 w-24" />
+        <LoadingBox className="h-8 w-2/3 max-w-sm" />
+        <div className="grid gap-6 lg:grid-cols-[1fr_20rem]">
+          <LoadingBox className="h-[24rem] w-full lg:h-[34rem]" />
+          <LoadingBox className="h-64 w-full" />
+        </div>
+      </Page>
+    );
+  }
 
-        {!loading && (!run || !runMap) && (
-          <div className="relative flex w-full flex-col items-center justify-center">
-            <div className="relative flex w-full flex-row justify-center py-8 text-lg">
-              Run not found
-            </div>
-            <div className="relative h-20 w-full bg-tufts-blue">
-              <img
-                src={hurdlesImage}
-                className="absolute inset-0 h-full w-full object-contain"
-                alt="Tufts hurdles"
-              />
-            </div>
-          </div>
-        )}
-
-        {!loading && run && runMap && (
-          <div className="flex w-full flex-col items-center">
-            <div className="flex w-full flex-col gap-4 md:w-[80%]">
-              <div className="flex flex-col gap-3 px-5 md:px-0">
-                <div className="flex flex-row items-center justify-between">
-                  <LinkButton href="/runs" text="All Runs" iconName="back" />
-                  <Button
-                    text="Next"
-                    iconName="next"
-                    onClick={onNextRun}
-                    className="px-2"
-                  />
-                </div>
-
-                <RunDetails
-                  run={run}
-                  favorites={favorites}
-                  isFavorite={isFavorite}
-                  saveFavorites={saveFavorites}
-                />
-              </div>
-
-              <div className="flex flex-col items-center">
-                <div className="h-[500px] w-full">
-                  <RunMapView runMap={runMap} />
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
-interface RunDetailsProps {
-  run: Run;
-  isFavorite: boolean;
-  favorites: Favorite[];
-  saveFavorites: (favorites: Favorite[]) => void;
-}
-
-function RunDetails({
-  run,
-  isFavorite,
-  favorites,
-  saveFavorites,
-}: RunDetailsProps) {
-  const firstRunYear = run.firstRunYear ? `${run.firstRunYear}` : "Unknown";
-
-  function onClickFavorite() {
-    if (isFavorite) {
-      saveFavorites(favorites.filter((favorite) => favorite.id !== run.id));
-    } else {
-      saveFavorites([...favorites, { id: run.id }]);
-    }
+  if (!run || !runMap) {
+    return (
+      <Page
+        width="measure"
+        className="flex flex-col items-center gap-5 py-24 text-center"
+      >
+        <h1 className="text-2xl font-bold tracking-tight text-black/80">
+          That route is not in the archive
+        </h1>
+        <p className="text-black/60">
+          The link may be old, or the run may not have been mapped yet.
+        </p>
+        <LinkButton
+          text="Browse all runs"
+          href="/runs"
+          iconName="shoe"
+          variant="primary"
+          className="px-4 py-2.5"
+        />
+      </Page>
+    );
   }
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex w-full flex-row items-center justify-between gap-3">
-        <div className="flex w-full flex-row items-center gap-2">
-          <a href={run.mapLink} target="_blank">
-            <div className="text-lg font-bold">{run.name}</div>
-          </a>
-          <div onClick={onClickFavorite} className="cursor-pointer p-1">
-            <CommonIcon
-              name="star"
-              size={16}
-              color={isFavorite ? "#3172AE" : "#3172AE"}
-              weight={isFavorite ? "fill" : "regular"}
-            />
-          </div>
+    <Page className="flex flex-col gap-5">
+      <LinkButton
+        text="All runs"
+        href="/runs"
+        iconName="back"
+        className="-ml-3 self-start"
+      />
+
+      <div className="flex flex-col gap-4 border-b border-black/10 pb-5 sm:flex-row sm:items-start sm:justify-between">
+        <div className="flex flex-row items-center gap-1">
+          <h1 className="text-balance text-2xl font-bold tracking-tight text-black/80 md:text-3xl">
+            {run.name}
+          </h1>
+          <FavoriteStar
+            isFavorite={isFavorite}
+            size={20}
+            onToggle={() =>
+              saveFavorites(
+                isFavorite
+                  ? favorites.filter((favorite) => favorite.id !== run.id)
+                  : [...favorites, { id: run.id }],
+              )
+            }
+          />
         </div>
-        <LinkButton text="Edit" href={`/edit/${run.id}`} iconName="pencil" />
+
+        <div className="flex shrink-0 flex-row items-center gap-1">
+          <Button
+            text="Previous"
+            iconName="back"
+            onClick={() => onStepRun(-1)}
+          />
+          <Button
+            text="Next"
+            iconName="next"
+            iconSide="right"
+            onClick={() => onStepRun(1)}
+          />
+        </div>
       </div>
 
-      <div className="flex flex-col gap-2">
-        <RunDetail
-          name="Distance"
-          detail={
-            <span className="rounded-md bg-tufts-brown px-2 py-0.5 text-white">{`${run.distance} mi`}</span>
-          }
-          iconName="ruler"
-        />
-        <RunDetail name="Area" detail={run.area} iconName="globe" />
-        <RunDetail
-          name={run.includesTrail ? "Includes trail" : "No trail"}
-          iconName={run.includesTrail ? "tree" : "road"}
-          className="items-center"
-        />
-        <RunDetail
-          name="First run year"
-          detail={firstRunYear}
-          iconName="calendar-plus"
-        />
-        {run.firstRunBy && (
-          <RunDetail
-            name="First run by"
-            detail={<InitialsList initialsList={run.firstRunBy} />}
-            iconName="medal"
-          />
-        )}
-        {run.editors && (
-          <RunDetail
-            name="Editors"
-            detail={<InitialsList initialsList={run.editors} />}
-            iconName="user-plus"
-          />
-        )}
-        {run.description && (
-          <RunDetail
-            name="Description"
-            detail={run.description}
-            iconName="letters"
-            blockDetail={true}
-            className="items-start"
-          />
-        )}
-        {run.lore && (
-          <RunDetail
-            name="Lore"
-            detail={run.lore}
-            iconName="book"
-            blockDetail={true}
-            className="items-start"
-          />
-        )}
+      <div className="grid gap-6 lg:grid-cols-[1fr_22rem] lg:gap-8">
+        <div className="h-[24rem] w-full overflow-hidden rounded-xl border border-black/10 sm:h-[28rem] lg:h-[34rem]">
+          <RunMapView runMap={runMap} />
+        </div>
+
+        <RunFacts run={run} editOpen={editOpen} setEditOpen={setEditOpen} />
       </div>
+    </Page>
+  );
+}
+
+interface RunFactsProps {
+  run: Run;
+  editOpen: boolean;
+  setEditOpen: (open: boolean) => void;
+}
+
+function RunFacts({ run, editOpen, setEditOpen }: RunFactsProps) {
+  return (
+    <aside className="flex h-fit flex-col gap-4 rounded-xl border border-black/10 p-5">
+      <dl className="flex flex-col gap-3">
+        <Fact iconName="ruler" term="Distance">
+          <span className="rounded-md bg-tufts-brown px-2 py-0.5 text-sm text-white">
+            {run.distance} mi
+          </span>
+        </Fact>
+
+        <Fact iconName="globe" term="Area">
+          {run.area}
+        </Fact>
+
+        <Fact iconName={run.includesTrail ? "tree" : "road"} term="Surface">
+          {run.includesTrail ? "Includes trail" : "Road only"}
+        </Fact>
+
+        <Fact iconName="calendar-plus" term="First run">
+          {run.firstRunYear ?? "Year unknown"}
+        </Fact>
+
+        {run.firstRunBy && (
+          <Fact iconName="medal" term="First run by">
+            <InitialsList initialsList={run.firstRunBy} />
+          </Fact>
+        )}
+
+        {run.editors && (
+          <Fact iconName="user-plus" term="Editors">
+            <InitialsList initialsList={run.editors} />
+          </Fact>
+        )}
+      </dl>
+
+      {run.description && (
+        <Note iconName="letters" heading="Description">
+          {run.description}
+        </Note>
+      )}
+
+      {run.lore && (
+        <Note iconName="book" heading="Lore">
+          {run.lore}
+        </Note>
+      )}
+
+      <div className="flex flex-col items-start gap-2 border-t border-black/10 pt-4 text-sm">
+        {run.mapLink && (
+          <LinkText text="Original map" href={run.mapLink} target="_blank" />
+        )}
+
+        <EditRunDialog run={run} open={editOpen} onOpenChange={setEditOpen}>
+          <button
+            type="button"
+            className="rounded text-tufts-blue outline-none transition-colors hover:text-tufts-brown focus-visible:ring-2 focus-visible:ring-tufts-blue"
+          >
+            Suggest an edit
+          </button>
+        </EditRunDialog>
+      </div>
+    </aside>
+  );
+}
+
+interface NoteProps {
+  heading: string;
+  iconName: IconName;
+  children: React.ReactNode;
+}
+
+/** A paragraph of writing about the run, sitting under the facts it belongs to. */
+function Note({ heading, iconName, children }: NoteProps) {
+  return (
+    <div className="flex flex-col gap-1.5 border-t border-black/10 pt-4">
+      <h2 className="flex flex-row items-center gap-2 text-xs font-bold uppercase tracking-[0.14em] text-black/40">
+        <CommonIcon
+          name={iconName}
+          className="shrink-0"
+          size={16}
+          color="#3172AE"
+          weight="duotone"
+        />
+        {heading}
+      </h2>
+      <p className="text-sm leading-relaxed text-black/70">{children}</p>
     </div>
   );
 }
@@ -227,7 +271,7 @@ interface InitialsListProps {
 
 function InitialsList({ initialsList }: InitialsListProps) {
   return (
-    <div className="flex flex-row gap-1">
+    <div className="flex flex-row flex-wrap gap-1">
       {initialsList.map((initials) => (
         <InitialsBadge initials={initials} key={initials} />
       ))}
@@ -235,47 +279,32 @@ function InitialsList({ initialsList }: InitialsListProps) {
   );
 }
 
-interface RunDetailProps {
-  name?: string;
-  detail?: string | React.ReactNode;
-  iconName?: IconName;
-  blockDetail?: boolean;
+interface FactProps {
+  term: string;
+  iconName: IconName;
+  children: React.ReactNode;
   className?: string;
 }
 
-function RunDetail({
-  name,
-  detail,
-  iconName,
-  blockDetail,
-  className,
-}: RunDetailProps) {
+function Fact({ term, iconName, children, className }: FactProps) {
   return (
     <div
       className={cn(
-        "flex w-full flex-row items-center gap-2 text-sm",
-        blockDetail && "flex-col",
+        "grid grid-cols-[7.5rem_1fr] items-center gap-2 text-sm",
         className,
       )}
     >
-      <div className="flex flex-row items-center gap-2">
-        {iconName && (
-          <CommonIcon
-            name={iconName}
-            className="h-4 w-4 shrink-0"
-            size={16}
-            color="#3172AE"
-            weight="duotone"
-          />
-        )}
-        {name && <span className="font-bold text-black/60">{name}</span>}
-      </div>
-      {detail && (
-        <div className="flex flex-row gap-2">
-          {!blockDetail && <span className="text-black/20">•</span>}
-          <span className={cn(blockDetail && "pl-[24px]")}>{detail}</span>
-        </div>
-      )}
+      <dt className="flex flex-row items-center gap-2 text-black/50">
+        <CommonIcon
+          name={iconName}
+          className="shrink-0"
+          size={16}
+          color="#3172AE"
+          weight="duotone"
+        />
+        {term}
+      </dt>
+      <dd className="text-black/80">{children}</dd>
     </div>
   );
 }

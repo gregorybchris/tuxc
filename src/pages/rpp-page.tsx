@@ -1,12 +1,14 @@
 import { LinkButton } from "@/widgets/link-button";
 import { LinkText } from "@/widgets/link-text";
+import { Page, PageHeader, Section } from "@/widgets/page";
 
 export default function RppPage() {
   return (
-    <div className="flex flex-row justify-center gap-10 px-5 py-14 md:px-[20%] md:py-20">
-      <div className="flex flex-col items-center justify-center gap-7">
-        <div className="text-xl font-bold text-black/60">About the Project</div>
-        <span className="text-justify indent-4">
+    <Page width="measure" className="flex flex-col gap-10">
+      <PageHeader title="About the Project" />
+
+      <Section>
+        <p className="leading-relaxed text-black/70">
           Welcome to the Run Preservation Project! This initiative was started
           in 2020 by TW with the goal of ensuring the preservation of our
           team&apos;s running routes. New runs have been added to the RPP
@@ -16,15 +18,34 @@ export default function RppPage() {
           the answer is yes, <LinkText href="/edit" text="run it up" />. All
           names must be initials when talking about lore etc. Go Jumbos Go RPP
           let&apos;s record some runs!
-        </span>
-        <LinkButton text="View all runs" href="/runs" iconName="shoe" />
-        <span className="text-justify indent-4">
+        </p>
+
+        <div className="flex flex-wrap gap-2 pt-1">
+          <LinkButton
+            text="Submit a run"
+            href="/edit"
+            iconName="pin-plus"
+            variant="primary"
+            className="px-4 py-2.5"
+          />
+          <LinkButton
+            text="View all runs"
+            href="/runs"
+            iconName="shoe"
+            variant="outline"
+            className="px-4 py-2.5"
+          />
+        </div>
+      </Section>
+
+      <Section heading="Helping out">
+        <p className="leading-relaxed text-black/70">
           This site cannot function without volunteers to review run submissions
           and edits. If you want to volunteer to help out please shoot an email
           to{" "}
           <LinkText
             text="tuxc.org@gmail.com"
-            href={`mailto:tuxc.org@gmail.com`}
+            href="mailto:tuxc.org@gmail.com"
           />
           . You will need to create GitHub account to make edits, but you do not
           need to know how to code. Bug reports and feature requests can either
@@ -37,11 +58,11 @@ export default function RppPage() {
           or by sending an email to{" "}
           <LinkText
             text="tuxc.org@gmail.com"
-            href={`mailto:tuxc.org@gmail.com`}
+            href="mailto:tuxc.org@gmail.com"
           />
           . If you have any questions about the project, feel free to reach out!
-        </span>
-      </div>
-    </div>
+        </p>
+      </Section>
+    </Page>
   );
 }
