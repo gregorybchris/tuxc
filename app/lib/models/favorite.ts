@@ -1,3 +1,0 @@
-type Favorite = {
-  id: number;
-};

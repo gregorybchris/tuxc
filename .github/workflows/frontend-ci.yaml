@@ -49,6 +49,9 @@ jobs:
       - name: Run eslint
         run: pnpm lint
 
+      - name: Build
+        run: pnpm build
+
       - name: Run danger
         run: pnpm danger ci
         env:
