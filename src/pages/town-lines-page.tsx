@@ -1,40 +1,51 @@
 import { Pin } from "@/components/run-map-pin";
+import { useMapColors, useMapStyle } from "@/lib/hooks/theme";
 import { pinImageUrl } from "@/lib/utilities/pin-utils";
 import { Page, PageHeader } from "@/widgets/page";
-import { useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import Map, { Layer, MapRef, Source } from "react-map-gl";
 import intersections from "../db/geos/intersections.json";
 import townLines from "../db/geos/town-line-poly.json";
 
-// The lighter blue reads against the brown town boundaries.
-const PIN_COLOR = "#4B87F7";
-const BOUNDARY_COLOR = "#5E4B3C";
 const PIN_IMAGE = "crossing-pin";
 // Drawn at twice its display size so it stays sharp on a retina screen.
 const PIN_PIXELS = 48;
 
 export default function TownLinesPage() {
   const mapRef = useRef<MapRef>(null);
+  const mapStyle = useMapStyle();
+  // The lighter blue reads against the town boundaries in either theme.
+  const colors = useMapColors();
   const [pinReady, setPinReady] = useState(false);
 
-  // The crossings are drawn as a symbol layer, so the pin has to be registered
-  // with the map before the layer that names it can render.
-  function onMapLoad() {
+  // Which colour the registered pin was drawn in, so a redundant styledata
+  // event does not redraw thousands of icons for nothing.
+  const pinColor = useRef<string>();
+
+  /**
+   * Registers the crossing pin with the map.
+   *
+   * The crossings are a symbol layer, so the image has to exist before the
+   * layer naming it can render. It has to be done again after every style
+   * change: swapping to the dark base style drops the images the old one held.
+   */
+  const registerPin = useCallback(() => {
     const map = mapRef.current?.getMap();
     if (!map) return;
-    if (map.hasImage(PIN_IMAGE)) {
+    if (map.hasImage(PIN_IMAGE) && pinColor.current === colors.pin) {
       setPinReady(true);
       return;
     }
+
     const image = new Image(PIN_PIXELS, PIN_PIXELS);
     image.onload = () => {
-      if (!map.hasImage(PIN_IMAGE)) {
-        map.addImage(PIN_IMAGE, image, { pixelRatio: 2 });
-      }
+      if (map.hasImage(PIN_IMAGE)) map.removeImage(PIN_IMAGE);
+      map.addImage(PIN_IMAGE, image, { pixelRatio: 2 });
+      pinColor.current = colors.pin;
       setPinReady(true);
     };
-    image.src = pinImageUrl(PIN_COLOR, PIN_PIXELS);
-  }
+    image.src = pinImageUrl(colors.pin, PIN_PIXELS);
+  }, [colors.pin]);
 
   return (
     <Page className="flex flex-col gap-6">
@@ -43,7 +54,7 @@ export default function TownLinesPage() {
         lede="It has long been a tradition for TUXC to race for the town lines in the Boston Area. Here, you can find a map of the surrounding town borders along with all crossing points marked with a pin."
       />
 
-      <div className="h-[60vh] min-h-[24rem] w-full overflow-hidden rounded-xl border border-black/10">
+      <div className="h-[60vh] min-h-[24rem] w-full overflow-hidden rounded-xl border border-ink/10">
         <Map
           ref={mapRef}
           initialViewState={{
@@ -54,9 +65,10 @@ export default function TownLinesPage() {
           }}
           mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
           style={{ width: "100%", height: "100%" }}
-          mapStyle="mapbox://styles/mapbox/outdoors-v12"
+          mapStyle={mapStyle}
           attributionControl={false}
-          onLoad={onMapLoad}
+          onLoad={registerPin}
+          onStyleData={registerPin}
         >
           {townLines && (
             <Source id="geojson-source" type="geojson" data={townLines}>
@@ -64,7 +76,7 @@ export default function TownLinesPage() {
                 id="geojson-line-layer"
                 type="line"
                 paint={{
-                  "line-color": BOUNDARY_COLOR,
+                  "line-color": colors.boundary,
                   "line-width": 2,
                 }}
               />
@@ -95,8 +107,8 @@ export default function TownLinesPage() {
         </Map>
       </div>
 
-      <p className="flex flex-row items-center gap-2 text-sm text-black/50">
-        <Pin color={PIN_COLOR} size={14} />
+      <p className="flex flex-row items-center gap-2 text-sm text-ink/50">
+        <Pin color={colors.pin} size={14} />
         Crossing point
       </p>
     </Page>

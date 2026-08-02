@@ -8,7 +8,7 @@ export default function RppPage() {
       <PageHeader title="About the Project" />
 
       <Section>
-        <p className="leading-relaxed text-black/70">
+        <p className="leading-relaxed text-ink/70">
           Welcome to the Run Preservation Project! This initiative was started
           in 2020 by TW with the goal of ensuring the preservation of our
           team&apos;s running routes. New runs have been added to the RPP
@@ -39,7 +39,7 @@ export default function RppPage() {
       </Section>
 
       <Section heading="Helping out">
-        <p className="leading-relaxed text-black/70">
+        <p className="leading-relaxed text-ink/70">
           This site cannot function without volunteers to review run submissions
           and edits. If you want to volunteer to help out please shoot an email
           to{" "}

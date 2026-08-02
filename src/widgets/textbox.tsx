@@ -42,8 +42,8 @@ export function Textbox({
       className={cn("relative flex w-full flex-row items-center", className)}
     >
       {icon === "search" && (
-        <div className="absolute left-2.5">
-          <MagnifyingGlass size={16} color="#999" weight="bold" />
+        <div className="absolute left-2.5 text-ink/45">
+          <MagnifyingGlass size={16} weight="bold" />
         </div>
       )}
       <input
@@ -51,7 +51,7 @@ export function Textbox({
         name={name}
         type={fieldType}
         className={cn(
-          "w-full rounded border border-black/20 px-3 py-2 text-sm text-black/70 outline-none placeholder:text-black/45 focus-visible:border-black/30 focus-visible:ring-2 focus-visible:ring-tufts-blue/40",
+          "w-full rounded border border-ink/20 bg-transparent px-3 py-2 text-sm text-ink/70 outline-none placeholder:text-ink/45 focus-visible:border-ink/30 focus-visible:ring-2 focus-visible:ring-accent/40",
           xVisible && "pr-9",
           icon && "pl-8",
         )}
@@ -65,12 +65,12 @@ export function Textbox({
       />
       <div
         className={cn(
-          "visible absolute right-2.5 cursor-pointer rounded-full p-0.5 transition-all hover:bg-black/5 md:hidden",
+          "visible absolute right-2.5 cursor-pointer rounded-full p-0.5 text-ink/45 transition-all hover:bg-ink/5 md:hidden",
           !xVisible && "hidden",
         )}
         onClick={() => onChange("")}
       >
-        <X size={16} color="999999" weight="bold" />
+        <X size={16} weight="bold" />
       </div>
     </div>
   );

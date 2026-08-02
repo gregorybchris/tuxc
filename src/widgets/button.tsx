@@ -4,7 +4,7 @@ import {
   BUTTON_BASE,
   ButtonVariant,
   VARIANT_CLASSES,
-  VARIANT_ICON_COLORS,
+  VARIANT_ICON_CLASSES,
 } from "./button-styles";
 
 type ButtonTypes = "button" | "submit" | "reset";
@@ -35,7 +35,7 @@ export function Button({
     <CommonIcon
       name={iconName}
       size={16}
-      color={VARIANT_ICON_COLORS[variant]}
+      className={VARIANT_ICON_CLASSES[variant]}
       weight="duotone"
     />
   );

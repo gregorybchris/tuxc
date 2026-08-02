@@ -1,3 +1,4 @@
+import { useMapColors, useMapStyle } from "@/lib/hooks/theme";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useRef, useState } from "react";
 import Map, { MapLayerMouseEvent, MapRef, Marker } from "react-map-gl";
@@ -25,6 +26,8 @@ export function RunMapsView({
   className,
 }: RunMapViewProps) {
   const mapRef = useRef<MapRef>(null);
+  const mapStyle = useMapStyle();
+  const colors = useMapColors();
   // Radius trades off how long it takes to process a query (larger radius takes longer)
   // with how precise you have to be when hovering to see the pin (smaller radius is more difficult to hover).
   // This value should generally be a few streets wide.
@@ -93,7 +96,7 @@ export function RunMapsView({
         }}
         mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
         style={{ width: "100%", height: "100%" }}
-        mapStyle="mapbox://styles/mapbox/outdoors-v12"
+        mapStyle={mapStyle}
         attributionControl={false}
         onClick={onClick}
         onMouseMove={onHover}
@@ -104,7 +107,7 @@ export function RunMapsView({
             longitude={markerCoordinate.longitude}
             anchor="bottom"
           >
-            <Pin color="#3172AE" />
+            <Pin color={colors.pin} />
           </Marker>
         )}
 

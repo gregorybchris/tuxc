@@ -56,7 +56,7 @@ export default function RunsMapPage() {
       {loading && <LoadingBox className="h-[60vh] min-h-[24rem] w-full" />}
 
       {!loading && (
-        <div className="relative h-[60vh] min-h-[24rem] w-full overflow-hidden rounded-xl border border-black/10">
+        <div className="relative h-[60vh] min-h-[24rem] w-full overflow-hidden rounded-xl border border-ink/10">
           <RunMapsView
             runMaps={runMaps}
             onClickRun={onClickRun}
@@ -64,14 +64,14 @@ export default function RunsMapPage() {
           />
 
           {selectedRun && (
-            <div className="pointer-events-none absolute left-3 top-3 flex flex-col rounded-md bg-white/95 px-3 py-1.5 shadow-sm">
-              <span className="text-sm font-bold text-black/80">
+            <div className="pointer-events-none absolute left-3 top-3 flex flex-col rounded-md bg-raised/95 px-3 py-1.5 shadow-sm">
+              <span className="text-sm font-bold text-ink/80">
                 {selectedRun.name}
-                <span className="pl-2 font-normal text-black/50">
+                <span className="pl-2 font-normal text-ink/50">
                   {selectedRun.distance} mi
                 </span>
               </span>
-              <span className="text-xs text-black/40">{selectedRun.area}</span>
+              <span className="text-xs text-ink/40">{selectedRun.area}</span>
             </div>
           )}
         </div>

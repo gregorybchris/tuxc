@@ -54,7 +54,12 @@ export type IconName =
 interface CommonIconProps {
   name: IconName;
   size: number;
-  color: string;
+  /**
+   * Left off almost everywhere: an icon that inherits the colour of the text
+   * beside it follows the theme without being told about it. Set it only where
+   * there is no text to inherit from.
+   */
+  color?: string;
   weight?: IconWeight;
   className?: string;
 }
@@ -62,7 +67,7 @@ interface CommonIconProps {
 export function CommonIcon({
   name,
   size,
-  color,
+  color = "currentColor",
   weight,
   className,
 }: CommonIconProps) {

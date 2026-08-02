@@ -1,9 +1,6 @@
 import { cn } from "@/lib/utilities/style-utils";
 import { CommonIcon } from "./common-icon";
 
-export const FAVORITE_GOLD = "#E0A526";
-export const FAVORITE_OUTLINE = "#3172AE";
-
 interface FavoriteStarProps {
   isFavorite: boolean;
   onToggle: () => void;
@@ -30,14 +27,14 @@ export function FavoriteStar({
       aria-pressed={isFavorite}
       aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
       className={cn(
-        "rounded p-1.5 outline-none transition-colors hover:bg-black/5 focus-visible:ring-2 focus-visible:ring-tufts-blue",
+        "rounded p-1.5 outline-none transition-colors hover:bg-ink/5 focus-visible:ring-2 focus-visible:ring-accent",
+        isFavorite ? "text-gold" : "text-accent",
         className,
       )}
     >
       <CommonIcon
         name="star"
         size={size}
-        color={isFavorite ? FAVORITE_GOLD : FAVORITE_OUTLINE}
         weight={isFavorite ? "fill" : "regular"}
       />
     </button>

@@ -1,3 +1,4 @@
+import { useMapColors, useMapStyle } from "@/lib/hooks/theme";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { useEffect, useRef } from "react";
 import Map, { Layer, MapRef, Marker, Source } from "react-map-gl";
@@ -18,6 +19,7 @@ interface RunMapViewProps {
 
 export function RunMapView({ runMap, className }: RunMapViewProps) {
   const mapRef = useRef<MapRef>(null);
+  const mapStyle = useMapStyle();
 
   const bounds = getRunMapBounds(runMap);
   const center = getCenter(runMap);
@@ -47,7 +49,7 @@ export function RunMapView({ runMap, className }: RunMapViewProps) {
         }}
         mapboxAccessToken={import.meta.env.VITE_MAPBOX_TOKEN}
         style={{ width: "100%", height: "100%" }}
-        mapStyle="mapbox://styles/mapbox/outdoors-v12"
+        mapStyle={mapStyle}
         attributionControl={false}
       >
         <Marker
@@ -72,16 +74,18 @@ interface LineSourceProps {
 
 export function LineSource({
   lineFeature,
-  lineColor = "#4B87F7",
+  lineColor,
   lineOpacity = 1,
   lineWidth = 4,
 }: LineSourceProps) {
+  const colors = useMapColors();
+
   return (
     <Source type="geojson" data={lineFeature}>
       <Layer
         type="line"
         paint={{
-          "line-color": lineColor,
+          "line-color": lineColor ?? colors.route,
           "line-width": lineWidth,
           "line-opacity": lineOpacity,
         }}

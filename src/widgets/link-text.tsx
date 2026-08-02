@@ -9,7 +9,7 @@ interface LinkTextProps {
 const EXTERNAL_HREF_PATTERN = /^(https?:|mailto:)/;
 
 export function LinkText({ href, text, target }: LinkTextProps) {
-  const className = "text-tufts-blue transition-all hover:text-tufts-brown";
+  const className = "text-accent transition-all hover:text-link-hover";
 
   if (EXTERNAL_HREF_PATTERN.test(href)) {
     return (

@@ -32,7 +32,7 @@ export function Textarea({
       name={name}
       rows={rows}
       className={cn(
-        "w-full resize-y rounded border border-black/20 px-3 py-2 text-sm leading-relaxed text-black/70 outline-none placeholder:text-black/45 focus-visible:border-black/30 focus-visible:ring-2 focus-visible:ring-tufts-blue/40",
+        "w-full resize-y rounded border border-ink/20 bg-transparent px-3 py-2 text-sm leading-relaxed text-ink/70 outline-none placeholder:text-ink/45 focus-visible:border-ink/30 focus-visible:ring-2 focus-visible:ring-accent/40",
         className,
       )}
       placeholder={placeholder}

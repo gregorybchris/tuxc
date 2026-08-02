@@ -14,7 +14,7 @@ import TownLinesPage from "./pages/town-lines-page";
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="flex min-h-screen flex-col font-manrope text-black/80">
+      <div className="flex min-h-screen flex-col font-manrope text-ink/80">
         <Nav />
 
         <main className="flex flex-1 flex-col">
