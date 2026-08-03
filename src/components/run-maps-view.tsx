@@ -14,15 +14,22 @@ import { Pin } from "./run-map-pin";
 import { LineSource } from "./run-map-view";
 interface RunMapViewProps {
   runMaps: RunMap[];
-  onClickRun: (slug: string) => void;
-  onHoverRun: (slug?: string) => void;
+  /** A click on the map: where it landed, and every route within reach of it. */
+  onClickPoint: (coordinate: Coordinate, slugs: string[]) => void;
+  onHoverRuns: (slugs: string[]) => void;
+  /** The dropped pin, kept by the page so it survives across renders. */
+  pinnedCoordinate: Coordinate | null;
+  /** Routes to draw at full strength, whether hovered on the map or in a list. */
+  highlightedSlugs: string[];
   className?: string;
 }
 
 export function RunMapsView({
   runMaps,
-  onClickRun,
-  onHoverRun,
+  onClickPoint,
+  onHoverRuns,
+  pinnedCoordinate,
+  highlightedSlugs,
   className,
 }: RunMapViewProps) {
   const mapRef = useRef<MapRef>(null);
@@ -36,6 +43,7 @@ export function RunMapsView({
   const [markerCoordinate, setMarkerCoordinate] = useState<Coordinate | null>(
     null,
   );
+  const hoveredSlugsRef = useRef<string[]>([]);
 
   useEffect(() => {
     if (!engineRef.current) {
@@ -44,37 +52,56 @@ export function RunMapsView({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  function getClosestRun(event: MapLayerMouseEvent): QueryResult | null {
+  // Closest first, which is the order both the hover card and the list keep.
+  function getRunsAt(event: MapLayerMouseEvent): QueryResult[] {
     const coordinate = {
       latitude: event.lngLat.lat,
       longitude: event.lngLat.lng,
     };
     if (!engineRef.current) {
-      return null;
+      return [];
     }
-    const results = engineRef.current.query(coordinate);
-    if (results.length === 0) {
-      return null;
-    }
-    return results[0];
+    return engineRef.current.query(coordinate);
   }
 
+  // The pin drops where you clicked rather than on the nearest route: with
+  // several routes under the cursor, snapping to one of them would be picking a
+  // winner, which is the choice the list exists to hand back to you.
   const onClick = (event: MapLayerMouseEvent) => {
-    const closestResult = getClosestRun(event);
-    if (closestResult) {
-      setMarkerCoordinate(closestResult.coordinate);
-      onClickRun(closestResult.runMap.slug);
-    }
+    const results = getRunsAt(event);
+    const coordinate = {
+      latitude: event.lngLat.lat,
+      longitude: event.lngLat.lng,
+    };
+    onClickPoint(
+      coordinate,
+      results.map((result) => result.runMap.slug),
+    );
   };
 
   function onHover(event: MapLayerMouseEvent) {
-    const closestResult = getClosestRun(event);
-    if (closestResult) {
-      setMarkerCoordinate(closestResult.coordinate);
-      onHoverRun(closestResult.runMap.slug);
+    const results = getRunsAt(event);
+    if (results.length > 0) {
+      setMarkerCoordinate(results[0].coordinate);
     } else {
-      setMarkerCoordinate({ latitude: 0, longitude: 0 });
-      onHoverRun(undefined);
+      setMarkerCoordinate(null);
+    }
+    // Only report a change when the cursor crosses into a different set of
+    // routes, so moving along a single route doesn't rerender on every pixel.
+    const slugs = results.map((result) => result.runMap.slug);
+    if (!sameSlugs(hoveredSlugsRef.current, slugs)) {
+      hoveredSlugsRef.current = slugs;
+      onHoverRuns(slugs);
+    }
+  }
+
+  // Reaching for the list means leaving the canvas, and without this the hover
+  // card would stay behind naming wherever the cursor last crossed.
+  function onLeave() {
+    setMarkerCoordinate(null);
+    if (hoveredSlugsRef.current.length > 0) {
+      hoveredSlugsRef.current = [];
+      onHoverRuns([]);
     }
   }
 
@@ -100,6 +127,7 @@ export function RunMapsView({
         attributionControl={false}
         onClick={onClick}
         onMouseMove={onHover}
+        onMouseOut={onLeave}
       >
         {markerCoordinate && (
           <Marker
@@ -111,13 +139,24 @@ export function RunMapsView({
           </Marker>
         )}
 
+        {pinnedCoordinate && (
+          <Marker
+            latitude={pinnedCoordinate.latitude}
+            longitude={pinnedCoordinate.longitude}
+            anchor="bottom"
+          >
+            <Pin color={colors.droppedPin} size={28} />
+          </Marker>
+        )}
+
         {runMaps.map((runMap) => {
           const lineFeature = getLineFeature(runMap);
+          const highlighted = highlightedSlugs.includes(runMap.slug);
           return (
             <LineSource
               key={runMap.slug}
               lineFeature={lineFeature}
-              lineOpacity={0.3}
+              lineOpacity={highlighted ? 0.9 : 0.3}
               lineWidth={5}
             />
           );
@@ -125,4 +164,8 @@ export function RunMapsView({
       </Map>
     </div>
   );
+}
+
+function sameSlugs(a: string[], b: string[]): boolean {
+  return a.length === b.length && a.every((slug, i) => slug === b[i]);
 }
