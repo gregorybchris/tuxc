@@ -1,6 +1,11 @@
 import { useMapColors, useMapStyle } from "@/lib/hooks/theme";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { useEffect, useRef, useState } from "react";
+import {
+  PointerEvent as ReactPointerEvent,
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 import Map, { MapLayerMouseEvent, MapRef, Marker } from "react-map-gl";
 import { QueryEngine, QueryResult } from "../lib/mapping/query-engine";
 import { RunMap } from "../lib/models/runMap";
@@ -44,6 +49,12 @@ export function RunMapsView({
     null,
   );
   const hoveredSlugsRef = useRef<string[]>([]);
+  // A tap makes the browser fire an emulated mousemove on its way to the click,
+  // so without knowing what kind of pointer this is, one tap on a phone raises
+  // the hover card and the list at once. Pointer events carry the answer and
+  // arrive first; a mouse that never presses a button leaves it at the default.
+  const pointerTypeRef = useRef<string>("mouse");
+  const isTouch = () => pointerTypeRef.current === "touch";
 
   useEffect(() => {
     if (!engineRef.current) {
@@ -80,6 +91,9 @@ export function RunMapsView({
   };
 
   function onHover(event: MapLayerMouseEvent) {
+    if (isTouch()) {
+      return;
+    }
     const results = getRunsAt(event);
     if (results.length > 0) {
       setMarkerCoordinate(results[0].coordinate);
@@ -98,7 +112,9 @@ export function RunMapsView({
   // Reaching for the list means leaving the canvas, and without this the hover
   // card would stay behind naming wherever the cursor last crossed.
   function onLeave() {
-    setMarkerCoordinate(null);
+    // Returning the same value rather than a fresh null, so the touch-drag that
+    // calls this on every pointermove doesn't rerender the map each frame.
+    setMarkerCoordinate((current) => (current === null ? current : null));
     if (hoveredSlugsRef.current.length > 0) {
       hoveredSlugsRef.current = [];
       onHoverRuns([]);
@@ -110,9 +126,21 @@ export function RunMapsView({
   const center = medianCenter(runMaps.flatMap((runMap) => runMap.points));
   const initialZoom = 11;
 
+  // Fires before the emulated mouse events the browser synthesises from a tap,
+  // and on a laptop with a touchscreen it tracks whichever one is in use now
+  // rather than what the hardware is capable of.
+  function onPointer(event: ReactPointerEvent) {
+    pointerTypeRef.current = event.pointerType;
+    if (event.pointerType === "touch") {
+      onLeave();
+    }
+  }
+
   return (
     <div
       className={cn("h-full w-full overflow-hidden md:rounded-xl", className)}
+      onPointerDown={onPointer}
+      onPointerMove={onPointer}
     >
       <Map
         ref={mapRef}
