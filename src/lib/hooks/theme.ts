@@ -117,6 +117,12 @@ interface MapColors {
   route: string;
   /** The pin that follows the cursor on the heatmap. */
   pin: string;
+  /**
+   * The pin a click leaves behind on the heatmap. Warm, where every other mark
+   * on the map is blue: it has to stay findable against a tangle of routes, and
+   * it means something different from all of them.
+   */
+  droppedPin: string;
   /** The town boundaries. Warm in light; the brown disappears on a dark map. */
   boundary: string;
 }
@@ -125,8 +131,18 @@ interface MapColors {
 // be kept in step with the `--route` and `--edge` variables in globals.css by
 // hand.
 const MAP_COLORS: Record<Theme, MapColors> = {
-  light: { route: "#4B87F7", pin: "#3172AE", boundary: "#5E4B3C" },
-  dark: { route: "#6BA0FF", pin: "#8CB8FF", boundary: "#A9BDD4" },
+  light: {
+    route: "#4B87F7",
+    pin: "#3172AE",
+    droppedPin: "#A6431C",
+    boundary: "#5E4B3C",
+  },
+  dark: {
+    route: "#6BA0FF",
+    pin: "#8CB8FF",
+    droppedPin: "#F0894F",
+    boundary: "#A9BDD4",
+  },
 };
 
 export function useMapColors(): MapColors {

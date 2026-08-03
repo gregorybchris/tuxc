@@ -24,6 +24,7 @@ import {
   TextAa,
   Tree,
   UserPlus,
+  X,
 } from "@phosphor-icons/react";
 
 export type IconName =
@@ -49,6 +50,7 @@ export type IconName =
   | "map"
   | "grid"
   | "star"
+  | "close"
   | "next";
 
 interface CommonIconProps {
@@ -138,6 +140,9 @@ export function CommonIcon({
     }
     case "star": {
       return <Star {...props} />;
+    }
+    case "close": {
+      return <X {...props} />;
     }
     case "next": {
       return <ArrowRight {...props} />;
