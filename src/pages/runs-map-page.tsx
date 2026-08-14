@@ -7,7 +7,6 @@ import { RunMap } from "@/lib/models/runMap";
 import { Coordinate } from "@/lib/utilities/map-utils";
 import { cn } from "@/lib/utilities/style-utils";
 import { CommonIcon } from "@/widgets/common-icon";
-import { LinkButton } from "@/widgets/link-button";
 import { LoadingBox } from "@/widgets/loading-box";
 import { Page, PageHeader } from "@/widgets/page";
 import { useNavigate } from "react-router-dom";
@@ -86,14 +85,6 @@ export default function RunsMapPage() {
       <PageHeader
         title="Heatmap"
         lede="Works best on desktop. Hover to see every route through a spot, click to drop a pin and pick one."
-        actions={
-          <LinkButton
-            text="Back to the grid"
-            href="/runs"
-            iconName="grid"
-            className="-ml-3"
-          />
-        }
       />
 
       {loading && <LoadingBox className="h-[60vh] min-h-[24rem] w-full" />}

@@ -50,7 +50,7 @@ export default function TownLinesPage() {
   return (
     <Page className="flex flex-col gap-6">
       <PageHeader
-        title="Town Lines Map"
+        title="Town Lines"
         lede="It has long been a tradition for TUXC to race for the town lines in the Boston Area. Here, you can find a map of the surrounding town borders along with all crossing points marked with a pin."
       />
 
