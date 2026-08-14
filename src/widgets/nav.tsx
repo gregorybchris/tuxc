@@ -103,19 +103,20 @@ export function Nav() {
           </nav>
 
           <div className="flex flex-row items-center gap-1">
-            {/* Wide enough to name its own shortcut on desktop; an icon on
-                phones, where there is no keyboard to press it with. */}
+            {/* Wide enough to name its own shortcut once the page is wide
+                enough to spare the room; an icon everywhere below that, where
+                the nav links need the space more. */}
             <button
               type="button"
               onClick={() => setSearchOpen(true)}
               aria-label="Search the archive"
-              className="flex flex-row items-center gap-2 rounded px-2 py-1.5 text-sm text-white/80 outline-none transition-colors hover:bg-white/10 hover:text-white focus-visible:ring-2 focus-visible:ring-white/70 md:w-44 md:justify-between md:border md:border-white/25 md:pl-2.5 md:pr-2 lg:w-56"
+              className="flex flex-row items-center gap-2 rounded px-2 py-1.5 text-sm text-white/80 outline-none transition-colors hover:bg-white/10 hover:text-white focus-visible:ring-2 focus-visible:ring-white/70 lg:w-56 lg:justify-between lg:border lg:border-white/25 lg:pl-2.5 lg:pr-2"
             >
               <span className="flex flex-row items-center gap-2">
                 <MagnifyingGlass size={18} weight="bold" />
-                <span className="hidden md:inline">Search</span>
+                <span className="hidden lg:inline">Search</span>
               </span>
-              <kbd className="hidden rounded bg-white/15 px-1.5 py-0.5 font-manrope text-[11px] text-white/80 md:inline">
+              <kbd className="hidden rounded bg-white/15 px-1.5 py-0.5 font-manrope text-[11px] text-white/80 lg:inline">
                 {shortcutLabel()}
               </kbd>
             </button>
